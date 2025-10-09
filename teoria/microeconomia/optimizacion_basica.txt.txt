@@ -1,0 +1,4 @@
+Conceptos básicos de optimización:
+- Función objetivo
+- Restricciones
+- Variables de decisión
