@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  title: "Economía Matemática"
+  site-url: https://emanuelquintana-glitch.github.io/-Apuntes_Economia_Matematica/
+  repo-url: https://github.com/emanuelquintana-glitch/-Apuntes_Economia_Matematica
+  
+  navbar:
+    background: primary
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Capítulos"
+        menu:
+          - text: "Parte I: Introducción"
+            href: capitulos/parte_01_introduccion/README.qmd
+          - text: "Parte II: Análisis Estático"
+            href: capitulos/parte_02_analisis_estatico/README.qmd
+          - text: "Parte III: Estática Comparativa"
+            href: capitulos/parte_03_estatica_comparativa/README.qmd
+          - text: "Parte IV: Optimización"
+            href: capitulos/parte_04_optimizacion/README.qmd
+          - text: "Parte V: Análisis Dinámico"
+            href: capitulos/parte_05_analisis_dinamico/README.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: show
+    code-tools: true
+
+# Incluir metadatos globales
+metadata-file: _metadata.yml

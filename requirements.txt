@@ -1,0 +1,78 @@
+# ==============================================
+# DEPENDENCIAS PARA ECONOMÍA MATEMÁTICA
+# ==============================================
+
+# 1. CORE CIENTÍFICO
+numpy>=1.24.0
+scipy>=1.10.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.13.0
+
+# 2. MATEMÁTICAS SIMBÓLICAS Y OPTIMIZACIÓN
+sympy>=1.12.0
+cvxopt>=1.3.0
+cvxpy>=1.3.0
+pulp>=2.7.0
+scikit-learn>=1.3.0
+
+# 3. COMPUTACIÓN TÉCNICA AVANZADA
+statsmodels>=0.14.0
+arch>=6.2.0
+networkx>=3.1
+pytz>=2023.3
+pyts>=1.0.0
+
+# 4. ECONOMETRÍA Y ANÁLISIS ESTADÍSTICO
+linearmodels>=5.0
+pymc>=5.7.0
+pandas-datareader>=0.10.0
+yfinance>=0.2.28
+fredapi>=0.5.0
+
+# 5. VISUALIZACIÓN AVANZADA
+plotly>=5.17.0
+bokeh>=3.2.0
+holoviews>=1.17.0
+yellowbrick>=1.5
+
+# 6. PROCESAMIENTO DE DATOS
+openpyxl>=3.1.0
+xlrd>=2.0.0
+xlsxwriter>=3.1.0
+sqlalchemy>=2.0.0
+
+# 7. PARA JUPYTER/QUARTO
+jupyter>=1.0.0
+jupyterlab>=4.0.0
+ipykernel>=6.0.0
+ipywidgets>=8.0.0
+nbformat>=5.9.0
+nbconvert>=7.10.0
+tabulate>=0.9.0        # <-- ESTA FALTABA
+markdown>=3.5.0
+pyyaml>=6.0
+myst-parser>=2.0.0
+
+# 8. UTILIDADES GENERALES
+tqdm>=4.65.0
+colorama>=0.4.0
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+autopep8>=2.0.0
+
+# 9. PARA MODELOS ECONÓMICOS ESPECÍFICOS
+dynesty>=2.1.0        # Inferencia bayesiana
+chaospy>=4.3.0        # Análisis de incertidumbre
+quantecon>=0.7.0      # Economía computacional
+
+# 10. DEPENDENCIAS DE RENDIMIENTO
+numba>=0.58.0
+dask>=2023.10.0
+joblib>=1.3.0
+
+# ==============================================
+# NOTA: Quarto NO es una librería de Python
+# Se instala por separado: https://quarto.org/docs/download
+# ==============================================

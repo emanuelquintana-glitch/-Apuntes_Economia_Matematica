@@ -1,0 +1,16 @@
+---
+title: "Título del Capítulo"
+author: "Emanuel Quintana Silva"
+date: "`r format(Sys.Date(), '%d de %B de %Y')`"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-tools: true
+    theme: cosmo
+---
+
+# Introducción
+
+Contenido del capítulo...

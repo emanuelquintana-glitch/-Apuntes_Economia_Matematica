@@ -1,0 +1,12 @@
+---
+title: "Parte II: Análisis Estático"
+---
+
+# Análisis Estático (Modelos de Equilibrio)
+
+Esta parte trata sobre modelos de equilibrio y álgebra lineal aplicada.
+
+## Capítulos
+
+4. Modelos Lineales y Álgebra de Matrices
+5. Modelos Lineales (continuación)

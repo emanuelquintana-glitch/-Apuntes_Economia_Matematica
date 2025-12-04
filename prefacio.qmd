@@ -1,0 +1,21 @@
+---
+title: "Prefacio"
+format: html
+---
+
+# Prefacio
+
+Este trabajo representa mi esfuerzo por organizar y sistematizar los métodos matemáticos fundamentales aplicados al análisis económico.
+
+## Motivación
+
+La necesidad de un recurso integral en español que combine rigor matemático con aplicaciones económicas concretas.
+
+## Estructura
+
+El material sigue la estructura clásica del libro de Chiang y Wainwright, organizado en cinco partes progresivas.
+
+---
+
+*Emanuel Quintana Silva*  
+*UPTC, 2025*

@@ -1,0 +1,29 @@
+---
+title: "Economía Matemática"
+author: "Emanuel Quintana Silva"
+format:
+  html:
+    toc: true
+---
+
+# Bienvenido
+
+Bienvenido al repositorio de **Economía Matemática**.
+
+## Contenido
+
+Este repositorio contiene apuntes completos de Economía Matemática basados en *Métodos Fundamentales de Economía Matemática*.
+
+### Estructura
+
+1. **Parte I**: Fundamentos Matemáticos
+2. **Parte II**: Álgebra de Matrices
+3. **Parte III**: Estática Comparativa
+4. **Parte IV**: Optimización
+5. **Parte V**: Análisis Dinámico
+
+## Autor
+
+**Emanuel Quintana Silva**  
+Economista en formación - UPTC  
+[emanuel.quintana@uptc.edu.co](mailto:emanuel.quintana@uptc.edu.co)

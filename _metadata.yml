@@ -1,0 +1,11 @@
+# Metadatos globales para todos los documentos
+bibliography: referencias/bibliografia.bib
+csl: referencias/apa.csl
+link-citations: true
+crossref:
+  chapters: true
+date-format: long
+lang: es
+theme: cosmo
+author: Emanuel Quintana Silva
+date: '2025'
