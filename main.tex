@@ -1,0 +1,1103 @@
+\documentclass[xcolor={dvipsnames,table},aspectratio=169]{beamer}
+
+% ============================================================
+% TEMA Y CONFIGURACIÓN VISUAL
+% ============================================================
+\usetheme{Goettingen}
+\usecolortheme{dolphin}
+
+% Colores personalizados en tonos azules
+\definecolor{AzulUPTC}{RGB}{0,51,102}
+\definecolor{AzulClaro}{RGB}{51,102,153}
+\definecolor{AzulMedio}{RGB}{102,153,204}
+\definecolor{AzulOscuro}{RGB}{0,32,64}
+\definecolor{GrisTexto}{RGB}{64,64,64}
+
+\setbeamercolor{structure}{fg=AzulUPTC}
+\setbeamercolor{palette primary}{bg=AzulUPTC,fg=white}
+\setbeamercolor{palette secondary}{bg=AzulClaro,fg=white}
+\setbeamercolor{palette tertiary}{bg=AzulOscuro,fg=white}
+\setbeamercolor{palette quaternary}{bg=AzulMedio,fg=white}
+\setbeamercolor{titlelike}{bg=AzulClaro,fg=white}
+\setbeamercolor{block title}{bg=AzulClaro,fg=white}
+\setbeamercolor{block body}{bg=AzulMedio!15}
+\setbeamercolor{frametitle}{bg=AzulUPTC,fg=white}
+\setbeamercolor{section in sidebar}{fg=AzulOscuro}
+\setbeamercolor{subsection in sidebar}{fg=AzulClaro}
+
+% ============================================================
+% PAQUETES ESENCIALES
+% ============================================================
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla,es-nodecimaldot]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+% ============================================================
+% CONFIGURACIÓN DE HYPERREF
+% ============================================================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=AzulClaro,
+    urlcolor=AzulMedio,
+    citecolor=AzulOscuro
+}
+
+% ============================================================
+% COMANDOS MATEMÁTICOS PERSONALIZADOS
+% ============================================================
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\img}{img}
+
+% ============================================================
+% INFORMACIÓN DE LA PRESENTACIÓN
+% ============================================================
+\title[Fundamentos de Economía Matemática]{Fundamentos de Economía Matemática}
+\subtitle{Modelos, Funciones y Análisis de Equilibrio}
+\author[E. Quintana]{
+    Emanuel Quintana\\
+    \scriptsize{Economía -- Universidad Pedagógica y Tecnológica de Colombia}
+}
+\institute[UPTC]{
+    Facultad de Ciencias Económicas y Administrativas\\
+    Universidad Pedagógica y Tecnológica de Colombia
+}
+\date{\today}
+
+% ============================================================
+% LOGO EN TODAS LAS DIAPOSITIVAS
+% ============================================================
+\logo{\includegraphics[height=0.8cm]{uptc-logo.png}}
+
+% ============================================================
+% INICIO DEL DOCUMENTO
+% ============================================================
+\begin{document}
+
+% ============================================================
+% PORTADA
+% ============================================================
+\begin{frame}[plain]
+    \titlepage
+    \begin{center}
+        \vspace{-0.5cm}
+        \scriptsize
+        \textbf{Contacto:} \href{mailto:emanuel.quintana@uptc.edu.co}{emanuel.quintana@uptc.edu.co}\\
+        \textbf{GitHub:} \href{https://github.com/emanuelquintana-glitch}{github.com/emanuelquintana-glitch}\\
+        \textbf{ORCID:} 0009-0006-8419-2805
+    \end{center}
+\end{frame}
+
+% ============================================================
+% TABLA DE CONTENIDOS
+% ============================================================
+%\begin{frame}{Contenido}
+    %\tableofcontents
+%\end{frame}
+
+% ============================================================
+% SECCIÓN 1: MODELOS ECONÓMICOS
+% ============================================================
+\section{Modelos Económicos y su Estructura}
+
+\begin{frame}{¿Qué es un Modelo Económico?}
+    \begin{block}{Definición}
+        Un modelo económico es un \textbf{marco analítico} o estructura simplificada que representa una abstracción de la economía real.
+    \end{block}
+    
+    \vspace{0.5cm}
+    
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Características:}
+            \begin{itemize}
+                \item Selección de factores principales
+                \item Relaciones esenciales
+                \item Simplificación intencional
+                \item Enfoque en fenómenos específicos
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{Forma matemática:}
+            \begin{itemize}
+                \item Conjunto de ecuaciones
+                \item Representa la estructura
+                \item Expresa suposiciones analíticas
+                \item Permite predicciones
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Elementos de un Modelo Matemático}
+    \begin{block}{Variables}
+        \begin{itemize}
+            \item \textbf{Variables endógenas:} valores buscados dentro del modelo ($Q_d$, $Q_s$, $P$)
+            \item \textbf{Variables exógenas:} determinadas externamente, tratadas como datos ($Y$, $I$)
+        \end{itemize}
+    \end{block}
+    
+    \begin{block}{Constantes Paramétricas}
+        Símbolos $(a, b, c, \alpha, \beta, \gamma)$ que representan magnitudes fijas, tratadas como datos: $C = a + bQ$
+    \end{block}
+    
+    \begin{alertblock}{Importancia}
+        La distinción entre variables endógenas y exógenas es \textbf{fundamental} para la estructura del modelo.
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{Tipos de Ecuaciones en Modelos}
+    \begin{enumerate}
+        \item \textbf{Ecuaciones Definicionales (Identidades)}
+        \begin{itemize}
+            \item Establecen igualdad entre expresiones equivalentes
+            \item Notación: $\equiv$ o $=$
+            \item Ejemplo: $\Pi \equiv R - C$ (ganancia)
+        \end{itemize}
+        
+        \vspace{0.3cm}
+        
+        \item \textbf{Ecuaciones de Comportamiento}
+        \begin{itemize}
+            \item Especifican cómo responde una variable a cambios en otras
+            \item Ejemplo: $C = 75 + 10Q$ vs. $C = 110 + 0.2Q^2$
+        \end{itemize}
+        
+        \vspace{0.3cm}
+        
+        \item \textbf{Ecuaciones Condicionales}
+        \begin{itemize}
+            \item Expresan requisitos que deben satisfacerse
+            \item Equilibrio: $Q_d = Q_s$
+            \item Optimización: $CM = IM$
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+% ============================================================
+% SECCIÓN 2: TIPOS DE ANÁLISIS
+% ============================================================
+\section{Tipos de Análisis Económico}
+
+\begin{frame}{Análisis Estático y Comparativo}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Análisis Estático}
+                Identifica valores de equilibrio donde:
+                \begin{itemize}
+                    \item No hay tendencia al cambio
+                    \item Balance de fuerzas internas
+                    \item Parámetros y exógenas fijos
+                \end{itemize}
+                
+                \vspace{0.3cm}
+                Ejemplo: $Q_d = Q_s$ en mercado
+            \end{block}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Análisis Estático Comparativo}
+                Compara dos estados de equilibrio resultantes de:
+                \begin{itemize}
+                    \item Diferentes valores de parámetros
+                    \item Cambios en variables exógenas
+                    \item Efectos de políticas
+                \end{itemize}
+            \end{block}
+        \end{column}
+    \end{columns}
+    
+    \vspace{0.5cm}
+    
+    \begin{alertblock}{Nota Importante}
+        El análisis estático \textbf{no} considera las trayectorias temporales hacia el equilibrio.
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{Problemas de Optimización y Análisis Dinámico}
+    \begin{block}{Problemas de Optimización}
+        Variedad especial de equilibrio donde la unidad económica busca:
+        \begin{itemize}
+            \item \textbf{Maximizar} o \textbf{minimizar} función objetivo
+            \item Ejemplo: maximización de ganancia ($\max \Pi = R - C$)
+            \item Condición necesaria: $\frac{d\Pi}{dQ} = 0$
+        \end{itemize}
+    \end{block}
+    
+    \vspace{0.3cm}
+    
+    \begin{block}{Análisis Dinámico}
+        Estudia las \textbf{trayectorias temporales} de las variables:
+        \begin{itemize}
+            \item Determina si convergen a valores de equilibrio
+            \item Utiliza ecuaciones diferenciales o en diferencias
+            \item Aborda la "asequibilidad" del equilibrio
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+% ============================================================
+% SECCIÓN 3: FUNDAMENTOS MATEMÁTICOS
+% ============================================================
+\section{Fundamentos Matemáticos}
+
+\begin{frame}{El Sistema de Números Reales ($\R$)}
+    \begin{center}
+        \begin{tikzpicture}[
+            level 1/.style={sibling distance=6cm},
+            level 2/.style={sibling distance=3cm},
+            every node/.style={rectangle, draw, rounded corners, fill=AzulMedio!20, align=center, minimum height=1cm}
+        ]
+        \node {Números Reales ($\R$)}
+            child {node {Racionales ($\Q$)\\[0.2cm] $\frac{a}{b}$, $a,b \in \Z$}
+                child {node {Enteros ($\Z$)\\[0.2cm] $\ldots,-2,-1,0,1,2,\ldots$}}
+                child {node {Fracciones\\[0.2cm] $\frac{1}{4}=0.25$\\$\frac{1}{3}=0.\overline{3}$}}
+            }
+            child {node {Irracionales\\[0.2cm] No expresables\\como $\frac{a}{b}$}
+                child {node {Ejemplos\\[0.2cm] $\sqrt{2}=1.4142\ldots$\\$\pi=3.1415\ldots$}}
+            };
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Números Racionales e Irracionales}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \begin{block}{Números Racionales}
+                \textbf{Definición:} Expresables como razón de dos enteros
+                
+                \vspace{0.3cm}
+                \textbf{Características:}
+                \begin{itemize}
+                    \item Decimal finito: $\frac{1}{4}=0.25$
+                    \item Decimal periódico: $\frac{1}{3}=0.\overline{3}$
+                \end{itemize}
+                
+                \vspace{0.3cm}
+                \textbf{Incluyen:}
+                \begin{itemize}
+                    \item Enteros positivos: $1, 2, 3, \ldots$
+                    \item Enteros negativos: $-1, -2, -3, \ldots$
+                    \item Cero: $0$
+                    \item Fracciones: $\frac{3}{4}, -\frac{2}{5}$
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.52\textwidth}
+            \begin{block}{Números Irracionales}
+                \textbf{Definición:} No expresables como $\frac{a}{b}$ con $a,b \in \Z$
+                
+                \vspace{0.0001cm}
+                \textbf{Características:}
+                \begin{itemize}
+                    \item Decimal no periódico
+                    \item Decimal no finito
+                \end{itemize}
+                
+                \vspace{0.000cm}
+                \textbf{Ejemplos:}
+                \begin{itemize}
+                    \item $\sqrt{2} = 1.41421356\ldots$
+                    \item $\pi = 3.14159265\ldots$
+                    \item $e = 2.71828182\ldots$
+                \end{itemize}
+            \end{block}
+            
+            \vspace{0 cm}
+            \begin{alertblock}{Observación}
+                Los irracionales llenan los espacios entre racionales, formando el \textbf{continuo} $\R$.
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ============================================================
+% SECCIÓN 4: TEORÍA DE CONJUNTOS
+% ============================================================
+\section{Conjuntos y Relaciones}
+
+\begin{frame}{Teoría de Conjuntos: Definiciones Básicas}
+    \begin{block}{Definición}
+        Un \textbf{conjunto} es una colección de objetos distintos. Los objetos se denominan \textbf{elementos}.
+    \end{block}
+    
+    \vspace{0.3cm}
+    
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Notación:}
+            \begin{itemize}
+                \item Por enumeración: $\{2, 3, 4\}$
+                \item Por descripción: $\{x \mid x \in \Z^+\}$
+                \item Pertenencia: $3 \in \{2,3,4\}$
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{Tipos:}
+            \begin{itemize}
+                \item Finito: $\{1,2,3\}$
+                \item Infinito numerable: $\N$
+                \item Infinito no numerable: $\R$
+                \item Vacío: $\emptyset$ o $\{\}$
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    
+    \vspace{0.3cm}
+    
+    \begin{alertblock}{Importante}
+        $\{0\} \neq \emptyset$ porque $\{0\}$ contiene al elemento cero.
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{Relaciones entre Conjuntos}
+    \begin{block}{Igualdad}
+        $A = B$ si y solo si contienen elementos idénticos (orden no importa)
+    \end{block}
+    
+    \begin{block}{Subconjunto}
+        $T \subset S$ (o $S \supset T$) si todo elemento de $T$ está en $S$
+        \begin{itemize}
+            \item \textbf{Subconjunto propio:} no contiene todos los elementos de $S$
+            \item \textbf{Propiedad:} $\emptyset \subset A$ para cualquier conjunto $A$
+        \end{itemize}
+    \end{block}
+    
+    \begin{block}{Conjuntos Disjuntos}
+        Dos conjuntos sin elementos en común
+    \end{block}
+    
+    \begin{alertblock}{Teorema}
+        Para un conjunto con $n$ elementos, el número de subconjuntos es $2^n$
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{Operaciones con Conjuntos}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Definiciones:}
+            \begin{itemize}
+                \item \textbf{Unión} ($A \cup B$): elementos en $A$ \textbf{o} en $B$
+                \item \textbf{Intersección} ($A \cap B$): elementos en $A$ \textbf{y} en $B$
+                \item \textbf{Complemento} ($\bar{A}$): elementos de $U$ que \textbf{no} están en $A$
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{Leyes:}
+            \begin{itemize}
+                \item \textbf{Conmutativa:}
+                \begin{align*}
+                    A \cup B &= B \cup A\\
+                    A \cap B &= B \cap A
+                \end{align*}
+                \item \textbf{Asociativa:}
+                \begin{align*}
+                    (A \cup B) \cup C &= A \cup (B \cup C)
+                \end{align*}
+                \item \textbf{Distributiva:}
+                \begin{align*}
+                    A \cap (B \cup C) &= (A \cap B) \cup (A \cap C)
+                \end{align*}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ============================================================
+% SECCIÓN 5: PARES ORDENADOS Y FUNCIONES
+% ============================================================
+\section{Relaciones y Funciones}
+
+\begin{frame}{Pares Ordenados}
+    \begin{block}{Definición}
+        Un \textbf{par ordenado} $(a,b)$ es diferente de un conjunto $\{a,b\}$ porque el orden importa.
+    \end{block}
+    
+    \begin{alertblock}{Propiedad Fundamental}
+        $(a,b) = (c,d)$ si y solo si $a=c$ y $b=d$
+        
+        Por tanto: $(a,b) \neq (b,a)$ a menos que $a=b$
+    \end{alertblock}
+    
+    \vspace{0.3cm}
+    
+    \textbf{Aplicaciones:}
+    \begin{itemize}
+        \item Coordenadas en el plano: $(x,y)$
+        \item Datos relacionados: $(edad, peso) = (19, 127)$
+        \item Producto Cartesiano: $X \times Y = \{(x,y) \mid x \in X, y \in Y\}$
+    \end{itemize}
+    
+    \vspace{0.3cm}
+    
+    \begin{exampleblock}{Plano Cartesiano}
+        $\R \times \R = \R^2$ representa todos los puntos del plano
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Producto Cartesiano: Ejemplo}
+    \textbf{Dados:} $S_1 = \{3, 6, 9\}$, $S_2 = \{a, b\}$, $S_3 = \{m, n\}$
+    
+    \vspace{0.3cm}
+    
+    \begin{block}{$S_1 \times S_2$}
+        $\{(3,a), (3,b), (6,a), (6,b), (9,a), (9,b)\}$ \quad (6 elementos)
+    \end{block}
+    
+    \begin{block}{$S_2 \times S_3$}
+        $\{(a,m), (a,n), (b,m), (b,n)\}$ \quad (4 elementos)
+    \end{block}
+    
+    \vspace{0.3cm}
+    
+    \begin{alertblock}{No Conmutatividad}
+        En general, $S_1 \times S_2 \neq S_2 \times S_1$
+        
+        \textbf{Excepción:} son iguales si $S_1 = S_2$ o si $S_1 = \emptyset$ o $S_2 = \emptyset$
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{Relaciones y Funciones}
+    \begin{block}{Relación}
+        Cualquier colección de pares ordenados (subconjunto de $\R \times \R$)
+        
+        Asocia uno o más valores de $y$ con cada valor de $x$
+    \end{block}
+    
+    \vspace{0.3cm}
+    
+    \begin{block}{Función}
+        Relación especial donde \textbf{para cada $x$ existe solo un $y$}
+        
+        Notación: $y = f(x)$ (``y es igual a efe de x'')
+    \end{block}
+    
+    \vspace{0.3cm}
+    
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Componentes:}
+            \begin{itemize}
+                \item Variable independiente: $x$
+                \item Variable dependiente: $y$
+                \item Dominio: valores de $x$
+                \item Imagen: valores de $y$
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{Propiedades:}
+            \begin{itemize}
+                \item Toda función es una relación
+                \item No toda relación es función
+                \item Varios $x$ pueden dar mismo $y$
+                \item También: mapeo o transformación
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Ejemplo: Dominio e Imagen}
+    \begin{exampleblock}{Función de Costo}
+        $C = 150 + 7Q$ con restricción $Q \leq 100$
+        
+        \vspace{0.3cm}
+        
+        \textbf{Dominio:} $\{Q \mid 0 \leq Q \leq 100\}$
+        
+        \vspace{0.3cm}
+        
+        \textbf{Imagen:}
+        \begin{itemize}
+            \item Costo mínimo: $C(0) = 150$
+            \item Costo máximo: $C(100) = 150 + 700 = 850$
+            \item Imagen: $\{C \mid 150 \leq C \leq 850\}$
+        \end{itemize}
+    \end{exampleblock}
+    
+    \vspace{0.3cm}
+    
+    \begin{alertblock}{Aplicación Económica}
+        Las ecuaciones de comportamiento en economía se expresan típicamente como funciones
+    \end{alertblock}
+\end{frame}
+
+% ============================================================
+% SECCIÓN 6: TIPOS DE FUNCIONES
+% ============================================================
+\section{Clasificación de Funciones}
+
+\begin{frame}{Funciones Constantes y Polinomiales}
+    \begin{block}{Función Constante}
+        $y = f(x) = k$ donde $k$ es constante
+        
+        Gráfica: línea horizontal
+        
+        Ejemplo económico: $I = I_0$ (inversión exógena)
+    \end{block}
+    
+    \vspace{0.3cm}
+    
+    \begin{block}{Función Polinomial}
+        Forma general: $y = a_0 + a_1x + a_2x^2 + \cdots + a_nx^n$
+        
+        \textbf{Grado:} mayor potencia de $x$ (denotado $n$)
+    \end{block}
+    
+    \vspace{0.0001cm}
+    
+    \begin{center}
+        \begin{tabular}{clll}
+            \toprule
+            \textbf{Grado} & \textbf{Tipo} & \textbf{Forma} & \textbf{Gráfica}\\
+            \midrule
+            0 & Constante & $y = a_0$ & Línea horizontal\\
+            1 & Lineal & $y = a_0 + a_1x$ & Línea recta\\
+            2 & Cuadrática & $y = a_0 + a_1x + a_2x^2$ & Parábola\\
+            3 & Cúbica & $y = a_0 + a_1x + a_2x^2 + a_3x^3$ & Dos ondulaciones\\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Función Lineal}
+    \begin{block}{Forma General}
+        $y = a_0 + a_1x$
+        
+        \begin{itemize}
+            \item $a_0$: ordenada al origen (y-intercepto)
+            \item $a_1$: pendiente (incremento en $y$ por unidad de $x$)
+        \end{itemize}
+    \end{block}
+    
+    \vspace{0.3cm}
+    
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Ejemplo 1:} $y = 16 - 2x$
+            \begin{itemize}
+                \item Ordenada: $16$
+                \item Pendiente: $-2$ (descendente)
+                \item Cruza eje $x$ en $x=8$
+            \end{itemize}
+            
+            \vspace{0.3cm}
+            
+            \textbf{Ejemplo 2:} $y = 8 + 2x$
+            \begin{itemize}
+                \item Ordenada: $8$
+                \item Pendiente: $+2$ (ascendente)
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{tikzpicture}[scale=0.7]
+                \begin{axis}[
+                    axis lines=middle,
+                    xlabel=$x$,
+                    ylabel=$y$,
+                    xmin=0, xmax=10,
+                    ymin=0, ymax=20,
+                    xtick={0,2,4,6,8,10},
+                    ytick={0,5,10,15,20},
+                    grid=major,
+                    width=6cm,
+                    height=5cm
+                ]
+                \addplot[blue, thick, domain=0:11] {16-2*x};
+                \addlegendentry{$y=16-2x$}
+                \addplot[red, thick, domain=0:8] {8+2*x};
+                \addlegendentry{$y=8+2x$}
+                \end{axis}
+            \end{tikzpicture}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Función Cuadrática}
+    \begin{block}{Forma General}
+        $y = a_0 + a_1x + a_2x^2$
+        
+        Gráfica: \textbf{parábola}
+    \end{block}
+    
+    \vspace{0.3cm}
+    
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Signo de $a_2$:}
+            \begin{itemize}
+                \item $a_2 > 0$: valle (U)
+                \item $a_2 < 0$: colina (U invertida)
+            \end{itemize}
+            
+            \vspace{0.3cm}
+            
+            \textbf{Ejemplos:}
+            \begin{itemize}
+                \item $y = 2x^2$: valle
+                \item $y = -x^2 + 5x - 2$: colina
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{tikzpicture}[scale=0.7]
+                \begin{axis}[
+                    axis lines=middle,
+                    xlabel=$x$,
+                    ylabel=$y$,
+                    xmin=0, xmax=5,
+                    ymin=-2, ymax=20,
+                    grid=major,
+                    width=6cm,
+                    height=5cm
+                ]
+                \addplot[blue, thick, domain=0:4] {2*x^2};
+                \addlegendentry{$y=2x^2$}
+                \addplot[red, thick, domain=0:5] {-x^2+5*x-2};
+                \addlegendentry{$y=-x^2+5x-2$}
+                \end{axis}
+            \end{tikzpicture}
+        \end{column}
+    \end{columns}
+    
+    \vspace{0.3cm}
+    
+    \begin{alertblock}{Propiedad}
+        Las funciones cuadráticas tienen exactamente una cúspide (máximo o mínimo)
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{Funciones Racionales}
+    \begin{block}{Definición}
+        Una función racional expresa $y$ como \textbf{razón de dos polinomios}:
+        $y = \frac{P(x)}{Q(x)}$
+        donde $P(x)$ y $Q(x)$ son polinomios
+    \end{block}
+    
+    \vspace{0.3cm}
+    
+    \begin{exampleblock}{Hipérbola Rectangular}
+        Caso especial: $y = \frac{a}{x}$ o $xy = a$
+        
+        \textbf{Aplicaciones económicas:}
+        \begin{itemize}
+            \item Curva de demanda con elasticidad unitaria ($PQ = constante$)
+            \item Curva de costo fijo promedio (CFP = $\frac{CF}{Q}$)
+        \end{itemize}
+    \end{exampleblock}
+    
+    \vspace{0.3cm}
+    
+    \begin{alertblock}{Propiedad Asintótica}
+        La hipérbola rectangular nunca toca los ejes; se aproxima a ellos \textbf{asintóticamente}
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{Ejemplo: Hipérbola Rectangular}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{Función:} $y = \frac{36}{x}$ o $xy = 36$
+            
+            \vspace{0.3cm}
+            
+            \textbf{Cuadrantes:}
+            \begin{itemize}
+                \item $x > 0, y > 0$: Cuadrante I
+                \item $x < 0, y < 0$: Cuadrante III
+            \end{itemize}
+            
+            \vspace{0.3cm}
+            
+            \textbf{Asíntotas:}
+            \begin{itemize}
+                \item Eje $x$ (horizontal)
+                \item Eje $y$ (vertical)
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{tikzpicture}[scale=0.8]
+                \begin{axis}[
+                    axis lines=middle,
+                    xlabel=$x$,
+                    ylabel=$y$,
+                    xmin=-10, xmax=10,
+                    ymin=-10, ymax=10,
+                    grid=major,
+                    width=6.5cm,
+                    height=6.5cm,
+                    samples=100
+                ]
+                \addplot[blue, thick, domain=0.5:10] {36/x};
+                \addplot[blue, thick, domain=-10:-0.5] {36/x};
+                \end{axis}
+            \end{tikzpicture}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Funciones No Algebraicas (Trascendentes)}
+    \begin{block}{Definición}
+        Funciones que \textbf{no} pueden expresarse mediante polinomios o raíces de polinomios
+    \end{block}
+    
+    \vspace{0.3cm}
+    
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{1. Funciones Exponenciales}
+            \begin{itemize}
+                \item Forma: $y = b^x$
+                \item Variable en el exponente
+                \item Ejemplo: $y = 2^x$, $y = e^x$
+            \end{itemize}
+            
+            \vspace{0.3cm}
+            
+            \textbf{2. Funciones Logarítmicas}
+            \begin{itemize}
+                \item Forma: $y = \log_b x$
+                \item Inversas de exponenciales
+                \item Ejemplo: $y = \ln x$
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{3. Funciones Trigonométricas}
+            \begin{itemize}
+                \item $\sin(x)$, $\cos(x)$, $\tan(x)$
+                \item Aplicaciones en ciclos económicos
+            \end{itemize}
+            
+            \vspace{0.3cm}
+            
+            \begin{alertblock}{Aplicación}
+                Las funciones exponenciales y logarítmicas son fundamentales en:
+                \begin{itemize}
+                    \item Crecimiento económico
+                    \item Tasas de interés
+                    \item Depreciación
+                \end{itemize}
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ============================================================
+% SECCIÓN 7: REGLAS DE EXPONENTES
+% ============================================================
+\section{Reglas de Exponentes}
+
+\begin{frame}{Reglas Fundamentales de Exponentes}
+\vspace{0.001cm}
+    \begin{block}{Regla I: Producto}
+        $x^m \cdot x^n = x^{m+n}$
+    \end{block}
+    
+    \begin{block}{Regla II: Cociente}
+        $\displaystyle\frac{x^m}{x^n} = x^{m-n}$ \quad ($x \neq 0$, $m > n$)
+    \end{block}
+    
+    \begin{block}{Regla III: Exponente Negativo}
+        $x^{-n} = \displaystyle\frac{1}{x^n}$ \quad ($x \neq 0$)
+    \end{block}
+    
+    \begin{block}{Regla IV: Exponente Cero}
+        $x^0 = 1$ \quad ($x \neq 0$)
+    \end{block}
+    \vspace{0.001cm}
+    
+\end{frame}
+
+\begin{frame}{Reglas Adicionales y Ejemplos}
+    \begin{block}{Regla V: Exponente Fraccionario}
+        $x^{1/n} = \sqrt[n]{x}$
+    \end{block}
+    \begin{block}{Regla VI: Potencia de una Potencia}
+        $(x^m)^n = x^{mn}$
+    \end{block}
+    
+    \begin{block}{Regla VII: Potencia de un Producto}
+        $(xy)^m = x^m y^m$
+    \end{block}
+    
+    \vspace{0.001cm}
+    
+    \textbf{Ejemplos de aplicación:}
+    
+    \begin{enumerate}
+        \item $x^4 \times x^{15} = x^{19}$ \quad (Regla I)
+        
+        \item $\displaystyle\frac{x^3}{x^{-3}} = x^{3-(-3)} = x^6$ \quad (Regla II)
+        
+        \item $(x^{1/2} \times x^{1/3}) / x^{2/3} = x^{5/6} / x^{2/3} = x^{1/6}$ \quad (Reglas I y II)
+        
+        \item $x^3 \times y^3 \times z^3 = (xyz)^3$ \quad (Regla VII)
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Demostración: Exponentes Fraccionarios}
+    \begin{block}{Teorema}
+        $x^{m/n} = \sqrt[n]{x^m} = (\sqrt[n]{x})^m$
+    \end{block}
+    
+    \vspace{0.001cm}
+    
+    \textbf{Demostración (Parte 1):} $x^{m/n} = \sqrt[n]{x^m}$
+    
+    \begin{align*}
+        x^{m/n} &= x^{m \cdot (1/n)} && \text{(Reescribir exponente)}\\
+        &= (x^m)^{1/n} && \text{(Regla VI)}\\
+        &= \sqrt[n]{x^m} && \text{(Regla V)}
+    \end{align*}
+    
+    \vspace{0.001cm}
+    
+    \textbf{Demostración (Parte 2):} $x^{m/n} = (\sqrt[n]{x})^m$
+    
+    \begin{align*}
+        x^{m/n} &= x^{(1/n) \cdot m} && \text{(Reescribir exponente)}\\
+        &= (x^{1/n})^m && \text{(Regla VI)}\\
+        &= (\sqrt[n]{x})^m && \text{(Regla V)}
+    \end{align*}
+\end{frame}
+
+% ============================================================
+% SECCIÓN 8: NIVELES DE GENERALIDAD
+% ============================================================
+\section{Niveles de Generalidad en Modelos}
+
+\begin{frame}{Tres Niveles de Generalidad}
+    \begin{enumerate}
+        \item \textbf{Nivel Numérico (Específico)}
+        \begin{itemize}
+            \item Coeficientes numéricos concretos
+            \item Ejemplo: $y = 6x + 4$
+            \item Resultado: valores numéricos específicos
+            \item Desventaja: poca generalidad
+        \end{itemize}
+        
+        \vspace{0.3cm}
+        
+        \item \textbf{Nivel Paramétrico (Intermedio)}
+        \begin{itemize}
+            \item Coeficientes como parámetros
+            \item Ejemplo: $y = a + bx$
+            \item Resultado: expresiones en términos de parámetros
+            \item Ventaja: familia de soluciones sin repetir razonamiento
+        \end{itemize}
+        
+        \vspace{0.3cm}
+        
+        \item \textbf{Nivel de Función General (Alta Generalidad)}
+        \begin{itemize}
+            \item Notación funcional general
+            \item Ejemplo: $y = f(x)$
+            \item Resultado: aplicabilidad más general
+            \item Requisito: restricciones cualitativas para significado económico
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Comparación de Niveles de Generalidad}
+    \begin{center}
+        \begin{tabular}{p{3cm}p{3cm}p{3.5cm}p{3cm}}
+            \toprule
+            \textbf{Nivel} & \textbf{Ejemplo} & \textbf{Representación} & \textbf{Aplicabilidad}\\
+            \midrule
+            Numérico & $y = 1$ & Una curva única & Muy limitada\\
+            & $y = 6x + 4$ & & \\
+            \midrule
+            Paramétrico & $y = a$ & Familia de curvas & Intermedia\\
+            & $y = a + bx$ & & \\
+            \midrule
+            General & $y = f(x)$ & Sin restricción & Muy amplia\\
+            & $z = g(x,y)$ & de forma & \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    
+    \vspace{0.5cm}
+    
+    \begin{alertblock}{Principio}
+        Mayor generalidad $\Rightarrow$ resultados más amplios pero requieren restricciones cualitativas
+    \end{alertblock}
+\end{frame}
+
+% ============================================================
+% SECCIÓN 9: EJERCICIOS Y APLICACIONES
+% ============================================================
+\section{Ejercicios y Aplicaciones}
+
+\begin{frame}{Ejercicio: Dominio e Imagen}
+    \begin{exampleblock}{Problema}
+        Si $y = 5 + 3x$ con dominio $\{x \mid 1 < x < 9\}$, determine la imagen.
+    \end{exampleblock}
+    
+    \vspace{0.3cm}
+    
+    \textbf{Solución:}
+    
+    La función es lineal con pendiente positiva ($3 > 0$), por tanto es estrictamente creciente.
+    
+    \begin{itemize}
+        \item Valor mínimo (cuando $x \to 1^+$):
+        $y_{\min} = 5 + 3(1) = 8$
+        
+        \item Valor máximo (cuando $x \to 9^-$):
+        $y_{\max} = 5 + 3(9) = 32$
+    \end{itemize}
+    
+    Como el dominio es abierto ($1 < x < 9$), la imagen también es abierta:
+    
+    \begin{alertblock}{Respuesta}
+        Imagen $= \{y \mid 8 < y < 32\}$
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{Ejercicio: Función Cuadrática}
+    \begin{exampleblock}{Problema}
+        Para $y = -x^2$ con dominio $\{x \mid x \geq 0\}$, ¿cuál es la imagen?
+    \end{exampleblock}
+    
+    \vspace{0.3cm}
+    
+    \textbf{Análisis:}
+    
+    \begin{enumerate}
+        \item Como $x \geq 0$, entonces $x^2 \geq 0$
+        
+        \item Por tanto, $-x^2 \leq 0$, es decir, $y \leq 0$
+        
+        \item Valor máximo: cuando $x = 0$, $y = -(0)^2 = 0$
+        
+        \item A medida que $x \to \infty$, $y \to -\infty$
+    \end{enumerate}
+    
+    \vspace{0.3cm}
+    
+    \begin{alertblock}{Respuesta}
+        Imagen $= \{y \mid y \leq 0\}$ (números reales no positivos)
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{Aplicación: Función de Costo}
+    \begin{exampleblock}{Contexto Económico}
+        En la teoría de la empresa: $C = f(Q)$
+    \end{exampleblock}
+    
+    \vspace{0.3cm}
+    
+    \textbf{Preguntas:}
+    
+    \begin{enumerate}
+        \item ¿Cada costo debe relacionarse con un nivel de producción único?
+        
+        \textbf{Respuesta:} \textcolor{red}{No}. La definición de función permite que varios valores de $Q$ se asocien al mismo $C$.
+        
+        \vspace{0.3cm}
+        
+        \item ¿Cada nivel de producción debe determinar un costo único?
+        
+        \textbf{Respuesta:} \textcolor{blue}{Sí}. Para ser función, cada $Q$ debe tener exactamente un $C$ asociado.
+    \end{enumerate}
+    
+    \vspace{0.3cm}
+    
+    \begin{alertblock}{Justificación Económica}
+        $C = f(Q)$ representa el \textbf{costo mínimo} (óptimo) de producir $Q$, asumiendo comportamiento eficiente de la empresa.
+    \end{alertblock}
+\end{frame}
+
+% ============================================================
+% CONCLUSIONES Y REFERENCIAS
+% ============================================================
+\section{Conclusiones}
+
+\begin{frame}{Síntesis de Contenidos}
+    \begin{block}{Hemos cubierto:}
+        \begin{enumerate}
+            \item \textbf{Modelos económicos:} estructura, variables y ecuaciones
+            \item \textbf{Tipos de análisis:} estático, comparativo, optimización y dinámico
+            \item \textbf{Fundamentos matemáticos:} números reales, conjuntos y operaciones
+            \item \textbf{Relaciones y funciones:} definiciones, componentes y propiedades
+            \item \textbf{Clasificación de funciones:} polinomiales, racionales y trascendentes
+            \item \textbf{Reglas de exponentes:} propiedades fundamentales
+            \item \textbf{Niveles de generalidad:} numérico, paramétrico y general
+        \end{enumerate}
+    \end{block}
+    
+    \vspace{0.3cm}
+    
+    \begin{alertblock}{Importancia}
+        Estos fundamentos son \textbf{esenciales} para el análisis económico riguroso y la construcción de modelos formales.
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Referencias}
+    \begin{thebibliography}{99}
+        \bibitem{Chiang2005}
+        Chiang, A. C. y Wainwright, K. (2005).
+        \textit{Fundamentos de Economía Matemática}.
+        4ª ed. McGraw-Hill.
+        ISBN: 978-970-10-5597-3.
+        
+        \bibitem{SimonBlume1994}
+        Simon, C. P. y Blume, L. (1994).
+        \textit{Mathematics for Economists}.
+        W. W. Norton \& Company.
+        ISBN: 978-0-393-95733-4.
+        
+        \framebreak
+        
+        \bibitem{SydsaeterHammond2008}
+        Sydsæter, K. y Hammond, P. (2008).
+        \textit{Essential Mathematics for Economic Analysis}.
+        3ª ed. Pearson Education.
+        ISBN: 978-0-273-71324-8.
+        
+        \bibitem{Varian1992}
+        Varian, H. R. (1992).
+        \textit{Microeconomic Analysis}.
+        3ª ed. W. W. Norton \& Company.
+        ISBN: 978-0-393-95735-8.
+        
+        \bibitem{Debreu1959}
+        Debreu, G. (1959).
+        \textit{Theory of Value: An Axiomatic Analysis of Economic Equilibrium}.
+        Yale University Press. Cowles Foundation Monograph 17.
+    \end{thebibliography}
+\end{frame}
+
+\begin{frame}[plain]
+    \begin{center}
+        \Huge\textcolor{AzulUPTC}{\textbf{¡Gracias!}}
+        
+        \vspace{1cm}
+        
+        \Large Preguntas y Discusión
+        
+        \vspace{1.5cm}
+        
+        \normalsize
+        \begin{tabular}{rl}
+            \textbf{Contacto:} & \href{mailto:emanuel.quintana@uptc.edu.co}{emanuel.quintana@uptc.edu.co}\\[0.3cm]
+            \textbf{GitHub:} & \href{https://github.com/emanuelquintana-glitch}{github.com/emanuelquintana-glitch}\\[0.3cm]
+            \textbf{ORCID:} & 0009-0006-8419-2805
+        \end{tabular}
+        
+        \vspace{1cm}
+        
+        \includegraphics[height=1.5cm]{uptc-logo.png}
+    \end{center}
+\end{frame}
+
+\end{document}

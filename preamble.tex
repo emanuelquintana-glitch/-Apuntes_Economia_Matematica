@@ -1,0 +1,225 @@
+% ============================================
+% PREAMBLE.TEX - CONFIGURACIÓN GENERAL
+% ============================================
+
+% Codificación y fuentes
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% Matemáticas
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+\usepackage{dsfont}
+
+% Geometría y espaciado
+\usepackage[a4paper,
+            top=3cm,
+            bottom=3cm,
+            left=3.5cm,
+            right=2.5cm,
+            headheight=14pt]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% Colores (Paleta azul estilo Göttingen)
+\usepackage{xcolor}
+\definecolor{goettingenblue}{RGB}{0,57,91}        % Azul principal
+\definecolor{goettingenlightblue}{RGB}{0,120,180} % Azul claro
+\definecolor{goettingendarkblue}{RGB}{0,40,70}    % Azul oscuro
+\definecolor{accentblue}{RGB}{51,102,153}         % Azul acento
+\definecolor{theoremblue}{RGB}{240,248,255}       % Fondo teoremas
+
+% Gráficos y figuras
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning,calc,decorations.pathreplacing}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% Tablas
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+
+% Enlaces e hipervínculos
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=goettingenblue,
+    citecolor=goettingenlightblue,
+    urlcolor=accentblue,
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    pdftitle={Apuntes de Economía Matemática},
+    pdfauthor={Emanuel Quintana},
+    pdfsubject={Economía Matemática},
+    pdfkeywords={Economía, Matemáticas, Modelos Económicos}
+}
+
+% Bibliografía
+\usepackage[backend=biber,
+            style=authoryear,
+            sorting=nyt,
+            maxcitenames=2,
+            maxbibnames=99]{biblatex}
+\addbibresource{bibliography/referencias.bib}
+
+% Teoremas y entornos matemáticos
+\usepackage{thmtools}
+\usepackage[framemethod=tikz]{mdframed}
+
+\mdfdefinestyle{theoremstyle}{
+    linecolor=goettingenblue,
+    linewidth=2pt,
+    topline=true,
+    bottomline=true,
+    rightline=false,
+    leftline=false,
+    innertopmargin=8pt,
+    innerbottommargin=8pt,
+    innerrightmargin=10pt,
+    innerleftmargin=10pt,
+    backgroundcolor=theoremblue,
+    frametitlebackgroundcolor=goettingenblue,
+    frametitlefont=\bfseries\color{white},
+    frametitlerule=true,
+    frametitlerulewidth=0pt,
+}
+
+\mdfdefinestyle{definitionstyle}{
+    linecolor=goettingenlightblue,
+    linewidth=2pt,
+    topline=true,
+    bottomline=true,
+    rightline=false,
+    leftline=false,
+    innertopmargin=8pt,
+    innerbottommargin=8pt,
+    innerrightmargin=10pt,
+    innerleftmargin=10pt,
+    backgroundcolor=white,
+    frametitlebackgroundcolor=goettingenlightblue,
+    frametitlefont=\bfseries\color{white},
+}
+
+\mdfdefinestyle{examplestyle}{
+    linecolor=accentblue,
+    linewidth=1.5pt,
+    topline=true,
+    bottomline=true,
+    rightline=false,
+    leftline=true,
+    innertopmargin=8pt,
+    innerbottommargin=8pt,
+    innerrightmargin=10pt,
+    innerleftmargin=10pt,
+    backgroundcolor=white,
+}
+
+% Definición de entornos
+\declaretheoremstyle[
+    mdframed={style=theoremstyle},
+    headfont=\bfseries\color{goettingenblue},
+    bodyfont=\normalfont,
+    spaceabove=12pt,
+    spacebelow=12pt,
+]{theoremstyle}
+
+\declaretheoremstyle[
+    mdframed={style=definitionstyle},
+    headfont=\bfseries\color{goettingenlightblue},
+    bodyfont=\normalfont,
+    spaceabove=12pt,
+    spacebelow=12pt,
+]{definitionstyle}
+
+\declaretheoremstyle[
+    mdframed={style=examplestyle},
+    headfont=\bfseries\color{accentblue},
+    bodyfont=\normalfont,
+    spaceabove=10pt,
+    spacebelow=10pt,
+]{examplestyle}
+
+\declaretheorem[style=theoremstyle,name=Teorema,numberwithin=chapter]{theorem}
+\declaretheorem[style=theoremstyle,name=Lema,sibling=theorem]{lemma}
+\declaretheorem[style=theoremstyle,name=Proposición,sibling=theorem]{proposition}
+\declaretheorem[style=theoremstyle,name=Corolario,sibling=theorem]{corollary}
+
+\declaretheorem[style=definitionstyle,name=Definición,numberwithin=chapter]{definition}
+\declaretheorem[style=definitionstyle,name=Axioma,sibling=definition]{axiom}
+
+\declaretheorem[style=examplestyle,name=Ejemplo,numberwithin=chapter]{example}
+\declaretheorem[style=examplestyle,name=Ejercicio,sibling=example]{exercise}
+
+\declaretheoremstyle[
+    headfont=\bfseries\color{goettingendarkblue},
+    bodyfont=\normalfont\itshape,
+    spaceabove=8pt,
+    spacebelow=8pt,
+    qed=$\blacksquare$,
+]{proofstyle}
+\declaretheorem[style=proofstyle,name=Demostración,numbered=no]{prf}
+
+% Encabezados y pies de página
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\textcolor{goettingenblue}{\slshape\leftmark}}
+\fancyhead[RO]{\textcolor{goettingenblue}{\slshape\rightmark}}
+\fancyfoot[C]{\textcolor{goettingenblue}{\thepage}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{goettingenblue}\leaders\hrule height \headrulewidth\hfill}}
+
+% Formato de capítulos
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{goettingenblue}}
+  {\filleft\Huge\textcolor{goettingenlightblue}{\chaptertitlename\ \thechapter}}
+  {4ex}
+  {\titlerule[2pt]\vspace{2ex}\filleft}
+  [\vspace{2ex}\titlerule[2pt]]
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{goettingenblue}}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{goettingenlightblue}}
+  {\thesubsection}{1em}{}
+
+% Listas
+\usepackage{enumitem}
+\setlist[itemize]{label=\textcolor{goettingenblue}{$\bullet$}}
+\setlist[enumerate]{label=\textcolor{goettingenblue}{\arabic*.}}
+
+% Cajas de observaciones y notas
+\usepackage[most]{tcolorbox}
+\newtcolorbox{observacion}{
+    colback=theoremblue,
+    colframe=goettingenlightblue,
+    fonttitle=\bfseries,
+    title=Observación,
+    arc=3mm,
+    boxrule=1pt,
+}
+
+\newtcolorbox{nota}{
+    colback=white,
+    colframe=accentblue,
+    fonttitle=\bfseries,
+    title=Nota,
+    arc=2mm,
+    boxrule=1pt,
+}
+
+% Otros paquetes útiles
+\usepackage{csquotes}
+\usepackage{lipsum}
+\usepackage{subcaption}
