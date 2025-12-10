@@ -1,0 +1,653 @@
+---
+title: "Capítulo 2: Revisión de Aritmética y Álgebra"
+subtitle: "Fundamentos Matemáticos para el Análisis Económico"
+author: "Emanuel Quintana Silva"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    number-sections: true
+    code-fold: show
+    code-tools: true
+    code-line-numbers: true
+    fig-align: center
+    theme: cosmo
+    css: ../../../styles.css
+    smooth-scroll: true
+execute:
+  keep-ipynb: true
+bibliography: ../../../referencias/bibliografia.bib
+csl: ../../../referencias/apa.csl
+lang: es
+number-sections: false
+---
+
+# Introducción {#sec-intro-cap02}
+
+El análisis económico matemático se fundamenta en el sistema de números reales y las estructuras algebraicas que permiten representar relaciones económicas de manera precisa y rigurosa. Este capítulo establece las bases matemáticas necesarias para el estudio de modelos económicos, desde los conceptos elementales de conjuntos hasta las funciones generales que caracterizan el comportamiento de variables económicas.
+
+La importancia de una sólida comprensión de estos fundamentos radica en que las variables económicas—precio, costo, ingreso, producción, entre otras—adoptan valores numéricos que deben ser manipulados mediante operaciones algebraicas precisas. Más aún, las relaciones entre estas variables se expresan típicamente mediante funciones matemáticas cuyas propiedades determinan el comportamiento del sistema económico bajo análisis [@chiang2005].
+
+::: {.callout-note}
+## Objetivo del capítulo
+
+Establecer una base rigurosa de conceptos matemáticos fundamentales que servirán como herramientas analíticas para el desarrollo de modelos económicos. Se enfatiza la precisión conceptual y la aplicabilidad económica de cada construcción matemática presentada.
+:::
+
+---
+
+# El Sistema de Números Reales {#sec-numeros-reales}
+
+## Definición y Estructura
+
+El **sistema de números reales**, denotado por $\mathbb{R}$, constituye un continuo numérico fundamental para el análisis económico matemático. Este sistema proporciona el marco dentro del cual se definen y operan las variables económicas.
+
+::: {.callout-important}
+## Definición: Números Reales
+
+El conjunto $\mathbb{R}$ de los números reales es la unión de los conjuntos de números racionales ($\mathbb{Q}$) e irracionales ($\mathbb{I}$):
+
+$$\mathbb{R} = \mathbb{Q} \cup \mathbb{I}$$
+
+Este conjunto forma un **campo ordenado completo** bajo las operaciones de adición y multiplicación.
+:::
+
+## Números Racionales
+
+Los **números racionales** constituyen el subconjunto de números reales que pueden expresarse como el cociente de dos enteros.
+
+**Definición formal:**
+
+$$\mathbb{Q} = \left\{\frac{p}{q} \mid p, q \in \mathbb{Z}, \, q \neq 0\right\}$$
+
+donde $\mathbb{Z}$ denota el conjunto de los números enteros.
+
+**Componentes del conjunto racional:**
+
+1. **Enteros positivos ($\mathbb{Z}^+$):** Utilizados para conteo y enumeración: $\{1, 2, 3, 4, \ldots\}$
+
+2. **Enteros negativos ($\mathbb{Z}^-$):** Representan magnitudes con sentido opuesto: $\{-1, -2, -3, \ldots\}$
+
+3. **Cero:** Elemento neutro de la adición, denotado por $0$
+
+4. **Fracciones:** Cocientes de enteros donde el denominador es distinto de cero
+
+**Propiedades características:**
+
+::: {.callout-tip}
+## Representación decimal de racionales
+
+Todo número racional admite una representación decimal que es:
+
+- **Finita (terminante):** $\frac{1}{4} = 0.25$, $\frac{3}{8} = 0.375$
+
+- **Periódica (infinita repetitiva):** $\frac{1}{3} = 0.\overline{3} = 0.333\ldots$, $\frac{2}{11} = 0.\overline{18} = 0.181818\ldots$
+
+La barra superior indica el bloque de dígitos que se repite indefinidamente.
+:::
+
+**Ejemplos económicos:**
+
+- Tasas de interés expresadas como fracciones: $r = \frac{5}{100} = 0.05$ (5%)
+- Proporciones de consumo: $c = \frac{3}{4}$ del ingreso disponible
+- Precios en unidades monetarias: $P = \frac{125}{10} = 12.5$ (doce unidades y media)
+
+## Números Irracionales
+
+Los **números irracionales** son aquellos números reales que no pueden expresarse como cociente de dos enteros.
+
+**Definición formal:**
+
+$$\mathbb{I} = \mathbb{R} \setminus \mathbb{Q} = \{x \in \mathbb{R} \mid x \notin \mathbb{Q}\}$$
+
+**Propiedades características:**
+
+::: {.callout-tip}
+## Representación decimal de irracionales
+
+Los números irracionales poseen representaciones decimales **infinitas no periódicas**. No existe un patrón repetitivo en su expansión decimal.
+:::
+
+**Ejemplos fundamentales:**
+
+| Número | Símbolo | Valor aproximado | Contexto |
+|:-------|:--------|:-----------------|:---------|
+| Raíz cuadrada de 2 | $\sqrt{2}$ | $1.41421356\ldots$ | Geometría, optimización |
+| Pi | $\pi$ | $3.14159265\ldots$ | Geometría circular, funciones trigonométricas |
+| Euler | $e$ | $2.71828182\ldots$ | Crecimiento exponencial continuo |
+| Razón áurea | $\phi$ | $1.61803398\ldots$ | Proporciones, series de Fibonacci |
+
+: Números irracionales fundamentales {#tbl-irracionales}
+
+**Aplicaciones económicas:**
+
+- La constante $e$ aparece en modelos de crecimiento continuo: $Q(t) = Q_0 e^{rt}$
+- $\pi$ surge en modelos con simetría circular o periódica
+- $\sqrt{2}$ aparece en problemas de optimización geométrica
+
+## La Recta Real
+
+La representación geométrica del conjunto $\mathbb{R}$ es la **recta real**, donde cada punto corresponde biunívocamente a un número real.
+
+```{r}
+#| label: fig-recta-real
+#| fig-cap: "Representación geométrica de la recta real"
+#| echo: false
+#| warning: false
+
+library(ggplot2)
+
+# Crear datos para la recta real
+df <- data.frame(x = seq(-5, 5, by = 0.01), y = 0)
+
+# Puntos específicos
+puntos <- data.frame(
+  x = c(-3, -1.5, 0, sqrt(2), pi, 4),
+  y = rep(0, 6),
+  label = c("-3", "-1.5", "0", "√2", "π", "4")
+)
+
+ggplot() +
+  geom_line(data = df, aes(x = x, y = y), linewidth = 1) +
+  geom_point(data = puntos, aes(x = x, y = y), size = 3, color = "red") +
+  geom_text(data = puntos, aes(x = x, y = y, label = label), 
+            vjust = -1.5, size = 4) +
+  geom_segment(data = puntos, aes(x = x, xend = x, y = -0.05, yend = 0.05),
+               linewidth = 0.5) +
+  scale_x_continuous(breaks = seq(-5, 5, 1)) +
+  theme_minimal() +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.title = element_blank(),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank()
+  ) +
+  labs(caption = "La recta real incluye tanto números racionales como irracionales")
+```
+
+::: {.callout-note}
+## Completitud de los números reales
+
+Los números irracionales "llenan" los espacios entre los números racionales, completando así el continuo numérico. Esta propiedad de **completitud** es fundamental para el análisis matemático y garantiza la existencia de límites y valores extremos en el análisis económico [@simon1994].
+:::
+
+---
+
+# Teoría de Conjuntos {#sec-conjuntos}
+
+## Conceptos Fundamentales
+
+La **teoría de conjuntos** proporciona el lenguaje formal para expresar colecciones de objetos y sus relaciones, constituyendo la base sobre la cual se construyen las estructuras matemáticas utilizadas en economía.
+
+::: {.callout-important}
+## Definición: Conjunto
+
+Un **conjunto** es una colección bien definida de objetos distintos. Los objetos que pertenecen a un conjunto se denominan **elementos** o **miembros** del conjunto.
+:::
+
+## Notación y Representación
+
+**Notación estándar:** Los conjuntos se denotan con letras mayúsculas ($A, B, C, \ldots$) y se encierran entre llaves: $\{\}$
+
+**Métodos de especificación:**
+
+1. **Por enumeración (extensión):** Se listan explícitamente todos los elementos.
+
+   $$S = \{2, 3, 5, 7, 11\}$$
+
+2. **Por comprensión (descripción):** Se especifica la propiedad que caracteriza a los elementos.
+
+   $$S = \{x \mid x \text{ es un número primo menor que 12}\}$$
+
+   Lectura: "El conjunto $S$ de todos los objetos $x$ tales que $x$ es un número primo menor que 12"
+
+**Relación de pertenencia:**
+
+- $x \in A$: "$x$ es elemento de $A$" o "$x$ pertenece a $A$"
+- $x \notin A$: "$x$ no es elemento de $A$" o "$x$ no pertenece a $A$"
+
+::: {.callout-tip}
+## Ejemplo económico
+
+Sea $\mathcal{B}$ el conjunto de bienes en una economía:
+
+$$\mathcal{B} = \{\text{trigo}, \text{acero}, \text{energía}, \text{transporte}\}$$
+
+Entonces: $\text{trigo} \in \mathcal{B}$ pero $\text{oro} \notin \mathcal{B}$
+:::
+
+## Clasificación de Conjuntos
+
+**Por cardinalidad:**
+
+1. **Conjunto finito:** Contiene un número finito de elementos.
+   
+   $$A = \{1, 2, 3, 4, 5\} \quad \text{donde } |A| = 5$$
+
+2. **Conjunto infinito:** Contiene infinitos elementos.
+   
+   - **Numerable (contable):** $\mathbb{N} = \{1, 2, 3, \ldots\}$
+   - **No numerable:** $\mathbb{R}$ (los números reales)
+
+3. **Conjunto vacío:** No contiene ningún elemento. Se denota $\emptyset$ o $\{\}$
+
+::: {.callout-warning}
+## Distinción importante
+
+El conjunto $\{0\}$ **no es vacío**, pues contiene al número $0$ como elemento. Es decir:
+
+$$\{0\} \neq \emptyset \quad \text{ya que } |\{0\}| = 1$$
+:::
+
+## Relaciones entre Conjuntos
+
+**Igualdad:**
+
+::: {.callout-important}
+## Definición: Igualdad de conjuntos
+
+Dos conjuntos $A$ y $B$ son iguales si y solo si contienen exactamente los mismos elementos:
+
+$$A = B \iff (\forall x)(x \in A \leftrightarrow x \in B)$$
+:::
+
+**Observación:** El orden de aparición de los elementos es irrelevante:
+
+$$\{1, 2, 3\} = \{3, 1, 2\} = \{2, 3, 1\}$$
+
+**Subconjunto:**
+
+::: {.callout-important}
+## Definición: Subconjunto
+
+$A$ es **subconjunto** de $B$ (denotado $A \subseteq B$ o $B \supseteq A$) si todo elemento de $A$ es también elemento de $B$:
+
+$$A \subseteq B \iff (\forall x)(x \in A \Rightarrow x \in B)$$
+:::
+
+**Subconjunto propio:**
+
+$$A \subset B \iff (A \subseteq B) \land (A \neq B)$$
+
+Es decir, $A$ es subconjunto propio de $B$ si $A \subseteq B$ y existe al menos un elemento en $B$ que no está en $A$.
+
+**Ejemplo:**
+
+$$\{1, 2\} \subset \{1, 2, 3\} \quad \text{pero} \quad \{1, 2\} \not\subset \{1, 2\}$$
+
+**Proposición fundamental:**
+
+::: {.callout-note}
+El conjunto vacío es subconjunto de cualquier conjunto:
+
+$$\forall A: \emptyset \subseteq A$$
+:::
+
+**Conjuntos disjuntos:**
+
+::: {.callout-important}
+## Definición: Conjuntos disjuntos
+
+Dos conjuntos $A$ y $B$ son **disjuntos** si no tienen elementos en común:
+
+$$A \cap B = \emptyset$$
+:::
+
+## Operaciones con Conjuntos
+
+**Unión:**
+
+::: {.callout-important}
+## Definición: Unión
+
+La **unión** de $A$ y $B$ (denotada $A \cup B$) es el conjunto de elementos que pertenecen a $A$ **o** a $B$ (o a ambos):
+
+$$A \cup B = \{x \mid x \in A \lor x \in B\}$$
+:::
+
+**Intersección:**
+
+::: {.callout-important}
+## Definición: Intersección
+
+La **intersección** de $A$ y $B$ (denotada $A \cap B$) es el conjunto de elementos que pertenecen **tanto** a $A$ **como** a $B$:
+
+$$A \cap B = \{x \mid x \in A \land x \in B\}$$
+:::
+
+**Complemento:**
+
+::: {.callout-important}
+## Definición: Complemento
+
+Sea $U$ un conjunto universal. El **complemento** de $A$ (denotado $A^c$ o $\overline{A}$) es el conjunto de elementos de $U$ que **no** pertenecen a $A$:
+
+$$A^c = \{x \in U \mid x \notin A\}$$
+:::
+
+**Diferencia:**
+
+$$A \setminus B = \{x \mid x \in A \land x \notin B\} = A \cap B^c$$
+
+## Leyes Algebraicas de Conjuntos
+
+**Leyes conmutativas:**
+
+$$A \cup B = B \cup A$$
+$$A \cap B = B \cap A$$
+
+**Leyes asociativas:**
+
+$$(A \cup B) \cup C = A \cup (B \cup C)$$
+$$(A \cap B) \cap C = A \cap (B \cap C)$$
+
+**Leyes distributivas:**
+
+$$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$$
+$$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$$
+
+**Leyes de De Morgan:**
+
+$$(A \cup B)^c = A^c \cap B^c$$
+$$(A \cap B)^c = A^c \cup B^c$$
+
+**Leyes de idempotencia:**
+
+$$A \cup A = A$$
+$$A \cap A = A$$
+
+**Leyes de identidad:**
+
+$$A \cup \emptyset = A$$
+$$A \cap U = A$$
+
+**Leyes de dominación:**
+
+$$A \cup U = U$$
+$$A \cap \emptyset = \emptyset$$
+
+**Leyes de complemento:**
+
+$$A \cup A^c = U$$
+$$A \cap A^c = \emptyset$$
+$$(A^c)^c = A$$
+
+## Número de Subconjuntos
+
+::: {.callout-note}
+## Teorema: Cardinalidad del conjunto potencia
+
+Si un conjunto $A$ tiene $n$ elementos, el número total de subconjuntos de $A$ (incluyendo $\emptyset$ y el propio $A$) es:
+
+$$|\mathcal{P}(A)| = 2^n$$
+
+donde $\mathcal{P}(A)$ denota el **conjunto potencia** de $A$.
+:::
+
+**Ejemplo:** Si $A = \{a, b, c\}$, entonces $|A| = 3$ y:
+
+$$\mathcal{P}(A) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\}, \{b,c\}, \{a,b,c\}\}$$
+
+con $|\mathcal{P}(A)| = 2^3 = 8$ subconjuntos.
+
+---
+
+# Producto Cartesiano y Pares Ordenados {#sec-producto-cartesiano}
+
+## Pares Ordenados
+
+A diferencia de los conjuntos simples, en los **pares ordenados** el orden de los elementos es significativo.
+
+::: {.callout-important}
+## Definición: Par ordenado
+
+Un **par ordenado** $(a, b)$ es una estructura donde el orden de los elementos importa:
+
+$$(a, b) = (c, d) \iff (a = c) \land (b = d)$$
+
+En particular: $(a, b) \neq (b, a)$ a menos que $a = b$
+:::
+
+**Notación:** Los pares ordenados se encierran entre **paréntesis** $()$, a diferencia de los conjuntos que usan llaves $\{\}$.
+
+**Generalización:** Las **n-tuplas ordenadas** extienden este concepto:
+
+- **Terna ordenada:** $(a, b, c)$
+- **Cuádrupla ordenada:** $(a, b, c, d)$
+- **n-tupla ordenada:** $(a_1, a_2, \ldots, a_n)$
+
+## Producto Cartesiano
+
+::: {.callout-important}
+## Definición: Producto cartesiano
+
+El **producto cartesiano** de dos conjuntos $X$ y $Y$ (denotado $X \times Y$) es el conjunto de todos los pares ordenados $(x, y)$ donde $x \in X$ e $y \in Y$:
+
+$$X \times Y = \{(x, y) \mid x \in X \land y \in Y\}$$
+:::
+
+**Propiedades:**
+
+1. **Cardinalidad:** Si $|X| = m$ y $|Y| = n$, entonces $|X \times Y| = m \cdot n$
+
+2. **No conmutatividad:** En general, $X \times Y \neq Y \times X$
+
+3. **Asociatividad:** $(X \times Y) \times Z \neq X \times (Y \times Z)$, pero ambos son isomorfos a $X \times Y \times Z$
+
+::: {.callout-tip}
+## Ejemplo numérico
+
+Sean $A = \{1, 2\}$ y $B = \{x, y, z\}$. Entonces:
+
+$$A \times B = \{(1,x), (1,y), (1,z), (2,x), (2,y), (2,z)\}$$
+
+$$B \times A = \{(x,1), (x,2), (y,1), (y,2), (z,1), (z,2)\}$$
+
+Claramente $A \times B \neq B \times A$, aunque $|A \times B| = |B \times A| = 6$
+:::
+
+## El Plano Cartesiano
+
+**Construcción geométrica:**
+
+El producto cartesiano $\mathbb{R} \times \mathbb{R} = \mathbb{R}^2$ representa el **plano cartesiano**, donde cada par ordenado $(x, y) \in \mathbb{R}^2$ corresponde a un punto único en el plano.
+
+```{r}
+#| label: fig-plano-cartesiano
+#| fig-cap: "Representación de pares ordenados en el plano cartesiano"
+#| echo: false
+
+library(ggplot2)
+
+# Puntos específicos
+puntos <- data.frame(
+  x = c(2, -3, 4, -1, 0),
+  y = c(3, -2, -1, 4, 0),
+  label = c("(2,3)", "(-3,-2)", "(4,-1)", "(-1,4)", "(0,0)")
+)
+
+ggplot(puntos, aes(x = x, y = y)) +
+  geom_hline(yintercept = 0, linewidth = 0.5) +
+  geom_vline(xintercept = 0, linewidth = 0.5) +
+  geom_point(size = 3, color = "red") +
+  geom_text(aes(label = label), vjust = -1, size = 4) +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-5, 5)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(-5, 5)) +
+  theme_minimal() +
+  labs(x = "Eje x (horizontal)", y = "Eje y (vertical)") +
+  theme(panel.grid.minor = element_blank())
+```
+
+**Cuadrantes del plano:**
+
+| Cuadrante | Región | Condiciones |
+|:---------:|:-------|:------------|
+| I | Superior derecha | $x > 0, y > 0$ |
+| II | Superior izquierda | $x < 0, y > 0$ |
+| III | Inferior izquierda | $x < 0, y < 0$ |
+| IV | Inferior derecha | $x > 0, y < 0$ |
+
+: División del plano cartesiano en cuadrantes {#tbl-cuadrantes}
+
+## Producto Cartesiano de Múltiples Conjuntos
+
+**Generalización:** El producto cartesiano se extiende a $n$ conjuntos:
+
+$$X_1 \times X_2 \times \cdots \times X_n = \{(x_1, x_2, \ldots, x_n) \mid x_i \in X_i \text{ para } i = 1, 2, \ldots, n\}$$
+
+**Caso especial:** $\mathbb{R}^n = \underbrace{\mathbb{R} \times \mathbb{R} \times \cdots \times \mathbb{R}}_{n \text{ veces}}$
+
+**Aplicaciones económicas:**
+
+- $\mathbb{R}^2$: Pares de variables (precio-cantidad, consumo-ingreso)
+- $\mathbb{R}^n$: Vectores de precios, cantidades, o dotaciones en economías con $n$ bienes
+- Espacios de estrategias en teoría de juegos
+
+---
+
+# Relaciones y Funciones {#sec-relaciones-funciones}
+
+## Relaciones
+
+Una **relación** formaliza la idea de asociación entre elementos de dos conjuntos.
+
+::: {.callout-important}
+## Definición: Relación
+
+Una **relación** $R$ de $X$ en $Y$ es cualquier subconjunto del producto cartesiano $X \times Y$:
+
+$$R \subseteq X \times Y$$
+
+Si $(x, y) \in R$, decimos que "$x$ está relacionado con $y$" y escribimos $xRy$.
+:::
+
+**Características:**
+
+- Una relación puede asociar **uno o más valores de $y$** con un valor dado de $x$
+- Una relación puede asociar **ningún valor de $y$** con ciertos valores de $x$
+
+::: {.callout-tip}
+## Ejemplo económico
+
+Sea $X$ el conjunto de empresas y $Y$ el conjunto de productos. La relación $P$ definida por:
+
+$$P = \{(e, p) \mid \text{la empresa } e \text{ produce el producto } p\}$$
+
+indica qué productos fabrica cada empresa. Una empresa puede producir múltiples productos.
+:::
+
+## Funciones
+
+Las **funciones** son relaciones especiales que satisfacen una condición de unicidad.
+
+::: {.callout-important}
+## Definición: Función
+
+Una **función** $f$ de $X$ en $Y$ (denotada $f: X \to Y$) es una relación que asigna a cada elemento $x \in X$ **exactamente un** elemento $y \in Y$:
+
+$$f \subseteq X \times Y \quad \text{tal que} \quad (\forall x \in X)(\exists! y \in Y)[(x,y) \in f]$$
+
+Notación: $y = f(x)$ (se lee "$y$ es igual a $f$ de $x$")
+:::
+
+**Componentes de una función:**
+
+::: {.callout-note}
+Para $f: X \to Y$:
+
+- **Dominio** ($\text{Dom}(f)$): Conjunto de valores permitidos para la variable independiente $x$. Por definición, $\text{Dom}(f) = X$.
+
+- **Codominio**: El conjunto $Y$ donde toman valores las imágenes.
+
+- **Imagen** o **Rango** ($\text{Im}(f)$ o $\text{Ran}(f)$): Conjunto de valores que efectivamente toma la variable dependiente $y$:
+
+  $$\text{Im}(f) = \{y \in Y \mid \exists x \in X: y = f(x)\} \subseteq Y$$
+
+- **Variable independiente** (o **argumento**): $x$
+
+- **Variable dependiente** (o **valor**): $y = f(x)$
+:::
+
+**Terminología alternativa:**
+
+- **Mapeo** o **aplicación**: Sinónimo de función
+- **Transformación**: Usado frecuentemente cuando $X = Y$
+
+## Distinción entre Relación y Función
+
+**Criterio fundamental:**
+
+> **Toda función es una relación, pero no toda relación es una función.**
+
+**Test de la línea vertical:** Una relación gráfica representa una función si y solo si toda línea vertical interseca la gráfica en **a lo sumo un punto**.
+
+```{r}
+#| label: fig-funcion-vs-relacion
+#| fig-cap: "Comparación entre función y relación"
+#| echo: false
+#| fig-width: 10
+#| fig-height: 4
+
+library(ggplot2)
+library(patchwork)
+
+# Gráfica 1: Función (línea recta)
+p1 <- ggplot(data.frame(x = c(-3, 3)), aes(x = x)) +
+  stat_function(fun = function(x) 2*x + 1, linewidth = 1, color = "blue") +
+  geom_vline(xintercept = c(-1, 0, 1), linetype = "dashed", alpha = 0.5) +
+  labs(title = "FUNCIÓN: y = 2x + 1",
+       subtitle = "Cada línea vertical cruza en un solo punto",
+       x = "x", y = "y") +
+  theme_minimal() +
+  coord_cartesian(xlim = c(-3, 3), ylim = c(-5, 7))
+
+# Gráfica 2: No función (círculo)
+circle <- function(x) sqrt(4 - x^2)
+p2 <- ggplot(data.frame(x = c(-2, 2)), aes(x = x)) +
+  stat_function(fun = circle, linewidth = 1, color = "red") +
+  stat_function(fun = function(x) -circle(x), linewidth = 1, color = "red") +
+  geom_vline(xintercept = c(-1, 0, 1), linetype = "dashed", alpha = 0.5) +
+  labs(title = "NO FUNCIÓN: x² + y² = 4",
+       subtitle = "Líneas verticales cruzan en dos puntos",
+       x = "x", y = "y") +
+  theme_minimal() +
+  coord_cartesian(xlim = c(-3, 3), ylim = c(-3, 3))
+
+p1 + p2
+```
+
+## Propiedades de Funciones
+
+**Inyectividad (función uno a uno):**
+
+::: {.callout-note}
+## Definición: Función inyectiva
+
+$f: X \to Y$ es **inyectiva** si elementos distintos del dominio se mapean a elementos distintos del codominio:
+
+$$(\forall x_1, x_2 \in X)[x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)]$$
+
+Equivalentemente: $f(x_1) = f(x_2) \Rightarrow x_1 = x_2$
+:::
+
+**Sobreyectividad (función onto):**
+
+::: {.callout-note}
+## Definición: Función sobreyectiva
+
+$f: X \to Y$ es **sobreyectiva** si cada elemento del codominio es imagen de al menos un elemento del dominio:
+
+$$(\forall y \in Y)(\exists x \in X)[y = f(x)]$$
+
+Es decir: $\text{Im}(f) = Y$
+:::
+
+**Biyectividad:**
+
+::: {.callout-note}
+## Definición: Función biyectiva
+
+$f: X \to Y$ es **biyectiva** si es simultáneamente inyectiva y sobreyectiva. Establece una correspondencia uno a uno entre $X$ e $Y$.
+:::

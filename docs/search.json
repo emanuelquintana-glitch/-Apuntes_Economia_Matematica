@@ -1,961 +1,352 @@
 [
   {
-    "objectID": "prefacio.html",
-    "href": "prefacio.html",
-    "title": "Prefacio",
-    "section": "",
-    "text": "Este trabajo representa mi esfuerzo por organizar y sistematizar los métodos matemáticos fundamentales aplicados al análisis económico.\n\n\nLa necesidad de un recurso integral en español que combine rigor matemático con aplicaciones económicas concretas.\n\n\n\nEl material sigue la estructura clásica del libro de Chiang y Wainwright, organizado en cinco partes progresivas.\n\nEmanuel Quintana Silva\nUPTC, 2025"
-  },
-  {
-    "objectID": "prefacio.html#motivación",
-    "href": "prefacio.html#motivación",
-    "title": "Prefacio",
-    "section": "",
-    "text": "La necesidad de un recurso integral en español que combine rigor matemático con aplicaciones económicas concretas."
-  },
-  {
-    "objectID": "prefacio.html#estructura",
-    "href": "prefacio.html#estructura",
-    "title": "Prefacio",
-    "section": "",
-    "text": "El material sigue la estructura clásica del libro de Chiang y Wainwright, organizado en cinco partes progresivas.\n\nEmanuel Quintana Silva\nUPTC, 2025"
-  },
-  {
-    "objectID": "capitulos/parte_01_introduccion/cap_03_ecuaciones_graficas/notas.html",
-    "href": "capitulos/parte_01_introduccion/cap_03_ecuaciones_graficas/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_03_modelos_insumo_producto/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_03_modelos_insumo_producto/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/notas_completas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_02_solucion/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_02_solucion/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_03_integrales_definidas/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_03_integrales_definidas/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_05_aplicaciones_economia/aplicaciones.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_05_aplicaciones_economia/aplicaciones.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_02_integrales_indefinidas/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_02_integrales_indefinidas/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_06_no_lineales_metodo_grafico/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_06_no_lineales_metodo_grafico/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/notas_completas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_02_solucion/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_02_solucion/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_01_segundo_orden/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_01_segundo_orden/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_02_modelo_samuelson/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_02_modelo_samuelson/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_04_generalizaciones/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_04_generalizaciones/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_02_condiciones_terminales/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_02_condiciones_terminales/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/notas_completas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_06_enfoque_cualitativo/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_06_enfoque_cualitativo/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/notas_completas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_02_dinamica_precio_mercado/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_02_dinamica_precio_mercado/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_05_no_lineales/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_05_no_lineales/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_02_numeros_complejos/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_02_numeros_complejos/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_07_orden_superior/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_07_orden_superior/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/notas_completas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_05_inflacion_desempleo/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_05_inflacion_desempleo/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_03_variables_diferentes/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_03_variables_diferentes/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_05_aplicaciones_estatica_comparativa/modelos_economia.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_05_aplicaciones_estatica_comparativa/modelos_economia.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/notas_completas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_01_diferenciales/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_01_diferenciales/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_06_estatica_comparativa/modelos.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_06_estatica_comparativa/modelos.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_05_funciones_implicitas/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_05_funciones_implicitas/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_02_diferenciales_totales/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_02_diferenciales_totales/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_04_limites/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_04_limites/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_02_tasa_cambio/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_02_tasa_cambio/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_05_desigualdades/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_05_desigualdades/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_07_mas_aplicaciones/aplicaciones.html",
-    "href": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_07_mas_aplicaciones/aplicaciones.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_05_derivadas/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_05_derivadas/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_01_naturaleza_exponenciales/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_01_naturaleza_exponenciales/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/notas_completas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_04_segunda_derivada/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_04_segunda_derivada/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_02_primera_derivada/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_02_primera_derivada/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/notas_completas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_01_valores_optimos/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_01_valores_optimos/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_06_dualidad/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_06_dualidad/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_05_funciones_valor_maximo/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_05_funciones_valor_maximo/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_02_calificacion_restriccion/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_02_calificacion_restriccion/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_07_estatica_comparativa/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_07_estatica_comparativa/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/notas_completas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_02_dos_variables/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_02_dos_variables/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_03_segunda_orden/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_03_segunda_orden/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_02_valores_estacionarios/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_02_valores_estacionarios/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/notas_completas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_07_combinacion_insumos/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_07_combinacion_insumos/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_03_propiedades_determinantes/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_03_propiedades_determinantes/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_06_aplicaciones_modelos/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_06_aplicaciones_modelos/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_05_regla_cramer/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_05_regla_cramer/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/aplicaciones.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/aplicaciones.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html",
-    "title": "Capítulo 4: Modelos Lineales y Álgebra de Matrices",
-    "section": "",
-    "text": "Contenido del capítulo.\n\n\n\n\n\nContenido de la sección 1.\n\n\n\n\n\n\nEjemplo práctico.\n\n\n\n\n\n\nEnunciado del ejercicio.\n\nCapítulo en desarrollo"
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#introducción",
-    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#introducción",
-    "title": "Capítulo 4: Modelos Lineales y Álgebra de Matrices",
-    "section": "",
-    "text": "Contenido del capítulo."
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#desarrollo-teórico",
-    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#desarrollo-teórico",
-    "title": "Capítulo 4: Modelos Lineales y Álgebra de Matrices",
-    "section": "",
-    "text": "Contenido de la sección 1."
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejemplos",
-    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejemplos",
-    "title": "Capítulo 4: Modelos Lineales y Álgebra de Matrices",
-    "section": "",
-    "text": "Ejemplo práctico."
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejercicios",
-    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejercicios",
-    "title": "Capítulo 4: Modelos Lineales y Álgebra de Matrices",
-    "section": "",
-    "text": "Enunciado del ejercicio.\n\nCapítulo en desarrollo"
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_06_transpuestas_inversas/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_06_transpuestas_inversas/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "template_capitulo.html",
-    "href": "template_capitulo.html",
-    "title": "Título del Capítulo",
-    "section": "",
-    "text": "1 Introducción\nContenido del capítulo…"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Economía Matemática",
     "section": "",
-    "text": "Bienvenido al repositorio de Economía Matemática.\n\n\nEste repositorio contiene apuntes completos de Economía Matemática basados en Métodos Fundamentales de Economía Matemática.\n\n\n\nParte I: Fundamentos Matemáticos\nParte II: Álgebra de Matrices\nParte III: Estática Comparativa\nParte IV: Optimización\nParte V: Análisis Dinámico\n\n\n\n\n\nEmanuel Quintana Silva\nEconomista en formación - UPTC\nemanuel.quintana@uptc.edu.co"
+    "text": "1 Bienvenido\nBienvenido al repositorio de Economía Matemática.",
+    "crumbs": [
+      "<span class='chapter-number'>119</span>  <span class='chapter-title'>Economía Matemática</span>"
+    ]
   },
   {
     "objectID": "index.html#contenido",
     "href": "index.html#contenido",
     "title": "Economía Matemática",
-    "section": "",
-    "text": "Este repositorio contiene apuntes completos de Economía Matemática basados en Métodos Fundamentales de Economía Matemática.\n\n\n\nParte I: Fundamentos Matemáticos\nParte II: Álgebra de Matrices\nParte III: Estática Comparativa\nParte IV: Optimización\nParte V: Análisis Dinámico"
+    "section": "1.1 Contenido",
+    "text": "1.1 Contenido\nEste repositorio contiene apuntes completos de Economía Matemática basados en Métodos Fundamentales de Economía Matemática.\n\n1.1.1 Estructura\n\nParte I: Fundamentos Matemáticos\nParte II: Álgebra de Matrices\nParte III: Estática Comparativa\nParte IV: Optimización\nParte V: Análisis Dinámico",
+    "crumbs": [
+      "<span class='chapter-number'>119</span>  <span class='chapter-title'>Economía Matemática</span>"
+    ]
   },
   {
     "objectID": "index.html#autor",
     "href": "index.html#autor",
     "title": "Economía Matemática",
-    "section": "",
-    "text": "Emanuel Quintana Silva\nEconomista en formación - UPTC\nemanuel.quintana@uptc.edu.co"
+    "section": "1.2 Autor",
+    "text": "1.2 Autor\nEmanuel Quintana Silva\nEconomista en formación - UPTC\nemanuel.quintana@uptc.edu.co",
+    "crumbs": [
+      "<span class='chapter-number'>119</span>  <span class='chapter-title'>Economía Matemática</span>"
+    ]
   },
   {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_05_identidad_nulas/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_05_identidad_nulas/notas.html",
-    "title": "",
+    "objectID": "prefacio.html",
+    "href": "prefacio.html",
+    "title": "120  Prefacio",
     "section": "",
-    "text": "Código"
+    "text": "121 Prefacio\nEste trabajo representa mi esfuerzo por organizar y sistematizar los métodos matemáticos fundamentales aplicados al análisis económico.",
+    "crumbs": [
+      "<span class='chapter-number'>120</span>  <span class='chapter-title'>Prefacio</span>"
+    ]
   },
   {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_04_leyes_algebraicas/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_04_leyes_algebraicas/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
+    "objectID": "prefacio.html#motivación",
+    "href": "prefacio.html#motivación",
+    "title": "120  Prefacio",
+    "section": "121.1 Motivación",
+    "text": "121.1 Motivación\nLa necesidad de un recurso integral en español que combine rigor matemático con aplicaciones económicas concretas.",
+    "crumbs": [
+      "<span class='chapter-number'>120</span>  <span class='chapter-title'>Prefacio</span>"
+    ]
   },
   {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_03_vectores/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_03_vectores/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
+    "objectID": "prefacio.html#estructura",
+    "href": "prefacio.html#estructura",
+    "title": "120  Prefacio",
+    "section": "121.2 Estructura",
+    "text": "121.2 Estructura\nEl material sigue la estructura clásica del libro de Chiang y Wainwright, organizado en cinco partes progresivas.\n\nEmanuel Quintana Silva\nUPTC, 2025",
+    "crumbs": [
+      "<span class='chapter-number'>120</span>  <span class='chapter-title'>Prefacio</span>"
+    ]
   },
   {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/notas.html",
-    "title": "",
+    "objectID": "capitulos/parte_01_introduccion/README.html",
+    "href": "capitulos/parte_01_introduccion/README.html",
+    "title": "121  Parte I: Introducción",
     "section": "",
-    "text": "Código"
+    "text": "122 Introducción a la Economía Matemática\nEsta parte cubre los fundamentos básicos necesarios para el estudio de la economía matemática.",
+    "crumbs": [
+      "<span class='chapter-number'>121</span>  <span class='chapter-title'>Parte I: Introducción</span>"
+    ]
   },
   {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_07_leontief_insumo_producto/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_07_leontief_insumo_producto/notas.html",
-    "title": "",
+    "objectID": "capitulos/parte_01_introduccion/README.html#capítulos",
+    "href": "capitulos/parte_01_introduccion/README.html#capítulos",
+    "title": "121  Parte I: Introducción",
+    "section": "122.1 Capítulos",
+    "text": "122.1 Capítulos\n\nNaturaleza de la Economía Matemática\nRevisión de Aritmética y Álgebra\nEcuaciones y Gráficas",
+    "crumbs": [
+      "<span class='chapter-number'>121</span>  <span class='chapter-title'>Parte I: Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html",
+    "title": "126  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
     "section": "",
-    "text": "Código"
+    "text": "127 Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "crumbs": [
+      "<span class='chapter-number'>126</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#introducción",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#introducción",
+    "title": "126  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "127.1 Introducción",
+    "text": "127.1 Introducción\nContenido del capítulo.",
+    "crumbs": [
+      "<span class='chapter-number'>126</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#desarrollo-teórico",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#desarrollo-teórico",
+    "title": "126  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "127.2 Desarrollo teórico",
+    "text": "127.2 Desarrollo teórico\n\n127.2.1 Sección 1\nContenido de la sección 1.",
+    "crumbs": [
+      "<span class='chapter-number'>126</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejemplos",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejemplos",
+    "title": "126  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "127.3 Ejemplos",
+    "text": "127.3 Ejemplos\n\n127.3.1 Ejemplo 1.1\nEjemplo práctico.",
+    "crumbs": [
+      "<span class='chapter-number'>126</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejercicios",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejercicios",
+    "title": "126  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "127.4 Ejercicios",
+    "text": "127.4 Ejercicios\n\n127.4.1 Ejercicio 1\nEnunciado del ejercicio.\n\nCapítulo en desarrollo",
+    "crumbs": [
+      "<span class='chapter-number'>126</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
   },
   {
     "objectID": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/notas_completas.html",
     "href": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/notas_completas.html",
     "title": "",
     "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_02_determinantes/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_02_determinantes/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/algoritmos.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/algoritmos.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_01_no_singularidad/notas.html",
-    "href": "capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_01_no_singularidad/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_04_cuasiconcavidad/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_04_cuasiconcavidad/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_05_maximizacion_utilidad/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_05_maximizacion_utilidad/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_06_funciones_homogeneas/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_06_funciones_homogeneas/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_05_concavidad_convexidad/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_05_concavidad_convexidad/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_03_formas_cuadraticas/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_03_formas_cuadraticas/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_04_mas_de_dos_variables/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_04_mas_de_dos_variables/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_01_version_diferencial/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_01_version_diferencial/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_01_kuhn_tucker/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_01_kuhn_tucker/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_04_teoremas_suficiencia/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_04_teoremas_suficiencia/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_13_temas_adicionales/notas_completas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_13_temas_adicionales/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_06_n_esima_derivada/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_06_n_esima_derivada/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_03_derivadas_superiores/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_03_derivadas_superiores/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_05_series_taylor_maclaurin/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_05_series_taylor_maclaurin/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_06_fecha_optima/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_06_fecha_optima/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_03_logaritmos/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_03_logaritmos/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_04_funciones_logaritmicas/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_04_funciones_logaritmicas/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_02_funcion_natural_crecimiento/notas.html",
-    "href": "capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_02_funcion_natural_crecimiento/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_03_pendiente_curva/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_03_pendiente_curva/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_06_teoremas_limites/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_06_teoremas_limites/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_07_continuidad_diferenciabilidad/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_07_continuidad_diferenciabilidad/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/notas_completas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_03_reglas_diferenciales/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_03_reglas_diferenciales/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_04_derivadas_totales/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_04_derivadas_totales/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_06_jacobianos/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_06_jacobianos/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_04_diferenciacion_parcial/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_04_diferenciacion_parcial/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_02_dos_o_mas_funciones/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_02_dos_o_mas_funciones/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_01_una_variable/notas.html",
-    "href": "capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_01_una_variable/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_06_termino_variable/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_06_termino_variable/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_03_raices_complejas/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_03_raices_complejas/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_04_modelo_expectativas/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_04_modelo_expectativas/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_01_segundo_orden/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_01_segundo_orden/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_03_coeficiente_variable/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_03_coeficiente_variable/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_07_modelo_solow/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_07_modelo_solow/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_01_lineales_coeficientes_constantes/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_01_lineales_coeficientes_constantes/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_04_ecuaciones_exactas/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_04_ecuaciones_exactas/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_01_naturaleza/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_01_naturaleza/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_05_horizonte_infinito/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_05_horizonte_infinito/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_03_inflacion_desempleo_discreto/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_03_inflacion_desempleo_discreto/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/notas_completas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_03_estabilidad/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_03_estabilidad/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_05_modelo_inventario/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_05_modelo_inventario/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_04_modelo_telarana/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_04_modelo_telarana/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_06_modelo_domar/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_06_modelo_domar/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_04_integrales_impropias/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_04_integrales_impropias/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/notas_completas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/notas_completas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_04_inflacion_desempleo/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_04_inflacion_desempleo/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_05_diagramas_fase/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_05_diagramas_fase/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_06_linealizacion/notas.html",
-    "href": "capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_06_linealizacion/notas.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html",
-    "href": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html",
-    "title": "Capítulo 1: Naturaleza de la Economía Matemática",
-    "section": "",
-    "text": "La economía matemática representa uno de los desarrollos metodológicos más significativos en la ciencia económica del siglo XX (Chiang & Wainwright, 2005). Su evolución desde los trabajos pioneros de Cournot (1838) hasta la formalización axiomática de Debreu (1959) ha transformado radicalmente la manera en que comprendemos y analizamos los fenómenos económicos.\nEste capítulo establece los fundamentos conceptuales que distinguen la economía matemática como método analítico, no como rama sustantiva de la economía. Exploraremos su alcance, metodología, y la relación dialéctica con enfoques complementarios como la econometría y el análisis cualitativo (Simon & Blume, 1994).\n\n\nAl finalizar este capítulo, el estudiante será capaz de:\n\nComprender la definición formal y el alcance metodológico de la economía matemática\nDistinguir entre economía matemática y economía literaria, identificando ventajas comparativas\nDiferenciar economía matemática de econometría, reconociendo su complementariedad\nAnalizar críticamente las ventajas y limitaciones del formalismo matemático\nEvaluar la relación entre teoría matemática, análisis empírico e intuición económica\nAplicar herramientas computacionales para implementar modelos matemáticos\n\n\n\n\nLa matematización de la economía tiene raíces profundas:\n\n\n\n\n\n\nHitos Históricos en Economía Matemática\n\n\n\n\n1838: Antoine Augustin Cournot - Recherches sur les principes mathématiques de la théorie des richesses\n1874: Léon Walras - Teoría del equilibrio general\n1881: Francis Ysidro Edgeworth - Mathematical Psychics\n1947: Paul Samuelson - Foundations of Economic Analysis\n1959: Gerard Debreu - Formalización axiomática del equilibrio general\n1972: Kenneth Arrow y Gerard Debreu - Premio Nobel por teoría del equilibrio general\n\n\n\n\n\n\n\n\n\nLa economía matemática no constituye una subdisciplina económica (como la economía laboral o la economía del desarrollo), sino un enfoque metodológico transversal aplicable a cualquier área del análisis económico (Chiang & Wainwright, 2005, pp. 3-4).\n\n\n\n\n\n\nDefinición 1.1 (Economía Matemática)\n\n\n\nLa economía matemática es un método de análisis económico caracterizado por:\n\nFormulación simbólica: Uso de notación matemática para expresar relaciones económicas\nRazonamiento formal: Aplicación de teoremas y técnicas matemáticas establecidas\nEstructuras axiomáticas: Desarrollo deductivo desde premisas explícitas hacia conclusiones lógicas\nGeneralidad abstracta: Capacidad de analizar sistemas de \\(n\\) dimensiones\n\nFormalmente, si \\(\\mathcal{E}\\) denota el conjunto de proposiciones económicas y \\(\\mathcal{M}\\) el conjunto de estructuras matemáticas, la economía matemática establece un homomorfismo:\n\\[\n\\phi: \\mathcal{E} \\rightarrow \\mathcal{M}\n\\]\nque preserva las relaciones lógicas entre proposiciones económicas.\n\n\n\n\n\n\n\n\n\nTabla 1.1: Características distintivas de la economía matemática\n\n\n\n\n\n\n\n\n\n\n\nCaracterística\nDescripción\nEjemplo\n\n\n\n\nLenguaje\nNotación simbólica formal (variables, funciones, operadores)\n\\(U: \\mathbb{R}^n_+ \\rightarrow \\mathbb{R}\\)\n\n\nPrecisión\nDefiniciones inequívocas y relaciones exactas\n\\(\\frac{\\partial U}{\\partial x_i} &gt; 0 \\ \\forall i\\)\n\n\nDimensionalidad\nCapacidad de manejar espacios de alta dimensión\n\\(\\max_{x \\in \\mathbb{R}^n_+} U(x)\\) s.a. \\(p \\cdot x \\leq m\\)\n\n\nSupuestos\nExplicitación completa de premisas y condiciones\nContinuidad, diferenciabilidad, convexidad\n\n\nDerivación\nProceso deductivo riguroso mediante teoremas\nTeorema de Kuhn-Tucker\n\n\nGeneralización\nResultados aplicables a clases amplias de problemas\nTeorema del sobre\n\n\n\n\n\n\n\n\n\n\n\nConsideremos la representación matemática de una relación de demanda:\n\n\nCódigo\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport sympy as sp\n\n# Configuración de estilo\nplt.style.use('seaborn-v0_8-darkgrid')\nplt.rcParams['figure.dpi'] = 100\nplt.rcParams['font.size'] = 10\n\n# 1. Representación simbólica\nP, Q, a, b = sp.symbols('P Q a b', positive=True, real=True)\ndemanda_simbolica = sp.Eq(Q, a - b*P)\n\nprint(\"=\"*60)\nprint(\"REPRESENTACIÓN MATEMÁTICA DE LA DEMANDA\")\nprint(\"=\"*60)\nprint(\"\\n1. FORMA EXPLÍCITA (Cantidad como función del precio):\")\nprint(f\"   {demanda_simbolica}\")\nprint(\"\\n2. FORMA INVERSA (Precio como función de la cantidad):\")\nP_inverso = sp.solve(demanda_simbolica, P)[0]\nprint(f\"   P = {P_inverso}\")\nprint(\"\\n3. FORMA IMPLÍCITA (Relación general):\")\nprint(f\"   F(P,Q) = {demanda_simbolica.lhs - demanda_simbolica.rhs} = 0\")\n\n# 2. Visualización numérica\nfig, axes = plt.subplots(1, 3, figsize=(15, 5))\n\n# Parámetros numéricos\na_val, b_val = 100, 2\nP_vals = np.linspace(0, 50, 100)\nQ_vals = np.maximum(0, a_val - b_val * P_vals)\n\n# Panel A: Forma estándar (P en eje vertical)\nax1 = axes[0]\nax1.plot(Q_vals, P_vals, 'b-', linewidth=2.5, label='$P = \\\\frac{100-Q}{2}$')\nax1.fill_between(Q_vals, 0, P_vals, alpha=0.1, color='blue')\nax1.set_xlabel('Cantidad (Q)', fontsize=11, fontweight='bold')\nax1.set_ylabel('Precio (P)', fontsize=11, fontweight='bold')\nax1.set_title('Representación Estándar\\n(Curva de Demanda)', \n              fontsize=12, fontweight='bold')\nax1.grid(True, alpha=0.3)\nax1.legend(loc='upper right', fontsize=10)\nax1.set_xlim(0, 105)\nax1.set_ylim(0, 55)\nax1.axhline(y=0, color='k', linewidth=0.5)\nax1.axvline(x=0, color='k', linewidth=0.5)\n\n# Panel B: Forma explícita (Q como función de P)\nax2 = axes[1]\nax2.plot(P_vals, Q_vals, 'r-', linewidth=2.5, label='$Q = 100 - 2P$')\nax2.fill_between(P_vals, 0, Q_vals, alpha=0.1, color='red')\nax2.set_xlabel('Precio (P)', fontsize=11, fontweight='bold')\nax2.set_ylabel('Cantidad (Q)', fontsize=11, fontweight='bold')\nax2.set_title('Forma Explícita\\n(Función de Demanda)', \n              fontsize=12, fontweight='bold')\nax2.grid(True, alpha=0.3)\nax2.legend(loc='upper right', fontsize=10)\nax2.set_xlim(0, 55)\nax2.set_ylim(0, 105)\nax2.axhline(y=0, color='k', linewidth=0.5)\nax2.axvline(x=0, color='k', linewidth=0.5)\n\n# Panel C: Elasticidad\nP_elast = P_vals[P_vals &gt; 0]\nQ_elast = a_val - b_val * P_elast\nelasticidad = -(b_val * P_elast / Q_elast)\n\nax3 = axes[2]\nax3.plot(Q_elast, elasticidad, 'g-', linewidth=2.5, \n         label='$\\\\varepsilon = -\\\\frac{dQ}{dP}\\\\frac{P}{Q}$')\nax3.axhline(y=-1, color='red', linestyle='--', alpha=0.7, \n            label='Elasticidad unitaria')\nax3.fill_between(Q_elast, elasticidad, -1, \n                  where=(elasticidad &lt; -1), alpha=0.1, color='blue',\n                  label='Elástica $(|\\\\varepsilon| &gt; 1)$')\nax3.fill_between(Q_elast, elasticidad, -1, \n                  where=(elasticidad &gt;= -1), alpha=0.1, color='red',\n                  label='Inelástica $(|\\\\varepsilon| &lt; 1)$')\nax3.set_xlabel('Cantidad (Q)', fontsize=11, fontweight='bold')\nax3.set_ylabel('Elasticidad-Precio', fontsize=11, fontweight='bold')\nax3.set_title('Elasticidad de la Demanda\\n(Concepto Derivado)', \n              fontsize=12, fontweight='bold')\nax3.grid(True, alpha=0.3)\nax3.legend(loc='lower right', fontsize=9)\nax3.set_xlim(0, 105)\nax3.set_ylim(-5, 0)\n\nplt.tight_layout()\nplt.show()\n\nprint(\"\\n4. PROPIEDADES MATEMÁTICAS DERIVADAS:\")\nprint(f\"   • Pendiente: dQ/dP = -{b_val}\")\nprint(f\"   • Intercepto vertical: P-máx = {a_val/b_val}\")\nprint(f\"   • Intercepto horizontal: Q-máx = {a_val}\")\nprint(f\"   • Elasticidad en punto medio: $\\\\varepsilon$ = {-b_val * (a_val/b_val/2) / (a_val/2):.2f}\")\n\n\n============================================================\nREPRESENTACIÓN MATEMÁTICA DE LA DEMANDA\n============================================================\n\n1. FORMA EXPLÍCITA (Cantidad como función del precio):\n   Eq(Q, -P*b + a)\n\n2. FORMA INVERSA (Precio como función de la cantidad):\n   P = (-Q + a)/b\n\n3. FORMA IMPLÍCITA (Relación general):\n   F(P,Q) = P*b + Q - a = 0\n\n4. PROPIEDADES MATEMÁTICAS DERIVADAS:\n   • Pendiente: dQ/dP = -2\n   • Intercepto vertical: P-máx = 50.0\n   • Intercepto horizontal: Q-máx = 100\n   • Elasticidad en punto medio: $\\varepsilon$ = -1.00\n\n\n\n\n\n\n\n\nFigura 1.1: Representaciones alternativas de la función de demanda\n\n\n\n\n\n\n\n\n\n\n\nInterpretación Económica\n\n\n\nLa formulación matemática \\(Q = a - bP\\) con \\(a, b &gt; 0\\) codifica dos principios económicos:\n\nLey de la demanda: \\(\\frac{\\partial Q}{\\partial P} = -b &lt; 0\\) (relación inversa)\nDemanda finita: \\(\\lim_{P \\to \\infty} Q(P) = -\\infty\\) implica \\(Q = 0\\) para \\(P \\geq a/b\\)\n\nLa ventaja del formalismo es que estas propiedades se derivan lógicamente de la especificación funcional, no por intuición.\n\n\n\n\n\nLa economía matemática se aplica transversalmente:\n\n\n\n\nTabla 1.2: Áreas de aplicación de la economía matemática\n\n\n\n\n\n\n\n\n\n\n\nÁrea\nProblemas Típicos\nHerramientas Matemáticas\n\n\n\n\nMicroeconomía\nOptimización del consumidor/productor, equilibrio competitivo\nCálculo multivariado, optimización convexa\n\n\nMacroeconomía\nModelos de crecimiento, ciclos económicos, política monetaria\nEcuaciones diferenciales, control óptimo\n\n\nEconomía Pública\nIncidencia tributaria, provisión de bienes públicos\nTeoría de juegos, análisis de bienestar\n\n\nEconomía Internacional\nVentaja comparativa, flujos de capital, tipos de cambio\nModelos de equilibrio general, comercio\n\n\nEconomía Financiera\nValoración de activos, gestión de riesgos, equilibrio de portafolio\nProcesos estocásticos, ecuaciones diferenciales estocásticas\n\n\nEconomía del Desarrollo\nTrampa de pobreza, acumulación de capital, demografía\nSistemas dinámicos, modelos de sobrelapamiento generacional\n\n\nEconomía Ambiental\nExternalidades, recursos comunes, sostenibilidad\nTeoría de juegos, programación dinámica\n\n\nEconomía Laboral\nBúsqueda de empleo, capital humano, discriminación\nBúsqueda y matching, modelos principal-agente\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTanto el enfoque matemático como el literario comparten el objetivo fundamental de la teoría económica deductiva (Chiang & Wainwright, 2005, pp. 5-6):\n\n\n\n\n\n\nObjetivo Compartido\n\n\n\n\n“Derivar un conjunto de conclusiones o teoremas a partir de un conjunto dado de axiomas o hipótesis mediante un proceso de razonamiento lógicamente válido”\n\nLa diferencia radica en el medio de expresión y las herramientas de inferencia, no en la naturaleza del análisis.\n\n\n\n\n\n\n\n\n\nTabla 1.3: Comparación metodológica: Economía matemática vs. literaria\n\n\n\n\n\n\n\n\n\n\n\nAspecto\nEconomía Matemática\nEconomía Literaria\n\n\n\n\nLenguaje de formulación\nSímbolos, ecuaciones, espacios abstractos\nPalabras, enunciados verbales\n\n\nProceso de razonamiento\nTeoremas matemáticos, demostraciones formales\nLógica discursiva, argumentación\n\n\nPrecisión conceptual\nAlta: definiciones inequívocas\nVariable: admite ambigüedades\n\n\nCapacidad de generalización\nCaso general de \\(n\\) variables\nLimitada por dimensionalidad\n\n\nExplicitación de supuestos\nCompleta y necesaria\nPuede ser implícita\n\n\nVerificabilidad de derivaciones\nAlta: pasos verificables\nBaja: interpretaciones múltiples\n\n\nAccesibilidad inicial\nRequiere formación matemática\nMás intuitiva inicialmente\n\n\nPotencia analítica\nMuy alta para problemas complejos\nLimitada en alta complejidad\n\n\n\n\n\n\n\n\n\n\n\n\n\nEl lenguaje matemático elimina ambigüedades semánticas inherentes al lenguaje natural.\nEjemplo 1.1 (Utilidad marginal decreciente)\n\nFormulación literaria: “La satisfacción adicional obtenida del consumo de una unidad adicional de un bien disminuye a medida que se consume más del bien, manteniendo constante el consumo de otros bienes”\nFormulación matemática: \\[\\frac{\\partial^2 U}{\\partial x_i^2} &lt; 0 \\quad \\forall i \\in \\{1,\\ldots,n\\}\\]\n\nLa formulación matemática es: - Más breve: Una línea vs. un párrafo - Más precisa: No admite interpretaciones alternativas - Más general: Aplica a \\(n\\) bienes simultáneamente\n\n\nCódigo\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom mpl_toolkits.mplot3d import Axes3D\n\nfig = plt.figure(figsize=(16, 5))\n\n# Panel A: Función de utilidad total\nax1 = fig.add_subplot(131)\nx = np.linspace(0.1, 10, 100)\nU = np.log(x)  # Utilidad logarítmica (cóncava)\nax1.plot(x, U, 'b-', linewidth=2.5, label='$U(x) = \\\\ln(x)$')\nax1.set_xlabel('Cantidad consumida (x)', fontsize=11, fontweight='bold')\nax1.set_ylabel('Utilidad total U(x)', fontsize=11, fontweight='bold')\nax1.set_title('Función de Utilidad\\n(Cóncava)', fontsize=12, fontweight='bold')\nax1.grid(True, alpha=0.3)\nax1.legend(fontsize=10)\n\n# Panel B: Utilidad marginal\nax2 = fig.add_subplot(132)\nU_marginal = 1/x  # Primera derivada\nax2.plot(x, U_marginal, 'r-', linewidth=2.5, \n         label='$U\\'(x) = \\\\frac{1}{x}$')\nax2.set_xlabel('Cantidad consumida (x)', fontsize=11, fontweight='bold')\nax2.set_ylabel('Utilidad marginal $U\\'(x)$', fontsize=11, fontweight='bold')\nax2.set_title('Utilidad Marginal\\n(Decreciente)', fontsize=12, fontweight='bold')\nax2.grid(True, alpha=0.3)\nax2.legend(fontsize=10)\nax2.set_ylim(0, 2)\n\n# Panel C: Curvatura (segunda derivada)\nax3 = fig.add_subplot(133)\nU_segunda = -1/(x**2)  # Segunda derivada\nax3.plot(x, U_segunda, 'g-', linewidth=2.5, \n         label='$U\\'\\'(x) = -\\\\frac{1}{x^2} &lt; 0$')\nax3.axhline(y=0, color='black', linestyle='--', linewidth=1, alpha=0.5)\nax3.fill_between(x, U_segunda, 0, alpha=0.2, color='green')\nax3.set_xlabel('Cantidad consumida (x)', fontsize=11, fontweight='bold')\nax3.set_ylabel('Curvatura $U\\'\\'(x)$', fontsize=11, fontweight='bold')\nax3.set_title('Segunda Derivada\\n(Cóncava: $U\\'\\'&lt;0$)', \n              fontsize=12, fontweight='bold')\nax3.grid(True, alpha=0.3)\nax3.legend(fontsize=10)\nax3.set_ylim(-1, 0.1)\n\nplt.tight_layout()\nplt.show()\n\nprint(\"VERIFICACIÓN ANALÍTICA:\")\nprint(f\"  U(x) = ln(x)\")\nprint(f\"  U'(x) = 1/x &gt; 0  (utilidad marginal positiva)\")\nprint(f\"  U''(x) = -1/x² &lt; 0  (utilidad marginal decreciente)\")\n\n\n\n\n\n\n\n\nFigura 1.2: Utilidad marginal decreciente: representación matemática\n\n\n\n\n\nVERIFICACIÓN ANALÍTICA:\n  U(x) = ln(x)\n  U'(x) = 1/x &gt; 0  (utilidad marginal positiva)\n  U''(x) = -1/x² &lt; 0  (utilidad marginal decreciente)\n\n\n\n\n\nLa matemática proporciona herramientas listas para aplicar (Simon & Blume, 1994, Capítulos 2–3):\n\n\n\n\n\n\nTeorema 1.1 (Condiciones de Primer Orden para Optimización)\n\n\n\nSea \\(f: \\mathbb{R}^n \\rightarrow \\mathbb{R}\\) una función diferenciable. Si \\(x^* \\in \\mathrm{int}(\\mathbb{R}^n_+)\\) es un máximo local de \\(f\\), entonces necesariamente:\n\\[\n\\nabla f(x^*) = \\mathbf{0} \\quad \\text{(condiciones de primer orden)}\n\\]\nSi además \\(f\\) es cóncava, esta condición es también suficiente para un máximo global.\n\n\nAplicación económica inmediata: Maximización de utilidad del consumidor\n\n\nCódigo\nfrom scipy.optimize import minimize\nimport sympy as sp\n\n# Parámetros\nalpha1, alpha2 = 0.6, 0.4\np1, p2, m = 2, 3, 100  # precios e ingreso\n\n# Función de utilidad Cobb-Douglas\ndef utilidad(x):\n    return -(x[0]**alpha1 * x[1]**alpha2)  # Negativo para minimizar\n\n# Restricción presupuestaria\ndef restriccion(x):\n    return p1*x[0] + p2*x[1] - m\n\n# Optimización numérica\nfrom scipy.optimize import minimize\ncons = {'type': 'eq', 'fun': restriccion}\nx0 = [10, 10]\nbounds = [(0.1, None), (0.1, None)]\nresultado = minimize(utilidad, x0, method='SLSQP', bounds=bounds, constraints=cons)\nx1_opt, x2_opt = resultado.x\nU_opt = -resultado.fun\n\n# Visualización\nfig, axes = plt.subplots(1, 2, figsize=(14, 6))\n\n# Panel izquierdo: Problema de optimización\nax1 = axes[0]\nx1_vals = np.linspace(0, 60, 100)\nx2_restriccion = (m - p1*x1_vals) / p2\n\n# Curvas de indiferencia\nU_levels = [U_opt * 0.6, U_opt * 0.8, U_opt, U_opt * 1.1]\nfor U_level in U_levels:\n    x2_curva = (U_level / (x1_vals**alpha1))**(1/alpha2)\n    if U_level == U_opt:\n        ax1.plot(x1_vals, x2_curva, 'r-', linewidth=3, \n                 label=f'Curva óptima $U^* = {U_opt:.2f}$', zorder=3)\n    else:\n        ax1.plot(x1_vals, x2_curva, 'b--', linewidth=1, alpha=0.5)\n\nax1.plot(x1_vals, x2_restriccion, 'g-', linewidth=2.5, \n         label=f'Restricción: ${p1}x_1 + {p2}x_2 = {m}$')\nax1.scatter(x1_opt, x2_opt, color='red', s=200, zorder=5, marker='*',\n            label=f'Óptimo: $x^* = ({x1_opt:.2f}, {x2_opt:.2f})$')\nax1.set_xlabel('Bien 1 $(x_1)$', fontsize=11, fontweight='bold')\nax1.set_ylabel('Bien 2 $(x_2)$', fontsize=11, fontweight='bold')\nax1.set_title('Maximización del Consumidor\\n(Representación Gráfica)', \n              fontsize=12, fontweight='bold')\nax1.grid(True, alpha=0.3)\nax1.legend(fontsize=9, loc='upper right')\nax1.set_xlim(0, 55)\nax1.set_ylim(0, 35)\n\n# Panel derecho: Verificación de CPO\nax2 = axes[1]\nax2.axis('off')\n\n# Texto explicativo\ntexto_cpo = f\"\"\"\nVERIFICACIÓN ANALÍTICA DE CPO\n\nProblema:\n    max U(x1,x2) = x1^{alpha1} * x2^{alpha2}\n    s.a. {p1}x1 + {p2}x2 = {m}\n\nLagrangiano:\n    L = x1^{alpha1} * x2^{alpha2} + lambda*({m} - {p1}x1 - {p2}x2)\n\nCondiciones de primer orden:\n    dL/dx1 = {alpha1}*x1^{alpha1-1}*x2^{alpha2} - lambda*{p1} = 0\n    dL/dx2 = {alpha2}*x1^{alpha1}*x2^{alpha2-1} - lambda*{p2} = 0\n    dL/dlambda = {m} - {p1}x1 - {p2}x2 = 0\n\nSolución óptima:\n    x1* = {x1_opt:.4f}\n    x2* = {x2_opt:.4f}\n    U* = {U_opt:.4f}\n    lambda* = {alpha1 * x2_opt**alpha2 / (x1_opt**(1-alpha1) * p1):.4f}\n\nInterpretación económica:\n    • TMS = p1/p2: {(alpha1*x2_opt)/(alpha2*x1_opt):.4f} = {p1/p2:.4f}\n    • Gasto total: ${p1*x1_opt + p2*x2_opt:.2f} = ${m}\n    • lambda* = Utilidad marginal del ingreso\n\"\"\"\n\nax2.text(0.1, 0.95, texto_cpo, fontsize=10, verticalalignment='top',\n         family='monospace', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.3))\n\nplt.tight_layout()\nplt.show()\n\n# Verificación numérica de CPO\nprint(\"=\"*60)\nprint(\"VERIFICACIÓN NUMÉRICA DE CONDICIONES DE PRIMER ORDEN\")\nprint(\"=\"*60)\nprint(f\"\\nSolución óptima:\")\nprint(f\"  x1* = {x1_opt:.6f}\")\nprint(f\"  x2* = {x2_opt:.6f}\")\nprint(f\"  U* = {U_opt:.6f}\")\nprint(f\"\\nVerificación de CPO:\")\nUMg1 = alpha1 * x1_opt**(alpha1-1) * x2_opt**alpha2\nUMg2 = alpha2 * x1_opt**alpha1 * x2_opt**(alpha2-1)\nlambda_opt = UMg1 / p1\nprint(f\"  dU/dx1 / p1 = {UMg1/p1:.6f}\")\nprint(f\"  dU/dx2 / p2 = {UMg2/p2:.6f}\")\nprint(f\"  Igualdad CPO: {abs(UMg1/p1 - UMg2/p2) &lt; 1e-6}\")\nprint(f\"\\nTMS = p1/p2:\")\nprint(f\"  TMS = {(alpha1*x2_opt)/(alpha2*x1_opt):.6f}\")\nprint(f\"  p1/p2 = {p1/p2:.6f}\")\nprint(f\"  Igualdad: {abs((alpha1*x2_opt)/(alpha2*x1_opt) - p1/p2) &lt; 1e-4}\")\n\n\n\n\n\n\n\n\nFigura 1.3: Condiciones de primer orden: maximización del consumidor\n\n\n\n\n\n============================================================\nVERIFICACIÓN NUMÉRICA DE CONDICIONES DE PRIMER ORDEN\n============================================================\n\nSolución óptima:\n  x1* = 29.999959\n  x2* = 13.333361\n  U* = 21.689435\n\nVerificación de CPO:\n  dU/dx1 / p1 = 0.216895\n  dU/dx2 / p2 = 0.216894\n  Igualdad CPO: True\n\nTMS = p1/p2:\n  TMS = 0.666669\n  p1/p2 = 0.666667\n  Igualdad: True\n\n\n\n\n\nLos teoremas matemáticos exigen declaración precisa de condiciones suficientes (Chiang & Wainwright, 2005, pp. 7-8):\n\n\n\n\n\n\nTeorema 1.2 (Teorema de la Función Implícita - Versión Simplificada)\n\n\n\nSea \\(F: \\mathbb{R}^{n+m} \\rightarrow \\mathbb{R}^m\\) una función continuamente diferenciable. Suponga que \\(F(x_0, y_0) = 0\\) y que la matriz Jacobiana \\(\\frac{\\partial F}{\\partial y}\\) evaluada en \\((x_0, y_0)\\) es no singular. Entonces existen vecindades \\(U\\) de \\(x_0\\) y \\(V\\) de \\(y_0\\), y una función única \\(g: U \\rightarrow V\\) tal que:\n\n\\(g(x_0) = y_0\\)\n\\(F(x, g(x)) = 0\\) para todo \\(x \\in U\\)\n\\(g\\) es continuamente diferenciable con:\n\n\\[\n\\frac{\\partial g}{\\partial x} = -\\left(\\frac{\\partial F}{\\partial y}\\right)^{-1} \\frac{\\partial F}{\\partial x}\n\\]\n\n\nImportancia económica: Este teorema garantiza que podemos despejar variables endógenas en función de parámetros exógenos, siempre que las condiciones sean satisfechas. La formulación matemática obliga a verificar estas condiciones.\n\n\nCódigo\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.optimize import fsolve\n\n# Ejemplo: Equilibrio de mercado implícito\n# F(P, Q, α) = Qd(P,α) - Qs(P) = 0\n\ndef F_equilibrio(vars, alpha):\n    \"\"\"Función implícita del equilibrio de mercado\"\"\"\n    P, Q = vars\n    Qd = alpha - 2*P  # Demanda\n    Qs = -20 + 3*P     # Oferta\n    return [Q - Qd, Q - Qs]\n\n# Resolver para diferentes valores de α\nalpha_vals = np.linspace(80, 120, 9)\nP_eq = []\nQ_eq = []\n\nfor alpha in alpha_vals:\n    sol = fsolve(lambda vars: F_equilibrio(vars, alpha), [20, 40])\n    P_eq.append(sol[0])\n    Q_eq.append(sol[1])\n\nP_eq = np.array(P_eq)\nQ_eq = np.array(Q_eq)\n\n# Derivada implícita ∂P*/∂α\ndP_dalpha_numerical = np.gradient(P_eq, alpha_vals)\ndP_dalpha_theoretical = 1/5  # De la solución analítica\n\nfig, axes = plt.subplots(1, 3, figsize=(16, 5))\n\n# Panel A: Función implícita F=0\nax1 = axes[0]\nP_grid = np.linspace(15, 35, 100)\nQ_grid = np.linspace(20, 80, 100)\nP_mesh, Q_mesh = np.meshgrid(P_grid, Q_grid)\n\nalpha_ejemplo = 100\nQd_mesh = alpha_ejemplo - 2*P_mesh\nQs_mesh = -20 + 3*P_mesh\nF_mesh = Qd_mesh - Qs_mesh\n\ncontour = ax1.contour(P_mesh, Q_mesh, F_mesh, levels=[0], colors='red', linewidths=3)\nax1.clabel(contour, inline=True, fontsize=10, fmt='F=0')\nax1.scatter(P_eq[4], Q_eq[4], color='red', s=200, marker='*', zorder=5,\n            label=f'Equilibrio: P*={P_eq[4]:.1f}, Q*={Q_eq[4]:.1f}')\nax1.set_xlabel('Precio (P)', fontsize=11, fontweight='bold')\nax1.set_ylabel('Cantidad (Q)', fontsize=11, fontweight='bold')\nax1.set_title('Función Implícita $F(P,Q,\\\\alpha)=0$\\n(Equilibrio de Mercado)', \n              fontsize=12, fontweight='bold')\nax1.grid(True, alpha=0.3)\nax1.legend(fontsize=10)\n\n# Panel B: Precio de equilibrio vs parámetro\nax2 = axes[1]\nax2.plot(alpha_vals, P_eq, 'b-o', linewidth=2.5, markersize=8,\n         label='$P^*(\\\\alpha)$ (numérico)')\n# CORRECCIÓN AQUÍ: Usar comillas dobles para el string interno\nax2.set_xlabel('Parámetro de demanda $(\\\\alpha)$', fontsize=11, fontweight='bold')\nax2.set_ylabel('Precio de equilibrio $P^*$', fontsize=11, fontweight='bold')\nax2.set_title('Función Implícita Despejada\\n$P^* = g(\\\\alpha)$', \n              fontsize=12, fontweight='bold')\nax2.grid(True, alpha=0.3)\nax2.legend(fontsize=10)\n\n# Panel C: Derivada implícita\nax3 = axes[2]\nax3.plot(alpha_vals, dP_dalpha_numerical, 'g-o', linewidth=2.5, markersize=8,\n         label='$\\\\frac{dP^*}{d\\\\alpha}$ (numérico)')\nax3.axhline(y=dP_dalpha_theoretical, color='red', linestyle='--', linewidth=2,\n            label=f'Teórico: $\\\\frac{{1}}{{5}}$ = {dP_dalpha_theoretical:.2f}')\n# CORRECCIÓN AQUÍ también\nax3.set_xlabel('Parámetro de demanda $(\\\\alpha)$', fontsize=11, fontweight='bold')\nax3.set_ylabel('Derivada $\\\\frac{dP^*}{d\\\\alpha}$', fontsize=11, fontweight='bold')\nax3.set_title('Derivada Implícita\\n(Estática Comparativa)', \n              fontsize=12, fontweight='bold')\nax3.grid(True, alpha=0.3)\nax3.legend(fontsize=10)\n\nplt.tight_layout()\nplt.show()\n\nprint(\"=\"*70)\nprint(\"VERIFICACIÓN DEL TEOREMA DE LA FUNCIÓN IMPLÍCITA\")\nprint(\"=\"*70)\nprint(\"\\nSistema de equilibrio:\")\nprint(\"  Demanda: Qd = α - 2P\")\nprint(\"  Oferta:  Qs = -20 + 3P\")\nprint(\"  Equilibrio: F(P, Q, α) = Qd - Qs = 0\")\nprint(\"\\nSolución analítica:\")\nprint(\"  P* = (α + 20)/5\")\nprint(\"  Q* = (3α - 40)/5\")\nprint(\"\\nDerivada implícita (Teorema):\")\nprint(\"  ∂P*/∂α = 1/5 = 0.2\")\nprint(f\"\\nVerificación numérica:\")\nprint(f\"  Promedio numérico: {np.mean(dP_dalpha_numerical):.4f}\")\nprint(f\"  Valor teórico: {dP_dalpha_theoretical:.4f}\")\nprint(f\"  Error relativo: {abs(np.mean(dP_dalpha_numerical) - dP_dalpha_theoretical)/dP_dalpha_theoretical * 100:.2f}%\")\n\n\n\n\n\n\n\n\nFigura 1.4: Teorema de la función implícita: ejemplo económico\n\n\n\n\n\n======================================================================\nVERIFICACIÓN DEL TEOREMA DE LA FUNCIÓN IMPLÍCITA\n======================================================================\n\nSistema de equilibrio:\n  Demanda: Qd = α - 2P\n  Oferta:  Qs = -20 + 3P\n  Equilibrio: F(P, Q, α) = Qd - Qs = 0\n\nSolución analítica:\n  P* = (α + 20)/5\n  Q* = (3α - 40)/5\n\nDerivada implícita (Teorema):\n  ∂P*/∂α = 1/5 = 0.2\n\nVerificación numérica:\n  Promedio numérico: 0.2000\n  Valor teórico: 0.2000\n  Error relativo: 0.00%\n\n\n\n\n\nLa geometría limita la visualización a 2-3 dimensiones, pero el álgebra maneja \\(n\\) variables (Simon & Blume, 1994, pp. 15-18):\nEjemplo 1.2 (Optimización con \\(n\\) bienes)\n\n\nCódigo\ndef resolver_consumidor(n_bienes=10, alpha=None, precios=None, ingreso=100):\n    \"\"\"\n    Resuelve el problema del consumidor para n bienes con utilidad Cobb-Douglas\n    \n    Parámetros:\n    -----------\n    n_bienes : int\n        Número de bienes\n    alpha : array\n        Exponentes Cobb-Douglas (deben sumar 1)\n    precios : array\n        Vector de precios\n    ingreso : float\n        Ingreso del consumidor\n    \"\"\"\n    if alpha is None:\n        alpha = np.ones(n_bienes) / n_bienes  # Pesos iguales\n    if precios is None:\n        precios = np.random.uniform(1, 5, n_bienes)\n    \n    # Solución analítica Cobb-Douglas\n    x_optimo = (alpha * ingreso) / precios\n    U_optimo = np.prod(x_optimo ** alpha)\n    \n    return x_optimo, U_optimo, precios, alpha\n\n# Resolver para diferentes dimensiones\ndimensiones = [2, 5, 10, 20, 50, 100]\nresultados = []\n\nnp.random.seed(42)\nfor n in dimensiones:\n    x_opt, U_opt, p, a = resolver_consumidor(n_bienes=n, ingreso=100)\n    gasto_total = np.sum(p * x_opt)\n    resultados.append({\n        'n': n,\n        'U*': U_opt,\n        'gasto': gasto_total,\n        'max_x': np.max(x_opt),\n        'min_x': np.min(x_opt)\n    })\n\ndf_resultados = pd.DataFrame(resultados)\n\n# Visualización\nfig, axes = plt.subplots(2, 2, figsize=(14, 10))\n\n# Panel A: Utilidad óptima vs dimensión\nax1 = axes[0, 0]\nax1.plot(df_resultados['n'], df_resultados['U*'], 'b-o', linewidth=2.5, markersize=8)\nax1.set_xlabel('Número de bienes (n)', fontsize=11, fontweight='bold')\nax1.set_ylabel('Utilidad óptima $U^*$', fontsize=11, fontweight='bold')\nax1.set_title('Utilidad Óptima vs Dimensión', fontsize=12, fontweight='bold')\nax1.grid(True, alpha=0.3)\nax1.set_xscale('log')\n\n# Panel B: Verificación de restricción presupuestaria\nax2 = axes[0, 1]\nax2.plot(df_resultados['n'], df_resultados['gasto'], 'r-s', linewidth=2.5, markersize=8)\nax2.axhline(y=100, color='green', linestyle='--', linewidth=2, label='Ingreso = 100')\nax2.set_xlabel('Número de bienes (n)', fontsize=11, fontweight='bold')\nax2.set_ylabel('Gasto total', fontsize=11, fontweight='bold')\nax2.set_title('Verificación: Restricción Presupuestaria', fontsize=12, fontweight='bold')\nax2.grid(True, alpha=0.3)\nax2.legend(fontsize=10)\nax2.set_xscale('log')\n\n# Panel C: Ejemplo específico n=10\nax3 = axes[1, 0]\nn_ejemplo = 10\nx_ej, U_ej, p_ej, a_ej = resolver_consumidor(n_bienes=n_ejemplo, ingreso=100)\nbienes = np.arange(1, n_ejemplo+1)\nax3.bar(bienes, x_ej, color='steelblue', alpha=0.7, edgecolor='black')\nax3.set_xlabel('Bien $i$', fontsize=11, fontweight='bold')\nax3.set_ylabel('Cantidad óptima $x_i^*$', fontsize=11, fontweight='bold')\nax3.set_title(f'Canasta Óptima para n={n_ejemplo} bienes', fontsize=12, fontweight='bold')\nax3.grid(True, alpha=0.3, axis='y')\nax3.set_xticks(bienes)\n\n# Panel D: Tabla resumen\nax4 = axes[1, 1]\nax4.axis('off')\ntabla_texto = df_resultados.to_string(index=False, float_format=lambda x: f'{x:.4f}')\nax4.text(0.1, 0.9, 'RESULTADOS NUMÉRICOS\\n' + '='*50 + '\\n' + tabla_texto,\n         fontsize=9, family='monospace', verticalalignment='top',\n         bbox=dict(boxstyle='round', facecolor='lightblue', alpha=0.3))\n\nplt.tight_layout()\nplt.show()\n\nprint(\"=\"*70)\nprint(\"OPTIMIZACIÓN EN DIMENSIÓN ARBITRARIA\")\nprint(\"=\"*70)\nprint(f\"\\nProblema general para n bienes:\")\nprint(r\"  $\\max U(x_1,\\ldots,x_n) = \\prod_i x_i^{\\alpha_i}$\")\nprint(r\"  s.a. $\\sum_i p_i x_i = m$\")\nprint(r\"  $x_i^* = (\\alpha_i \\cdot m) / p_i \\quad \\forall i \\in \\{1,\\ldots,n\\}$\")\nprint(f\"\\nSolución analítica:\")\nprint(r\"  $x_i^* = (\\alpha_i \\cdot m) / p_i \\quad \\forall i \\in \\{1,\\ldots,n\\}$\")  # ← CAMBIO AQUÍ\nprint(f\"\\nEsta fórmula es válida independientemente de n\")\nprint(f\"(la geometría falla para n&gt;3, pero el álgebra no)\")\n\n\n\n\n\n\n\n\nFigura 1.5: Optimización del consumidor en dimensión arbitraria\n\n\n\n\n\n======================================================================\nOPTIMIZACIÓN EN DIMENSIÓN ARBITRARIA\n======================================================================\n\nProblema general para n bienes:\n  $\\max U(x_1,\\ldots,x_n) = \\prod_i x_i^{\\alpha_i}$\n  s.a. $\\sum_i p_i x_i = m$\n  $x_i^* = (\\alpha_i \\cdot m) / p_i \\quad \\forall i \\in \\{1,\\ldots,n\\}$\n\nSolución analítica:\n  $x_i^* = (\\alpha_i \\cdot m) / p_i \\quad \\forall i \\in \\{1,\\ldots,n\\}$\n\nEsta fórmula es válida independientemente de n\n(la geometría falla para n&gt;3, pero el álgebra no)\n\n\n\n\n\n\nUna crítica común a la economía matemática es que sus modelos son “irreales” o “alejados de la realidad” (Chiang & Wainwright, 2005, pp. 9-10). Esta crítica confunde el método con el contenido.\n\n\n\n\n\n\nProposición 1.1 (Defensa del Formalismo)\n\n\n\nLa crítica de que la teoría matemática es “irreal” es metodológicamente incorrecta porque:\n\nToda teoría científica es abstracta: La abstracción es necesaria para el análisis científico\nEl realismo depende de los supuestos, no del método: Un modelo verbal puede ser tan “irreal” como uno matemático\nLa matemática es un lenguaje, no un filtro de realidad: El formalismo no impone restricciones de contenido\nLa falsabilidad es independiente del formalismo: Tanto modelos matemáticos como verbales pueden ser empíricamente falsos\n\nCorolario: Si un modelo matemático es “irreal”, el problema está en los supuestos económicos, no en el método matemático.\n\n\n\n\n\n\n\n\nLa econometría y la economía matemática son disciplinas complementarias pero metodológicamente distintas (Chiang & Wainwright, 2005, pp. 10-12).\n\n\n\n\n\n\nDefinición 1.3 (Econometría)\n\n\n\nLa econometría es la aplicación de métodos matemáticos y estadísticos a datos económicos con los objetivos de:\n\nEstimación: Cuantificar parámetros de relaciones económicas\nInferencia: Probar hipótesis sobre comportamientos económicos\nPredicción: Pronosticar valores futuros de variables económicas\nEvaluación de políticas: Medir impactos causales de intervenciones\n\nFormalmente, dado un modelo económico \\(y = f(x; \\theta)\\), la econometría busca estimar \\(\\hat{\\theta}\\) a partir de datos observados \\(\\{(y_i, x_i)\\}_{i=1}^N\\).\n\n\n\n\n\n\n\n\n\nTabla 1.4: Economía matemática vs. Econometría: comparación detallada\n\n\n\n\n\n\n\n\n\n\n\nDimensión\nEconomía Matemática\nEconometría\n\n\n\n\nObjetivo primario\nDerivar implicaciones lógicas de supuestos\nEstimar relaciones y probar hipótesis\n\n\nEnfoque metodológico\nDeductivo (axiomático)\nInductivo (inferencial)\n\n\nNaturaleza del análisis\nTeórico-cualitativo\nEmpírico-cuantitativo\n\n\nPapel de los datos\nAbstractos, simbólicos, parametrizados\nObservados, muestrales, numéricos\n\n\nTipo de conclusiones\nTeoremas, proposiciones, condiciones generales\nEstimadores, estadísticos, intervalos\n\n\nHerramientas principales\nCálculo, álgebra lineal, optimización, teoría de juegos\nRegresión, máxima verosimilitud, GMM, panel\n\n\nPreguntas típicas\n¿Qué implica X? ¿Bajo qué condiciones Y?\n¿Cuánto es X? ¿Es significativo Y?\n\n\nValidación de resultados\nConsistencia lógica, rigor matemático\nSignificancia estadística, bondad de ajuste\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProposición 1.2 (Complementariedad)\n\n\n\nLa economía matemática y la econometría son mutuamente necesarias para el progreso científico en economía:\n\nTeoría sin datos es vacía: Los modelos matemáticos requieren confrontación empírica\nDatos sin teoría son ciegos: El análisis empírico requiere estructura teórica\nRetroalimentación iterativa: Los resultados empíricos refinan la teoría; la teoría guía el análisis empírico\n\nEsquemáticamente:\n\\[\n\\text{Teoría Matemática} \\xrightarrow{\\text{genera}} \\text{Hipótesis testables} \\xrightarrow{\\text{requiere}} \\text{Análisis Econométrico}\n\\] \\[\n\\text{Resultados Empíricos} \\xrightarrow{\\text{refinan}} \\text{Teoría Matemática}\n\\]\n\n\n\n\n\nIlustremos la complementariedad con un ejemplo clásico (Chiang & Wainwright, 2005, Capítulo 19):\n\n\nCódigo\n# 1. TEORÍA MATEMÁTICA: Modelo de Phillips aumentado por expectativas\n# π_t = π_t^e + β(u_t - u*) + ε_t\n\ndef phillips_teorico(u, u_star, beta, pi_e):\n    \"\"\"Curva de Phillips teórica\"\"\"\n    return pi_e + beta * (u - u_star)\n\n# Parámetros teóricos\nu_star = 5.0  # Tasa natural de desempleo\nbeta = -0.5   # Sensibilidad de inflación al desempleo\npi_e = 2.0    # Expectativas de inflación\n\n# 2. SIMULACIÓN DE DATOS (representando realidad económica)\nnp.random.seed(123)\nn_obs = 100\nu_obs = np.random.uniform(3, 9, n_obs)\npi_teorico = phillips_teorico(u_obs, u_star, beta, pi_e)\n# Añadir shocks aleatorios\nepsilon = np.random.normal(0, 0.8, n_obs)\npi_obs = pi_teorico + epsilon\n\n# 3. ANÁLISIS ECONOMÉTRICO: Estimación por MCO\nfrom scipy import stats\n\n# Regresión lineal\nX = u_obs - u_obs.mean()  # Centrar para interpretación\nslope, intercept, r_value, p_value, std_err = stats.linregress(u_obs, pi_obs)\n\nprint(\"=\"*70)\nprint(\"ANÁLISIS INTEGRADO: CURVA DE PHILLIPS\")\nprint(\"=\"*70)\nprint(\"\\n1. TEORÍA MATEMÁTICA:\")\nprint(r\"   Modelo: $\\pi = \\pi^e + \\beta(u - u^*)$\")\nprint(rf\"     - Coeficiente $\\beta$: {beta:.2f}\")\nprint(rf\"     - Expectativas $\\pi^e$: {pi_e:.1f}%\")\nprint(rf\"     - Intercepto: {intercept:.3f} ($\\pi^e$ estimado)\")\nprint(rf\"     - Pendiente: {slope:.3f} ($\\beta$ estimado)\")\n\nprint(\"\\n2. ANÁLISIS ECONOMÉTRICO:\")\nprint(f\"   Estimación por MCO:\")\nprint(f\"     - Intercepto: {intercept:.3f} (π^e estimado)\")\nprint(f\"     - Pendiente: {slope:.3f} (\\beta estimado)\")\nprint(f\"     - R: {r_value**2:.3f}\")\nprint(f\"     - p-value: {p_value:.6f}\")\nprint(f\"     - Error estándar: {std_err:.3f}\")\n\nprint(\"\\n3. COMPARACIÓN TEORÍA-EVIDENCIA:\")\nprint(f\"   \\beta teórico vs estimado: {beta:.3f} vs {slope:.3f}\")\nprint(f\"   Error de estimación: {abs(beta - slope):.3f}\")\nprint(f\"   Error relativo: {abs(beta - slope)/abs(beta)*100:.1f}%\")\n\n# Visualización integrada\nfig, axes = plt.subplots(2, 2, figsize=(15, 12))\n\n# Panel A: Teoría pura\nax1 = axes[0, 0]\nu_range = np.linspace(0, 10, 100)\npi_teoria = phillips_teorico(u_range, u_star, beta, pi_e)\nax1.plot(u_range, pi_teoria, 'b-', linewidth=3, label='Teoría: $\\\\pi = 2 - 0.5(u - 5)$')\nax1.axvline(x=u_star, color='red', linestyle='--', alpha=0.7, label=f'$u^* = {u_star}$')\nax1.axhline(y=pi_e, color='green', linestyle='--', alpha=0.7, label=f'$\\\\pi^e = {pi_e}$')\nax1.set_xlabel('Tasa de desempleo (u) %', fontsize=11, fontweight='bold')\nax1.set_ylabel('Tasa de inflación (π) %', fontsize=11, fontweight='bold')\nax1.set_title('A. Modelo Teórico\\n(Economía Matemática)', fontsize=12, fontweight='bold')\nax1.grid(True, alpha=0.3)\nax1.legend(fontsize=10)\nax1.set_xlim(0, 10)\nax1.set_ylim(-2, 6)\n\n# Panel B: Datos observados\nax2 = axes[0, 1]\nax2.scatter(u_obs, pi_obs, alpha=0.5, s=50, color='red', label='Datos observados')\nax2.plot(u_obs, intercept + slope * u_obs, 'g--', linewidth=2.5,\n         label=f'MCO: π = {intercept:.2f} + {slope:.2f}u')\nax2.set_xlabel('Tasa de desempleo (u) %', fontsize=11, fontweight='bold')\nax2.set_ylabel('Tasa de inflación (π) %', fontsize=11, fontweight='bold')\nax2.set_title('B. Análisis Empírico\\n(Econometría)', fontsize=12, fontweight='bold')\nax2.grid(True, alpha=0.3)\nax2.legend(fontsize=10)\nax2.set_xlim(0, 10)\nax2.set_ylim(-2, 6)\n\n# Panel C: Integración\nax3 = axes[1, 0]\nax3.plot(u_range, pi_teoria, 'b-', linewidth=3, label='Teoría', alpha=0.7)\nax3.scatter(u_obs, pi_obs, alpha=0.3, s=30, color='red', label='Datos')\nax3.plot(u_obs, intercept + slope * u_obs, 'g--', linewidth=2.5, label='Estimación')\nax3.set_xlabel('Tasa de desempleo (u) %', fontsize=11, fontweight='bold')\nax3.set_ylabel('Tasa de inflación (π) %', fontsize=11, fontweight='bold')\nax3.set_title('C. Integración Teoría-Evidencia', fontsize=12, fontweight='bold')\nax3.grid(True, alpha=0.3)\nax3.legend(fontsize=10)\nax3.set_xlim(0, 10)\nax3.set_ylim(-2, 6)\n\n# Panel D: Residuos (diagnóstico)\nax4 = axes[1, 1]\nresiduos = pi_obs - (intercept + slope * u_obs)\nax4.scatter(u_obs, residuos, alpha=0.5, s=50, color='purple')\nax4.axhline(y=0, color='black', linestyle='-', linewidth=1)\nax4.axhline(y=2*np.std(residuos), color='red', linestyle='--', alpha=0.5)\nax4.axhline(y=-2*np.std(residuos), color='red', linestyle='--', alpha=0.5)\nax4.set_xlabel('Tasa de desempleo (u) %', fontsize=11, fontweight='bold')\nax4.set_ylabel('Residuos', fontsize=11, fontweight='bold')\nax4.set_title('D. Diagnóstico de Residuos\\n(Validación del Modelo)', fontsize=12, fontweight='bold')\nax4.grid(True, alpha=0.3)\nax4.set_xlim(0, 10)\n\nplt.tight_layout()\nplt.show()\n\n# Test de normalidad de residuos\nfrom scipy.stats import shapiro\nstat_shapiro, p_shapiro = shapiro(residuos)\nprint(\"\\n4. DIAGNÓSTICO ESTADÍSTICO:\")\nprint(f\"   Test de Shapiro-Wilk (normalidad residuos):\")\nprint(f\"     - Estadístico: {stat_shapiro:.4f}\")\nprint(f\"     - p-value: {p_shapiro:.4f}\")\nprint(f\"     - Conclusión: {'Residuos normales' if p_shapiro &gt; 0.05 else 'Evidencia contra normalidad'}\")\n\n\n======================================================================\nANÁLISIS INTEGRADO: CURVA DE PHILLIPS\n======================================================================\n\n1. TEORÍA MATEMÁTICA:\n   Modelo: $\\pi = \\pi^e + \\beta(u - u^*)$\n     - Coeficiente $\\beta$: -0.50\n     - Expectativas $\\pi^e$: 2.0%\n     - Intercepto: 4.744 ($\\pi^e$ estimado)\n     - Pendiente: -0.536 ($\\beta$ estimado)\n\n2. ANÁLISIS ECONOMÉTRICO:\n   Estimación por MCO:\n     - Intercepto: 4.744 (π^e estimado)\n     - Pendiente: -0.536 (\beta estimado)\n     - R: 0.504\n     - p-value: 0.000000\n     - Error estándar: 0.054\n\n3. COMPARACIÓN TEORÍA-EVIDENCIA:\n   \beta teórico vs estimado: -0.500 vs -0.536\n   Error de estimación: 0.036\n   Error relativo: 7.2%\n\n4. DIAGNÓSTICO ESTADÍSTICO:\n   Test de Shapiro-Wilk (normalidad residuos):\n     - Estadístico: 0.9939\n     - p-value: 0.9340\n     - Conclusión: Residuos normales\n\n\n\n\n\n\n\n\nFigura 1.6: Curva de Phillips: integración de teoría matemática y análisis empírico\n\n\n\n\n\n\n\n\n\n\n\nDesarrollaremos completamente un problema de optimización del productor (Varian, 1992, Capítulo 1).\nProblema: Una firma con tecnología Cobb-Douglas busca minimizar costos:\nProblema: Una firma con tecnología Cobb-Douglas busca minimizar costos:\n\\[\n\\min_{K, L} rK + wL \\quad \\text{sujeto a} \\quad AK^\\alpha L^{1-\\alpha} \\geq Q_0\n\\]\ndonde \\(r\\) es el precio del capital, \\(w\\) el salario, y \\(0 &lt; \\alpha &lt; 1\\).\n\n\n\n\n\n\nChiang, A. C., & Wainwright, K. (2005). Fundamental Methods of Mathematical Economics (4th ed.). McGraw-Hill.\n\n\nDebreu, G. (1959). Theory of Value: An Axiomatic Analysis of Economic Equilibrium. Yale University Press.\n\n\nSimon, C. P., & Blume, L. (1994). Mathematics for Economists. W.W. Norton & Company.\n\n\nVarian, H. R. (1992). Microeconomic Analysis (3rd ed.). W.W. Norton & Company.\n\n\n\nEmanuel Quintana Silva\nUniversidad Pedagógica y Tecnológica de Colombia (UPTC)"
-  },
-  {
-    "objectID": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html#introducción",
-    "href": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html#introducción",
-    "title": "Capítulo 1: Naturaleza de la Economía Matemática",
-    "section": "",
-    "text": "La economía matemática representa uno de los desarrollos metodológicos más significativos en la ciencia económica del siglo XX (Chiang & Wainwright, 2005). Su evolución desde los trabajos pioneros de Cournot (1838) hasta la formalización axiomática de Debreu (1959) ha transformado radicalmente la manera en que comprendemos y analizamos los fenómenos económicos.\nEste capítulo establece los fundamentos conceptuales que distinguen la economía matemática como método analítico, no como rama sustantiva de la economía. Exploraremos su alcance, metodología, y la relación dialéctica con enfoques complementarios como la econometría y el análisis cualitativo (Simon & Blume, 1994).\n\n\nAl finalizar este capítulo, el estudiante será capaz de:\n\nComprender la definición formal y el alcance metodológico de la economía matemática\nDistinguir entre economía matemática y economía literaria, identificando ventajas comparativas\nDiferenciar economía matemática de econometría, reconociendo su complementariedad\nAnalizar críticamente las ventajas y limitaciones del formalismo matemático\nEvaluar la relación entre teoría matemática, análisis empírico e intuición económica\nAplicar herramientas computacionales para implementar modelos matemáticos\n\n\n\n\nLa matematización de la economía tiene raíces profundas:\n\n\n\n\n\n\nHitos Históricos en Economía Matemática\n\n\n\n\n1838: Antoine Augustin Cournot - Recherches sur les principes mathématiques de la théorie des richesses\n1874: Léon Walras - Teoría del equilibrio general\n1881: Francis Ysidro Edgeworth - Mathematical Psychics\n1947: Paul Samuelson - Foundations of Economic Analysis\n1959: Gerard Debreu - Formalización axiomática del equilibrio general\n1972: Kenneth Arrow y Gerard Debreu - Premio Nobel por teoría del equilibrio general"
-  },
-  {
-    "objectID": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html#definición-y-alcance",
-    "href": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html#definición-y-alcance",
-    "title": "Capítulo 1: Naturaleza de la Economía Matemática",
-    "section": "",
-    "text": "La economía matemática no constituye una subdisciplina económica (como la economía laboral o la economía del desarrollo), sino un enfoque metodológico transversal aplicable a cualquier área del análisis económico (Chiang & Wainwright, 2005, pp. 3-4).\n\n\n\n\n\n\nDefinición 1.1 (Economía Matemática)\n\n\n\nLa economía matemática es un método de análisis económico caracterizado por:\n\nFormulación simbólica: Uso de notación matemática para expresar relaciones económicas\nRazonamiento formal: Aplicación de teoremas y técnicas matemáticas establecidas\nEstructuras axiomáticas: Desarrollo deductivo desde premisas explícitas hacia conclusiones lógicas\nGeneralidad abstracta: Capacidad de analizar sistemas de \\(n\\) dimensiones\n\nFormalmente, si \\(\\mathcal{E}\\) denota el conjunto de proposiciones económicas y \\(\\mathcal{M}\\) el conjunto de estructuras matemáticas, la economía matemática establece un homomorfismo:\n\\[\n\\phi: \\mathcal{E} \\rightarrow \\mathcal{M}\n\\]\nque preserva las relaciones lógicas entre proposiciones económicas.\n\n\n\n\n\n\n\n\n\nTabla 1.1: Características distintivas de la economía matemática\n\n\n\n\n\n\n\n\n\n\n\nCaracterística\nDescripción\nEjemplo\n\n\n\n\nLenguaje\nNotación simbólica formal (variables, funciones, operadores)\n\\(U: \\mathbb{R}^n_+ \\rightarrow \\mathbb{R}\\)\n\n\nPrecisión\nDefiniciones inequívocas y relaciones exactas\n\\(\\frac{\\partial U}{\\partial x_i} &gt; 0 \\ \\forall i\\)\n\n\nDimensionalidad\nCapacidad de manejar espacios de alta dimensión\n\\(\\max_{x \\in \\mathbb{R}^n_+} U(x)\\) s.a. \\(p \\cdot x \\leq m\\)\n\n\nSupuestos\nExplicitación completa de premisas y condiciones\nContinuidad, diferenciabilidad, convexidad\n\n\nDerivación\nProceso deductivo riguroso mediante teoremas\nTeorema de Kuhn-Tucker\n\n\nGeneralización\nResultados aplicables a clases amplias de problemas\nTeorema del sobre\n\n\n\n\n\n\n\n\n\n\n\nConsideremos la representación matemática de una relación de demanda:\n\n\nCódigo\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport sympy as sp\n\n# Configuración de estilo\nplt.style.use('seaborn-v0_8-darkgrid')\nplt.rcParams['figure.dpi'] = 100\nplt.rcParams['font.size'] = 10\n\n# 1. Representación simbólica\nP, Q, a, b = sp.symbols('P Q a b', positive=True, real=True)\ndemanda_simbolica = sp.Eq(Q, a - b*P)\n\nprint(\"=\"*60)\nprint(\"REPRESENTACIÓN MATEMÁTICA DE LA DEMANDA\")\nprint(\"=\"*60)\nprint(\"\\n1. FORMA EXPLÍCITA (Cantidad como función del precio):\")\nprint(f\"   {demanda_simbolica}\")\nprint(\"\\n2. FORMA INVERSA (Precio como función de la cantidad):\")\nP_inverso = sp.solve(demanda_simbolica, P)[0]\nprint(f\"   P = {P_inverso}\")\nprint(\"\\n3. FORMA IMPLÍCITA (Relación general):\")\nprint(f\"   F(P,Q) = {demanda_simbolica.lhs - demanda_simbolica.rhs} = 0\")\n\n# 2. Visualización numérica\nfig, axes = plt.subplots(1, 3, figsize=(15, 5))\n\n# Parámetros numéricos\na_val, b_val = 100, 2\nP_vals = np.linspace(0, 50, 100)\nQ_vals = np.maximum(0, a_val - b_val * P_vals)\n\n# Panel A: Forma estándar (P en eje vertical)\nax1 = axes[0]\nax1.plot(Q_vals, P_vals, 'b-', linewidth=2.5, label='$P = \\\\frac{100-Q}{2}$')\nax1.fill_between(Q_vals, 0, P_vals, alpha=0.1, color='blue')\nax1.set_xlabel('Cantidad (Q)', fontsize=11, fontweight='bold')\nax1.set_ylabel('Precio (P)', fontsize=11, fontweight='bold')\nax1.set_title('Representación Estándar\\n(Curva de Demanda)', \n              fontsize=12, fontweight='bold')\nax1.grid(True, alpha=0.3)\nax1.legend(loc='upper right', fontsize=10)\nax1.set_xlim(0, 105)\nax1.set_ylim(0, 55)\nax1.axhline(y=0, color='k', linewidth=0.5)\nax1.axvline(x=0, color='k', linewidth=0.5)\n\n# Panel B: Forma explícita (Q como función de P)\nax2 = axes[1]\nax2.plot(P_vals, Q_vals, 'r-', linewidth=2.5, label='$Q = 100 - 2P$')\nax2.fill_between(P_vals, 0, Q_vals, alpha=0.1, color='red')\nax2.set_xlabel('Precio (P)', fontsize=11, fontweight='bold')\nax2.set_ylabel('Cantidad (Q)', fontsize=11, fontweight='bold')\nax2.set_title('Forma Explícita\\n(Función de Demanda)', \n              fontsize=12, fontweight='bold')\nax2.grid(True, alpha=0.3)\nax2.legend(loc='upper right', fontsize=10)\nax2.set_xlim(0, 55)\nax2.set_ylim(0, 105)\nax2.axhline(y=0, color='k', linewidth=0.5)\nax2.axvline(x=0, color='k', linewidth=0.5)\n\n# Panel C: Elasticidad\nP_elast = P_vals[P_vals &gt; 0]\nQ_elast = a_val - b_val * P_elast\nelasticidad = -(b_val * P_elast / Q_elast)\n\nax3 = axes[2]\nax3.plot(Q_elast, elasticidad, 'g-', linewidth=2.5, \n         label='$\\\\varepsilon = -\\\\frac{dQ}{dP}\\\\frac{P}{Q}$')\nax3.axhline(y=-1, color='red', linestyle='--', alpha=0.7, \n            label='Elasticidad unitaria')\nax3.fill_between(Q_elast, elasticidad, -1, \n                  where=(elasticidad &lt; -1), alpha=0.1, color='blue',\n                  label='Elástica $(|\\\\varepsilon| &gt; 1)$')\nax3.fill_between(Q_elast, elasticidad, -1, \n                  where=(elasticidad &gt;= -1), alpha=0.1, color='red',\n                  label='Inelástica $(|\\\\varepsilon| &lt; 1)$')\nax3.set_xlabel('Cantidad (Q)', fontsize=11, fontweight='bold')\nax3.set_ylabel('Elasticidad-Precio', fontsize=11, fontweight='bold')\nax3.set_title('Elasticidad de la Demanda\\n(Concepto Derivado)', \n              fontsize=12, fontweight='bold')\nax3.grid(True, alpha=0.3)\nax3.legend(loc='lower right', fontsize=9)\nax3.set_xlim(0, 105)\nax3.set_ylim(-5, 0)\n\nplt.tight_layout()\nplt.show()\n\nprint(\"\\n4. PROPIEDADES MATEMÁTICAS DERIVADAS:\")\nprint(f\"   • Pendiente: dQ/dP = -{b_val}\")\nprint(f\"   • Intercepto vertical: P-máx = {a_val/b_val}\")\nprint(f\"   • Intercepto horizontal: Q-máx = {a_val}\")\nprint(f\"   • Elasticidad en punto medio: $\\\\varepsilon$ = {-b_val * (a_val/b_val/2) / (a_val/2):.2f}\")\n\n\n============================================================\nREPRESENTACIÓN MATEMÁTICA DE LA DEMANDA\n============================================================\n\n1. FORMA EXPLÍCITA (Cantidad como función del precio):\n   Eq(Q, -P*b + a)\n\n2. FORMA INVERSA (Precio como función de la cantidad):\n   P = (-Q + a)/b\n\n3. FORMA IMPLÍCITA (Relación general):\n   F(P,Q) = P*b + Q - a = 0\n\n4. PROPIEDADES MATEMÁTICAS DERIVADAS:\n   • Pendiente: dQ/dP = -2\n   • Intercepto vertical: P-máx = 50.0\n   • Intercepto horizontal: Q-máx = 100\n   • Elasticidad en punto medio: $\\varepsilon$ = -1.00\n\n\n\n\n\n\n\n\nFigura 1.1: Representaciones alternativas de la función de demanda\n\n\n\n\n\n\n\n\n\n\n\nInterpretación Económica\n\n\n\nLa formulación matemática \\(Q = a - bP\\) con \\(a, b &gt; 0\\) codifica dos principios económicos:\n\nLey de la demanda: \\(\\frac{\\partial Q}{\\partial P} = -b &lt; 0\\) (relación inversa)\nDemanda finita: \\(\\lim_{P \\to \\infty} Q(P) = -\\infty\\) implica \\(Q = 0\\) para \\(P \\geq a/b\\)\n\nLa ventaja del formalismo es que estas propiedades se derivan lógicamente de la especificación funcional, no por intuición.\n\n\n\n\n\nLa economía matemática se aplica transversalmente:\n\n\n\n\nTabla 1.2: Áreas de aplicación de la economía matemática\n\n\n\n\n\n\n\n\n\n\n\nÁrea\nProblemas Típicos\nHerramientas Matemáticas\n\n\n\n\nMicroeconomía\nOptimización del consumidor/productor, equilibrio competitivo\nCálculo multivariado, optimización convexa\n\n\nMacroeconomía\nModelos de crecimiento, ciclos económicos, política monetaria\nEcuaciones diferenciales, control óptimo\n\n\nEconomía Pública\nIncidencia tributaria, provisión de bienes públicos\nTeoría de juegos, análisis de bienestar\n\n\nEconomía Internacional\nVentaja comparativa, flujos de capital, tipos de cambio\nModelos de equilibrio general, comercio\n\n\nEconomía Financiera\nValoración de activos, gestión de riesgos, equilibrio de portafolio\nProcesos estocásticos, ecuaciones diferenciales estocásticas\n\n\nEconomía del Desarrollo\nTrampa de pobreza, acumulación de capital, demografía\nSistemas dinámicos, modelos de sobrelapamiento generacional\n\n\nEconomía Ambiental\nExternalidades, recursos comunes, sostenibilidad\nTeoría de juegos, programación dinámica\n\n\nEconomía Laboral\nBúsqueda de empleo, capital humano, discriminación\nBúsqueda y matching, modelos principal-agente"
-  },
-  {
-    "objectID": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html#economía-matemática-vs.-economía-literaria",
-    "href": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html#economía-matemática-vs.-economía-literaria",
-    "title": "Capítulo 1: Naturaleza de la Economía Matemática",
-    "section": "",
-    "text": "Tanto el enfoque matemático como el literario comparten el objetivo fundamental de la teoría económica deductiva (Chiang & Wainwright, 2005, pp. 5-6):\n\n\n\n\n\n\nObjetivo Compartido\n\n\n\n\n“Derivar un conjunto de conclusiones o teoremas a partir de un conjunto dado de axiomas o hipótesis mediante un proceso de razonamiento lógicamente válido”\n\nLa diferencia radica en el medio de expresión y las herramientas de inferencia, no en la naturaleza del análisis.\n\n\n\n\n\n\n\n\n\nTabla 1.3: Comparación metodológica: Economía matemática vs. literaria\n\n\n\n\n\n\n\n\n\n\n\nAspecto\nEconomía Matemática\nEconomía Literaria\n\n\n\n\nLenguaje de formulación\nSímbolos, ecuaciones, espacios abstractos\nPalabras, enunciados verbales\n\n\nProceso de razonamiento\nTeoremas matemáticos, demostraciones formales\nLógica discursiva, argumentación\n\n\nPrecisión conceptual\nAlta: definiciones inequívocas\nVariable: admite ambigüedades\n\n\nCapacidad de generalización\nCaso general de \\(n\\) variables\nLimitada por dimensionalidad\n\n\nExplicitación de supuestos\nCompleta y necesaria\nPuede ser implícita\n\n\nVerificabilidad de derivaciones\nAlta: pasos verificables\nBaja: interpretaciones múltiples\n\n\nAccesibilidad inicial\nRequiere formación matemática\nMás intuitiva inicialmente\n\n\nPotencia analítica\nMuy alta para problemas complejos\nLimitada en alta complejidad\n\n\n\n\n\n\n\n\n\n\n\n\n\nEl lenguaje matemático elimina ambigüedades semánticas inherentes al lenguaje natural.\nEjemplo 1.1 (Utilidad marginal decreciente)\n\nFormulación literaria: “La satisfacción adicional obtenida del consumo de una unidad adicional de un bien disminuye a medida que se consume más del bien, manteniendo constante el consumo de otros bienes”\nFormulación matemática: \\[\\frac{\\partial^2 U}{\\partial x_i^2} &lt; 0 \\quad \\forall i \\in \\{1,\\ldots,n\\}\\]\n\nLa formulación matemática es: - Más breve: Una línea vs. un párrafo - Más precisa: No admite interpretaciones alternativas - Más general: Aplica a \\(n\\) bienes simultáneamente\n\n\nCódigo\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom mpl_toolkits.mplot3d import Axes3D\n\nfig = plt.figure(figsize=(16, 5))\n\n# Panel A: Función de utilidad total\nax1 = fig.add_subplot(131)\nx = np.linspace(0.1, 10, 100)\nU = np.log(x)  # Utilidad logarítmica (cóncava)\nax1.plot(x, U, 'b-', linewidth=2.5, label='$U(x) = \\\\ln(x)$')\nax1.set_xlabel('Cantidad consumida (x)', fontsize=11, fontweight='bold')\nax1.set_ylabel('Utilidad total U(x)', fontsize=11, fontweight='bold')\nax1.set_title('Función de Utilidad\\n(Cóncava)', fontsize=12, fontweight='bold')\nax1.grid(True, alpha=0.3)\nax1.legend(fontsize=10)\n\n# Panel B: Utilidad marginal\nax2 = fig.add_subplot(132)\nU_marginal = 1/x  # Primera derivada\nax2.plot(x, U_marginal, 'r-', linewidth=2.5, \n         label='$U\\'(x) = \\\\frac{1}{x}$')\nax2.set_xlabel('Cantidad consumida (x)', fontsize=11, fontweight='bold')\nax2.set_ylabel('Utilidad marginal $U\\'(x)$', fontsize=11, fontweight='bold')\nax2.set_title('Utilidad Marginal\\n(Decreciente)', fontsize=12, fontweight='bold')\nax2.grid(True, alpha=0.3)\nax2.legend(fontsize=10)\nax2.set_ylim(0, 2)\n\n# Panel C: Curvatura (segunda derivada)\nax3 = fig.add_subplot(133)\nU_segunda = -1/(x**2)  # Segunda derivada\nax3.plot(x, U_segunda, 'g-', linewidth=2.5, \n         label='$U\\'\\'(x) = -\\\\frac{1}{x^2} &lt; 0$')\nax3.axhline(y=0, color='black', linestyle='--', linewidth=1, alpha=0.5)\nax3.fill_between(x, U_segunda, 0, alpha=0.2, color='green')\nax3.set_xlabel('Cantidad consumida (x)', fontsize=11, fontweight='bold')\nax3.set_ylabel('Curvatura $U\\'\\'(x)$', fontsize=11, fontweight='bold')\nax3.set_title('Segunda Derivada\\n(Cóncava: $U\\'\\'&lt;0$)', \n              fontsize=12, fontweight='bold')\nax3.grid(True, alpha=0.3)\nax3.legend(fontsize=10)\nax3.set_ylim(-1, 0.1)\n\nplt.tight_layout()\nplt.show()\n\nprint(\"VERIFICACIÓN ANALÍTICA:\")\nprint(f\"  U(x) = ln(x)\")\nprint(f\"  U'(x) = 1/x &gt; 0  (utilidad marginal positiva)\")\nprint(f\"  U''(x) = -1/x² &lt; 0  (utilidad marginal decreciente)\")\n\n\n\n\n\n\n\n\nFigura 1.2: Utilidad marginal decreciente: representación matemática\n\n\n\n\n\nVERIFICACIÓN ANALÍTICA:\n  U(x) = ln(x)\n  U'(x) = 1/x &gt; 0  (utilidad marginal positiva)\n  U''(x) = -1/x² &lt; 0  (utilidad marginal decreciente)\n\n\n\n\n\nLa matemática proporciona herramientas listas para aplicar (Simon & Blume, 1994, Capítulos 2–3):\n\n\n\n\n\n\nTeorema 1.1 (Condiciones de Primer Orden para Optimización)\n\n\n\nSea \\(f: \\mathbb{R}^n \\rightarrow \\mathbb{R}\\) una función diferenciable. Si \\(x^* \\in \\mathrm{int}(\\mathbb{R}^n_+)\\) es un máximo local de \\(f\\), entonces necesariamente:\n\\[\n\\nabla f(x^*) = \\mathbf{0} \\quad \\text{(condiciones de primer orden)}\n\\]\nSi además \\(f\\) es cóncava, esta condición es también suficiente para un máximo global.\n\n\nAplicación económica inmediata: Maximización de utilidad del consumidor\n\n\nCódigo\nfrom scipy.optimize import minimize\nimport sympy as sp\n\n# Parámetros\nalpha1, alpha2 = 0.6, 0.4\np1, p2, m = 2, 3, 100  # precios e ingreso\n\n# Función de utilidad Cobb-Douglas\ndef utilidad(x):\n    return -(x[0]**alpha1 * x[1]**alpha2)  # Negativo para minimizar\n\n# Restricción presupuestaria\ndef restriccion(x):\n    return p1*x[0] + p2*x[1] - m\n\n# Optimización numérica\nfrom scipy.optimize import minimize\ncons = {'type': 'eq', 'fun': restriccion}\nx0 = [10, 10]\nbounds = [(0.1, None), (0.1, None)]\nresultado = minimize(utilidad, x0, method='SLSQP', bounds=bounds, constraints=cons)\nx1_opt, x2_opt = resultado.x\nU_opt = -resultado.fun\n\n# Visualización\nfig, axes = plt.subplots(1, 2, figsize=(14, 6))\n\n# Panel izquierdo: Problema de optimización\nax1 = axes[0]\nx1_vals = np.linspace(0, 60, 100)\nx2_restriccion = (m - p1*x1_vals) / p2\n\n# Curvas de indiferencia\nU_levels = [U_opt * 0.6, U_opt * 0.8, U_opt, U_opt * 1.1]\nfor U_level in U_levels:\n    x2_curva = (U_level / (x1_vals**alpha1))**(1/alpha2)\n    if U_level == U_opt:\n        ax1.plot(x1_vals, x2_curva, 'r-', linewidth=3, \n                 label=f'Curva óptima $U^* = {U_opt:.2f}$', zorder=3)\n    else:\n        ax1.plot(x1_vals, x2_curva, 'b--', linewidth=1, alpha=0.5)\n\nax1.plot(x1_vals, x2_restriccion, 'g-', linewidth=2.5, \n         label=f'Restricción: ${p1}x_1 + {p2}x_2 = {m}$')\nax1.scatter(x1_opt, x2_opt, color='red', s=200, zorder=5, marker='*',\n            label=f'Óptimo: $x^* = ({x1_opt:.2f}, {x2_opt:.2f})$')\nax1.set_xlabel('Bien 1 $(x_1)$', fontsize=11, fontweight='bold')\nax1.set_ylabel('Bien 2 $(x_2)$', fontsize=11, fontweight='bold')\nax1.set_title('Maximización del Consumidor\\n(Representación Gráfica)', \n              fontsize=12, fontweight='bold')\nax1.grid(True, alpha=0.3)\nax1.legend(fontsize=9, loc='upper right')\nax1.set_xlim(0, 55)\nax1.set_ylim(0, 35)\n\n# Panel derecho: Verificación de CPO\nax2 = axes[1]\nax2.axis('off')\n\n# Texto explicativo\ntexto_cpo = f\"\"\"\nVERIFICACIÓN ANALÍTICA DE CPO\n\nProblema:\n    max U(x1,x2) = x1^{alpha1} * x2^{alpha2}\n    s.a. {p1}x1 + {p2}x2 = {m}\n\nLagrangiano:\n    L = x1^{alpha1} * x2^{alpha2} + lambda*({m} - {p1}x1 - {p2}x2)\n\nCondiciones de primer orden:\n    dL/dx1 = {alpha1}*x1^{alpha1-1}*x2^{alpha2} - lambda*{p1} = 0\n    dL/dx2 = {alpha2}*x1^{alpha1}*x2^{alpha2-1} - lambda*{p2} = 0\n    dL/dlambda = {m} - {p1}x1 - {p2}x2 = 0\n\nSolución óptima:\n    x1* = {x1_opt:.4f}\n    x2* = {x2_opt:.4f}\n    U* = {U_opt:.4f}\n    lambda* = {alpha1 * x2_opt**alpha2 / (x1_opt**(1-alpha1) * p1):.4f}\n\nInterpretación económica:\n    • TMS = p1/p2: {(alpha1*x2_opt)/(alpha2*x1_opt):.4f} = {p1/p2:.4f}\n    • Gasto total: ${p1*x1_opt + p2*x2_opt:.2f} = ${m}\n    • lambda* = Utilidad marginal del ingreso\n\"\"\"\n\nax2.text(0.1, 0.95, texto_cpo, fontsize=10, verticalalignment='top',\n         family='monospace', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.3))\n\nplt.tight_layout()\nplt.show()\n\n# Verificación numérica de CPO\nprint(\"=\"*60)\nprint(\"VERIFICACIÓN NUMÉRICA DE CONDICIONES DE PRIMER ORDEN\")\nprint(\"=\"*60)\nprint(f\"\\nSolución óptima:\")\nprint(f\"  x1* = {x1_opt:.6f}\")\nprint(f\"  x2* = {x2_opt:.6f}\")\nprint(f\"  U* = {U_opt:.6f}\")\nprint(f\"\\nVerificación de CPO:\")\nUMg1 = alpha1 * x1_opt**(alpha1-1) * x2_opt**alpha2\nUMg2 = alpha2 * x1_opt**alpha1 * x2_opt**(alpha2-1)\nlambda_opt = UMg1 / p1\nprint(f\"  dU/dx1 / p1 = {UMg1/p1:.6f}\")\nprint(f\"  dU/dx2 / p2 = {UMg2/p2:.6f}\")\nprint(f\"  Igualdad CPO: {abs(UMg1/p1 - UMg2/p2) &lt; 1e-6}\")\nprint(f\"\\nTMS = p1/p2:\")\nprint(f\"  TMS = {(alpha1*x2_opt)/(alpha2*x1_opt):.6f}\")\nprint(f\"  p1/p2 = {p1/p2:.6f}\")\nprint(f\"  Igualdad: {abs((alpha1*x2_opt)/(alpha2*x1_opt) - p1/p2) &lt; 1e-4}\")\n\n\n\n\n\n\n\n\nFigura 1.3: Condiciones de primer orden: maximización del consumidor\n\n\n\n\n\n============================================================\nVERIFICACIÓN NUMÉRICA DE CONDICIONES DE PRIMER ORDEN\n============================================================\n\nSolución óptima:\n  x1* = 29.999959\n  x2* = 13.333361\n  U* = 21.689435\n\nVerificación de CPO:\n  dU/dx1 / p1 = 0.216895\n  dU/dx2 / p2 = 0.216894\n  Igualdad CPO: True\n\nTMS = p1/p2:\n  TMS = 0.666669\n  p1/p2 = 0.666667\n  Igualdad: True\n\n\n\n\n\nLos teoremas matemáticos exigen declaración precisa de condiciones suficientes (Chiang & Wainwright, 2005, pp. 7-8):\n\n\n\n\n\n\nTeorema 1.2 (Teorema de la Función Implícita - Versión Simplificada)\n\n\n\nSea \\(F: \\mathbb{R}^{n+m} \\rightarrow \\mathbb{R}^m\\) una función continuamente diferenciable. Suponga que \\(F(x_0, y_0) = 0\\) y que la matriz Jacobiana \\(\\frac{\\partial F}{\\partial y}\\) evaluada en \\((x_0, y_0)\\) es no singular. Entonces existen vecindades \\(U\\) de \\(x_0\\) y \\(V\\) de \\(y_0\\), y una función única \\(g: U \\rightarrow V\\) tal que:\n\n\\(g(x_0) = y_0\\)\n\\(F(x, g(x)) = 0\\) para todo \\(x \\in U\\)\n\\(g\\) es continuamente diferenciable con:\n\n\\[\n\\frac{\\partial g}{\\partial x} = -\\left(\\frac{\\partial F}{\\partial y}\\right)^{-1} \\frac{\\partial F}{\\partial x}\n\\]\n\n\nImportancia económica: Este teorema garantiza que podemos despejar variables endógenas en función de parámetros exógenos, siempre que las condiciones sean satisfechas. La formulación matemática obliga a verificar estas condiciones.\n\n\nCódigo\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.optimize import fsolve\n\n# Ejemplo: Equilibrio de mercado implícito\n# F(P, Q, α) = Qd(P,α) - Qs(P) = 0\n\ndef F_equilibrio(vars, alpha):\n    \"\"\"Función implícita del equilibrio de mercado\"\"\"\n    P, Q = vars\n    Qd = alpha - 2*P  # Demanda\n    Qs = -20 + 3*P     # Oferta\n    return [Q - Qd, Q - Qs]\n\n# Resolver para diferentes valores de α\nalpha_vals = np.linspace(80, 120, 9)\nP_eq = []\nQ_eq = []\n\nfor alpha in alpha_vals:\n    sol = fsolve(lambda vars: F_equilibrio(vars, alpha), [20, 40])\n    P_eq.append(sol[0])\n    Q_eq.append(sol[1])\n\nP_eq = np.array(P_eq)\nQ_eq = np.array(Q_eq)\n\n# Derivada implícita ∂P*/∂α\ndP_dalpha_numerical = np.gradient(P_eq, alpha_vals)\ndP_dalpha_theoretical = 1/5  # De la solución analítica\n\nfig, axes = plt.subplots(1, 3, figsize=(16, 5))\n\n# Panel A: Función implícita F=0\nax1 = axes[0]\nP_grid = np.linspace(15, 35, 100)\nQ_grid = np.linspace(20, 80, 100)\nP_mesh, Q_mesh = np.meshgrid(P_grid, Q_grid)\n\nalpha_ejemplo = 100\nQd_mesh = alpha_ejemplo - 2*P_mesh\nQs_mesh = -20 + 3*P_mesh\nF_mesh = Qd_mesh - Qs_mesh\n\ncontour = ax1.contour(P_mesh, Q_mesh, F_mesh, levels=[0], colors='red', linewidths=3)\nax1.clabel(contour, inline=True, fontsize=10, fmt='F=0')\nax1.scatter(P_eq[4], Q_eq[4], color='red', s=200, marker='*', zorder=5,\n            label=f'Equilibrio: P*={P_eq[4]:.1f}, Q*={Q_eq[4]:.1f}')\nax1.set_xlabel('Precio (P)', fontsize=11, fontweight='bold')\nax1.set_ylabel('Cantidad (Q)', fontsize=11, fontweight='bold')\nax1.set_title('Función Implícita $F(P,Q,\\\\alpha)=0$\\n(Equilibrio de Mercado)', \n              fontsize=12, fontweight='bold')\nax1.grid(True, alpha=0.3)\nax1.legend(fontsize=10)\n\n# Panel B: Precio de equilibrio vs parámetro\nax2 = axes[1]\nax2.plot(alpha_vals, P_eq, 'b-o', linewidth=2.5, markersize=8,\n         label='$P^*(\\\\alpha)$ (numérico)')\n# CORRECCIÓN AQUÍ: Usar comillas dobles para el string interno\nax2.set_xlabel('Parámetro de demanda $(\\\\alpha)$', fontsize=11, fontweight='bold')\nax2.set_ylabel('Precio de equilibrio $P^*$', fontsize=11, fontweight='bold')\nax2.set_title('Función Implícita Despejada\\n$P^* = g(\\\\alpha)$', \n              fontsize=12, fontweight='bold')\nax2.grid(True, alpha=0.3)\nax2.legend(fontsize=10)\n\n# Panel C: Derivada implícita\nax3 = axes[2]\nax3.plot(alpha_vals, dP_dalpha_numerical, 'g-o', linewidth=2.5, markersize=8,\n         label='$\\\\frac{dP^*}{d\\\\alpha}$ (numérico)')\nax3.axhline(y=dP_dalpha_theoretical, color='red', linestyle='--', linewidth=2,\n            label=f'Teórico: $\\\\frac{{1}}{{5}}$ = {dP_dalpha_theoretical:.2f}')\n# CORRECCIÓN AQUÍ también\nax3.set_xlabel('Parámetro de demanda $(\\\\alpha)$', fontsize=11, fontweight='bold')\nax3.set_ylabel('Derivada $\\\\frac{dP^*}{d\\\\alpha}$', fontsize=11, fontweight='bold')\nax3.set_title('Derivada Implícita\\n(Estática Comparativa)', \n              fontsize=12, fontweight='bold')\nax3.grid(True, alpha=0.3)\nax3.legend(fontsize=10)\n\nplt.tight_layout()\nplt.show()\n\nprint(\"=\"*70)\nprint(\"VERIFICACIÓN DEL TEOREMA DE LA FUNCIÓN IMPLÍCITA\")\nprint(\"=\"*70)\nprint(\"\\nSistema de equilibrio:\")\nprint(\"  Demanda: Qd = α - 2P\")\nprint(\"  Oferta:  Qs = -20 + 3P\")\nprint(\"  Equilibrio: F(P, Q, α) = Qd - Qs = 0\")\nprint(\"\\nSolución analítica:\")\nprint(\"  P* = (α + 20)/5\")\nprint(\"  Q* = (3α - 40)/5\")\nprint(\"\\nDerivada implícita (Teorema):\")\nprint(\"  ∂P*/∂α = 1/5 = 0.2\")\nprint(f\"\\nVerificación numérica:\")\nprint(f\"  Promedio numérico: {np.mean(dP_dalpha_numerical):.4f}\")\nprint(f\"  Valor teórico: {dP_dalpha_theoretical:.4f}\")\nprint(f\"  Error relativo: {abs(np.mean(dP_dalpha_numerical) - dP_dalpha_theoretical)/dP_dalpha_theoretical * 100:.2f}%\")\n\n\n\n\n\n\n\n\nFigura 1.4: Teorema de la función implícita: ejemplo económico\n\n\n\n\n\n======================================================================\nVERIFICACIÓN DEL TEOREMA DE LA FUNCIÓN IMPLÍCITA\n======================================================================\n\nSistema de equilibrio:\n  Demanda: Qd = α - 2P\n  Oferta:  Qs = -20 + 3P\n  Equilibrio: F(P, Q, α) = Qd - Qs = 0\n\nSolución analítica:\n  P* = (α + 20)/5\n  Q* = (3α - 40)/5\n\nDerivada implícita (Teorema):\n  ∂P*/∂α = 1/5 = 0.2\n\nVerificación numérica:\n  Promedio numérico: 0.2000\n  Valor teórico: 0.2000\n  Error relativo: 0.00%\n\n\n\n\n\nLa geometría limita la visualización a 2-3 dimensiones, pero el álgebra maneja \\(n\\) variables (Simon & Blume, 1994, pp. 15-18):\nEjemplo 1.2 (Optimización con \\(n\\) bienes)\n\n\nCódigo\ndef resolver_consumidor(n_bienes=10, alpha=None, precios=None, ingreso=100):\n    \"\"\"\n    Resuelve el problema del consumidor para n bienes con utilidad Cobb-Douglas\n    \n    Parámetros:\n    -----------\n    n_bienes : int\n        Número de bienes\n    alpha : array\n        Exponentes Cobb-Douglas (deben sumar 1)\n    precios : array\n        Vector de precios\n    ingreso : float\n        Ingreso del consumidor\n    \"\"\"\n    if alpha is None:\n        alpha = np.ones(n_bienes) / n_bienes  # Pesos iguales\n    if precios is None:\n        precios = np.random.uniform(1, 5, n_bienes)\n    \n    # Solución analítica Cobb-Douglas\n    x_optimo = (alpha * ingreso) / precios\n    U_optimo = np.prod(x_optimo ** alpha)\n    \n    return x_optimo, U_optimo, precios, alpha\n\n# Resolver para diferentes dimensiones\ndimensiones = [2, 5, 10, 20, 50, 100]\nresultados = []\n\nnp.random.seed(42)\nfor n in dimensiones:\n    x_opt, U_opt, p, a = resolver_consumidor(n_bienes=n, ingreso=100)\n    gasto_total = np.sum(p * x_opt)\n    resultados.append({\n        'n': n,\n        'U*': U_opt,\n        'gasto': gasto_total,\n        'max_x': np.max(x_opt),\n        'min_x': np.min(x_opt)\n    })\n\ndf_resultados = pd.DataFrame(resultados)\n\n# Visualización\nfig, axes = plt.subplots(2, 2, figsize=(14, 10))\n\n# Panel A: Utilidad óptima vs dimensión\nax1 = axes[0, 0]\nax1.plot(df_resultados['n'], df_resultados['U*'], 'b-o', linewidth=2.5, markersize=8)\nax1.set_xlabel('Número de bienes (n)', fontsize=11, fontweight='bold')\nax1.set_ylabel('Utilidad óptima $U^*$', fontsize=11, fontweight='bold')\nax1.set_title('Utilidad Óptima vs Dimensión', fontsize=12, fontweight='bold')\nax1.grid(True, alpha=0.3)\nax1.set_xscale('log')\n\n# Panel B: Verificación de restricción presupuestaria\nax2 = axes[0, 1]\nax2.plot(df_resultados['n'], df_resultados['gasto'], 'r-s', linewidth=2.5, markersize=8)\nax2.axhline(y=100, color='green', linestyle='--', linewidth=2, label='Ingreso = 100')\nax2.set_xlabel('Número de bienes (n)', fontsize=11, fontweight='bold')\nax2.set_ylabel('Gasto total', fontsize=11, fontweight='bold')\nax2.set_title('Verificación: Restricción Presupuestaria', fontsize=12, fontweight='bold')\nax2.grid(True, alpha=0.3)\nax2.legend(fontsize=10)\nax2.set_xscale('log')\n\n# Panel C: Ejemplo específico n=10\nax3 = axes[1, 0]\nn_ejemplo = 10\nx_ej, U_ej, p_ej, a_ej = resolver_consumidor(n_bienes=n_ejemplo, ingreso=100)\nbienes = np.arange(1, n_ejemplo+1)\nax3.bar(bienes, x_ej, color='steelblue', alpha=0.7, edgecolor='black')\nax3.set_xlabel('Bien $i$', fontsize=11, fontweight='bold')\nax3.set_ylabel('Cantidad óptima $x_i^*$', fontsize=11, fontweight='bold')\nax3.set_title(f'Canasta Óptima para n={n_ejemplo} bienes', fontsize=12, fontweight='bold')\nax3.grid(True, alpha=0.3, axis='y')\nax3.set_xticks(bienes)\n\n# Panel D: Tabla resumen\nax4 = axes[1, 1]\nax4.axis('off')\ntabla_texto = df_resultados.to_string(index=False, float_format=lambda x: f'{x:.4f}')\nax4.text(0.1, 0.9, 'RESULTADOS NUMÉRICOS\\n' + '='*50 + '\\n' + tabla_texto,\n         fontsize=9, family='monospace', verticalalignment='top',\n         bbox=dict(boxstyle='round', facecolor='lightblue', alpha=0.3))\n\nplt.tight_layout()\nplt.show()\n\nprint(\"=\"*70)\nprint(\"OPTIMIZACIÓN EN DIMENSIÓN ARBITRARIA\")\nprint(\"=\"*70)\nprint(f\"\\nProblema general para n bienes:\")\nprint(r\"  $\\max U(x_1,\\ldots,x_n) = \\prod_i x_i^{\\alpha_i}$\")\nprint(r\"  s.a. $\\sum_i p_i x_i = m$\")\nprint(r\"  $x_i^* = (\\alpha_i \\cdot m) / p_i \\quad \\forall i \\in \\{1,\\ldots,n\\}$\")\nprint(f\"\\nSolución analítica:\")\nprint(r\"  $x_i^* = (\\alpha_i \\cdot m) / p_i \\quad \\forall i \\in \\{1,\\ldots,n\\}$\")  # ← CAMBIO AQUÍ\nprint(f\"\\nEsta fórmula es válida independientemente de n\")\nprint(f\"(la geometría falla para n&gt;3, pero el álgebra no)\")\n\n\n\n\n\n\n\n\nFigura 1.5: Optimización del consumidor en dimensión arbitraria\n\n\n\n\n\n======================================================================\nOPTIMIZACIÓN EN DIMENSIÓN ARBITRARIA\n======================================================================\n\nProblema general para n bienes:\n  $\\max U(x_1,\\ldots,x_n) = \\prod_i x_i^{\\alpha_i}$\n  s.a. $\\sum_i p_i x_i = m$\n  $x_i^* = (\\alpha_i \\cdot m) / p_i \\quad \\forall i \\in \\{1,\\ldots,n\\}$\n\nSolución analítica:\n  $x_i^* = (\\alpha_i \\cdot m) / p_i \\quad \\forall i \\in \\{1,\\ldots,n\\}$\n\nEsta fórmula es válida independientemente de n\n(la geometría falla para n&gt;3, pero el álgebra no)\n\n\n\n\n\n\nUna crítica común a la economía matemática es que sus modelos son “irreales” o “alejados de la realidad” (Chiang & Wainwright, 2005, pp. 9-10). Esta crítica confunde el método con el contenido.\n\n\n\n\n\n\nProposición 1.1 (Defensa del Formalismo)\n\n\n\nLa crítica de que la teoría matemática es “irreal” es metodológicamente incorrecta porque:\n\nToda teoría científica es abstracta: La abstracción es necesaria para el análisis científico\nEl realismo depende de los supuestos, no del método: Un modelo verbal puede ser tan “irreal” como uno matemático\nLa matemática es un lenguaje, no un filtro de realidad: El formalismo no impone restricciones de contenido\nLa falsabilidad es independiente del formalismo: Tanto modelos matemáticos como verbales pueden ser empíricamente falsos\n\nCorolario: Si un modelo matemático es “irreal”, el problema está en los supuestos económicos, no en el método matemático."
-  },
-  {
-    "objectID": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html#economía-matemática-vs.-econometría",
-    "href": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html#economía-matemática-vs.-econometría",
-    "title": "Capítulo 1: Naturaleza de la Economía Matemática",
-    "section": "",
-    "text": "La econometría y la economía matemática son disciplinas complementarias pero metodológicamente distintas (Chiang & Wainwright, 2005, pp. 10-12).\n\n\n\n\n\n\nDefinición 1.3 (Econometría)\n\n\n\nLa econometría es la aplicación de métodos matemáticos y estadísticos a datos económicos con los objetivos de:\n\nEstimación: Cuantificar parámetros de relaciones económicas\nInferencia: Probar hipótesis sobre comportamientos económicos\nPredicción: Pronosticar valores futuros de variables económicas\nEvaluación de políticas: Medir impactos causales de intervenciones\n\nFormalmente, dado un modelo económico \\(y = f(x; \\theta)\\), la econometría busca estimar \\(\\hat{\\theta}\\) a partir de datos observados \\(\\{(y_i, x_i)\\}_{i=1}^N\\).\n\n\n\n\n\n\n\n\n\nTabla 1.4: Economía matemática vs. Econometría: comparación detallada\n\n\n\n\n\n\n\n\n\n\n\nDimensión\nEconomía Matemática\nEconometría\n\n\n\n\nObjetivo primario\nDerivar implicaciones lógicas de supuestos\nEstimar relaciones y probar hipótesis\n\n\nEnfoque metodológico\nDeductivo (axiomático)\nInductivo (inferencial)\n\n\nNaturaleza del análisis\nTeórico-cualitativo\nEmpírico-cuantitativo\n\n\nPapel de los datos\nAbstractos, simbólicos, parametrizados\nObservados, muestrales, numéricos\n\n\nTipo de conclusiones\nTeoremas, proposiciones, condiciones generales\nEstimadores, estadísticos, intervalos\n\n\nHerramientas principales\nCálculo, álgebra lineal, optimización, teoría de juegos\nRegresión, máxima verosimilitud, GMM, panel\n\n\nPreguntas típicas\n¿Qué implica X? ¿Bajo qué condiciones Y?\n¿Cuánto es X? ¿Es significativo Y?\n\n\nValidación de resultados\nConsistencia lógica, rigor matemático\nSignificancia estadística, bondad de ajuste\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProposición 1.2 (Complementariedad)\n\n\n\nLa economía matemática y la econometría son mutuamente necesarias para el progreso científico en economía:\n\nTeoría sin datos es vacía: Los modelos matemáticos requieren confrontación empírica\nDatos sin teoría son ciegos: El análisis empírico requiere estructura teórica\nRetroalimentación iterativa: Los resultados empíricos refinan la teoría; la teoría guía el análisis empírico\n\nEsquemáticamente:\n\\[\n\\text{Teoría Matemática} \\xrightarrow{\\text{genera}} \\text{Hipótesis testables} \\xrightarrow{\\text{requiere}} \\text{Análisis Econométrico}\n\\] \\[\n\\text{Resultados Empíricos} \\xrightarrow{\\text{refinan}} \\text{Teoría Matemática}\n\\]\n\n\n\n\n\nIlustremos la complementariedad con un ejemplo clásico (Chiang & Wainwright, 2005, Capítulo 19):\n\n\nCódigo\n# 1. TEORÍA MATEMÁTICA: Modelo de Phillips aumentado por expectativas\n# π_t = π_t^e + β(u_t - u*) + ε_t\n\ndef phillips_teorico(u, u_star, beta, pi_e):\n    \"\"\"Curva de Phillips teórica\"\"\"\n    return pi_e + beta * (u - u_star)\n\n# Parámetros teóricos\nu_star = 5.0  # Tasa natural de desempleo\nbeta = -0.5   # Sensibilidad de inflación al desempleo\npi_e = 2.0    # Expectativas de inflación\n\n# 2. SIMULACIÓN DE DATOS (representando realidad económica)\nnp.random.seed(123)\nn_obs = 100\nu_obs = np.random.uniform(3, 9, n_obs)\npi_teorico = phillips_teorico(u_obs, u_star, beta, pi_e)\n# Añadir shocks aleatorios\nepsilon = np.random.normal(0, 0.8, n_obs)\npi_obs = pi_teorico + epsilon\n\n# 3. ANÁLISIS ECONOMÉTRICO: Estimación por MCO\nfrom scipy import stats\n\n# Regresión lineal\nX = u_obs - u_obs.mean()  # Centrar para interpretación\nslope, intercept, r_value, p_value, std_err = stats.linregress(u_obs, pi_obs)\n\nprint(\"=\"*70)\nprint(\"ANÁLISIS INTEGRADO: CURVA DE PHILLIPS\")\nprint(\"=\"*70)\nprint(\"\\n1. TEORÍA MATEMÁTICA:\")\nprint(r\"   Modelo: $\\pi = \\pi^e + \\beta(u - u^*)$\")\nprint(rf\"     - Coeficiente $\\beta$: {beta:.2f}\")\nprint(rf\"     - Expectativas $\\pi^e$: {pi_e:.1f}%\")\nprint(rf\"     - Intercepto: {intercept:.3f} ($\\pi^e$ estimado)\")\nprint(rf\"     - Pendiente: {slope:.3f} ($\\beta$ estimado)\")\n\nprint(\"\\n2. ANÁLISIS ECONOMÉTRICO:\")\nprint(f\"   Estimación por MCO:\")\nprint(f\"     - Intercepto: {intercept:.3f} (π^e estimado)\")\nprint(f\"     - Pendiente: {slope:.3f} (\\beta estimado)\")\nprint(f\"     - R: {r_value**2:.3f}\")\nprint(f\"     - p-value: {p_value:.6f}\")\nprint(f\"     - Error estándar: {std_err:.3f}\")\n\nprint(\"\\n3. COMPARACIÓN TEORÍA-EVIDENCIA:\")\nprint(f\"   \\beta teórico vs estimado: {beta:.3f} vs {slope:.3f}\")\nprint(f\"   Error de estimación: {abs(beta - slope):.3f}\")\nprint(f\"   Error relativo: {abs(beta - slope)/abs(beta)*100:.1f}%\")\n\n# Visualización integrada\nfig, axes = plt.subplots(2, 2, figsize=(15, 12))\n\n# Panel A: Teoría pura\nax1 = axes[0, 0]\nu_range = np.linspace(0, 10, 100)\npi_teoria = phillips_teorico(u_range, u_star, beta, pi_e)\nax1.plot(u_range, pi_teoria, 'b-', linewidth=3, label='Teoría: $\\\\pi = 2 - 0.5(u - 5)$')\nax1.axvline(x=u_star, color='red', linestyle='--', alpha=0.7, label=f'$u^* = {u_star}$')\nax1.axhline(y=pi_e, color='green', linestyle='--', alpha=0.7, label=f'$\\\\pi^e = {pi_e}$')\nax1.set_xlabel('Tasa de desempleo (u) %', fontsize=11, fontweight='bold')\nax1.set_ylabel('Tasa de inflación (π) %', fontsize=11, fontweight='bold')\nax1.set_title('A. Modelo Teórico\\n(Economía Matemática)', fontsize=12, fontweight='bold')\nax1.grid(True, alpha=0.3)\nax1.legend(fontsize=10)\nax1.set_xlim(0, 10)\nax1.set_ylim(-2, 6)\n\n# Panel B: Datos observados\nax2 = axes[0, 1]\nax2.scatter(u_obs, pi_obs, alpha=0.5, s=50, color='red', label='Datos observados')\nax2.plot(u_obs, intercept + slope * u_obs, 'g--', linewidth=2.5,\n         label=f'MCO: π = {intercept:.2f} + {slope:.2f}u')\nax2.set_xlabel('Tasa de desempleo (u) %', fontsize=11, fontweight='bold')\nax2.set_ylabel('Tasa de inflación (π) %', fontsize=11, fontweight='bold')\nax2.set_title('B. Análisis Empírico\\n(Econometría)', fontsize=12, fontweight='bold')\nax2.grid(True, alpha=0.3)\nax2.legend(fontsize=10)\nax2.set_xlim(0, 10)\nax2.set_ylim(-2, 6)\n\n# Panel C: Integración\nax3 = axes[1, 0]\nax3.plot(u_range, pi_teoria, 'b-', linewidth=3, label='Teoría', alpha=0.7)\nax3.scatter(u_obs, pi_obs, alpha=0.3, s=30, color='red', label='Datos')\nax3.plot(u_obs, intercept + slope * u_obs, 'g--', linewidth=2.5, label='Estimación')\nax3.set_xlabel('Tasa de desempleo (u) %', fontsize=11, fontweight='bold')\nax3.set_ylabel('Tasa de inflación (π) %', fontsize=11, fontweight='bold')\nax3.set_title('C. Integración Teoría-Evidencia', fontsize=12, fontweight='bold')\nax3.grid(True, alpha=0.3)\nax3.legend(fontsize=10)\nax3.set_xlim(0, 10)\nax3.set_ylim(-2, 6)\n\n# Panel D: Residuos (diagnóstico)\nax4 = axes[1, 1]\nresiduos = pi_obs - (intercept + slope * u_obs)\nax4.scatter(u_obs, residuos, alpha=0.5, s=50, color='purple')\nax4.axhline(y=0, color='black', linestyle='-', linewidth=1)\nax4.axhline(y=2*np.std(residuos), color='red', linestyle='--', alpha=0.5)\nax4.axhline(y=-2*np.std(residuos), color='red', linestyle='--', alpha=0.5)\nax4.set_xlabel('Tasa de desempleo (u) %', fontsize=11, fontweight='bold')\nax4.set_ylabel('Residuos', fontsize=11, fontweight='bold')\nax4.set_title('D. Diagnóstico de Residuos\\n(Validación del Modelo)', fontsize=12, fontweight='bold')\nax4.grid(True, alpha=0.3)\nax4.set_xlim(0, 10)\n\nplt.tight_layout()\nplt.show()\n\n# Test de normalidad de residuos\nfrom scipy.stats import shapiro\nstat_shapiro, p_shapiro = shapiro(residuos)\nprint(\"\\n4. DIAGNÓSTICO ESTADÍSTICO:\")\nprint(f\"   Test de Shapiro-Wilk (normalidad residuos):\")\nprint(f\"     - Estadístico: {stat_shapiro:.4f}\")\nprint(f\"     - p-value: {p_shapiro:.4f}\")\nprint(f\"     - Conclusión: {'Residuos normales' if p_shapiro &gt; 0.05 else 'Evidencia contra normalidad'}\")\n\n\n======================================================================\nANÁLISIS INTEGRADO: CURVA DE PHILLIPS\n======================================================================\n\n1. TEORÍA MATEMÁTICA:\n   Modelo: $\\pi = \\pi^e + \\beta(u - u^*)$\n     - Coeficiente $\\beta$: -0.50\n     - Expectativas $\\pi^e$: 2.0%\n     - Intercepto: 4.744 ($\\pi^e$ estimado)\n     - Pendiente: -0.536 ($\\beta$ estimado)\n\n2. ANÁLISIS ECONOMÉTRICO:\n   Estimación por MCO:\n     - Intercepto: 4.744 (π^e estimado)\n     - Pendiente: -0.536 (\beta estimado)\n     - R: 0.504\n     - p-value: 0.000000\n     - Error estándar: 0.054\n\n3. COMPARACIÓN TEORÍA-EVIDENCIA:\n   \beta teórico vs estimado: -0.500 vs -0.536\n   Error de estimación: 0.036\n   Error relativo: 7.2%\n\n4. DIAGNÓSTICO ESTADÍSTICO:\n   Test de Shapiro-Wilk (normalidad residuos):\n     - Estadístico: 0.9939\n     - p-value: 0.9340\n     - Conclusión: Residuos normales\n\n\n\n\n\n\n\n\nFigura 1.6: Curva de Phillips: integración de teoría matemática y análisis empírico"
-  },
-  {
-    "objectID": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html#aplicaciones-avanzadas",
-    "href": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html#aplicaciones-avanzadas",
-    "title": "Capítulo 1: Naturaleza de la Economía Matemática",
-    "section": "",
-    "text": "Desarrollaremos completamente un problema de optimización del productor (Varian, 1992, Capítulo 1).\nProblema: Una firma con tecnología Cobb-Douglas busca minimizar costos:\nProblema: Una firma con tecnología Cobb-Douglas busca minimizar costos:\n\\[\n\\min_{K, L} rK + wL \\quad \\text{sujeto a} \\quad AK^\\alpha L^{1-\\alpha} \\geq Q_0\n\\]\ndonde \\(r\\) es el precio del capital, \\(w\\) el salario, y \\(0 &lt; \\alpha &lt; 1\\)."
-  },
-  {
-    "objectID": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html#referencias",
-    "href": "capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html#referencias",
-    "title": "Capítulo 1: Naturaleza de la Economía Matemática",
-    "section": "",
-    "text": "Chiang, A. C., & Wainwright, K. (2005). Fundamental Methods of Mathematical Economics (4th ed.). McGraw-Hill.\n\n\nDebreu, G. (1959). Theory of Value: An Axiomatic Analysis of Economic Equilibrium. Yale University Press.\n\n\nSimon, C. P., & Blume, L. (1994). Mathematics for Economists. W.W. Norton & Company.\n\n\nVarian, H. R. (1992). Microeconomic Analysis (3rd ed.). W.W. Norton & Company.\n\n\n\nEmanuel Quintana Silva\nUniversidad Pedagógica y Tecnológica de Colombia (UPTC)"
+    "text": "Code",
+    "crumbs": [
+      "<span class='chapter-number'>127</span>  <span class='chapter-title'>notas_completas.html</span>"
+    ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html",
-    "title": "",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
     "section": "",
-    "text": "Código"
+    "text": "124 Introducción\nEl análisis económico matemático se fundamenta en el sistema de números reales y las estructuras algebraicas que permiten representar relaciones económicas de manera precisa y rigurosa. Este capítulo establece las bases matemáticas necesarias para el estudio de modelos económicos, desde los conceptos elementales de conjuntos hasta las funciones generales que caracterizan el comportamiento de variables económicas.\nLa importancia de una sólida comprensión de estos fundamentos radica en que las variables económicas—precio, costo, ingreso, producción, entre otras—adoptan valores numéricos que deben ser manipulados mediante operaciones algebraicas precisas. Más aún, las relaciones entre estas variables se expresan típicamente mediante funciones matemáticas cuyas propiedades determinan el comportamiento del sistema económico bajo análisis (Chiang & Wainwright, 2005).",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#definición-y-estructura",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#definición-y-estructura",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "125.1 Definición y Estructura",
+    "text": "125.1 Definición y Estructura\nEl sistema de números reales, denotado por \\(\\mathbb{R}\\), constituye un continuo numérico fundamental para el análisis económico matemático. Este sistema proporciona el marco dentro del cual se definen y operan las variables económicas.\n\n\n\n\n\n\nDefinición: Números Reales\n\n\n\nEl conjunto \\(\\mathbb{R}\\) de los números reales es la unión de los conjuntos de números racionales (\\(\\mathbb{Q}\\)) e irracionales (\\(\\mathbb{I}\\)):\n\\[\\mathbb{R} = \\mathbb{Q} \\cup \\mathbb{I}\\]\nEste conjunto forma un campo ordenado completo bajo las operaciones de adición y multiplicación.",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#números-racionales",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#números-racionales",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "125.2 Números Racionales",
+    "text": "125.2 Números Racionales\nLos números racionales constituyen el subconjunto de números reales que pueden expresarse como el cociente de dos enteros.\nDefinición formal:\n\\[\\mathbb{Q} = \\left\\{\\frac{p}{q} \\mid p, q \\in \\mathbb{Z}, \\, q \\neq 0\\right\\}\\]\ndonde \\(\\mathbb{Z}\\) denota el conjunto de los números enteros.\nComponentes del conjunto racional:\n\nEnteros positivos (\\(\\mathbb{Z}^+\\)): Utilizados para conteo y enumeración: \\(\\{1, 2, 3, 4, \\ldots\\}\\)\nEnteros negativos (\\(\\mathbb{Z}^-\\)): Representan magnitudes con sentido opuesto: \\(\\{-1, -2, -3, \\ldots\\}\\)\nCero: Elemento neutro de la adición, denotado por \\(0\\)\nFracciones: Cocientes de enteros donde el denominador es distinto de cero\n\nPropiedades características:\n\n\n\n\n\n\nRepresentación decimal de racionales\n\n\n\nTodo número racional admite una representación decimal que es:\n\nFinita (terminante): \\(\\frac{1}{4} = 0.25\\), \\(\\frac{3}{8} = 0.375\\)\nPeriódica (infinita repetitiva): \\(\\frac{1}{3} = 0.\\overline{3} = 0.333\\ldots\\), \\(\\frac{2}{11} = 0.\\overline{18} = 0.181818\\ldots\\)\n\nLa barra superior indica el bloque de dígitos que se repite indefinidamente.\n\n\nEjemplos económicos:\n\nTasas de interés expresadas como fracciones: \\(r = \\frac{5}{100} = 0.05\\) (5%)\nProporciones de consumo: \\(c = \\frac{3}{4}\\) del ingreso disponible\nPrecios en unidades monetarias: \\(P = \\frac{125}{10} = 12.5\\) (doce unidades y media)",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#números-irracionales",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#números-irracionales",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "125.3 Números Irracionales",
+    "text": "125.3 Números Irracionales\nLos números irracionales son aquellos números reales que no pueden expresarse como cociente de dos enteros.\nDefinición formal:\n\\[\\mathbb{I} = \\mathbb{R} \\setminus \\mathbb{Q} = \\{x \\in \\mathbb{R} \\mid x \\notin \\mathbb{Q}\\}\\]\nPropiedades características:\n\n\n\n\n\n\nRepresentación decimal de irracionales\n\n\n\nLos números irracionales poseen representaciones decimales infinitas no periódicas. No existe un patrón repetitivo en su expansión decimal.\n\n\nEjemplos fundamentales:\n\n\n\nTabla 125.1: Números irracionales fundamentales\n\n\n\n\n\n\n\n\n\n\n\nNúmero\nSímbolo\nValor aproximado\nContexto\n\n\n\n\nRaíz cuadrada de 2\n\\(\\sqrt{2}\\)\n\\(1.41421356\\ldots\\)\nGeometría, optimización\n\n\nPi\n\\(\\pi\\)\n\\(3.14159265\\ldots\\)\nGeometría circular, funciones trigonométricas\n\n\nEuler\n\\(e\\)\n\\(2.71828182\\ldots\\)\nCrecimiento exponencial continuo\n\n\nRazón áurea\n\\(\\phi\\)\n\\(1.61803398\\ldots\\)\nProporciones, series de Fibonacci\n\n\n\n\n\n\nAplicaciones económicas:\n\nLa constante \\(e\\) aparece en modelos de crecimiento continuo: \\(Q(t) = Q_0 e^{rt}\\)\n\\(\\pi\\) surge en modelos con simetría circular o periódica\n\\(\\sqrt{2}\\) aparece en problemas de optimización geométrica",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#la-recta-real",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#la-recta-real",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "125.4 La Recta Real",
+    "text": "125.4 La Recta Real\nLa representación geométrica del conjunto \\(\\mathbb{R}\\) es la recta real, donde cada punto corresponde biunívocamente a un número real.\n\n\n\n\n\n\n\n\nFigura 125.1: Representación geométrica de la recta real\n\n\n\n\n\n\n\n\n\n\n\nCompletitud de los números reales\n\n\n\nLos números irracionales “llenan” los espacios entre los números racionales, completando así el continuo numérico. Esta propiedad de completitud es fundamental para el análisis matemático y garantiza la existencia de límites y valores extremos en el análisis económico (Simon & Blume, 1994).",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#conceptos-fundamentales",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#conceptos-fundamentales",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "126.1 Conceptos Fundamentales",
+    "text": "126.1 Conceptos Fundamentales\nLa teoría de conjuntos proporciona el lenguaje formal para expresar colecciones de objetos y sus relaciones, constituyendo la base sobre la cual se construyen las estructuras matemáticas utilizadas en economía.\n\n\n\n\n\n\nDefinición: Conjunto\n\n\n\nUn conjunto es una colección bien definida de objetos distintos. Los objetos que pertenecen a un conjunto se denominan elementos o miembros del conjunto.",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#notación-y-representación",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#notación-y-representación",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "126.2 Notación y Representación",
+    "text": "126.2 Notación y Representación\nNotación estándar: Los conjuntos se denotan con letras mayúsculas (\\(A, B, C, \\ldots\\)) y se encierran entre llaves: \\(\\{\\}\\)\nMétodos de especificación:\n\nPor enumeración (extensión): Se listan explícitamente todos los elementos.\n\\[S = \\{2, 3, 5, 7, 11\\}\\]\nPor comprensión (descripción): Se especifica la propiedad que caracteriza a los elementos.\n\\[S = \\{x \\mid x \\text{ es un número primo menor que 12}\\}\\]\nLectura: “El conjunto \\(S\\) de todos los objetos \\(x\\) tales que \\(x\\) es un número primo menor que 12”\n\nRelación de pertenencia:\n\n\\(x \\in A\\): “\\(x\\) es elemento de \\(A\\)” o “\\(x\\) pertenece a \\(A\\)”\n\\(x \\notin A\\): “\\(x\\) no es elemento de \\(A\\)” o “\\(x\\) no pertenece a \\(A\\)”\n\n\n\n\n\n\n\nEjemplo económico\n\n\n\nSea \\(\\mathcal{B}\\) el conjunto de bienes en una economía:\n\\[\\mathcal{B} = \\{\\text{trigo}, \\text{acero}, \\text{energía}, \\text{transporte}\\}\\]\nEntonces: \\(\\text{trigo} \\in \\mathcal{B}\\) pero \\(\\text{oro} \\notin \\mathcal{B}\\)",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#clasificación-de-conjuntos",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#clasificación-de-conjuntos",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "126.3 Clasificación de Conjuntos",
+    "text": "126.3 Clasificación de Conjuntos\nPor cardinalidad:\n\nConjunto finito: Contiene un número finito de elementos.\n\\[A = \\{1, 2, 3, 4, 5\\} \\quad \\text{donde } |A| = 5\\]\nConjunto infinito: Contiene infinitos elementos.\n\nNumerable (contable): \\(\\mathbb{N} = \\{1, 2, 3, \\ldots\\}\\)\nNo numerable: \\(\\mathbb{R}\\) (los números reales)\n\nConjunto vacío: No contiene ningún elemento. Se denota \\(\\emptyset\\) o \\(\\{\\}\\)\n\n\n\n\n\n\n\nDistinción importante\n\n\n\nEl conjunto \\(\\{0\\}\\) no es vacío, pues contiene al número \\(0\\) como elemento. Es decir:\n\\[\\{0\\} \\neq \\emptyset \\quad \\text{ya que } |\\{0\\}| = 1\\]",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#relaciones-entre-conjuntos",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#relaciones-entre-conjuntos",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "126.4 Relaciones entre Conjuntos",
+    "text": "126.4 Relaciones entre Conjuntos\nIgualdad:\n\n\n\n\n\n\nDefinición: Igualdad de conjuntos\n\n\n\nDos conjuntos \\(A\\) y \\(B\\) son iguales si y solo si contienen exactamente los mismos elementos:\n\\[A = B \\iff (\\forall x)(x \\in A \\leftrightarrow x \\in B)\\]\n\n\nObservación: El orden de aparición de los elementos es irrelevante:\n\\[\\{1, 2, 3\\} = \\{3, 1, 2\\} = \\{2, 3, 1\\}\\]\nSubconjunto:\n\n\n\n\n\n\nDefinición: Subconjunto\n\n\n\n\\(A\\) es subconjunto de \\(B\\) (denotado \\(A \\subseteq B\\) o \\(B \\supseteq A\\)) si todo elemento de \\(A\\) es también elemento de \\(B\\):\n\\[A \\subseteq B \\iff (\\forall x)(x \\in A \\Rightarrow x \\in B)\\]\n\n\nSubconjunto propio:\n\\[A \\subset B \\iff (A \\subseteq B) \\land (A \\neq B)\\]\nEs decir, \\(A\\) es subconjunto propio de \\(B\\) si \\(A \\subseteq B\\) y existe al menos un elemento en \\(B\\) que no está en \\(A\\).\nEjemplo:\n\\[\\{1, 2\\} \\subset \\{1, 2, 3\\} \\quad \\text{pero} \\quad \\{1, 2\\} \\not\\subset \\{1, 2\\}\\]\nProposición fundamental:\n\n\n\n\n\n\nNota\n\n\n\nEl conjunto vacío es subconjunto de cualquier conjunto:\n\\[\\forall A: \\emptyset \\subseteq A\\]\n\n\nConjuntos disjuntos:\n\n\n\n\n\n\nDefinición: Conjuntos disjuntos\n\n\n\nDos conjuntos \\(A\\) y \\(B\\) son disjuntos si no tienen elementos en común:\n\\[A \\cap B = \\emptyset\\]",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#operaciones-con-conjuntos",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#operaciones-con-conjuntos",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "126.5 Operaciones con Conjuntos",
+    "text": "126.5 Operaciones con Conjuntos\nUnión:\n\n\n\n\n\n\nDefinición: Unión\n\n\n\nLa unión de \\(A\\) y \\(B\\) (denotada \\(A \\cup B\\)) es el conjunto de elementos que pertenecen a \\(A\\) o a \\(B\\) (o a ambos):\n\\[A \\cup B = \\{x \\mid x \\in A \\lor x \\in B\\}\\]\n\n\nIntersección:\n\n\n\n\n\n\nDefinición: Intersección\n\n\n\nLa intersección de \\(A\\) y \\(B\\) (denotada \\(A \\cap B\\)) es el conjunto de elementos que pertenecen tanto a \\(A\\) como a \\(B\\):\n\\[A \\cap B = \\{x \\mid x \\in A \\land x \\in B\\}\\]\n\n\nComplemento:\n\n\n\n\n\n\nDefinición: Complemento\n\n\n\nSea \\(U\\) un conjunto universal. El complemento de \\(A\\) (denotado \\(A^c\\) o \\(\\overline{A}\\)) es el conjunto de elementos de \\(U\\) que no pertenecen a \\(A\\):\n\\[A^c = \\{x \\in U \\mid x \\notin A\\}\\]\n\n\nDiferencia:\n\\[A \\setminus B = \\{x \\mid x \\in A \\land x \\notin B\\} = A \\cap B^c\\]",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#leyes-algebraicas-de-conjuntos",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#leyes-algebraicas-de-conjuntos",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "126.6 Leyes Algebraicas de Conjuntos",
+    "text": "126.6 Leyes Algebraicas de Conjuntos\nLeyes conmutativas:\n\\[A \\cup B = B \\cup A\\] \\[A \\cap B = B \\cap A\\]\nLeyes asociativas:\n\\[(A \\cup B) \\cup C = A \\cup (B \\cup C)\\] \\[(A \\cap B) \\cap C = A \\cap (B \\cap C)\\]\nLeyes distributivas:\n\\[A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)\\] \\[A \\cup (B \\cap C) = (A \\cup B) \\cap (A \\cup C)\\]\nLeyes de De Morgan:\n\\[(A \\cup B)^c = A^c \\cap B^c\\] \\[(A \\cap B)^c = A^c \\cup B^c\\]\nLeyes de idempotencia:\n\\[A \\cup A = A\\] \\[A \\cap A = A\\]\nLeyes de identidad:\n\\[A \\cup \\emptyset = A\\] \\[A \\cap U = A\\]\nLeyes de dominación:\n\\[A \\cup U = U\\] \\[A \\cap \\emptyset = \\emptyset\\]\nLeyes de complemento:\n\\[A \\cup A^c = U\\] \\[A \\cap A^c = \\emptyset\\] \\[(A^c)^c = A\\]",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#número-de-subconjuntos",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#número-de-subconjuntos",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "126.7 Número de Subconjuntos",
+    "text": "126.7 Número de Subconjuntos\n\n\n\n\n\n\nTeorema: Cardinalidad del conjunto potencia\n\n\n\nSi un conjunto \\(A\\) tiene \\(n\\) elementos, el número total de subconjuntos de \\(A\\) (incluyendo \\(\\emptyset\\) y el propio \\(A\\)) es:\n\\[|\\mathcal{P}(A)| = 2^n\\]\ndonde \\(\\mathcal{P}(A)\\) denota el conjunto potencia de \\(A\\).\n\n\nEjemplo: Si \\(A = \\{a, b, c\\}\\), entonces \\(|A| = 3\\) y:\n\\[\\mathcal{P}(A) = \\{\\emptyset, \\{a\\}, \\{b\\}, \\{c\\}, \\{a,b\\}, \\{a,c\\}, \\{b,c\\}, \\{a,b,c\\}\\}\\]\ncon \\(|\\mathcal{P}(A)| = 2^3 = 8\\) subconjuntos.",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#pares-ordenados",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#pares-ordenados",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "127.1 Pares Ordenados",
+    "text": "127.1 Pares Ordenados\nA diferencia de los conjuntos simples, en los pares ordenados el orden de los elementos es significativo.\n\n\n\n\n\n\nDefinición: Par ordenado\n\n\n\nUn par ordenado \\((a, b)\\) es una estructura donde el orden de los elementos importa:\n\\[(a, b) = (c, d) \\iff (a = c) \\land (b = d)\\]\nEn particular: \\((a, b) \\neq (b, a)\\) a menos que \\(a = b\\)\n\n\nNotación: Los pares ordenados se encierran entre paréntesis \\(()\\), a diferencia de los conjuntos que usan llaves \\(\\{\\}\\).\nGeneralización: Las n-tuplas ordenadas extienden este concepto:\n\nTerna ordenada: \\((a, b, c)\\)\nCuádrupla ordenada: \\((a, b, c, d)\\)\nn-tupla ordenada: \\((a_1, a_2, \\ldots, a_n)\\)",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#producto-cartesiano",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#producto-cartesiano",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "127.2 Producto Cartesiano",
+    "text": "127.2 Producto Cartesiano\n\n\n\n\n\n\nDefinición: Producto cartesiano\n\n\n\nEl producto cartesiano de dos conjuntos \\(X\\) y \\(Y\\) (denotado \\(X \\times Y\\)) es el conjunto de todos los pares ordenados \\((x, y)\\) donde \\(x \\in X\\) e \\(y \\in Y\\):\n\\[X \\times Y = \\{(x, y) \\mid x \\in X \\land y \\in Y\\}\\]\n\n\nPropiedades:\n\nCardinalidad: Si \\(|X| = m\\) y \\(|Y| = n\\), entonces \\(|X \\times Y| = m \\cdot n\\)\nNo conmutatividad: En general, \\(X \\times Y \\neq Y \\times X\\)\nAsociatividad: \\((X \\times Y) \\times Z \\neq X \\times (Y \\times Z)\\), pero ambos son isomorfos a \\(X \\times Y \\times Z\\)\n\n\n\n\n\n\n\nEjemplo numérico\n\n\n\nSean \\(A = \\{1, 2\\}\\) y \\(B = \\{x, y, z\\}\\). Entonces:\n\\[A \\times B = \\{(1,x), (1,y), (1,z), (2,x), (2,y), (2,z)\\}\\]\n\\[B \\times A = \\{(x,1), (x,2), (y,1), (y,2), (z,1), (z,2)\\}\\]\nClaramente \\(A \\times B \\neq B \\times A\\), aunque \\(|A \\times B| = |B \\times A| = 6\\)",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#el-plano-cartesiano",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#el-plano-cartesiano",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "127.3 El Plano Cartesiano",
+    "text": "127.3 El Plano Cartesiano\nConstrucción geométrica:\nEl producto cartesiano \\(\\mathbb{R} \\times \\mathbb{R} = \\mathbb{R}^2\\) representa el plano cartesiano, donde cada par ordenado \\((x, y) \\in \\mathbb{R}^2\\) corresponde a un punto único en el plano.\n\n\n\n\n\n\n\n\nFigura 127.1: Representación de pares ordenados en el plano cartesiano\n\n\n\n\n\nCuadrantes del plano:\n\n\n\nTabla 127.1: División del plano cartesiano en cuadrantes\n\n\n\n\n\nCuadrante\nRegión\nCondiciones\n\n\n\n\nI\nSuperior derecha\n\\(x &gt; 0, y &gt; 0\\)\n\n\nII\nSuperior izquierda\n\\(x &lt; 0, y &gt; 0\\)\n\n\nIII\nInferior izquierda\n\\(x &lt; 0, y &lt; 0\\)\n\n\nIV\nInferior derecha\n\\(x &gt; 0, y &lt; 0\\)",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#producto-cartesiano-de-múltiples-conjuntos",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#producto-cartesiano-de-múltiples-conjuntos",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "127.4 Producto Cartesiano de Múltiples Conjuntos",
+    "text": "127.4 Producto Cartesiano de Múltiples Conjuntos\nGeneralización: El producto cartesiano se extiende a \\(n\\) conjuntos:\n\\[X_1 \\times X_2 \\times \\cdots \\times X_n = \\{(x_1, x_2, \\ldots, x_n) \\mid x_i \\in X_i \\text{ para } i = 1, 2, \\ldots, n\\}\\]\nCaso especial: \\(\\mathbb{R}^n = \\underbrace{\\mathbb{R} \\times \\mathbb{R} \\times \\cdots \\times \\mathbb{R}}_{n \\text{ veces}}\\)\nAplicaciones económicas:\n\n\\(\\mathbb{R}^2\\): Pares de variables (precio-cantidad, consumo-ingreso)\n\\(\\mathbb{R}^n\\): Vectores de precios, cantidades, o dotaciones en economías con \\(n\\) bienes\nEspacios de estrategias en teoría de juegos",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#relaciones",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#relaciones",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "128.1 Relaciones",
+    "text": "128.1 Relaciones\nUna relación formaliza la idea de asociación entre elementos de dos conjuntos.\n\n\n\n\n\n\nDefinición: Relación\n\n\n\nUna relación \\(R\\) de \\(X\\) en \\(Y\\) es cualquier subconjunto del producto cartesiano \\(X \\times Y\\):\n\\[R \\subseteq X \\times Y\\]\nSi \\((x, y) \\in R\\), decimos que “\\(x\\) está relacionado con \\(y\\)” y escribimos \\(xRy\\).\n\n\nCaracterísticas:\n\nUna relación puede asociar uno o más valores de \\(y\\) con un valor dado de \\(x\\)\nUna relación puede asociar ningún valor de \\(y\\) con ciertos valores de \\(x\\)\n\n\n\n\n\n\n\nEjemplo económico\n\n\n\nSea \\(X\\) el conjunto de empresas y \\(Y\\) el conjunto de productos. La relación \\(P\\) definida por:\n\\[P = \\{(e, p) \\mid \\text{la empresa } e \\text{ produce el producto } p\\}\\]\nindica qué productos fabrica cada empresa. Una empresa puede producir múltiples productos.",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#referencias",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#referencias",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "128.2 Referencias",
+    "text": "128.2 Referencias\n\n\nChiang, A. C., & Wainwright, K. (2005). Fundamental Methods of Mathematical Economics (4th ed.). McGraw-Hill.\n\n\nSimon, C. P., & Blume, L. (1994). Mathematics for Economists. W.W. Norton & Company.\n\n\n\nEmanuel Quintana Silva\nUniversidad Pedagógica y Tecnológica de Colombia (UPTC)",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#funciones",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#funciones",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "128.2 Funciones",
+    "text": "128.2 Funciones\nLas funciones son relaciones especiales que satisfacen una condición de unicidad.\n\n\n\n\n\n\nDefinición: Función\n\n\n\nUna función \\(f\\) de \\(X\\) en \\(Y\\) (denotada \\(f: X \\to Y\\)) es una relación que asigna a cada elemento \\(x \\in X\\) exactamente un elemento \\(y \\in Y\\):\n\\[f \\subseteq X \\times Y \\quad \\text{tal que} \\quad (\\forall x \\in X)(\\exists! y \\in Y)[(x,y) \\in f]\\]\nNotación: \\(y = f(x)\\) (se lee “\\(y\\) es igual a \\(f\\) de \\(x\\)”)\n\n\nComponentes de una función:\n\n\n\n\n\n\nNota\n\n\n\nPara \\(f: X \\to Y\\):\n\nDominio (\\(\\text{Dom}(f)\\)): Conjunto de valores permitidos para la variable independiente \\(x\\). Por definición, \\(\\text{Dom}(f) = X\\).\nCodominio: El conjunto \\(Y\\) donde toman valores las imágenes.\nImagen o Rango (\\(\\text{Im}(f)\\) o \\(\\text{Ran}(f)\\)): Conjunto de valores que efectivamente toma la variable dependiente \\(y\\):\n\\[\\text{Im}(f) = \\{y \\in Y \\mid \\exists x \\in X: y = f(x)\\} \\subseteq Y\\]\nVariable independiente (o argumento): \\(x\\)\nVariable dependiente (o valor): \\(y = f(x)\\)\n\n\n\nTerminología alternativa:\n\nMapeo o aplicación: Sinónimo de función\nTransformación: Usado frecuentemente cuando \\(X = Y\\)",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#distinción-entre-relación-y-función",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#distinción-entre-relación-y-función",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "128.3 Distinción entre Relación y Función",
+    "text": "128.3 Distinción entre Relación y Función\nCriterio fundamental:\n\nToda función es una relación, pero no toda relación es una función.\n\nTest de la línea vertical: Una relación gráfica representa una función si y solo si toda línea vertical interseca la gráfica en a lo sumo un punto.\n\n\n\n\n\n\n\n\nFigura 128.1: Comparación entre función y relación",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#propiedades-de-funciones",
+    "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#propiedades-de-funciones",
+    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "128.4 Propiedades de Funciones",
+    "text": "128.4 Propiedades de Funciones\nInyectividad (función uno a uno):\n\n\n\n\n\n\nDefinición: Función inyectiva\n\n\n\n\\(f: X \\to Y\\) es inyectiva si elementos distintos del dominio se mapean a elementos distintos del codominio:\n\\[(\\forall x_1, x_2 \\in X)[x_1 \\neq x_2 \\Rightarrow f(x_1) \\neq f(x_2)]\\]\nEquivalentemente: \\(f(x_1) = f(x_2) \\Rightarrow x_1 = x_2\\)\n\n\nSobreyectividad (función onto):\n\n\n\n\n\n\nDefinición: Función sobreyectiva\n\n\n\n\\(f: X \\to Y\\) es sobreyectiva si cada elemento del codominio es imagen de al menos un elemento del dominio:\n\\[(\\forall y \\in Y)(\\exists x \\in X)[y = f(x)]\\]\nEs decir: \\(\\text{Im}(f) = Y\\)\n\n\nBiyectividad:\n\n\n\n\n\n\nDefinición: Función biyectiva\n\n\n\n\\(f: X \\to Y\\) es biyectiva si es simultáneamente inyectiva y sobreyectiva. Establece una correspondencia uno a uno entre \\(X\\) e \\(Y\\).\n\n\n\n\n\n\n\n\nChiang, A. C., & Wainwright, K. (2005). Fundamental Methods of Mathematical Economics (4th ed.). McGraw-Hill.\n\n\nSimon, C. P., & Blume, L. (1994). Mathematics for Economists. W.W. Norton & Company.",
+    "crumbs": [
+      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+    ]
   }
 ]

@@ -1,31 +1,108 @@
-# Quarto
+# ============================================
+# QUARTO / LaTeX
+# ============================================
+# Carpetas generadas por Quarto
 _book/
 _site/
+.quarto/
+
+# Archivos temporales de LaTeX
 *.aux
 *.log
 *.out
 *.toc
+*.bbl
+*.blg
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.tex
 
-# Python
+# Archivos intermedios de Quarto
+*.ipynb  # Notebooks temporales
+
+# Imágenes generadas
+**/figure-pdf/
+**/figure-html/
+**/figure-latex/
+
+# ============================================
+# PYTHON
+# ============================================
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*$py.class
+*.so
+.Python
+.env
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
-# Jupyter
+# ============================================
+# JUPYTER / IPYTHON
+# ============================================
 .ipynb_checkpoints/
+*.ipynb_checkpoints/
 
+# ============================================
 # R
+# ============================================
 .Rhistory
 .RData
-.Rproj.user
+.Rproj.user/
 
-# Temporal
+# ============================================
+# SISTEMA / TEMPORALES
+# ============================================
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+*~
+/tmp/
+*.tmp
+*.temp
 
-# Output
-*.html
-*.pdf
-*.docx
+# ============================================
+# ARCHIVOS INSTALADORES / BINARIOS
+# ============================================
+*.deb
+*.exe
+*.dmg
+*.pkg
+*.tar.gz
+*.zip
 
+# ============================================
+# IDE / EDITORES
+# ============================================
+.vscode/
+.idea/
+*.code-workspace
+
+# ============================================
+# IMPORTANTE: NO IGNORAR ESTOS
+# ============================================
+# Mantén estos si quieres GitHub Pages:
+# !docs/
+# !*.html
+# !*.pdf
+
+# Mantén tus archivos fuente:
+# !*.qmd
+# !*.bib
+# !*.csl
+# !*.css
+# !*.yml
 /.quarto/
+_quarto.yml.backup*
+*.synctex.gz
+*.aux
+*.log
+*.toc
+index.pdf

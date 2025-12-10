@@ -1,0 +1,2926 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Emanuel Quintana Silva">
+<meta name="keywords" content="economía matemática, matemáticas, economía, optimización, cálculo">
+<meta name="description" content="Apuntes de Economía Matemática">
+
+<title>Economía Matemática - 123&nbsp; Capítulo 2: Revisión de Aritmética y Álgebra</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../capitulos/parte_01_introduccion/cap_03_ecuaciones_graficas/notas.html" rel="next">
+<link href="../../../capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html"><span class="chapter-number">123</span>&nbsp; <span class="chapter-title">Capítulo 2: Revisión de Aritmética y Álgebra</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../../">Economía Matemática</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/emanuelquintana-glitch/-Apuntes_Economia_Matematica" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_03_vectores/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_04_leyes_algebraicas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_05_identidad_nulas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_06_transpuestas_inversas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">aplicaciones.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_01_no_singularidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_02_determinantes/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_03_propiedades_determinantes/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/algoritmos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">algoritmos.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_05_regla_cramer/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_06_aplicaciones_modelos/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_07_leontief_insumo_producto/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Parte III: Estática Comparativa</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_02_tasa_cambio/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_03_pendiente_curva/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_04_limites/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_05_desigualdades/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_06_teoremas_limites/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_07_continuidad_diferenciabilidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_01_una_variable/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_02_dos_o_mas_funciones/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_03_variables_diferentes/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_04_diferenciacion_parcial/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_05_aplicaciones_estatica_comparativa/modelos_economia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">modelos_economia.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_06_jacobianos/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_01_diferenciales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_02_diferenciales_totales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_03_reglas_diferenciales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_04_derivadas_totales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_05_funciones_implicitas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_06_estatica_comparativa/modelos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">modelos.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Parte IV: Optimización</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_01_valores_optimos/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_02_primera_derivada/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_03_derivadas_superiores/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_04_segunda_derivada/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_05_series_taylor_maclaurin/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_06_n_esima_derivada/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_01_naturaleza_exponenciales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_02_funcion_natural_crecimiento/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_03_logaritmos/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_04_funciones_logaritmicas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_05_derivadas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_06_fecha_optima/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_07_mas_aplicaciones/aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">aplicaciones.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_01_version_diferencial/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_02_dos_variables/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_03_formas_cuadraticas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_04_mas_de_dos_variables/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_05_concavidad_convexidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_07_estatica_comparativa/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_02_valores_estacionarios/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_03_segunda_orden/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_04_cuasiconcavidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_05_maximizacion_utilidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_06_funciones_homogeneas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_07_combinacion_insumos/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_01_kuhn_tucker/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_02_calificacion_restriccion/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_04_teoremas_suficiencia/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_05_funciones_valor_maximo/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_06_dualidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">75</span>&nbsp; <span class="chapter-title">Parte V: Análisis Dinámico</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">76</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_02_integrales_indefinidas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">77</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_03_integrales_definidas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_04_integrales_impropias/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">79</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_05_aplicaciones_economia/aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">aplicaciones.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_06_modelo_domar/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">81</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">82</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_01_lineales_coeficientes_constantes/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">83</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_02_dinamica_precio_mercado/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">84</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_03_coeficiente_variable/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">85</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_04_ecuaciones_exactas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">86</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_05_no_lineales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">87</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_06_enfoque_cualitativo/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">88</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_07_modelo_solow/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">89</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">90</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_01_segundo_orden/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">91</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_02_numeros_complejos/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">92</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_03_raices_complejas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">93</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_04_modelo_expectativas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_05_inflacion_desempleo/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">95</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_06_termino_variable/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">96</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_07_orden_superior/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">97</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">98</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_02_solucion/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">99</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_03_estabilidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">100</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_04_modelo_telarana/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">101</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_05_modelo_inventario/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">102</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_06_no_lineales_metodo_grafico/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">103</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">104</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_01_segundo_orden/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">105</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_02_modelo_samuelson/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">106</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_03_inflacion_desempleo_discreto/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">107</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_04_generalizaciones/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">108</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">109</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_02_solucion/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">110</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_03_modelos_insumo_producto/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">111</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_04_inflacion_desempleo/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">112</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_05_diagramas_fase/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">113</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_06_linealizacion/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">114</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">115</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_01_naturaleza/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">116</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_02_condiciones_terminales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">117</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_05_horizonte_infinito/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">118</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">119</span>&nbsp; <span class="chapter-title">Economía Matemática</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../prefacio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">120</span>&nbsp; <span class="chapter-title">Prefacio</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_01_introduccion/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">121</span>&nbsp; <span class="chapter-title">Parte I: Introducción</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">122</span>&nbsp; <span class="chapter-title">Capítulo 1: Naturaleza de la Economía Matemática</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">123</span>&nbsp; <span class="chapter-title">Capítulo 2: Revisión de Aritmética y Álgebra</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_01_introduccion/cap_03_ecuaciones_graficas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">124</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">125</span>&nbsp; <span class="chapter-title">Parte II: Análisis Estático</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">126</span>&nbsp; <span class="chapter-title">Capítulo 4: Modelos Lineales y Álgebra de Matrices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">127</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+  <li><a href="#sec-intro-cap02" id="toc-sec-intro-cap02" class="nav-link active" data-scroll-target="#sec-intro-cap02"><span class="header-section-number">124</span> Introducción</a></li>
+  <li><a href="#sec-numeros-reales" id="toc-sec-numeros-reales" class="nav-link" data-scroll-target="#sec-numeros-reales"><span class="header-section-number">125</span> El Sistema de Números Reales</a>
+  <ul>
+  <li><a href="#definición-y-estructura" id="toc-definición-y-estructura" class="nav-link" data-scroll-target="#definición-y-estructura"><span class="header-section-number">125.1</span> Definición y Estructura</a></li>
+  <li><a href="#números-racionales" id="toc-números-racionales" class="nav-link" data-scroll-target="#números-racionales"><span class="header-section-number">125.2</span> Números Racionales</a></li>
+  <li><a href="#números-irracionales" id="toc-números-irracionales" class="nav-link" data-scroll-target="#números-irracionales"><span class="header-section-number">125.3</span> Números Irracionales</a></li>
+  <li><a href="#la-recta-real" id="toc-la-recta-real" class="nav-link" data-scroll-target="#la-recta-real"><span class="header-section-number">125.4</span> La Recta Real</a></li>
+  </ul></li>
+  <li><a href="#sec-conjuntos" id="toc-sec-conjuntos" class="nav-link" data-scroll-target="#sec-conjuntos"><span class="header-section-number">126</span> Teoría de Conjuntos</a>
+  <ul>
+  <li><a href="#conceptos-fundamentales" id="toc-conceptos-fundamentales" class="nav-link" data-scroll-target="#conceptos-fundamentales"><span class="header-section-number">126.1</span> Conceptos Fundamentales</a></li>
+  <li><a href="#notación-y-representación" id="toc-notación-y-representación" class="nav-link" data-scroll-target="#notación-y-representación"><span class="header-section-number">126.2</span> Notación y Representación</a></li>
+  <li><a href="#clasificación-de-conjuntos" id="toc-clasificación-de-conjuntos" class="nav-link" data-scroll-target="#clasificación-de-conjuntos"><span class="header-section-number">126.3</span> Clasificación de Conjuntos</a></li>
+  <li><a href="#relaciones-entre-conjuntos" id="toc-relaciones-entre-conjuntos" class="nav-link" data-scroll-target="#relaciones-entre-conjuntos"><span class="header-section-number">126.4</span> Relaciones entre Conjuntos</a></li>
+  <li><a href="#operaciones-con-conjuntos" id="toc-operaciones-con-conjuntos" class="nav-link" data-scroll-target="#operaciones-con-conjuntos"><span class="header-section-number">126.5</span> Operaciones con Conjuntos</a></li>
+  <li><a href="#leyes-algebraicas-de-conjuntos" id="toc-leyes-algebraicas-de-conjuntos" class="nav-link" data-scroll-target="#leyes-algebraicas-de-conjuntos"><span class="header-section-number">126.6</span> Leyes Algebraicas de Conjuntos</a></li>
+  <li><a href="#número-de-subconjuntos" id="toc-número-de-subconjuntos" class="nav-link" data-scroll-target="#número-de-subconjuntos"><span class="header-section-number">126.7</span> Número de Subconjuntos</a></li>
+  </ul></li>
+  <li><a href="#sec-producto-cartesiano" id="toc-sec-producto-cartesiano" class="nav-link" data-scroll-target="#sec-producto-cartesiano"><span class="header-section-number">127</span> Producto Cartesiano y Pares Ordenados</a>
+  <ul>
+  <li><a href="#pares-ordenados" id="toc-pares-ordenados" class="nav-link" data-scroll-target="#pares-ordenados"><span class="header-section-number">127.1</span> Pares Ordenados</a></li>
+  <li><a href="#producto-cartesiano" id="toc-producto-cartesiano" class="nav-link" data-scroll-target="#producto-cartesiano"><span class="header-section-number">127.2</span> Producto Cartesiano</a></li>
+  <li><a href="#el-plano-cartesiano" id="toc-el-plano-cartesiano" class="nav-link" data-scroll-target="#el-plano-cartesiano"><span class="header-section-number">127.3</span> El Plano Cartesiano</a></li>
+  <li><a href="#producto-cartesiano-de-múltiples-conjuntos" id="toc-producto-cartesiano-de-múltiples-conjuntos" class="nav-link" data-scroll-target="#producto-cartesiano-de-múltiples-conjuntos"><span class="header-section-number">127.4</span> Producto Cartesiano de Múltiples Conjuntos</a></li>
+  </ul></li>
+  <li><a href="#sec-relaciones-funciones" id="toc-sec-relaciones-funciones" class="nav-link" data-scroll-target="#sec-relaciones-funciones"><span class="header-section-number">128</span> Relaciones y Funciones</a>
+  <ul>
+  <li><a href="#relaciones" id="toc-relaciones" class="nav-link" data-scroll-target="#relaciones"><span class="header-section-number">128.1</span> Relaciones</a></li>
+  <li><a href="#funciones" id="toc-funciones" class="nav-link" data-scroll-target="#funciones"><span class="header-section-number">128.2</span> Funciones</a></li>
+  <li><a href="#distinción-entre-relación-y-función" id="toc-distinción-entre-relación-y-función" class="nav-link" data-scroll-target="#distinción-entre-relación-y-función"><span class="header-section-number">128.3</span> Distinción entre Relación y Función</a></li>
+  <li><a href="#propiedades-de-funciones" id="toc-propiedades-de-funciones" class="nav-link" data-scroll-target="#propiedades-de-funciones"><span class="header-section-number">128.4</span> Propiedades de Funciones</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">123</span>&nbsp; <span class="chapter-title">Capítulo 2: Revisión de Aritmética y Álgebra</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
+<p class="subtitle lead">Fundamentos Matemáticos para el Análisis Económico</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>Emanuel Quintana Silva </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">10 de diciembre de 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Palabras clave</div>
+    <p>economía matemática, matemáticas, economía, optimización, cálculo</p>
+  </div>
+</div>
+
+</header>
+
+
+<section id="sec-intro-cap02" class="level1" data-number="124">
+<h1 data-number="124"><span class="header-section-number">124</span> Introducción</h1>
+<p>El análisis económico matemático se fundamenta en el sistema de números reales y las estructuras algebraicas que permiten representar relaciones económicas de manera precisa y rigurosa. Este capítulo establece las bases matemáticas necesarias para el estudio de modelos económicos, desde los conceptos elementales de conjuntos hasta las funciones generales que caracterizan el comportamiento de variables económicas.</p>
+<p>La importancia de una sólida comprensión de estos fundamentos radica en que las variables económicas—precio, costo, ingreso, producción, entre otras—adoptan valores numéricos que deben ser manipulados mediante operaciones algebraicas precisas. Más aún, las relaciones entre estas variables se expresan típicamente mediante funciones matemáticas cuyas propiedades determinan el comportamiento del sistema económico bajo análisis <span class="citation" data-cites="chiang2005">(<a href="../cap_01_naturaleza_economia_matematica/notas.html#ref-chiang2005" role="doc-biblioref">Chiang &amp; Wainwright, 2005</a>)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Objetivo del capítulo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Establecer una base rigurosa de conceptos matemáticos fundamentales que servirán como herramientas analíticas para el desarrollo de modelos económicos. Se enfatiza la precisión conceptual y la aplicabilidad económica de cada construcción matemática presentada.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="sec-numeros-reales" class="level1" data-number="125">
+<h1 data-number="125"><span class="header-section-number">125</span> El Sistema de Números Reales</h1>
+<section id="definición-y-estructura" class="level2" data-number="125.1">
+<h2 data-number="125.1" class="anchored" data-anchor-id="definición-y-estructura"><span class="header-section-number">125.1</span> Definición y Estructura</h2>
+<p>El <strong>sistema de números reales</strong>, denotado por <span class="math inline">\(\mathbb{R}\)</span>, constituye un continuo numérico fundamental para el análisis económico matemático. Este sistema proporciona el marco dentro del cual se definen y operan las variables económicas.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Números Reales
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El conjunto <span class="math inline">\(\mathbb{R}\)</span> de los números reales es la unión de los conjuntos de números racionales (<span class="math inline">\(\mathbb{Q}\)</span>) e irracionales (<span class="math inline">\(\mathbb{I}\)</span>):</p>
+<p><span class="math display">\[\mathbb{R} = \mathbb{Q} \cup \mathbb{I}\]</span></p>
+<p>Este conjunto forma un <strong>campo ordenado completo</strong> bajo las operaciones de adición y multiplicación.</p>
+</div>
+</div>
+</section>
+<section id="números-racionales" class="level2" data-number="125.2">
+<h2 data-number="125.2" class="anchored" data-anchor-id="números-racionales"><span class="header-section-number">125.2</span> Números Racionales</h2>
+<p>Los <strong>números racionales</strong> constituyen el subconjunto de números reales que pueden expresarse como el cociente de dos enteros.</p>
+<p><strong>Definición formal:</strong></p>
+<p><span class="math display">\[\mathbb{Q} = \left\{\frac{p}{q} \mid p, q \in \mathbb{Z}, \, q \neq 0\right\}\]</span></p>
+<p>donde <span class="math inline">\(\mathbb{Z}\)</span> denota el conjunto de los números enteros.</p>
+<p><strong>Componentes del conjunto racional:</strong></p>
+<ol type="1">
+<li><p><strong>Enteros positivos (<span class="math inline">\(\mathbb{Z}^+\)</span>):</strong> Utilizados para conteo y enumeración: <span class="math inline">\(\{1, 2, 3, 4, \ldots\}\)</span></p></li>
+<li><p><strong>Enteros negativos (<span class="math inline">\(\mathbb{Z}^-\)</span>):</strong> Representan magnitudes con sentido opuesto: <span class="math inline">\(\{-1, -2, -3, \ldots\}\)</span></p></li>
+<li><p><strong>Cero:</strong> Elemento neutro de la adición, denotado por <span class="math inline">\(0\)</span></p></li>
+<li><p><strong>Fracciones:</strong> Cocientes de enteros donde el denominador es distinto de cero</p></li>
+</ol>
+<p><strong>Propiedades características:</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Representación decimal de racionales
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Todo número racional admite una representación decimal que es:</p>
+<ul>
+<li><p><strong>Finita (terminante):</strong> <span class="math inline">\(\frac{1}{4} = 0.25\)</span>, <span class="math inline">\(\frac{3}{8} = 0.375\)</span></p></li>
+<li><p><strong>Periódica (infinita repetitiva):</strong> <span class="math inline">\(\frac{1}{3} = 0.\overline{3} = 0.333\ldots\)</span>, <span class="math inline">\(\frac{2}{11} = 0.\overline{18} = 0.181818\ldots\)</span></p></li>
+</ul>
+<p>La barra superior indica el bloque de dígitos que se repite indefinidamente.</p>
+</div>
+</div>
+<p><strong>Ejemplos económicos:</strong></p>
+<ul>
+<li>Tasas de interés expresadas como fracciones: <span class="math inline">\(r = \frac{5}{100} = 0.05\)</span> (5%)</li>
+<li>Proporciones de consumo: <span class="math inline">\(c = \frac{3}{4}\)</span> del ingreso disponible</li>
+<li>Precios en unidades monetarias: <span class="math inline">\(P = \frac{125}{10} = 12.5\)</span> (doce unidades y media)</li>
+</ul>
+</section>
+<section id="números-irracionales" class="level2" data-number="125.3">
+<h2 data-number="125.3" class="anchored" data-anchor-id="números-irracionales"><span class="header-section-number">125.3</span> Números Irracionales</h2>
+<p>Los <strong>números irracionales</strong> son aquellos números reales que no pueden expresarse como cociente de dos enteros.</p>
+<p><strong>Definición formal:</strong></p>
+<p><span class="math display">\[\mathbb{I} = \mathbb{R} \setminus \mathbb{Q} = \{x \in \mathbb{R} \mid x \notin \mathbb{Q}\}\]</span></p>
+<p><strong>Propiedades características:</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Representación decimal de irracionales
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Los números irracionales poseen representaciones decimales <strong>infinitas no periódicas</strong>. No existe un patrón repetitivo en su expansión decimal.</p>
+</div>
+</div>
+<p><strong>Ejemplos fundamentales:</strong></p>
+<div id="tbl-irracionales" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-irracionales-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;125.1: Números irracionales fundamentales
+</figcaption>
+<div aria-describedby="tbl-irracionales-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Número</th>
+<th style="text-align: left;">Símbolo</th>
+<th style="text-align: left;">Valor aproximado</th>
+<th style="text-align: left;">Contexto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Raíz cuadrada de 2</td>
+<td style="text-align: left;"><span class="math inline">\(\sqrt{2}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(1.41421356\ldots\)</span></td>
+<td style="text-align: left;">Geometría, optimización</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pi</td>
+<td style="text-align: left;"><span class="math inline">\(\pi\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(3.14159265\ldots\)</span></td>
+<td style="text-align: left;">Geometría circular, funciones trigonométricas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Euler</td>
+<td style="text-align: left;"><span class="math inline">\(e\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(2.71828182\ldots\)</span></td>
+<td style="text-align: left;">Crecimiento exponencial continuo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Razón áurea</td>
+<td style="text-align: left;"><span class="math inline">\(\phi\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(1.61803398\ldots\)</span></td>
+<td style="text-align: left;">Proporciones, series de Fibonacci</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Aplicaciones económicas:</strong></p>
+<ul>
+<li>La constante <span class="math inline">\(e\)</span> aparece en modelos de crecimiento continuo: <span class="math inline">\(Q(t) = Q_0 e^{rt}\)</span></li>
+<li><span class="math inline">\(\pi\)</span> surge en modelos con simetría circular o periódica</li>
+<li><span class="math inline">\(\sqrt{2}\)</span> aparece en problemas de optimización geométrica</li>
+</ul>
+</section>
+<section id="la-recta-real" class="level2" data-number="125.4">
+<h2 data-number="125.4" class="anchored" data-anchor-id="la-recta-real"><span class="header-section-number">125.4</span> La Recta Real</h2>
+<p>La representación geométrica del conjunto <span class="math inline">\(\mathbb{R}\)</span> es la <strong>recta real</strong>, donde cada punto corresponde biunívocamente a un número real.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-recta-real" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-recta-real-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="notas_files/figure-html/fig-recta-real-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-recta-real-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;125.1: Representación geométrica de la recta real
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Completitud de los números reales
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Los números irracionales “llenan” los espacios entre los números racionales, completando así el continuo numérico. Esta propiedad de <strong>completitud</strong> es fundamental para el análisis matemático y garantiza la existencia de límites y valores extremos en el análisis económico <span class="citation" data-cites="simon1994">(<a href="../cap_01_naturaleza_economia_matematica/notas.html#ref-simon1994" role="doc-biblioref">Simon &amp; Blume, 1994</a>)</span>.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-conjuntos" class="level1" data-number="126">
+<h1 data-number="126"><span class="header-section-number">126</span> Teoría de Conjuntos</h1>
+<section id="conceptos-fundamentales" class="level2" data-number="126.1">
+<h2 data-number="126.1" class="anchored" data-anchor-id="conceptos-fundamentales"><span class="header-section-number">126.1</span> Conceptos Fundamentales</h2>
+<p>La <strong>teoría de conjuntos</strong> proporciona el lenguaje formal para expresar colecciones de objetos y sus relaciones, constituyendo la base sobre la cual se construyen las estructuras matemáticas utilizadas en economía.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Conjunto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un <strong>conjunto</strong> es una colección bien definida de objetos distintos. Los objetos que pertenecen a un conjunto se denominan <strong>elementos</strong> o <strong>miembros</strong> del conjunto.</p>
+</div>
+</div>
+</section>
+<section id="notación-y-representación" class="level2" data-number="126.2">
+<h2 data-number="126.2" class="anchored" data-anchor-id="notación-y-representación"><span class="header-section-number">126.2</span> Notación y Representación</h2>
+<p><strong>Notación estándar:</strong> Los conjuntos se denotan con letras mayúsculas (<span class="math inline">\(A, B, C, \ldots\)</span>) y se encierran entre llaves: <span class="math inline">\(\{\}\)</span></p>
+<p><strong>Métodos de especificación:</strong></p>
+<ol type="1">
+<li><p><strong>Por enumeración (extensión):</strong> Se listan explícitamente todos los elementos.</p>
+<p><span class="math display">\[S = \{2, 3, 5, 7, 11\}\]</span></p></li>
+<li><p><strong>Por comprensión (descripción):</strong> Se especifica la propiedad que caracteriza a los elementos.</p>
+<p><span class="math display">\[S = \{x \mid x \text{ es un número primo menor que 12}\}\]</span></p>
+<p>Lectura: “El conjunto <span class="math inline">\(S\)</span> de todos los objetos <span class="math inline">\(x\)</span> tales que <span class="math inline">\(x\)</span> es un número primo menor que 12”</p></li>
+</ol>
+<p><strong>Relación de pertenencia:</strong></p>
+<ul>
+<li><span class="math inline">\(x \in A\)</span>: “<span class="math inline">\(x\)</span> es elemento de <span class="math inline">\(A\)</span>” o “<span class="math inline">\(x\)</span> pertenece a <span class="math inline">\(A\)</span>”</li>
+<li><span class="math inline">\(x \notin A\)</span>: “<span class="math inline">\(x\)</span> no es elemento de <span class="math inline">\(A\)</span>” o “<span class="math inline">\(x\)</span> no pertenece a <span class="math inline">\(A\)</span>”</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ejemplo económico
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(\mathcal{B}\)</span> el conjunto de bienes en una economía:</p>
+<p><span class="math display">\[\mathcal{B} = \{\text{trigo}, \text{acero}, \text{energía}, \text{transporte}\}\]</span></p>
+<p>Entonces: <span class="math inline">\(\text{trigo} \in \mathcal{B}\)</span> pero <span class="math inline">\(\text{oro} \notin \mathcal{B}\)</span></p>
+</div>
+</div>
+</section>
+<section id="clasificación-de-conjuntos" class="level2" data-number="126.3">
+<h2 data-number="126.3" class="anchored" data-anchor-id="clasificación-de-conjuntos"><span class="header-section-number">126.3</span> Clasificación de Conjuntos</h2>
+<p><strong>Por cardinalidad:</strong></p>
+<ol type="1">
+<li><p><strong>Conjunto finito:</strong> Contiene un número finito de elementos.</p>
+<p><span class="math display">\[A = \{1, 2, 3, 4, 5\} \quad \text{donde } |A| = 5\]</span></p></li>
+<li><p><strong>Conjunto infinito:</strong> Contiene infinitos elementos.</p>
+<ul>
+<li><strong>Numerable (contable):</strong> <span class="math inline">\(\mathbb{N} = \{1, 2, 3, \ldots\}\)</span></li>
+<li><strong>No numerable:</strong> <span class="math inline">\(\mathbb{R}\)</span> (los números reales)</li>
+</ul></li>
+<li><p><strong>Conjunto vacío:</strong> No contiene ningún elemento. Se denota <span class="math inline">\(\emptyset\)</span> o <span class="math inline">\(\{\}\)</span></p></li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Distinción importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El conjunto <span class="math inline">\(\{0\}\)</span> <strong>no es vacío</strong>, pues contiene al número <span class="math inline">\(0\)</span> como elemento. Es decir:</p>
+<p><span class="math display">\[\{0\} \neq \emptyset \quad \text{ya que } |\{0\}| = 1\]</span></p>
+</div>
+</div>
+</section>
+<section id="relaciones-entre-conjuntos" class="level2" data-number="126.4">
+<h2 data-number="126.4" class="anchored" data-anchor-id="relaciones-entre-conjuntos"><span class="header-section-number">126.4</span> Relaciones entre Conjuntos</h2>
+<p><strong>Igualdad:</strong></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Igualdad de conjuntos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dos conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son iguales si y solo si contienen exactamente los mismos elementos:</p>
+<p><span class="math display">\[A = B \iff (\forall x)(x \in A \leftrightarrow x \in B)\]</span></p>
+</div>
+</div>
+<p><strong>Observación:</strong> El orden de aparición de los elementos es irrelevante:</p>
+<p><span class="math display">\[\{1, 2, 3\} = \{3, 1, 2\} = \{2, 3, 1\}\]</span></p>
+<p><strong>Subconjunto:</strong></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Subconjunto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(A\)</span> es <strong>subconjunto</strong> de <span class="math inline">\(B\)</span> (denotado <span class="math inline">\(A \subseteq B\)</span> o <span class="math inline">\(B \supseteq A\)</span>) si todo elemento de <span class="math inline">\(A\)</span> es también elemento de <span class="math inline">\(B\)</span>:</p>
+<p><span class="math display">\[A \subseteq B \iff (\forall x)(x \in A \Rightarrow x \in B)\]</span></p>
+</div>
+</div>
+<p><strong>Subconjunto propio:</strong></p>
+<p><span class="math display">\[A \subset B \iff (A \subseteq B) \land (A \neq B)\]</span></p>
+<p>Es decir, <span class="math inline">\(A\)</span> es subconjunto propio de <span class="math inline">\(B\)</span> si <span class="math inline">\(A \subseteq B\)</span> y existe al menos un elemento en <span class="math inline">\(B\)</span> que no está en <span class="math inline">\(A\)</span>.</p>
+<p><strong>Ejemplo:</strong></p>
+<p><span class="math display">\[\{1, 2\} \subset \{1, 2, 3\} \quad \text{pero} \quad \{1, 2\} \not\subset \{1, 2\}\]</span></p>
+<p><strong>Proposición fundamental:</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El conjunto vacío es subconjunto de cualquier conjunto:</p>
+<p><span class="math display">\[\forall A: \emptyset \subseteq A\]</span></p>
+</div>
+</div>
+<p><strong>Conjuntos disjuntos:</strong></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Conjuntos disjuntos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dos conjuntos <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son <strong>disjuntos</strong> si no tienen elementos en común:</p>
+<p><span class="math display">\[A \cap B = \emptyset\]</span></p>
+</div>
+</div>
+</section>
+<section id="operaciones-con-conjuntos" class="level2" data-number="126.5">
+<h2 data-number="126.5" class="anchored" data-anchor-id="operaciones-con-conjuntos"><span class="header-section-number">126.5</span> Operaciones con Conjuntos</h2>
+<p><strong>Unión:</strong></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Unión
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La <strong>unión</strong> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> (denotada <span class="math inline">\(A \cup B\)</span>) es el conjunto de elementos que pertenecen a <span class="math inline">\(A\)</span> <strong>o</strong> a <span class="math inline">\(B\)</span> (o a ambos):</p>
+<p><span class="math display">\[A \cup B = \{x \mid x \in A \lor x \in B\}\]</span></p>
+</div>
+</div>
+<p><strong>Intersección:</strong></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Intersección
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La <strong>intersección</strong> de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> (denotada <span class="math inline">\(A \cap B\)</span>) es el conjunto de elementos que pertenecen <strong>tanto</strong> a <span class="math inline">\(A\)</span> <strong>como</strong> a <span class="math inline">\(B\)</span>:</p>
+<p><span class="math display">\[A \cap B = \{x \mid x \in A \land x \in B\}\]</span></p>
+</div>
+</div>
+<p><strong>Complemento:</strong></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Complemento
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(U\)</span> un conjunto universal. El <strong>complemento</strong> de <span class="math inline">\(A\)</span> (denotado <span class="math inline">\(A^c\)</span> o <span class="math inline">\(\overline{A}\)</span>) es el conjunto de elementos de <span class="math inline">\(U\)</span> que <strong>no</strong> pertenecen a <span class="math inline">\(A\)</span>:</p>
+<p><span class="math display">\[A^c = \{x \in U \mid x \notin A\}\]</span></p>
+</div>
+</div>
+<p><strong>Diferencia:</strong></p>
+<p><span class="math display">\[A \setminus B = \{x \mid x \in A \land x \notin B\} = A \cap B^c\]</span></p>
+</section>
+<section id="leyes-algebraicas-de-conjuntos" class="level2" data-number="126.6">
+<h2 data-number="126.6" class="anchored" data-anchor-id="leyes-algebraicas-de-conjuntos"><span class="header-section-number">126.6</span> Leyes Algebraicas de Conjuntos</h2>
+<p><strong>Leyes conmutativas:</strong></p>
+<p><span class="math display">\[A \cup B = B \cup A\]</span> <span class="math display">\[A \cap B = B \cap A\]</span></p>
+<p><strong>Leyes asociativas:</strong></p>
+<p><span class="math display">\[(A \cup B) \cup C = A \cup (B \cup C)\]</span> <span class="math display">\[(A \cap B) \cap C = A \cap (B \cap C)\]</span></p>
+<p><strong>Leyes distributivas:</strong></p>
+<p><span class="math display">\[A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\]</span> <span class="math display">\[A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\]</span></p>
+<p><strong>Leyes de De Morgan:</strong></p>
+<p><span class="math display">\[(A \cup B)^c = A^c \cap B^c\]</span> <span class="math display">\[(A \cap B)^c = A^c \cup B^c\]</span></p>
+<p><strong>Leyes de idempotencia:</strong></p>
+<p><span class="math display">\[A \cup A = A\]</span> <span class="math display">\[A \cap A = A\]</span></p>
+<p><strong>Leyes de identidad:</strong></p>
+<p><span class="math display">\[A \cup \emptyset = A\]</span> <span class="math display">\[A \cap U = A\]</span></p>
+<p><strong>Leyes de dominación:</strong></p>
+<p><span class="math display">\[A \cup U = U\]</span> <span class="math display">\[A \cap \emptyset = \emptyset\]</span></p>
+<p><strong>Leyes de complemento:</strong></p>
+<p><span class="math display">\[A \cup A^c = U\]</span> <span class="math display">\[A \cap A^c = \emptyset\]</span> <span class="math display">\[(A^c)^c = A\]</span></p>
+</section>
+<section id="número-de-subconjuntos" class="level2" data-number="126.7">
+<h2 data-number="126.7" class="anchored" data-anchor-id="número-de-subconjuntos"><span class="header-section-number">126.7</span> Número de Subconjuntos</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Teorema: Cardinalidad del conjunto potencia
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si un conjunto <span class="math inline">\(A\)</span> tiene <span class="math inline">\(n\)</span> elementos, el número total de subconjuntos de <span class="math inline">\(A\)</span> (incluyendo <span class="math inline">\(\emptyset\)</span> y el propio <span class="math inline">\(A\)</span>) es:</p>
+<p><span class="math display">\[|\mathcal{P}(A)| = 2^n\]</span></p>
+<p>donde <span class="math inline">\(\mathcal{P}(A)\)</span> denota el <strong>conjunto potencia</strong> de <span class="math inline">\(A\)</span>.</p>
+</div>
+</div>
+<p><strong>Ejemplo:</strong> Si <span class="math inline">\(A = \{a, b, c\}\)</span>, entonces <span class="math inline">\(|A| = 3\)</span> y:</p>
+<p><span class="math display">\[\mathcal{P}(A) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\}, \{b,c\}, \{a,b,c\}\}\]</span></p>
+<p>con <span class="math inline">\(|\mathcal{P}(A)| = 2^3 = 8\)</span> subconjuntos.</p>
+<hr>
+</section>
+</section>
+<section id="sec-producto-cartesiano" class="level1" data-number="127">
+<h1 data-number="127"><span class="header-section-number">127</span> Producto Cartesiano y Pares Ordenados</h1>
+<section id="pares-ordenados" class="level2" data-number="127.1">
+<h2 data-number="127.1" class="anchored" data-anchor-id="pares-ordenados"><span class="header-section-number">127.1</span> Pares Ordenados</h2>
+<p>A diferencia de los conjuntos simples, en los <strong>pares ordenados</strong> el orden de los elementos es significativo.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Par ordenado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un <strong>par ordenado</strong> <span class="math inline">\((a, b)\)</span> es una estructura donde el orden de los elementos importa:</p>
+<p><span class="math display">\[(a, b) = (c, d) \iff (a = c) \land (b = d)\]</span></p>
+<p>En particular: <span class="math inline">\((a, b) \neq (b, a)\)</span> a menos que <span class="math inline">\(a = b\)</span></p>
+</div>
+</div>
+<p><strong>Notación:</strong> Los pares ordenados se encierran entre <strong>paréntesis</strong> <span class="math inline">\(()\)</span>, a diferencia de los conjuntos que usan llaves <span class="math inline">\(\{\}\)</span>.</p>
+<p><strong>Generalización:</strong> Las <strong>n-tuplas ordenadas</strong> extienden este concepto:</p>
+<ul>
+<li><strong>Terna ordenada:</strong> <span class="math inline">\((a, b, c)\)</span></li>
+<li><strong>Cuádrupla ordenada:</strong> <span class="math inline">\((a, b, c, d)\)</span></li>
+<li><strong>n-tupla ordenada:</strong> <span class="math inline">\((a_1, a_2, \ldots, a_n)\)</span></li>
+</ul>
+</section>
+<section id="producto-cartesiano" class="level2" data-number="127.2">
+<h2 data-number="127.2" class="anchored" data-anchor-id="producto-cartesiano"><span class="header-section-number">127.2</span> Producto Cartesiano</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Producto cartesiano
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El <strong>producto cartesiano</strong> de dos conjuntos <span class="math inline">\(X\)</span> y <span class="math inline">\(Y\)</span> (denotado <span class="math inline">\(X \times Y\)</span>) es el conjunto de todos los pares ordenados <span class="math inline">\((x, y)\)</span> donde <span class="math inline">\(x \in X\)</span> e <span class="math inline">\(y \in Y\)</span>:</p>
+<p><span class="math display">\[X \times Y = \{(x, y) \mid x \in X \land y \in Y\}\]</span></p>
+</div>
+</div>
+<p><strong>Propiedades:</strong></p>
+<ol type="1">
+<li><p><strong>Cardinalidad:</strong> Si <span class="math inline">\(|X| = m\)</span> y <span class="math inline">\(|Y| = n\)</span>, entonces <span class="math inline">\(|X \times Y| = m \cdot n\)</span></p></li>
+<li><p><strong>No conmutatividad:</strong> En general, <span class="math inline">\(X \times Y \neq Y \times X\)</span></p></li>
+<li><p><strong>Asociatividad:</strong> <span class="math inline">\((X \times Y) \times Z \neq X \times (Y \times Z)\)</span>, pero ambos son isomorfos a <span class="math inline">\(X \times Y \times Z\)</span></p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ejemplo numérico
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sean <span class="math inline">\(A = \{1, 2\}\)</span> y <span class="math inline">\(B = \{x, y, z\}\)</span>. Entonces:</p>
+<p><span class="math display">\[A \times B = \{(1,x), (1,y), (1,z), (2,x), (2,y), (2,z)\}\]</span></p>
+<p><span class="math display">\[B \times A = \{(x,1), (x,2), (y,1), (y,2), (z,1), (z,2)\}\]</span></p>
+<p>Claramente <span class="math inline">\(A \times B \neq B \times A\)</span>, aunque <span class="math inline">\(|A \times B| = |B \times A| = 6\)</span></p>
+</div>
+</div>
+</section>
+<section id="el-plano-cartesiano" class="level2" data-number="127.3">
+<h2 data-number="127.3" class="anchored" data-anchor-id="el-plano-cartesiano"><span class="header-section-number">127.3</span> El Plano Cartesiano</h2>
+<p><strong>Construcción geométrica:</strong></p>
+<p>El producto cartesiano <span class="math inline">\(\mathbb{R} \times \mathbb{R} = \mathbb{R}^2\)</span> representa el <strong>plano cartesiano</strong>, donde cada par ordenado <span class="math inline">\((x, y) \in \mathbb{R}^2\)</span> corresponde a un punto único en el plano.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-plano-cartesiano" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-plano-cartesiano-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="notas_files/figure-html/fig-plano-cartesiano-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plano-cartesiano-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;127.1: Representación de pares ordenados en el plano cartesiano
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Cuadrantes del plano:</strong></p>
+<div id="tbl-cuadrantes" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cuadrantes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;127.1: División del plano cartesiano en cuadrantes
+</figcaption>
+<div aria-describedby="tbl-cuadrantes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Cuadrante</th>
+<th style="text-align: left;">Región</th>
+<th style="text-align: left;">Condiciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">I</td>
+<td style="text-align: left;">Superior derecha</td>
+<td style="text-align: left;"><span class="math inline">\(x &gt; 0, y &gt; 0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">II</td>
+<td style="text-align: left;">Superior izquierda</td>
+<td style="text-align: left;"><span class="math inline">\(x &lt; 0, y &gt; 0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">III</td>
+<td style="text-align: left;">Inferior izquierda</td>
+<td style="text-align: left;"><span class="math inline">\(x &lt; 0, y &lt; 0\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">IV</td>
+<td style="text-align: left;">Inferior derecha</td>
+<td style="text-align: left;"><span class="math inline">\(x &gt; 0, y &lt; 0\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="producto-cartesiano-de-múltiples-conjuntos" class="level2" data-number="127.4">
+<h2 data-number="127.4" class="anchored" data-anchor-id="producto-cartesiano-de-múltiples-conjuntos"><span class="header-section-number">127.4</span> Producto Cartesiano de Múltiples Conjuntos</h2>
+<p><strong>Generalización:</strong> El producto cartesiano se extiende a <span class="math inline">\(n\)</span> conjuntos:</p>
+<p><span class="math display">\[X_1 \times X_2 \times \cdots \times X_n = \{(x_1, x_2, \ldots, x_n) \mid x_i \in X_i \text{ para } i = 1, 2, \ldots, n\}\]</span></p>
+<p><strong>Caso especial:</strong> <span class="math inline">\(\mathbb{R}^n = \underbrace{\mathbb{R} \times \mathbb{R} \times \cdots \times \mathbb{R}}_{n \text{ veces}}\)</span></p>
+<p><strong>Aplicaciones económicas:</strong></p>
+<ul>
+<li><span class="math inline">\(\mathbb{R}^2\)</span>: Pares de variables (precio-cantidad, consumo-ingreso)</li>
+<li><span class="math inline">\(\mathbb{R}^n\)</span>: Vectores de precios, cantidades, o dotaciones en economías con <span class="math inline">\(n\)</span> bienes</li>
+<li>Espacios de estrategias en teoría de juegos</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="sec-relaciones-funciones" class="level1" data-number="128">
+<h1 data-number="128"><span class="header-section-number">128</span> Relaciones y Funciones</h1>
+<section id="relaciones" class="level2" data-number="128.1">
+<h2 data-number="128.1" class="anchored" data-anchor-id="relaciones"><span class="header-section-number">128.1</span> Relaciones</h2>
+<p>Una <strong>relación</strong> formaliza la idea de asociación entre elementos de dos conjuntos.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Relación
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Una <strong>relación</strong> <span class="math inline">\(R\)</span> de <span class="math inline">\(X\)</span> en <span class="math inline">\(Y\)</span> es cualquier subconjunto del producto cartesiano <span class="math inline">\(X \times Y\)</span>:</p>
+<p><span class="math display">\[R \subseteq X \times Y\]</span></p>
+<p>Si <span class="math inline">\((x, y) \in R\)</span>, decimos que “<span class="math inline">\(x\)</span> está relacionado con <span class="math inline">\(y\)</span>” y escribimos <span class="math inline">\(xRy\)</span>.</p>
+</div>
+</div>
+<p><strong>Características:</strong></p>
+<ul>
+<li>Una relación puede asociar <strong>uno o más valores de <span class="math inline">\(y\)</span></strong> con un valor dado de <span class="math inline">\(x\)</span></li>
+<li>Una relación puede asociar <strong>ningún valor de <span class="math inline">\(y\)</span></strong> con ciertos valores de <span class="math inline">\(x\)</span></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Ejemplo económico
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sea <span class="math inline">\(X\)</span> el conjunto de empresas y <span class="math inline">\(Y\)</span> el conjunto de productos. La relación <span class="math inline">\(P\)</span> definida por:</p>
+<p><span class="math display">\[P = \{(e, p) \mid \text{la empresa } e \text{ produce el producto } p\}\]</span></p>
+<p>indica qué productos fabrica cada empresa. Una empresa puede producir múltiples productos.</p>
+</div>
+</div>
+</section>
+<section id="funciones" class="level2" data-number="128.2">
+<h2 data-number="128.2" class="anchored" data-anchor-id="funciones"><span class="header-section-number">128.2</span> Funciones</h2>
+<p>Las <strong>funciones</strong> son relaciones especiales que satisfacen una condición de unicidad.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Función
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Una <strong>función</strong> <span class="math inline">\(f\)</span> de <span class="math inline">\(X\)</span> en <span class="math inline">\(Y\)</span> (denotada <span class="math inline">\(f: X \to Y\)</span>) es una relación que asigna a cada elemento <span class="math inline">\(x \in X\)</span> <strong>exactamente un</strong> elemento <span class="math inline">\(y \in Y\)</span>:</p>
+<p><span class="math display">\[f \subseteq X \times Y \quad \text{tal que} \quad (\forall x \in X)(\exists! y \in Y)[(x,y) \in f]\]</span></p>
+<p>Notación: <span class="math inline">\(y = f(x)\)</span> (se lee “<span class="math inline">\(y\)</span> es igual a <span class="math inline">\(f\)</span> de <span class="math inline">\(x\)</span>”)</p>
+</div>
+</div>
+<p><strong>Componentes de una función:</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para <span class="math inline">\(f: X \to Y\)</span>:</p>
+<ul>
+<li><p><strong>Dominio</strong> (<span class="math inline">\(\text{Dom}(f)\)</span>): Conjunto de valores permitidos para la variable independiente <span class="math inline">\(x\)</span>. Por definición, <span class="math inline">\(\text{Dom}(f) = X\)</span>.</p></li>
+<li><p><strong>Codominio</strong>: El conjunto <span class="math inline">\(Y\)</span> donde toman valores las imágenes.</p></li>
+<li><p><strong>Imagen</strong> o <strong>Rango</strong> (<span class="math inline">\(\text{Im}(f)\)</span> o <span class="math inline">\(\text{Ran}(f)\)</span>): Conjunto de valores que efectivamente toma la variable dependiente <span class="math inline">\(y\)</span>:</p>
+<p><span class="math display">\[\text{Im}(f) = \{y \in Y \mid \exists x \in X: y = f(x)\} \subseteq Y\]</span></p></li>
+<li><p><strong>Variable independiente</strong> (o <strong>argumento</strong>): <span class="math inline">\(x\)</span></p></li>
+<li><p><strong>Variable dependiente</strong> (o <strong>valor</strong>): <span class="math inline">\(y = f(x)\)</span></p></li>
+</ul>
+</div>
+</div>
+<p><strong>Terminología alternativa:</strong></p>
+<ul>
+<li><strong>Mapeo</strong> o <strong>aplicación</strong>: Sinónimo de función</li>
+<li><strong>Transformación</strong>: Usado frecuentemente cuando <span class="math inline">\(X = Y\)</span></li>
+</ul>
+</section>
+<section id="distinción-entre-relación-y-función" class="level2" data-number="128.3">
+<h2 data-number="128.3" class="anchored" data-anchor-id="distinción-entre-relación-y-función"><span class="header-section-number">128.3</span> Distinción entre Relación y Función</h2>
+<p><strong>Criterio fundamental:</strong></p>
+<blockquote class="blockquote">
+<p><strong>Toda función es una relación, pero no toda relación es una función.</strong></p>
+</blockquote>
+<p><strong>Test de la línea vertical:</strong> Una relación gráfica representa una función si y solo si toda línea vertical interseca la gráfica en <strong>a lo sumo un punto</strong>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-funcion-vs-relacion" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-funcion-vs-relacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="notas_files/figure-html/fig-funcion-vs-relacion-1.png" class="img-fluid figure-img" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-funcion-vs-relacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;128.1: Comparación entre función y relación
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="propiedades-de-funciones" class="level2" data-number="128.4">
+<h2 data-number="128.4" class="anchored" data-anchor-id="propiedades-de-funciones"><span class="header-section-number">128.4</span> Propiedades de Funciones</h2>
+<p><strong>Inyectividad (función uno a uno):</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Función inyectiva
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(f: X \to Y\)</span> es <strong>inyectiva</strong> si elementos distintos del dominio se mapean a elementos distintos del codominio:</p>
+<p><span class="math display">\[(\forall x_1, x_2 \in X)[x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)]\]</span></p>
+<p>Equivalentemente: <span class="math inline">\(f(x_1) = f(x_2) \Rightarrow x_1 = x_2\)</span></p>
+</div>
+</div>
+<p><strong>Sobreyectividad (función onto):</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Función sobreyectiva
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(f: X \to Y\)</span> es <strong>sobreyectiva</strong> si cada elemento del codominio es imagen de al menos un elemento del dominio:</p>
+<p><span class="math display">\[(\forall y \in Y)(\exists x \in X)[y = f(x)]\]</span></p>
+<p>Es decir: <span class="math inline">\(\text{Im}(f) = Y\)</span></p>
+</div>
+</div>
+<p><strong>Biyectividad:</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definición: Función biyectiva
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(f: X \to Y\)</span> es <strong>biyectiva</strong> si es simultáneamente inyectiva y sobreyectiva. Establece una correspondencia uno a uno entre <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>.</p>
+</div>
+</div>
+
+
+<!-- -->
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-chiang2005" class="csl-entry" role="listitem">
+Chiang, A. C., &amp; Wainwright, K. (2005). <em>Fundamental Methods of Mathematical Economics</em> (4th ed.). McGraw-Hill.
+</div>
+<div id="ref-simon1994" class="csl-entry" role="listitem">
+Simon, C. P., &amp; Blume, L. (1994). <em>Mathematics for Economists</em>. W.W. Norton &amp; Company.
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html" class="pagination-link" aria-label="Capítulo 1: Naturaleza de la Economía Matemática">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">122</span>&nbsp; <span class="chapter-title">Capítulo 1: Naturaleza de la Economía Matemática</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../capitulos/parte_01_introduccion/cap_03_ecuaciones_graficas/notas.html" class="pagination-link" aria-label="notas.html">
+        <span class="nav-page-text"><span class="chapter-number">124</span>&nbsp; <span class="chapter-title">notas.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Ejecutar el código</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "Capítulo 2: Revisión de Aritmética y Álgebra"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="an">subtitle:</span><span class="co"> "Fundamentos Matemáticos para el Análisis Económico"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="an">author:</span><span class="co"> "Emanuel Quintana Silva"</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="an">date:</span><span class="co"> today</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="an">format:</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">  html:</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">    toc: true</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">    toc-depth: 4</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co">    number-sections: true</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co">    code-fold: show</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co">    code-tools: true</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co">    code-line-numbers: true</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="co">    fig-align: center</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co">    theme: cosmo</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="co">    css: ../../../styles.css</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="co">    smooth-scroll: true</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="an">execute:</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="co">  keep-ipynb: true</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="an">bibliography:</span><span class="co"> ../../../referencias/bibliografia.bib</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="an">csl:</span><span class="co"> ../../../referencias/apa.csl</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="an">lang:</span><span class="co"> es</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="an">number-sections:</span><span class="co"> false</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="co">---</span></span>
+<span id="cb1-25"><a href="#cb1-25"></a></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="fu"># Introducción {#sec-intro-cap02}</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a></span>
+<span id="cb1-28"><a href="#cb1-28"></a>El análisis económico matemático se fundamenta en el sistema de números reales y las estructuras algebraicas que permiten representar relaciones económicas de manera precisa y rigurosa. Este capítulo establece las bases matemáticas necesarias para el estudio de modelos económicos, desde los conceptos elementales de conjuntos hasta las funciones generales que caracterizan el comportamiento de variables económicas.</span>
+<span id="cb1-29"><a href="#cb1-29"></a></span>
+<span id="cb1-30"><a href="#cb1-30"></a>La importancia de una sólida comprensión de estos fundamentos radica en que las variables económicas—precio, costo, ingreso, producción, entre otras—adoptan valores numéricos que deben ser manipulados mediante operaciones algebraicas precisas. Más aún, las relaciones entre estas variables se expresan típicamente mediante funciones matemáticas cuyas propiedades determinan el comportamiento del sistema económico bajo análisis <span class="co">[</span><span class="ot">@chiang2005</span><span class="co">]</span>.</span>
+<span id="cb1-31"><a href="#cb1-31"></a></span>
+<span id="cb1-32"><a href="#cb1-32"></a>::: {.callout-note}</span>
+<span id="cb1-33"><a href="#cb1-33"></a><span class="fu">## Objetivo del capítulo</span></span>
+<span id="cb1-34"><a href="#cb1-34"></a></span>
+<span id="cb1-35"><a href="#cb1-35"></a>Establecer una base rigurosa de conceptos matemáticos fundamentales que servirán como herramientas analíticas para el desarrollo de modelos económicos. Se enfatiza la precisión conceptual y la aplicabilidad económica de cada construcción matemática presentada.</span>
+<span id="cb1-36"><a href="#cb1-36"></a>:::</span>
+<span id="cb1-37"><a href="#cb1-37"></a></span>
+<span id="cb1-38"><a href="#cb1-38"></a>---</span>
+<span id="cb1-39"><a href="#cb1-39"></a></span>
+<span id="cb1-40"><a href="#cb1-40"></a><span class="fu"># El Sistema de Números Reales {#sec-numeros-reales}</span></span>
+<span id="cb1-41"><a href="#cb1-41"></a></span>
+<span id="cb1-42"><a href="#cb1-42"></a><span class="fu">## Definición y Estructura</span></span>
+<span id="cb1-43"><a href="#cb1-43"></a></span>
+<span id="cb1-44"><a href="#cb1-44"></a>El **sistema de números reales**, denotado por $\mathbb{R}$, constituye un continuo numérico fundamental para el análisis económico matemático. Este sistema proporciona el marco dentro del cual se definen y operan las variables económicas.</span>
+<span id="cb1-45"><a href="#cb1-45"></a></span>
+<span id="cb1-46"><a href="#cb1-46"></a>::: {.callout-important}</span>
+<span id="cb1-47"><a href="#cb1-47"></a><span class="fu">## Definición: Números Reales</span></span>
+<span id="cb1-48"><a href="#cb1-48"></a></span>
+<span id="cb1-49"><a href="#cb1-49"></a>El conjunto $\mathbb{R}$ de los números reales es la unión de los conjuntos de números racionales ($\mathbb{Q}$) e irracionales ($\mathbb{I}$):</span>
+<span id="cb1-50"><a href="#cb1-50"></a></span>
+<span id="cb1-51"><a href="#cb1-51"></a>$$\mathbb{R} = \mathbb{Q} \cup \mathbb{I}$$</span>
+<span id="cb1-52"><a href="#cb1-52"></a></span>
+<span id="cb1-53"><a href="#cb1-53"></a>Este conjunto forma un **campo ordenado completo** bajo las operaciones de adición y multiplicación.</span>
+<span id="cb1-54"><a href="#cb1-54"></a>:::</span>
+<span id="cb1-55"><a href="#cb1-55"></a></span>
+<span id="cb1-56"><a href="#cb1-56"></a><span class="fu">## Números Racionales</span></span>
+<span id="cb1-57"><a href="#cb1-57"></a></span>
+<span id="cb1-58"><a href="#cb1-58"></a>Los **números racionales** constituyen el subconjunto de números reales que pueden expresarse como el cociente de dos enteros.</span>
+<span id="cb1-59"><a href="#cb1-59"></a></span>
+<span id="cb1-60"><a href="#cb1-60"></a>**Definición formal:**</span>
+<span id="cb1-61"><a href="#cb1-61"></a></span>
+<span id="cb1-62"><a href="#cb1-62"></a>$$\mathbb{Q} = \left<span class="sc">\{</span>\frac{p}{q} \mid p, q \in \mathbb{Z}, \, q \neq 0\right<span class="sc">\}</span>$$</span>
+<span id="cb1-63"><a href="#cb1-63"></a></span>
+<span id="cb1-64"><a href="#cb1-64"></a>donde $\mathbb{Z}$ denota el conjunto de los números enteros.</span>
+<span id="cb1-65"><a href="#cb1-65"></a></span>
+<span id="cb1-66"><a href="#cb1-66"></a>**Componentes del conjunto racional:**</span>
+<span id="cb1-67"><a href="#cb1-67"></a></span>
+<span id="cb1-68"><a href="#cb1-68"></a><span class="ss">1. </span>**Enteros positivos ($\mathbb{Z}^+$):** Utilizados para conteo y enumeración: $<span class="sc">\{</span>1, 2, 3, 4, \ldots<span class="sc">\}</span>$</span>
+<span id="cb1-69"><a href="#cb1-69"></a></span>
+<span id="cb1-70"><a href="#cb1-70"></a><span class="ss">2. </span>**Enteros negativos ($\mathbb{Z}^-$):** Representan magnitudes con sentido opuesto: $<span class="sc">\{</span>-1, -2, -3, \ldots<span class="sc">\}</span>$</span>
+<span id="cb1-71"><a href="#cb1-71"></a></span>
+<span id="cb1-72"><a href="#cb1-72"></a><span class="ss">3. </span>**Cero:** Elemento neutro de la adición, denotado por $0$</span>
+<span id="cb1-73"><a href="#cb1-73"></a></span>
+<span id="cb1-74"><a href="#cb1-74"></a><span class="ss">4. </span>**Fracciones:** Cocientes de enteros donde el denominador es distinto de cero</span>
+<span id="cb1-75"><a href="#cb1-75"></a></span>
+<span id="cb1-76"><a href="#cb1-76"></a>**Propiedades características:**</span>
+<span id="cb1-77"><a href="#cb1-77"></a></span>
+<span id="cb1-78"><a href="#cb1-78"></a>::: {.callout-tip}</span>
+<span id="cb1-79"><a href="#cb1-79"></a><span class="fu">## Representación decimal de racionales</span></span>
+<span id="cb1-80"><a href="#cb1-80"></a></span>
+<span id="cb1-81"><a href="#cb1-81"></a>Todo número racional admite una representación decimal que es:</span>
+<span id="cb1-82"><a href="#cb1-82"></a></span>
+<span id="cb1-83"><a href="#cb1-83"></a><span class="ss">- </span>**Finita (terminante):** $\frac{1}{4} = 0.25$, $\frac{3}{8} = 0.375$</span>
+<span id="cb1-84"><a href="#cb1-84"></a></span>
+<span id="cb1-85"><a href="#cb1-85"></a><span class="ss">- </span>**Periódica (infinita repetitiva):** $\frac{1}{3} = 0.\overline{3} = 0.333\ldots$, $\frac{2}{11} = 0.\overline{18} = 0.181818\ldots$</span>
+<span id="cb1-86"><a href="#cb1-86"></a></span>
+<span id="cb1-87"><a href="#cb1-87"></a>La barra superior indica el bloque de dígitos que se repite indefinidamente.</span>
+<span id="cb1-88"><a href="#cb1-88"></a>:::</span>
+<span id="cb1-89"><a href="#cb1-89"></a></span>
+<span id="cb1-90"><a href="#cb1-90"></a>**Ejemplos económicos:**</span>
+<span id="cb1-91"><a href="#cb1-91"></a></span>
+<span id="cb1-92"><a href="#cb1-92"></a><span class="ss">- </span>Tasas de interés expresadas como fracciones: $r = \frac{5}{100} = 0.05$ (5%)</span>
+<span id="cb1-93"><a href="#cb1-93"></a><span class="ss">- </span>Proporciones de consumo: $c = \frac{3}{4}$ del ingreso disponible</span>
+<span id="cb1-94"><a href="#cb1-94"></a><span class="ss">- </span>Precios en unidades monetarias: $P = \frac{125}{10} = 12.5$ (doce unidades y media)</span>
+<span id="cb1-95"><a href="#cb1-95"></a></span>
+<span id="cb1-96"><a href="#cb1-96"></a><span class="fu">## Números Irracionales</span></span>
+<span id="cb1-97"><a href="#cb1-97"></a></span>
+<span id="cb1-98"><a href="#cb1-98"></a>Los **números irracionales** son aquellos números reales que no pueden expresarse como cociente de dos enteros.</span>
+<span id="cb1-99"><a href="#cb1-99"></a></span>
+<span id="cb1-100"><a href="#cb1-100"></a>**Definición formal:**</span>
+<span id="cb1-101"><a href="#cb1-101"></a></span>
+<span id="cb1-102"><a href="#cb1-102"></a>$$\mathbb{I} = \mathbb{R} \setminus \mathbb{Q} = <span class="sc">\{</span>x \in \mathbb{R} \mid x \notin \mathbb{Q}<span class="sc">\}</span>$$</span>
+<span id="cb1-103"><a href="#cb1-103"></a></span>
+<span id="cb1-104"><a href="#cb1-104"></a>**Propiedades características:**</span>
+<span id="cb1-105"><a href="#cb1-105"></a></span>
+<span id="cb1-106"><a href="#cb1-106"></a>::: {.callout-tip}</span>
+<span id="cb1-107"><a href="#cb1-107"></a><span class="fu">## Representación decimal de irracionales</span></span>
+<span id="cb1-108"><a href="#cb1-108"></a></span>
+<span id="cb1-109"><a href="#cb1-109"></a>Los números irracionales poseen representaciones decimales **infinitas no periódicas**. No existe un patrón repetitivo en su expansión decimal.</span>
+<span id="cb1-110"><a href="#cb1-110"></a>:::</span>
+<span id="cb1-111"><a href="#cb1-111"></a></span>
+<span id="cb1-112"><a href="#cb1-112"></a>**Ejemplos fundamentales:**</span>
+<span id="cb1-113"><a href="#cb1-113"></a></span>
+<span id="cb1-114"><a href="#cb1-114"></a>| Número | Símbolo | Valor aproximado | Contexto |</span>
+<span id="cb1-115"><a href="#cb1-115"></a>|:-------|:--------|:-----------------|:---------|</span>
+<span id="cb1-116"><a href="#cb1-116"></a>| Raíz cuadrada de 2 | $\sqrt{2}$ | $1.41421356\ldots$ | Geometría, optimización |</span>
+<span id="cb1-117"><a href="#cb1-117"></a>| Pi | $\pi$ | $3.14159265\ldots$ | Geometría circular, funciones trigonométricas |</span>
+<span id="cb1-118"><a href="#cb1-118"></a>| Euler | $e$ | $2.71828182\ldots$ | Crecimiento exponencial continuo |</span>
+<span id="cb1-119"><a href="#cb1-119"></a>| Razón áurea | $\phi$ | $1.61803398\ldots$ | Proporciones, series de Fibonacci |</span>
+<span id="cb1-120"><a href="#cb1-120"></a></span>
+<span id="cb1-121"><a href="#cb1-121"></a>: Números irracionales fundamentales {#tbl-irracionales}</span>
+<span id="cb1-122"><a href="#cb1-122"></a></span>
+<span id="cb1-123"><a href="#cb1-123"></a>**Aplicaciones económicas:**</span>
+<span id="cb1-124"><a href="#cb1-124"></a></span>
+<span id="cb1-125"><a href="#cb1-125"></a><span class="ss">- </span>La constante $e$ aparece en modelos de crecimiento continuo: $Q(t) = Q_0 e^{rt}$</span>
+<span id="cb1-126"><a href="#cb1-126"></a><span class="ss">- </span>$\pi$ surge en modelos con simetría circular o periódica</span>
+<span id="cb1-127"><a href="#cb1-127"></a><span class="ss">- </span>$\sqrt{2}$ aparece en problemas de optimización geométrica</span>
+<span id="cb1-128"><a href="#cb1-128"></a></span>
+<span id="cb1-129"><a href="#cb1-129"></a><span class="fu">## La Recta Real</span></span>
+<span id="cb1-130"><a href="#cb1-130"></a></span>
+<span id="cb1-131"><a href="#cb1-131"></a>La representación geométrica del conjunto $\mathbb{R}$ es la **recta real**, donde cada punto corresponde biunívocamente a un número real.</span>
+<span id="cb1-132"><a href="#cb1-132"></a></span>
+<span id="cb1-135"><a href="#cb1-135"></a><span class="in">```{r}</span></span>
+<span id="cb1-136"><a href="#cb1-136"></a><span class="co">#| label: fig-recta-real</span></span>
+<span id="cb1-137"><a href="#cb1-137"></a><span class="co">#| fig-cap: "Representación geométrica de la recta real"</span></span>
+<span id="cb1-138"><a href="#cb1-138"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-139"><a href="#cb1-139"></a><span class="co">#| warning: false</span></span>
+<span id="cb1-140"><a href="#cb1-140"></a></span>
+<span id="cb1-141"><a href="#cb1-141"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-142"><a href="#cb1-142"></a></span>
+<span id="cb1-143"><a href="#cb1-143"></a><span class="co"># Crear datos para la recta real</span></span>
+<span id="cb1-144"><a href="#cb1-144"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="at">by =</span> <span class="fl">0.01</span>), <span class="at">y =</span> <span class="dv">0</span>)</span>
+<span id="cb1-145"><a href="#cb1-145"></a></span>
+<span id="cb1-146"><a href="#cb1-146"></a><span class="co"># Puntos específicos</span></span>
+<span id="cb1-147"><a href="#cb1-147"></a>puntos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-148"><a href="#cb1-148"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="sc">-</span><span class="fl">1.5</span>, <span class="dv">0</span>, <span class="fu">sqrt</span>(<span class="dv">2</span>), pi, <span class="dv">4</span>),</span>
+<span id="cb1-149"><a href="#cb1-149"></a>  <span class="at">y =</span> <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">6</span>),</span>
+<span id="cb1-150"><a href="#cb1-150"></a>  <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"-3"</span>, <span class="st">"-1.5"</span>, <span class="st">"0"</span>, <span class="st">"√2"</span>, <span class="st">"π"</span>, <span class="st">"4"</span>)</span>
+<span id="cb1-151"><a href="#cb1-151"></a>)</span>
+<span id="cb1-152"><a href="#cb1-152"></a></span>
+<span id="cb1-153"><a href="#cb1-153"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1-154"><a href="#cb1-154"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y), <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb1-155"><a href="#cb1-155"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> puntos, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y), <span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb1-156"><a href="#cb1-156"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> puntos, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">label =</span> label), </span>
+<span id="cb1-157"><a href="#cb1-157"></a>            <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">1.5</span>, <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb1-158"><a href="#cb1-158"></a>  <span class="fu">geom_segment</span>(<span class="at">data =</span> puntos, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">xend =</span> x, <span class="at">y =</span> <span class="sc">-</span><span class="fl">0.05</span>, <span class="at">yend =</span> <span class="fl">0.05</span>),</span>
+<span id="cb1-159"><a href="#cb1-159"></a>               <span class="at">linewidth =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb1-160"><a href="#cb1-160"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb1-161"><a href="#cb1-161"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb1-162"><a href="#cb1-162"></a>  <span class="fu">theme</span>(</span>
+<span id="cb1-163"><a href="#cb1-163"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-164"><a href="#cb1-164"></a>    <span class="at">axis.ticks.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-165"><a href="#cb1-165"></a>    <span class="at">axis.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-166"><a href="#cb1-166"></a>    <span class="at">panel.grid.major.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-167"><a href="#cb1-167"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb1-168"><a href="#cb1-168"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-169"><a href="#cb1-169"></a>  <span class="fu">labs</span>(<span class="at">caption =</span> <span class="st">"La recta real incluye tanto números racionales como irracionales"</span>)</span>
+<span id="cb1-170"><a href="#cb1-170"></a><span class="in">```</span></span>
+<span id="cb1-171"><a href="#cb1-171"></a></span>
+<span id="cb1-172"><a href="#cb1-172"></a>::: {.callout-note}</span>
+<span id="cb1-173"><a href="#cb1-173"></a><span class="fu">## Completitud de los números reales</span></span>
+<span id="cb1-174"><a href="#cb1-174"></a></span>
+<span id="cb1-175"><a href="#cb1-175"></a>Los números irracionales "llenan" los espacios entre los números racionales, completando así el continuo numérico. Esta propiedad de **completitud** es fundamental para el análisis matemático y garantiza la existencia de límites y valores extremos en el análisis económico <span class="co">[</span><span class="ot">@simon1994</span><span class="co">]</span>.</span>
+<span id="cb1-176"><a href="#cb1-176"></a>:::</span>
+<span id="cb1-177"><a href="#cb1-177"></a></span>
+<span id="cb1-178"><a href="#cb1-178"></a>---</span>
+<span id="cb1-179"><a href="#cb1-179"></a></span>
+<span id="cb1-180"><a href="#cb1-180"></a><span class="fu"># Teoría de Conjuntos {#sec-conjuntos}</span></span>
+<span id="cb1-181"><a href="#cb1-181"></a></span>
+<span id="cb1-182"><a href="#cb1-182"></a><span class="fu">## Conceptos Fundamentales</span></span>
+<span id="cb1-183"><a href="#cb1-183"></a></span>
+<span id="cb1-184"><a href="#cb1-184"></a>La **teoría de conjuntos** proporciona el lenguaje formal para expresar colecciones de objetos y sus relaciones, constituyendo la base sobre la cual se construyen las estructuras matemáticas utilizadas en economía.</span>
+<span id="cb1-185"><a href="#cb1-185"></a></span>
+<span id="cb1-186"><a href="#cb1-186"></a>::: {.callout-important}</span>
+<span id="cb1-187"><a href="#cb1-187"></a><span class="fu">## Definición: Conjunto</span></span>
+<span id="cb1-188"><a href="#cb1-188"></a></span>
+<span id="cb1-189"><a href="#cb1-189"></a>Un **conjunto** es una colección bien definida de objetos distintos. Los objetos que pertenecen a un conjunto se denominan **elementos** o **miembros** del conjunto.</span>
+<span id="cb1-190"><a href="#cb1-190"></a>:::</span>
+<span id="cb1-191"><a href="#cb1-191"></a></span>
+<span id="cb1-192"><a href="#cb1-192"></a><span class="fu">## Notación y Representación</span></span>
+<span id="cb1-193"><a href="#cb1-193"></a></span>
+<span id="cb1-194"><a href="#cb1-194"></a>**Notación estándar:** Los conjuntos se denotan con letras mayúsculas ($A, B, C, \ldots$) y se encierran entre llaves: $<span class="sc">\{\}</span>$</span>
+<span id="cb1-195"><a href="#cb1-195"></a></span>
+<span id="cb1-196"><a href="#cb1-196"></a>**Métodos de especificación:**</span>
+<span id="cb1-197"><a href="#cb1-197"></a></span>
+<span id="cb1-198"><a href="#cb1-198"></a><span class="ss">1. </span>**Por enumeración (extensión):** Se listan explícitamente todos los elementos.</span>
+<span id="cb1-199"><a href="#cb1-199"></a></span>
+<span id="cb1-200"><a href="#cb1-200"></a>   $$S = <span class="sc">\{</span>2, 3, 5, 7, 11<span class="sc">\}</span>$$</span>
+<span id="cb1-201"><a href="#cb1-201"></a></span>
+<span id="cb1-202"><a href="#cb1-202"></a><span class="ss">2. </span>**Por comprensión (descripción):** Se especifica la propiedad que caracteriza a los elementos.</span>
+<span id="cb1-203"><a href="#cb1-203"></a></span>
+<span id="cb1-204"><a href="#cb1-204"></a>   $$S = <span class="sc">\{</span>x \mid x \text{ es un número primo menor que 12}<span class="sc">\}</span>$$</span>
+<span id="cb1-205"><a href="#cb1-205"></a></span>
+<span id="cb1-206"><a href="#cb1-206"></a>   Lectura: "El conjunto $S$ de todos los objetos $x$ tales que $x$ es un número primo menor que 12"</span>
+<span id="cb1-207"><a href="#cb1-207"></a></span>
+<span id="cb1-208"><a href="#cb1-208"></a>**Relación de pertenencia:**</span>
+<span id="cb1-209"><a href="#cb1-209"></a></span>
+<span id="cb1-210"><a href="#cb1-210"></a><span class="ss">- </span>$x \in A$: "$x$ es elemento de $A$" o "$x$ pertenece a $A$"</span>
+<span id="cb1-211"><a href="#cb1-211"></a><span class="ss">- </span>$x \notin A$: "$x$ no es elemento de $A$" o "$x$ no pertenece a $A$"</span>
+<span id="cb1-212"><a href="#cb1-212"></a></span>
+<span id="cb1-213"><a href="#cb1-213"></a>::: {.callout-tip}</span>
+<span id="cb1-214"><a href="#cb1-214"></a><span class="fu">## Ejemplo económico</span></span>
+<span id="cb1-215"><a href="#cb1-215"></a></span>
+<span id="cb1-216"><a href="#cb1-216"></a>Sea $\mathcal{B}$ el conjunto de bienes en una economía:</span>
+<span id="cb1-217"><a href="#cb1-217"></a></span>
+<span id="cb1-218"><a href="#cb1-218"></a>$$\mathcal{B} = <span class="sc">\{</span>\text{trigo}, \text{acero}, \text{energía}, \text{transporte}<span class="sc">\}</span>$$</span>
+<span id="cb1-219"><a href="#cb1-219"></a></span>
+<span id="cb1-220"><a href="#cb1-220"></a>Entonces: $\text{trigo} \in \mathcal{B}$ pero $\text{oro} \notin \mathcal{B}$</span>
+<span id="cb1-221"><a href="#cb1-221"></a>:::</span>
+<span id="cb1-222"><a href="#cb1-222"></a></span>
+<span id="cb1-223"><a href="#cb1-223"></a><span class="fu">## Clasificación de Conjuntos</span></span>
+<span id="cb1-224"><a href="#cb1-224"></a></span>
+<span id="cb1-225"><a href="#cb1-225"></a>**Por cardinalidad:**</span>
+<span id="cb1-226"><a href="#cb1-226"></a></span>
+<span id="cb1-227"><a href="#cb1-227"></a><span class="ss">1. </span>**Conjunto finito:** Contiene un número finito de elementos.</span>
+<span id="cb1-228"><a href="#cb1-228"></a>   </span>
+<span id="cb1-229"><a href="#cb1-229"></a>   $$A = <span class="sc">\{</span>1, 2, 3, 4, 5<span class="sc">\}</span> \quad \text{donde } |A| = 5$$</span>
+<span id="cb1-230"><a href="#cb1-230"></a></span>
+<span id="cb1-231"><a href="#cb1-231"></a><span class="ss">2. </span>**Conjunto infinito:** Contiene infinitos elementos.</span>
+<span id="cb1-232"><a href="#cb1-232"></a>   </span>
+<span id="cb1-233"><a href="#cb1-233"></a><span class="ss">   - </span>**Numerable (contable):** $\mathbb{N} = <span class="sc">\{</span>1, 2, 3, \ldots<span class="sc">\}</span>$</span>
+<span id="cb1-234"><a href="#cb1-234"></a><span class="ss">   - </span>**No numerable:** $\mathbb{R}$ (los números reales)</span>
+<span id="cb1-235"><a href="#cb1-235"></a></span>
+<span id="cb1-236"><a href="#cb1-236"></a><span class="ss">3. </span>**Conjunto vacío:** No contiene ningún elemento. Se denota $\emptyset$ o $<span class="sc">\{\}</span>$</span>
+<span id="cb1-237"><a href="#cb1-237"></a></span>
+<span id="cb1-238"><a href="#cb1-238"></a>::: {.callout-warning}</span>
+<span id="cb1-239"><a href="#cb1-239"></a><span class="fu">## Distinción importante</span></span>
+<span id="cb1-240"><a href="#cb1-240"></a></span>
+<span id="cb1-241"><a href="#cb1-241"></a>El conjunto $<span class="sc">\{</span>0<span class="sc">\}</span>$ **no es vacío**, pues contiene al número $0$ como elemento. Es decir:</span>
+<span id="cb1-242"><a href="#cb1-242"></a></span>
+<span id="cb1-243"><a href="#cb1-243"></a>$$<span class="sc">\{</span>0<span class="sc">\}</span> \neq \emptyset \quad \text{ya que } |<span class="sc">\{</span>0<span class="sc">\}</span>| = 1$$</span>
+<span id="cb1-244"><a href="#cb1-244"></a>:::</span>
+<span id="cb1-245"><a href="#cb1-245"></a></span>
+<span id="cb1-246"><a href="#cb1-246"></a><span class="fu">## Relaciones entre Conjuntos</span></span>
+<span id="cb1-247"><a href="#cb1-247"></a></span>
+<span id="cb1-248"><a href="#cb1-248"></a>**Igualdad:**</span>
+<span id="cb1-249"><a href="#cb1-249"></a></span>
+<span id="cb1-250"><a href="#cb1-250"></a>::: {.callout-important}</span>
+<span id="cb1-251"><a href="#cb1-251"></a><span class="fu">## Definición: Igualdad de conjuntos</span></span>
+<span id="cb1-252"><a href="#cb1-252"></a></span>
+<span id="cb1-253"><a href="#cb1-253"></a>Dos conjuntos $A$ y $B$ son iguales si y solo si contienen exactamente los mismos elementos:</span>
+<span id="cb1-254"><a href="#cb1-254"></a></span>
+<span id="cb1-255"><a href="#cb1-255"></a>$$A = B \iff (\forall x)(x \in A \leftrightarrow x \in B)$$</span>
+<span id="cb1-256"><a href="#cb1-256"></a>:::</span>
+<span id="cb1-257"><a href="#cb1-257"></a></span>
+<span id="cb1-258"><a href="#cb1-258"></a>**Observación:** El orden de aparición de los elementos es irrelevante:</span>
+<span id="cb1-259"><a href="#cb1-259"></a></span>
+<span id="cb1-260"><a href="#cb1-260"></a>$$<span class="sc">\{</span>1, 2, 3<span class="sc">\}</span> = <span class="sc">\{</span>3, 1, 2<span class="sc">\}</span> = <span class="sc">\{</span>2, 3, 1<span class="sc">\}</span>$$</span>
+<span id="cb1-261"><a href="#cb1-261"></a></span>
+<span id="cb1-262"><a href="#cb1-262"></a>**Subconjunto:**</span>
+<span id="cb1-263"><a href="#cb1-263"></a></span>
+<span id="cb1-264"><a href="#cb1-264"></a>::: {.callout-important}</span>
+<span id="cb1-265"><a href="#cb1-265"></a><span class="fu">## Definición: Subconjunto</span></span>
+<span id="cb1-266"><a href="#cb1-266"></a></span>
+<span id="cb1-267"><a href="#cb1-267"></a>$A$ es **subconjunto** de $B$ (denotado $A \subseteq B$ o $B \supseteq A$) si todo elemento de $A$ es también elemento de $B$:</span>
+<span id="cb1-268"><a href="#cb1-268"></a></span>
+<span id="cb1-269"><a href="#cb1-269"></a>$$A \subseteq B \iff (\forall x)(x \in A \Rightarrow x \in B)$$</span>
+<span id="cb1-270"><a href="#cb1-270"></a>:::</span>
+<span id="cb1-271"><a href="#cb1-271"></a></span>
+<span id="cb1-272"><a href="#cb1-272"></a>**Subconjunto propio:**</span>
+<span id="cb1-273"><a href="#cb1-273"></a></span>
+<span id="cb1-274"><a href="#cb1-274"></a>$$A \subset B \iff (A \subseteq B) \land (A \neq B)$$</span>
+<span id="cb1-275"><a href="#cb1-275"></a></span>
+<span id="cb1-276"><a href="#cb1-276"></a>Es decir, $A$ es subconjunto propio de $B$ si $A \subseteq B$ y existe al menos un elemento en $B$ que no está en $A$.</span>
+<span id="cb1-277"><a href="#cb1-277"></a></span>
+<span id="cb1-278"><a href="#cb1-278"></a>**Ejemplo:**</span>
+<span id="cb1-279"><a href="#cb1-279"></a></span>
+<span id="cb1-280"><a href="#cb1-280"></a>$$<span class="sc">\{</span>1, 2<span class="sc">\}</span> \subset <span class="sc">\{</span>1, 2, 3<span class="sc">\}</span> \quad \text{pero} \quad <span class="sc">\{</span>1, 2<span class="sc">\}</span> \not\subset <span class="sc">\{</span>1, 2<span class="sc">\}</span>$$</span>
+<span id="cb1-281"><a href="#cb1-281"></a></span>
+<span id="cb1-282"><a href="#cb1-282"></a>**Proposición fundamental:**</span>
+<span id="cb1-283"><a href="#cb1-283"></a></span>
+<span id="cb1-284"><a href="#cb1-284"></a>::: {.callout-note}</span>
+<span id="cb1-285"><a href="#cb1-285"></a>El conjunto vacío es subconjunto de cualquier conjunto:</span>
+<span id="cb1-286"><a href="#cb1-286"></a></span>
+<span id="cb1-287"><a href="#cb1-287"></a>$$\forall A: \emptyset \subseteq A$$</span>
+<span id="cb1-288"><a href="#cb1-288"></a>:::</span>
+<span id="cb1-289"><a href="#cb1-289"></a></span>
+<span id="cb1-290"><a href="#cb1-290"></a>**Conjuntos disjuntos:**</span>
+<span id="cb1-291"><a href="#cb1-291"></a></span>
+<span id="cb1-292"><a href="#cb1-292"></a>::: {.callout-important}</span>
+<span id="cb1-293"><a href="#cb1-293"></a><span class="fu">## Definición: Conjuntos disjuntos</span></span>
+<span id="cb1-294"><a href="#cb1-294"></a></span>
+<span id="cb1-295"><a href="#cb1-295"></a>Dos conjuntos $A$ y $B$ son **disjuntos** si no tienen elementos en común:</span>
+<span id="cb1-296"><a href="#cb1-296"></a></span>
+<span id="cb1-297"><a href="#cb1-297"></a>$$A \cap B = \emptyset$$</span>
+<span id="cb1-298"><a href="#cb1-298"></a>:::</span>
+<span id="cb1-299"><a href="#cb1-299"></a></span>
+<span id="cb1-300"><a href="#cb1-300"></a><span class="fu">## Operaciones con Conjuntos</span></span>
+<span id="cb1-301"><a href="#cb1-301"></a></span>
+<span id="cb1-302"><a href="#cb1-302"></a>**Unión:**</span>
+<span id="cb1-303"><a href="#cb1-303"></a></span>
+<span id="cb1-304"><a href="#cb1-304"></a>::: {.callout-important}</span>
+<span id="cb1-305"><a href="#cb1-305"></a><span class="fu">## Definición: Unión</span></span>
+<span id="cb1-306"><a href="#cb1-306"></a></span>
+<span id="cb1-307"><a href="#cb1-307"></a>La **unión** de $A$ y $B$ (denotada $A \cup B$) es el conjunto de elementos que pertenecen a $A$ **o** a $B$ (o a ambos):</span>
+<span id="cb1-308"><a href="#cb1-308"></a></span>
+<span id="cb1-309"><a href="#cb1-309"></a>$$A \cup B = <span class="sc">\{</span>x \mid x \in A \lor x \in B<span class="sc">\}</span>$$</span>
+<span id="cb1-310"><a href="#cb1-310"></a>:::</span>
+<span id="cb1-311"><a href="#cb1-311"></a></span>
+<span id="cb1-312"><a href="#cb1-312"></a>**Intersección:**</span>
+<span id="cb1-313"><a href="#cb1-313"></a></span>
+<span id="cb1-314"><a href="#cb1-314"></a>::: {.callout-important}</span>
+<span id="cb1-315"><a href="#cb1-315"></a><span class="fu">## Definición: Intersección</span></span>
+<span id="cb1-316"><a href="#cb1-316"></a></span>
+<span id="cb1-317"><a href="#cb1-317"></a>La **intersección** de $A$ y $B$ (denotada $A \cap B$) es el conjunto de elementos que pertenecen **tanto** a $A$ **como** a $B$:</span>
+<span id="cb1-318"><a href="#cb1-318"></a></span>
+<span id="cb1-319"><a href="#cb1-319"></a>$$A \cap B = <span class="sc">\{</span>x \mid x \in A \land x \in B<span class="sc">\}</span>$$</span>
+<span id="cb1-320"><a href="#cb1-320"></a>:::</span>
+<span id="cb1-321"><a href="#cb1-321"></a></span>
+<span id="cb1-322"><a href="#cb1-322"></a>**Complemento:**</span>
+<span id="cb1-323"><a href="#cb1-323"></a></span>
+<span id="cb1-324"><a href="#cb1-324"></a>::: {.callout-important}</span>
+<span id="cb1-325"><a href="#cb1-325"></a><span class="fu">## Definición: Complemento</span></span>
+<span id="cb1-326"><a href="#cb1-326"></a></span>
+<span id="cb1-327"><a href="#cb1-327"></a>Sea $U$ un conjunto universal. El **complemento** de $A$ (denotado $A^c$ o $\overline{A}$) es el conjunto de elementos de $U$ que **no** pertenecen a $A$:</span>
+<span id="cb1-328"><a href="#cb1-328"></a></span>
+<span id="cb1-329"><a href="#cb1-329"></a>$$A^c = <span class="sc">\{</span>x \in U \mid x \notin A<span class="sc">\}</span>$$</span>
+<span id="cb1-330"><a href="#cb1-330"></a>:::</span>
+<span id="cb1-331"><a href="#cb1-331"></a></span>
+<span id="cb1-332"><a href="#cb1-332"></a>**Diferencia:**</span>
+<span id="cb1-333"><a href="#cb1-333"></a></span>
+<span id="cb1-334"><a href="#cb1-334"></a>$$A \setminus B = <span class="sc">\{</span>x \mid x \in A \land x \notin B<span class="sc">\}</span> = A \cap B^c$$</span>
+<span id="cb1-335"><a href="#cb1-335"></a></span>
+<span id="cb1-336"><a href="#cb1-336"></a><span class="fu">## Leyes Algebraicas de Conjuntos</span></span>
+<span id="cb1-337"><a href="#cb1-337"></a></span>
+<span id="cb1-338"><a href="#cb1-338"></a>**Leyes conmutativas:**</span>
+<span id="cb1-339"><a href="#cb1-339"></a></span>
+<span id="cb1-340"><a href="#cb1-340"></a>$$A \cup B = B \cup A$$</span>
+<span id="cb1-341"><a href="#cb1-341"></a>$$A \cap B = B \cap A$$</span>
+<span id="cb1-342"><a href="#cb1-342"></a></span>
+<span id="cb1-343"><a href="#cb1-343"></a>**Leyes asociativas:**</span>
+<span id="cb1-344"><a href="#cb1-344"></a></span>
+<span id="cb1-345"><a href="#cb1-345"></a>$$(A \cup B) \cup C = A \cup (B \cup C)$$</span>
+<span id="cb1-346"><a href="#cb1-346"></a>$$(A \cap B) \cap C = A \cap (B \cap C)$$</span>
+<span id="cb1-347"><a href="#cb1-347"></a></span>
+<span id="cb1-348"><a href="#cb1-348"></a>**Leyes distributivas:**</span>
+<span id="cb1-349"><a href="#cb1-349"></a></span>
+<span id="cb1-350"><a href="#cb1-350"></a>$$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$$</span>
+<span id="cb1-351"><a href="#cb1-351"></a>$$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$$</span>
+<span id="cb1-352"><a href="#cb1-352"></a></span>
+<span id="cb1-353"><a href="#cb1-353"></a>**Leyes de De Morgan:**</span>
+<span id="cb1-354"><a href="#cb1-354"></a></span>
+<span id="cb1-355"><a href="#cb1-355"></a>$$(A \cup B)^c = A^c \cap B^c$$</span>
+<span id="cb1-356"><a href="#cb1-356"></a>$$(A \cap B)^c = A^c \cup B^c$$</span>
+<span id="cb1-357"><a href="#cb1-357"></a></span>
+<span id="cb1-358"><a href="#cb1-358"></a>**Leyes de idempotencia:**</span>
+<span id="cb1-359"><a href="#cb1-359"></a></span>
+<span id="cb1-360"><a href="#cb1-360"></a>$$A \cup A = A$$</span>
+<span id="cb1-361"><a href="#cb1-361"></a>$$A \cap A = A$$</span>
+<span id="cb1-362"><a href="#cb1-362"></a></span>
+<span id="cb1-363"><a href="#cb1-363"></a>**Leyes de identidad:**</span>
+<span id="cb1-364"><a href="#cb1-364"></a></span>
+<span id="cb1-365"><a href="#cb1-365"></a>$$A \cup \emptyset = A$$</span>
+<span id="cb1-366"><a href="#cb1-366"></a>$$A \cap U = A$$</span>
+<span id="cb1-367"><a href="#cb1-367"></a></span>
+<span id="cb1-368"><a href="#cb1-368"></a>**Leyes de dominación:**</span>
+<span id="cb1-369"><a href="#cb1-369"></a></span>
+<span id="cb1-370"><a href="#cb1-370"></a>$$A \cup U = U$$</span>
+<span id="cb1-371"><a href="#cb1-371"></a>$$A \cap \emptyset = \emptyset$$</span>
+<span id="cb1-372"><a href="#cb1-372"></a></span>
+<span id="cb1-373"><a href="#cb1-373"></a>**Leyes de complemento:**</span>
+<span id="cb1-374"><a href="#cb1-374"></a></span>
+<span id="cb1-375"><a href="#cb1-375"></a>$$A \cup A^c = U$$</span>
+<span id="cb1-376"><a href="#cb1-376"></a>$$A \cap A^c = \emptyset$$</span>
+<span id="cb1-377"><a href="#cb1-377"></a>$$(A^c)^c = A$$</span>
+<span id="cb1-378"><a href="#cb1-378"></a></span>
+<span id="cb1-379"><a href="#cb1-379"></a><span class="fu">## Número de Subconjuntos</span></span>
+<span id="cb1-380"><a href="#cb1-380"></a></span>
+<span id="cb1-381"><a href="#cb1-381"></a>::: {.callout-note}</span>
+<span id="cb1-382"><a href="#cb1-382"></a><span class="fu">## Teorema: Cardinalidad del conjunto potencia</span></span>
+<span id="cb1-383"><a href="#cb1-383"></a></span>
+<span id="cb1-384"><a href="#cb1-384"></a>Si un conjunto $A$ tiene $n$ elementos, el número total de subconjuntos de $A$ (incluyendo $\emptyset$ y el propio $A$) es:</span>
+<span id="cb1-385"><a href="#cb1-385"></a></span>
+<span id="cb1-386"><a href="#cb1-386"></a>$$|\mathcal{P}(A)| = 2^n$$</span>
+<span id="cb1-387"><a href="#cb1-387"></a></span>
+<span id="cb1-388"><a href="#cb1-388"></a>donde $\mathcal{P}(A)$ denota el **conjunto potencia** de $A$.</span>
+<span id="cb1-389"><a href="#cb1-389"></a>:::</span>
+<span id="cb1-390"><a href="#cb1-390"></a></span>
+<span id="cb1-391"><a href="#cb1-391"></a>**Ejemplo:** Si $A = <span class="sc">\{</span>a, b, c<span class="sc">\}</span>$, entonces $|A| = 3$ y:</span>
+<span id="cb1-392"><a href="#cb1-392"></a></span>
+<span id="cb1-393"><a href="#cb1-393"></a>$$\mathcal{P}(A) = <span class="sc">\{</span>\emptyset, <span class="sc">\{</span>a<span class="sc">\}</span>, <span class="sc">\{</span>b<span class="sc">\}</span>, <span class="sc">\{</span>c<span class="sc">\}</span>, <span class="sc">\{</span>a,b<span class="sc">\}</span>, <span class="sc">\{</span>a,c<span class="sc">\}</span>, <span class="sc">\{</span>b,c<span class="sc">\}</span>, <span class="sc">\{</span>a,b,c<span class="sc">\}\}</span>$$</span>
+<span id="cb1-394"><a href="#cb1-394"></a></span>
+<span id="cb1-395"><a href="#cb1-395"></a>con $|\mathcal{P}(A)| = 2^3 = 8$ subconjuntos.</span>
+<span id="cb1-396"><a href="#cb1-396"></a></span>
+<span id="cb1-397"><a href="#cb1-397"></a>---</span>
+<span id="cb1-398"><a href="#cb1-398"></a></span>
+<span id="cb1-399"><a href="#cb1-399"></a><span class="fu"># Producto Cartesiano y Pares Ordenados {#sec-producto-cartesiano}</span></span>
+<span id="cb1-400"><a href="#cb1-400"></a></span>
+<span id="cb1-401"><a href="#cb1-401"></a><span class="fu">## Pares Ordenados</span></span>
+<span id="cb1-402"><a href="#cb1-402"></a></span>
+<span id="cb1-403"><a href="#cb1-403"></a>A diferencia de los conjuntos simples, en los **pares ordenados** el orden de los elementos es significativo.</span>
+<span id="cb1-404"><a href="#cb1-404"></a></span>
+<span id="cb1-405"><a href="#cb1-405"></a>::: {.callout-important}</span>
+<span id="cb1-406"><a href="#cb1-406"></a><span class="fu">## Definición: Par ordenado</span></span>
+<span id="cb1-407"><a href="#cb1-407"></a></span>
+<span id="cb1-408"><a href="#cb1-408"></a>Un **par ordenado** $(a, b)$ es una estructura donde el orden de los elementos importa:</span>
+<span id="cb1-409"><a href="#cb1-409"></a></span>
+<span id="cb1-410"><a href="#cb1-410"></a>$$(a, b) = (c, d) \iff (a = c) \land (b = d)$$</span>
+<span id="cb1-411"><a href="#cb1-411"></a></span>
+<span id="cb1-412"><a href="#cb1-412"></a>En particular: $(a, b) \neq (b, a)$ a menos que $a = b$</span>
+<span id="cb1-413"><a href="#cb1-413"></a>:::</span>
+<span id="cb1-414"><a href="#cb1-414"></a></span>
+<span id="cb1-415"><a href="#cb1-415"></a>**Notación:** Los pares ordenados se encierran entre **paréntesis** $()$, a diferencia de los conjuntos que usan llaves $<span class="sc">\{\}</span>$.</span>
+<span id="cb1-416"><a href="#cb1-416"></a></span>
+<span id="cb1-417"><a href="#cb1-417"></a>**Generalización:** Las **n-tuplas ordenadas** extienden este concepto:</span>
+<span id="cb1-418"><a href="#cb1-418"></a></span>
+<span id="cb1-419"><a href="#cb1-419"></a><span class="ss">- </span>**Terna ordenada:** $(a, b, c)$</span>
+<span id="cb1-420"><a href="#cb1-420"></a><span class="ss">- </span>**Cuádrupla ordenada:** $(a, b, c, d)$</span>
+<span id="cb1-421"><a href="#cb1-421"></a><span class="ss">- </span>**n-tupla ordenada:** $(a_1, a_2, \ldots, a_n)$</span>
+<span id="cb1-422"><a href="#cb1-422"></a></span>
+<span id="cb1-423"><a href="#cb1-423"></a><span class="fu">## Producto Cartesiano</span></span>
+<span id="cb1-424"><a href="#cb1-424"></a></span>
+<span id="cb1-425"><a href="#cb1-425"></a>::: {.callout-important}</span>
+<span id="cb1-426"><a href="#cb1-426"></a><span class="fu">## Definición: Producto cartesiano</span></span>
+<span id="cb1-427"><a href="#cb1-427"></a></span>
+<span id="cb1-428"><a href="#cb1-428"></a>El **producto cartesiano** de dos conjuntos $X$ y $Y$ (denotado $X \times Y$) es el conjunto de todos los pares ordenados $(x, y)$ donde $x \in X$ e $y \in Y$:</span>
+<span id="cb1-429"><a href="#cb1-429"></a></span>
+<span id="cb1-430"><a href="#cb1-430"></a>$$X \times Y = <span class="sc">\{</span>(x, y) \mid x \in X \land y \in Y<span class="sc">\}</span>$$</span>
+<span id="cb1-431"><a href="#cb1-431"></a>:::</span>
+<span id="cb1-432"><a href="#cb1-432"></a></span>
+<span id="cb1-433"><a href="#cb1-433"></a>**Propiedades:**</span>
+<span id="cb1-434"><a href="#cb1-434"></a></span>
+<span id="cb1-435"><a href="#cb1-435"></a><span class="ss">1. </span>**Cardinalidad:** Si $|X| = m$ y $|Y| = n$, entonces $|X \times Y| = m \cdot n$</span>
+<span id="cb1-436"><a href="#cb1-436"></a></span>
+<span id="cb1-437"><a href="#cb1-437"></a><span class="ss">2. </span>**No conmutatividad:** En general, $X \times Y \neq Y \times X$</span>
+<span id="cb1-438"><a href="#cb1-438"></a></span>
+<span id="cb1-439"><a href="#cb1-439"></a><span class="ss">3. </span>**Asociatividad:** $(X \times Y) \times Z \neq X \times (Y \times Z)$, pero ambos son isomorfos a $X \times Y \times Z$</span>
+<span id="cb1-440"><a href="#cb1-440"></a></span>
+<span id="cb1-441"><a href="#cb1-441"></a>::: {.callout-tip}</span>
+<span id="cb1-442"><a href="#cb1-442"></a><span class="fu">## Ejemplo numérico</span></span>
+<span id="cb1-443"><a href="#cb1-443"></a></span>
+<span id="cb1-444"><a href="#cb1-444"></a>Sean $A = <span class="sc">\{</span>1, 2<span class="sc">\}</span>$ y $B = <span class="sc">\{</span>x, y, z<span class="sc">\}</span>$. Entonces:</span>
+<span id="cb1-445"><a href="#cb1-445"></a></span>
+<span id="cb1-446"><a href="#cb1-446"></a>$$A \times B = <span class="sc">\{</span>(1,x), (1,y), (1,z), (2,x), (2,y), (2,z)<span class="sc">\}</span>$$</span>
+<span id="cb1-447"><a href="#cb1-447"></a></span>
+<span id="cb1-448"><a href="#cb1-448"></a>$$B \times A = <span class="sc">\{</span>(x,1), (x,2), (y,1), (y,2), (z,1), (z,2)<span class="sc">\}</span>$$</span>
+<span id="cb1-449"><a href="#cb1-449"></a></span>
+<span id="cb1-450"><a href="#cb1-450"></a>Claramente $A \times B \neq B \times A$, aunque $|A \times B| = |B \times A| = 6$</span>
+<span id="cb1-451"><a href="#cb1-451"></a>:::</span>
+<span id="cb1-452"><a href="#cb1-452"></a></span>
+<span id="cb1-453"><a href="#cb1-453"></a><span class="fu">## El Plano Cartesiano</span></span>
+<span id="cb1-454"><a href="#cb1-454"></a></span>
+<span id="cb1-455"><a href="#cb1-455"></a>**Construcción geométrica:**</span>
+<span id="cb1-456"><a href="#cb1-456"></a></span>
+<span id="cb1-457"><a href="#cb1-457"></a>El producto cartesiano $\mathbb{R} \times \mathbb{R} = \mathbb{R}^2$ representa el **plano cartesiano**, donde cada par ordenado $(x, y) \in \mathbb{R}^2$ corresponde a un punto único en el plano.</span>
+<span id="cb1-458"><a href="#cb1-458"></a></span>
+<span id="cb1-461"><a href="#cb1-461"></a><span class="in">```{r}</span></span>
+<span id="cb1-462"><a href="#cb1-462"></a><span class="co">#| label: fig-plano-cartesiano</span></span>
+<span id="cb1-463"><a href="#cb1-463"></a><span class="co">#| fig-cap: "Representación de pares ordenados en el plano cartesiano"</span></span>
+<span id="cb1-464"><a href="#cb1-464"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-465"><a href="#cb1-465"></a></span>
+<span id="cb1-466"><a href="#cb1-466"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-467"><a href="#cb1-467"></a></span>
+<span id="cb1-468"><a href="#cb1-468"></a><span class="co"># Puntos específicos</span></span>
+<span id="cb1-469"><a href="#cb1-469"></a>puntos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-470"><a href="#cb1-470"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="sc">-</span><span class="dv">3</span>, <span class="dv">4</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>),</span>
+<span id="cb1-471"><a href="#cb1-471"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">0</span>),</span>
+<span id="cb1-472"><a href="#cb1-472"></a>  <span class="at">label =</span> <span class="fu">c</span>(<span class="st">"(2,3)"</span>, <span class="st">"(-3,-2)"</span>, <span class="st">"(4,-1)"</span>, <span class="st">"(-1,4)"</span>, <span class="st">"(0,0)"</span>)</span>
+<span id="cb1-473"><a href="#cb1-473"></a>)</span>
+<span id="cb1-474"><a href="#cb1-474"></a></span>
+<span id="cb1-475"><a href="#cb1-475"></a><span class="fu">ggplot</span>(puntos, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb1-476"><a href="#cb1-476"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb1-477"><a href="#cb1-477"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb1-478"><a href="#cb1-478"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb1-479"><a href="#cb1-479"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> label), <span class="at">vjust =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb1-480"><a href="#cb1-480"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">1</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb1-481"><a href="#cb1-481"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">1</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb1-482"><a href="#cb1-482"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb1-483"><a href="#cb1-483"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Eje x (horizontal)"</span>, <span class="at">y =</span> <span class="st">"Eje y (vertical)"</span>) <span class="sc">+</span></span>
+<span id="cb1-484"><a href="#cb1-484"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>())</span>
+<span id="cb1-485"><a href="#cb1-485"></a><span class="in">```</span></span>
+<span id="cb1-486"><a href="#cb1-486"></a></span>
+<span id="cb1-487"><a href="#cb1-487"></a>**Cuadrantes del plano:**</span>
+<span id="cb1-488"><a href="#cb1-488"></a></span>
+<span id="cb1-489"><a href="#cb1-489"></a>| Cuadrante | Región | Condiciones |</span>
+<span id="cb1-490"><a href="#cb1-490"></a>|:---------:|:-------|:------------|</span>
+<span id="cb1-491"><a href="#cb1-491"></a>| I | Superior derecha | $x &gt; 0, y &gt; 0$ |</span>
+<span id="cb1-492"><a href="#cb1-492"></a>| II | Superior izquierda | $x &lt; 0, y &gt; 0$ |</span>
+<span id="cb1-493"><a href="#cb1-493"></a>| III | Inferior izquierda | $x &lt; 0, y &lt; 0$ |</span>
+<span id="cb1-494"><a href="#cb1-494"></a>| IV | Inferior derecha | $x &gt; 0, y &lt; 0$ |</span>
+<span id="cb1-495"><a href="#cb1-495"></a></span>
+<span id="cb1-496"><a href="#cb1-496"></a>: División del plano cartesiano en cuadrantes {#tbl-cuadrantes}</span>
+<span id="cb1-497"><a href="#cb1-497"></a></span>
+<span id="cb1-498"><a href="#cb1-498"></a><span class="fu">## Producto Cartesiano de Múltiples Conjuntos</span></span>
+<span id="cb1-499"><a href="#cb1-499"></a></span>
+<span id="cb1-500"><a href="#cb1-500"></a>**Generalización:** El producto cartesiano se extiende a $n$ conjuntos:</span>
+<span id="cb1-501"><a href="#cb1-501"></a></span>
+<span id="cb1-502"><a href="#cb1-502"></a>$$X_1 \times X_2 \times \cdots \times X_n = <span class="sc">\{</span>(x_1, x_2, \ldots, x_n) \mid x_i \in X_i \text{ para } i = 1, 2, \ldots, n<span class="sc">\}</span>$$</span>
+<span id="cb1-503"><a href="#cb1-503"></a></span>
+<span id="cb1-504"><a href="#cb1-504"></a>**Caso especial:** $\mathbb{R}^n = \underbrace{\mathbb{R} \times \mathbb{R} \times \cdots \times \mathbb{R}}_{n \text{ veces}}$</span>
+<span id="cb1-505"><a href="#cb1-505"></a></span>
+<span id="cb1-506"><a href="#cb1-506"></a>**Aplicaciones económicas:**</span>
+<span id="cb1-507"><a href="#cb1-507"></a></span>
+<span id="cb1-508"><a href="#cb1-508"></a><span class="ss">- </span>$\mathbb{R}^2$: Pares de variables (precio-cantidad, consumo-ingreso)</span>
+<span id="cb1-509"><a href="#cb1-509"></a><span class="ss">- </span>$\mathbb{R}^n$: Vectores de precios, cantidades, o dotaciones en economías con $n$ bienes</span>
+<span id="cb1-510"><a href="#cb1-510"></a><span class="ss">- </span>Espacios de estrategias en teoría de juegos</span>
+<span id="cb1-511"><a href="#cb1-511"></a></span>
+<span id="cb1-512"><a href="#cb1-512"></a>---</span>
+<span id="cb1-513"><a href="#cb1-513"></a></span>
+<span id="cb1-514"><a href="#cb1-514"></a><span class="fu"># Relaciones y Funciones {#sec-relaciones-funciones}</span></span>
+<span id="cb1-515"><a href="#cb1-515"></a></span>
+<span id="cb1-516"><a href="#cb1-516"></a><span class="fu">## Relaciones</span></span>
+<span id="cb1-517"><a href="#cb1-517"></a></span>
+<span id="cb1-518"><a href="#cb1-518"></a>Una **relación** formaliza la idea de asociación entre elementos de dos conjuntos.</span>
+<span id="cb1-519"><a href="#cb1-519"></a></span>
+<span id="cb1-520"><a href="#cb1-520"></a>::: {.callout-important}</span>
+<span id="cb1-521"><a href="#cb1-521"></a><span class="fu">## Definición: Relación</span></span>
+<span id="cb1-522"><a href="#cb1-522"></a></span>
+<span id="cb1-523"><a href="#cb1-523"></a>Una **relación** $R$ de $X$ en $Y$ es cualquier subconjunto del producto cartesiano $X \times Y$:</span>
+<span id="cb1-524"><a href="#cb1-524"></a></span>
+<span id="cb1-525"><a href="#cb1-525"></a>$$R \subseteq X \times Y$$</span>
+<span id="cb1-526"><a href="#cb1-526"></a></span>
+<span id="cb1-527"><a href="#cb1-527"></a>Si $(x, y) \in R$, decimos que "$x$ está relacionado con $y$" y escribimos $xRy$.</span>
+<span id="cb1-528"><a href="#cb1-528"></a>:::</span>
+<span id="cb1-529"><a href="#cb1-529"></a></span>
+<span id="cb1-530"><a href="#cb1-530"></a>**Características:**</span>
+<span id="cb1-531"><a href="#cb1-531"></a></span>
+<span id="cb1-532"><a href="#cb1-532"></a><span class="ss">- </span>Una relación puede asociar **uno o más valores de $y$** con un valor dado de $x$</span>
+<span id="cb1-533"><a href="#cb1-533"></a><span class="ss">- </span>Una relación puede asociar **ningún valor de $y$** con ciertos valores de $x$</span>
+<span id="cb1-534"><a href="#cb1-534"></a></span>
+<span id="cb1-535"><a href="#cb1-535"></a>::: {.callout-tip}</span>
+<span id="cb1-536"><a href="#cb1-536"></a><span class="fu">## Ejemplo económico</span></span>
+<span id="cb1-537"><a href="#cb1-537"></a></span>
+<span id="cb1-538"><a href="#cb1-538"></a>Sea $X$ el conjunto de empresas y $Y$ el conjunto de productos. La relación $P$ definida por:</span>
+<span id="cb1-539"><a href="#cb1-539"></a></span>
+<span id="cb1-540"><a href="#cb1-540"></a>$$P = <span class="sc">\{</span>(e, p) \mid \text{la empresa } e \text{ produce el producto } p<span class="sc">\}</span>$$</span>
+<span id="cb1-541"><a href="#cb1-541"></a></span>
+<span id="cb1-542"><a href="#cb1-542"></a>indica qué productos fabrica cada empresa. Una empresa puede producir múltiples productos.</span>
+<span id="cb1-543"><a href="#cb1-543"></a>:::</span>
+<span id="cb1-544"><a href="#cb1-544"></a></span>
+<span id="cb1-545"><a href="#cb1-545"></a><span class="fu">## Funciones</span></span>
+<span id="cb1-546"><a href="#cb1-546"></a></span>
+<span id="cb1-547"><a href="#cb1-547"></a>Las **funciones** son relaciones especiales que satisfacen una condición de unicidad.</span>
+<span id="cb1-548"><a href="#cb1-548"></a></span>
+<span id="cb1-549"><a href="#cb1-549"></a>::: {.callout-important}</span>
+<span id="cb1-550"><a href="#cb1-550"></a><span class="fu">## Definición: Función</span></span>
+<span id="cb1-551"><a href="#cb1-551"></a></span>
+<span id="cb1-552"><a href="#cb1-552"></a>Una **función** $f$ de $X$ en $Y$ (denotada $f: X \to Y$) es una relación que asigna a cada elemento $x \in X$ **exactamente un** elemento $y \in Y$:</span>
+<span id="cb1-553"><a href="#cb1-553"></a></span>
+<span id="cb1-554"><a href="#cb1-554"></a>$$f \subseteq X \times Y \quad \text{tal que} \quad (\forall x \in X)(\exists! y \in Y)<span class="co">[</span><span class="ot">(x,y) \in f</span><span class="co">]</span>$$</span>
+<span id="cb1-555"><a href="#cb1-555"></a></span>
+<span id="cb1-556"><a href="#cb1-556"></a>Notación: $y = f(x)$ (se lee "$y$ es igual a $f$ de $x$")</span>
+<span id="cb1-557"><a href="#cb1-557"></a>:::</span>
+<span id="cb1-558"><a href="#cb1-558"></a></span>
+<span id="cb1-559"><a href="#cb1-559"></a>**Componentes de una función:**</span>
+<span id="cb1-560"><a href="#cb1-560"></a></span>
+<span id="cb1-561"><a href="#cb1-561"></a>::: {.callout-note}</span>
+<span id="cb1-562"><a href="#cb1-562"></a>Para $f: X \to Y$:</span>
+<span id="cb1-563"><a href="#cb1-563"></a></span>
+<span id="cb1-564"><a href="#cb1-564"></a><span class="ss">- </span>**Dominio** ($\text{Dom}(f)$): Conjunto de valores permitidos para la variable independiente $x$. Por definición, $\text{Dom}(f) = X$.</span>
+<span id="cb1-565"><a href="#cb1-565"></a></span>
+<span id="cb1-566"><a href="#cb1-566"></a><span class="ss">- </span>**Codominio**: El conjunto $Y$ donde toman valores las imágenes.</span>
+<span id="cb1-567"><a href="#cb1-567"></a></span>
+<span id="cb1-568"><a href="#cb1-568"></a><span class="ss">- </span>**Imagen** o **Rango** ($\text{Im}(f)$ o $\text{Ran}(f)$): Conjunto de valores que efectivamente toma la variable dependiente $y$:</span>
+<span id="cb1-569"><a href="#cb1-569"></a></span>
+<span id="cb1-570"><a href="#cb1-570"></a>  $$\text{Im}(f) = <span class="sc">\{</span>y \in Y \mid \exists x \in X: y = f(x)<span class="sc">\}</span> \subseteq Y$$</span>
+<span id="cb1-571"><a href="#cb1-571"></a></span>
+<span id="cb1-572"><a href="#cb1-572"></a><span class="ss">- </span>**Variable independiente** (o **argumento**): $x$</span>
+<span id="cb1-573"><a href="#cb1-573"></a></span>
+<span id="cb1-574"><a href="#cb1-574"></a><span class="ss">- </span>**Variable dependiente** (o **valor**): $y = f(x)$</span>
+<span id="cb1-575"><a href="#cb1-575"></a>:::</span>
+<span id="cb1-576"><a href="#cb1-576"></a></span>
+<span id="cb1-577"><a href="#cb1-577"></a>**Terminología alternativa:**</span>
+<span id="cb1-578"><a href="#cb1-578"></a></span>
+<span id="cb1-579"><a href="#cb1-579"></a><span class="ss">- </span>**Mapeo** o **aplicación**: Sinónimo de función</span>
+<span id="cb1-580"><a href="#cb1-580"></a><span class="ss">- </span>**Transformación**: Usado frecuentemente cuando $X = Y$</span>
+<span id="cb1-581"><a href="#cb1-581"></a></span>
+<span id="cb1-582"><a href="#cb1-582"></a><span class="fu">## Distinción entre Relación y Función</span></span>
+<span id="cb1-583"><a href="#cb1-583"></a></span>
+<span id="cb1-584"><a href="#cb1-584"></a>**Criterio fundamental:**</span>
+<span id="cb1-585"><a href="#cb1-585"></a></span>
+<span id="cb1-586"><a href="#cb1-586"></a><span class="at">&gt; **Toda función es una relación, pero no toda relación es una función.**</span></span>
+<span id="cb1-587"><a href="#cb1-587"></a></span>
+<span id="cb1-588"><a href="#cb1-588"></a>**Test de la línea vertical:** Una relación gráfica representa una función si y solo si toda línea vertical interseca la gráfica en **a lo sumo un punto**.</span>
+<span id="cb1-589"><a href="#cb1-589"></a></span>
+<span id="cb1-592"><a href="#cb1-592"></a><span class="in">```{r}</span></span>
+<span id="cb1-593"><a href="#cb1-593"></a><span class="co">#| label: fig-funcion-vs-relacion</span></span>
+<span id="cb1-594"><a href="#cb1-594"></a><span class="co">#| fig-cap: "Comparación entre función y relación"</span></span>
+<span id="cb1-595"><a href="#cb1-595"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-596"><a href="#cb1-596"></a><span class="co">#| fig-width: 10</span></span>
+<span id="cb1-597"><a href="#cb1-597"></a><span class="co">#| fig-height: 4</span></span>
+<span id="cb1-598"><a href="#cb1-598"></a></span>
+<span id="cb1-599"><a href="#cb1-599"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-600"><a href="#cb1-600"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb1-601"><a href="#cb1-601"></a></span>
+<span id="cb1-602"><a href="#cb1-602"></a><span class="co"># Gráfica 1: Función (línea recta)</span></span>
+<span id="cb1-603"><a href="#cb1-603"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">3</span>)), <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span></span>
+<span id="cb1-604"><a href="#cb1-604"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="dv">2</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">1</span>, <span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb1-605"><a href="#cb1-605"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>), <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb1-606"><a href="#cb1-606"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"FUNCIÓN: y = 2x + 1"</span>,</span>
+<span id="cb1-607"><a href="#cb1-607"></a>       <span class="at">subtitle =</span> <span class="st">"Cada línea vertical cruza en un solo punto"</span>,</span>
+<span id="cb1-608"><a href="#cb1-608"></a>       <span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"y"</span>) <span class="sc">+</span></span>
+<span id="cb1-609"><a href="#cb1-609"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb1-610"><a href="#cb1-610"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">3</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">7</span>))</span>
+<span id="cb1-611"><a href="#cb1-611"></a></span>
+<span id="cb1-612"><a href="#cb1-612"></a><span class="co"># Gráfica 2: No función (círculo)</span></span>
+<span id="cb1-613"><a href="#cb1-613"></a>circle <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">sqrt</span>(<span class="dv">4</span> <span class="sc">-</span> x<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb1-614"><a href="#cb1-614"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)), <span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span></span>
+<span id="cb1-615"><a href="#cb1-615"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> circle, <span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb1-616"><a href="#cb1-616"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="sc">-</span><span class="fu">circle</span>(x), <span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb1-617"><a href="#cb1-617"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>), <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb1-618"><a href="#cb1-618"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"NO FUNCIÓN: x² + y² = 4"</span>,</span>
+<span id="cb1-619"><a href="#cb1-619"></a>       <span class="at">subtitle =</span> <span class="st">"Líneas verticales cruzan en dos puntos"</span>,</span>
+<span id="cb1-620"><a href="#cb1-620"></a>       <span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"y"</span>) <span class="sc">+</span></span>
+<span id="cb1-621"><a href="#cb1-621"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb1-622"><a href="#cb1-622"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">3</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">3</span>))</span>
+<span id="cb1-623"><a href="#cb1-623"></a></span>
+<span id="cb1-624"><a href="#cb1-624"></a>p1 <span class="sc">+</span> p2</span>
+<span id="cb1-625"><a href="#cb1-625"></a><span class="in">```</span></span>
+<span id="cb1-626"><a href="#cb1-626"></a></span>
+<span id="cb1-627"><a href="#cb1-627"></a><span class="fu">## Propiedades de Funciones</span></span>
+<span id="cb1-628"><a href="#cb1-628"></a></span>
+<span id="cb1-629"><a href="#cb1-629"></a>**Inyectividad (función uno a uno):**</span>
+<span id="cb1-630"><a href="#cb1-630"></a></span>
+<span id="cb1-631"><a href="#cb1-631"></a>::: {.callout-note}</span>
+<span id="cb1-632"><a href="#cb1-632"></a><span class="fu">## Definición: Función inyectiva</span></span>
+<span id="cb1-633"><a href="#cb1-633"></a></span>
+<span id="cb1-634"><a href="#cb1-634"></a>$f: X \to Y$ es **inyectiva** si elementos distintos del dominio se mapean a elementos distintos del codominio:</span>
+<span id="cb1-635"><a href="#cb1-635"></a></span>
+<span id="cb1-636"><a href="#cb1-636"></a>$$(\forall x_1, x_2 \in X)<span class="co">[</span><span class="ot">x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)</span><span class="co">]</span>$$</span>
+<span id="cb1-637"><a href="#cb1-637"></a></span>
+<span id="cb1-638"><a href="#cb1-638"></a>Equivalentemente: $f(x_1) = f(x_2) \Rightarrow x_1 = x_2$</span>
+<span id="cb1-639"><a href="#cb1-639"></a>:::</span>
+<span id="cb1-640"><a href="#cb1-640"></a></span>
+<span id="cb1-641"><a href="#cb1-641"></a>**Sobreyectividad (función onto):**</span>
+<span id="cb1-642"><a href="#cb1-642"></a></span>
+<span id="cb1-643"><a href="#cb1-643"></a>::: {.callout-note}</span>
+<span id="cb1-644"><a href="#cb1-644"></a><span class="fu">## Definición: Función sobreyectiva</span></span>
+<span id="cb1-645"><a href="#cb1-645"></a></span>
+<span id="cb1-646"><a href="#cb1-646"></a>$f: X \to Y$ es **sobreyectiva** si cada elemento del codominio es imagen de al menos un elemento del dominio:</span>
+<span id="cb1-647"><a href="#cb1-647"></a></span>
+<span id="cb1-648"><a href="#cb1-648"></a>$$(\forall y \in Y)(\exists x \in X)<span class="co">[</span><span class="ot">y = f(x)</span><span class="co">]</span>$$</span>
+<span id="cb1-649"><a href="#cb1-649"></a></span>
+<span id="cb1-650"><a href="#cb1-650"></a>Es decir: $\text{Im}(f) = Y$</span>
+<span id="cb1-651"><a href="#cb1-651"></a>:::</span>
+<span id="cb1-652"><a href="#cb1-652"></a></span>
+<span id="cb1-653"><a href="#cb1-653"></a>**Biyectividad:**</span>
+<span id="cb1-654"><a href="#cb1-654"></a></span>
+<span id="cb1-655"><a href="#cb1-655"></a>::: {.callout-note}</span>
+<span id="cb1-656"><a href="#cb1-656"></a><span class="fu">## Definición: Función biyectiva</span></span>
+<span id="cb1-657"><a href="#cb1-657"></a></span>
+<span id="cb1-658"><a href="#cb1-658"></a>$f: X \to Y$ es **biyectiva** si es simultáneamente inyectiva y sobreyectiva. Establece una correspondencia uno a uno entre $X$ e $Y$.</span>
+<span id="cb1-659"><a href="#cb1-659"></a>:::</span>
+</code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
