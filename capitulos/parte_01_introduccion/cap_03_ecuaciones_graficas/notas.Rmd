@@ -1,0 +1,1229 @@
+---
+title: "Capítulo 3: Ecuaciones y Gráficas en Análisis Económico"
+subtitle: "Análisis Estático, Equilibrio y Representación Visual de Modelos Económicos"
+author: "Emanuel Quintana Silva"
+affiliation: "Universidad Pedagógica y Tecnológica de Colombia (UPTC)"
+date: "`r Sys.Date()`"
+lang: es
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    number-sections: true
+    code-fold: show
+    theme: cosmo
+    code-tools: true
+    code-link: true
+    smooth-scroll: true
+    highlight-style: github
+    css: styles.css
+    fig-width: 10
+    fig-height: 7
+    fig-align: center
+  pdf:
+    toc: true
+    number-sections: true
+    pdf-engine: xelatex
+    geometry: 
+      - margin=1in
+      - top=1.2in
+      - bottom=1.2in
+    fontsize: 11pt
+    linestretch: 1.5
+    include-in-header:
+      text: |
+        \usepackage{amsmath, amsthm, amssymb, bbm, graphicx}
+        \usepackage[utf8]{inputenc}
+        \usepackage{hyperref}
+        \usepackage{xcolor}
+        \usepackage{fancyhdr}
+        \usepackage{enumerate}
+        \usepackage{tikz}
+        \usetikzlibrary{arrows,positioning,calc}
+        \newtheorem{definition}{Definición}[section]
+        \newtheorem{theorem}{Teorema}[section]
+        \newtheorem{lemma}{Lema}[section]
+        \newtheorem{proposition}{Proposición}[section]
+        \newtheorem{corollary}{Corolario}[section]
+        \newtheorem{example}{Ejemplo}[section]
+        \newtheorem{exercise}{Ejercicio}[section]
+        \newtheorem{remark}{Observación}[section]
+        \definecolor{theoremcolor}{RGB}{0,102,204}
+        \definecolor{examplecolor}{RGB}{0,153,0}
+        \definecolor{remarkcolor}{RGB}{204,0,0}
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: true
+  fig.retina: 2
+bibliography: ../../../referencias/bibliografia.bib
+csl: ../../../referencias/apa.csl
+---
+```{r setup, include=FALSE}
+library(knitr); library(tidyverse); library(plotly); library(shiny); library(DT); library(latex2exp); library(gridExtra); library(patchwork); library(scales); library(viridis); library(ggthemes); library(gganimate); library(pracma); library(rootSolve)
+knitr::opts_chunk$set(echo=TRUE, warning=FALSE, message=FALSE, cache=TRUE, fig.align='center', fig.width=10, fig.height=7, dpi=300, out.width="100%", comment="#>")
+theme_set(theme_minimal(base_size=14) + theme(plot.title=element_text(face="bold", size=16, hjust=0.5), plot.subtitle=element_text(size=12, hjust=0.5, color="gray40"), axis.title=element_text(face="bold", size=12), legend.position="bottom", legend.title=element_text(face="bold"), panel.grid.minor=element_blank(), panel.border=element_rect(fill=NA, color="gray80")))
+colores_economia <- c(demanda="#E74C3C", oferta="#3498DB", equilibrio="#2ECC71", exceso="#F39C12", deficit="#9B59B6")
+formatear_numero <- function(x, decimales=2) { format(round(x, decimales), nsmall=decimales, big.mark=",", decimal.mark=".") }
+```
+
+# Introducción al Análisis Estático y Equilibrio
+
+## Contexto Teórico Fundamental
+
+El **análisis estático** constituye el fundamento del análisis económico moderno, centrado en la determinación de valores de equilibrio para sistemas de variables económicas interrelacionadas. A diferencia del análisis dinámico, que estudia la trayectoria temporal de las variables, el análisis estático se concentra en estados de reposo donde no existe tendencia inherente al cambio.
+
+:::{.callout-note}
+## Definición Formal: Equilibrio Económico
+
+Un sistema económico se encuentra en **equilibrio** cuando el conjunto de variables seleccionadas e interrelacionadas se han ajustado mutuamente de tal manera que **no existe tendencia inherente al cambio** dentro del modelo que constituyen, dados los parámetros y variables exógenas constantes.
+:::
+
+### Marco Conceptual del Equilibrio
+
+El concepto de equilibrio en economía matemática posee tres dimensiones fundamentales que determinan su naturaleza y aplicabilidad:
+
+**1. Variables Seleccionadas**
+
+La noción de equilibrio es intrínsecamente relativa al conjunto específico de variables que el analista incorpora en el modelo. Si el modelo se extiende para incluir variables adicionales, el estado de equilibrio previamente identificado puede dejar de ser válido. Esta característica subraya la importancia de la especificación completa del modelo.
+
+**2. Interrelación de Variables**
+
+Las variables endógenas del modelo deben alcanzar simultáneamente un **estado de reposo compatible**. Si una variable experimentara cambio, desencadenaría una reacción en cadena afectando a las demás variables del sistema, lo cual contradice la definición de equilibrio. Esta interdependencia es la esencia del análisis de equilibrio general.
+
+**3. Fuerzas Inherentes vs. Externas**
+
+El equilibrio se fundamenta exclusivamente en el balance de **fuerzas internas** del modelo. Los parámetros estructurales y variables exógenas se consideran constantes (ceteris paribus). Solo cambios en estos elementos externos pueden alterar el estado de equilibrio, tema central del análisis de estática comparativa.
+```{r equilibrio-conceptual, fig.cap="Representación Conceptual del Equilibrio Económico"}
+tibble(
+  componente = c("Variables\nSeleccionadas", "Interrelación\nSimultánea", "Fuerzas\nInternas", "Parámetros\nConstantes"),
+  importancia = c(0.95, 1.0, 0.90, 0.85),
+  categoria = c("Especificación", "Dinámica", "Mecánica", "Exógenas")
+) %>%
+  ggplot(aes(x=reorder(componente, importancia), y=importancia, fill=categoria)) +
+  geom_col(width=0.7, alpha=0.8) +
+  geom_text(aes(label=paste0(round(importancia*100), "%")), hjust=-0.2, fontface="bold", size=5) +
+  coord_flip() +
+  scale_fill_viridis_d(option="plasma", begin=0.2, end=0.8) +
+  scale_y_continuous(limits=c(0, 1.1), labels=percent) +
+  labs(title="Componentes Fundamentales del Equilibrio Económico",
+       subtitle="Relevancia Relativa en la Estructura Teórica",
+       x="Componente", y="Importancia Relativa", fill="Categoría") +
+  theme(legend.position="right")
+```
+
+### Tipos de Equilibrio en Teoría Económica
+```{r tipos-equilibrio}
+tipos_eq <- tibble(
+  Tipo = c("Equilibrio Final", "Equilibrio Final", "Equilibrio Intermedio", "Equilibrio Intermedio"),
+  Característica = c("Resultado de optimización", "Acción deliberada (agentes)", "Proceso impersonal", "Interacción de fuerzas"),
+  Ejemplo = c("Maximización de beneficios", "Optimización de utilidad", "Equilibrio de mercado", "Equilibrio ingreso nacional"),
+  Naturaleza = c("Teleológico", "Teleológico", "Mecánico", "Mecánico")
+)
+datatable(tipos_eq, options=list(pageLength=4, dom='t'), rownames=FALSE, class='cell-border stripe',
+          caption="Taxonomía de Estados de Equilibrio en Economía") %>%
+  formatStyle(columns=1:4, fontSize='14px') %>%
+  formatStyle('Naturaleza', backgroundColor=styleEqual(c("Teleológico", "Mecánico"), c('#E8F4F8', '#FFF4E6')))
+```
+
+:::{.callout-important}
+## Observación Crítica
+
+El equilibrio **no implica** necesariamente un estado óptimo o deseable desde perspectiva normativa. El equilibrio con desempleo (equilibrio keynesiano de subempleo) ilustra que un sistema puede estar en reposo sin alcanzar eficiencia social o utilización plena de recursos.
+:::
+
+# Equilibrio de Mercado Parcial: Modelo Lineal
+
+## Estructura Matemática del Modelo Básico
+
+El modelo de equilibrio de mercado parcial analiza el comportamiento de un único bien aislado, asumiendo que los efectos de retroalimentación con otros mercados son negligibles (hipótesis de independencia sectorial). Este enfoque marshaliano constituye el fundamento del análisis microeconómico.
+
+### Especificación del Modelo Lineal
+
+El modelo se compone de **tres ecuaciones** que describen completamente el comportamiento del mercado:
+
+**Variables Endógenas** (a determinar):
+- $Q_d$: Cantidad demandada
+- $Q_s$: Cantidad ofrecida  
+- $P$: Precio de mercado
+
+**Ecuaciones del Modelo**:
+
+$$
+\begin{aligned}
+\text{(1) Condición de Equilibrio:} \quad & Q_d = Q_s \\
+\text{(2) Función de Demanda:} \quad & Q_d = a - \beta P \quad (a, \beta > 0) \\
+\text{(3) Función de Oferta:} \quad & Q_s = -\gamma + \delta P \quad (\gamma, \delta > 0)
+\end{aligned}
+$$
+```{r modelo-lineal-visual, fig.width=12, fig.height=6}
+parametros <- list(a=48, beta=1, gamma=10, delta=6)
+P_eq <- (parametros$a + parametros$gamma) / (parametros$beta + parametros$delta)
+Q_eq <- (parametros$a * parametros$delta - parametros$beta * parametros$gamma) / (parametros$beta + parametros$delta)
+P_range <- seq(0, 60, length.out=200)
+datos_mercado <- tibble(
+  P = P_range,
+  Qd = parametros$a - parametros$beta * P,
+  Qs = -parametros$gamma + parametros$delta * P,
+  Exceso = Qd - Qs
+) %>% filter(Qd >= 0, Qs >= 0)
+p1 <- ggplot(datos_mercado, aes(x=P)) +
+  geom_line(aes(y=Qd, color="Demanda"), linewidth=1.2) +
+  geom_line(aes(y=Qs, color="Oferta"), linewidth=1.2) +
+  geom_point(aes(x=P_eq, y=Q_eq), size=5, color=colores_economia["equilibrio"], shape=19) +
+  geom_segment(aes(x=P_eq, y=0, xend=P_eq, yend=Q_eq), linetype="dashed", color="gray50", linewidth=0.8) +
+  geom_segment(aes(x=0, y=Q_eq, xend=P_eq, yend=Q_eq), linetype="dashed", color="gray50", linewidth=0.8) +
+  annotate("text", x=P_eq+3, y=Q_eq+3, label=paste0("E* (", round(P_eq,2), ", ", round(Q_eq,2), ")"), fontface="bold", size=4.5) +
+  scale_color_manual(values=c(Demanda=colores_economia["demanda"], Oferta=colores_economia["oferta"])) +
+  labs(title="Equilibrio de Mercado Parcial: Modelo Lineal", subtitle=expression(paste("Parámetros: ", alpha==48, ", ", beta==1, ", ", gamma==10, ", ", delta==6)), x="Precio (P)", y="Cantidad (Q)", color="Función") +
+  theme(legend.position=c(0.85, 0.85))
+p2 <- ggplot(datos_mercado, aes(x=P, y=Exceso)) +
+  geom_line(linewidth=1.2, color=colores_economia["exceso"]) +
+  geom_hline(yintercept=0, linetype="solid", color="gray30", linewidth=0.8) +
+  geom_vline(xintercept=P_eq, linetype="dashed", color=colores_economia["equilibrio"], linewidth=0.8) +
+  geom_ribbon(data=filter(datos_mercado, Exceso>0), aes(ymin=0, ymax=Exceso), fill=colores_economia["exceso"], alpha=0.3) +
+  geom_ribbon(data=filter(datos_mercado, Exceso<0), aes(ymin=Exceso, ymax=0), fill=colores_economia["deficit"], alpha=0.3) +
+  annotate("text", x=2, y=20, label="Exceso de\nDemanda", color=colores_economia["exceso"], fontface="bold", size=4) +
+  annotate("text", x=15, y=-20, label="Exceso de\nOferta", color=colores_economia["deficit"], fontface="bold", size=4) +
+  labs(title="Función de Exceso de Demanda", subtitle=expression(E(P)==Q[d]-Q[s]), x="Precio (P)", y="Exceso de Demanda E(P)")
+gridExtra::grid.arrange(p1, p2, ncol=2)
+```
+
+### Justificación Económica de las Restricciones Paramétricas
+
+La estructura lineal impone restricciones sobre los parámetros que reflejan principios económicos fundamentales:
+
+**Parámetro $\beta$ (Demanda):**
+
+La pendiente de la función de demanda es $-\beta$. Dado que $\beta > 0$, la curva tiene pendiente negativa, consistente con la **ley de la demanda**: la cantidad demandada disminuye cuando el precio aumenta (relación inversa). Esta propiedad se fundamenta en los efectos sustitución e ingreso de la teoría del consumidor.
+
+$$
+\frac{\partial Q_d}{\partial P} = -\beta < 0 \quad \text{(Monotonicidad decreciente)}
+$$
+
+**Parámetro $\delta$ (Oferta):**
+
+Con $\delta > 0$, la curva de oferta posee pendiente positiva, reflejando la **ley de la oferta**: los productores están dispuestos a ofrecer mayor cantidad a precios más altos (relación directa). Esta característica se deriva de costos marginales crecientes.
+
+$$
+\frac{\partial Q_s}{\partial P} = \delta > 0 \quad \text{(Monotonicidad creciente)}
+$$
+
+**Parámetro $\gamma$ (Intercepto de Oferta):**
+
+El intercepto vertical de la oferta es negativo ($-\gamma < 0$), lo cual garantiza que la **intersección horizontal sea positiva**. Económicamente, esto implica que existe un precio mínimo positivo ($P_{min} = \gamma/\delta$) por debajo del cual no se ofrecerá ninguna cantidad del bien (precio de reserva).
+```{r interceptos-analisis}
+P_min <- parametros$gamma / parametros$delta
+P_max <- parametros$a / parametros$beta
+tibble(
+  Concepto = c("Precio Máximo Demanda", "Precio Mínimo Oferta", "Precio de Equilibrio", "Cantidad de Equilibrio"),
+  Fórmula = c("a/β", "γ/δ", "(a+γ)/(β+δ)", "(aδ-βγ)/(β+δ)"),
+  Valor = c(P_max, P_min, P_eq, Q_eq),
+  Interpretación = c("Precio donde Qd=0", "Precio donde Qs=0", "Precio que iguala mercado", "Cantidad intercambiada")
+) %>%
+  datatable(options=list(pageLength=4, dom='t'), rownames=FALSE, class='cell-border stripe',
+            caption="Puntos Críticos del Modelo de Mercado Lineal") %>%
+  formatRound(columns='Valor', digits=3)
+```
+
+## Solución Analítica: Método de Eliminación de Variables
+
+El procedimiento de solución consiste en reducir el sistema de tres ecuaciones a una ecuación en términos del precio, para posteriormente determinar la cantidad de equilibrio.
+
+### Determinación del Precio de Equilibrio ($P^*$)
+
+Aplicando la condición de equilibrio $Q_d = Q_s$, igualamos las funciones de demanda y oferta:
+
+$$
+\begin{aligned}
+a - \beta P &= -\gamma + \delta P \\
+a + \gamma &= \beta P + \delta P \\
+a + \gamma &= (\beta + \delta)P \\
+\Rightarrow \quad P^* &= \frac{a + \gamma}{\beta + \delta}
+\end{aligned}
+$$
+
+**Propiedad de Positividad**: Dado que todos los parámetros son positivos por hipótesis ($a, \beta, \gamma, \delta > 0$), se garantiza que:
+
+$$
+P^* = \frac{a + \gamma}{\beta + \delta} > 0 \quad \checkmark
+$$
+
+### Determinación de la Cantidad de Equilibrio ($Q^*$)
+
+Sustituyendo $P^*$ en la función de demanda:
+
+$$
+\begin{aligned}
+Q^* &= a - \beta P^* = a - \beta \left(\frac{a + \gamma}{\beta + \delta}\right) \\
+&= \frac{a(\beta + \delta) - \beta(a + \gamma)}{\beta + \delta} \\
+&= \frac{a\beta + a\delta - \beta a - \beta\gamma}{\beta + \delta} \\
+&= \frac{a\delta - \beta\gamma}{\beta + \delta}
+\end{aligned}
+$$
+
+**Condición de Validez Económica**: Para que $Q^* > 0$, se requiere:
+
+$$
+a\delta > \beta\gamma \quad \Leftrightarrow \quad \frac{a}{\beta} > \frac{\gamma}{\delta} \quad \text{(Precio máximo demanda > Precio mínimo oferta)}
+$$
+```{r solucion-interactiva}
+fluidPage(
+  titlePanel("Calculadora de Equilibrio de Mercado Lineal"),
+  sidebarLayout(
+    sidebarPanel(
+      h4("Parámetros de Demanda"),
+      sliderInput("a_param", "Intercepto (a):", min=10, max=100, value=48, step=1),
+      sliderInput("beta_param", "Pendiente (β):", min=0.1, max=5, value=1, step=0.1),
+      hr(),
+      h4("Parámetros de Oferta"),
+      sliderInput("gamma_param", "Intercepto (γ):", min=1, max=50, value=10, step=1),
+      sliderInput("delta_param", "Pendiente (δ):", min=0.1, max=10, value=6, step=0.1),
+      hr(),
+      actionButton("calcular", "Calcular Equilibrio", class="btn-primary btn-block")
+    ),
+    mainPanel(
+      tabsetPanel(
+        tabPanel("Gráfico", plotlyOutput("grafico_equilibrio", height="600px")),
+        tabPanel("Solución Analítica", 
+                 uiOutput("solucion_math"),
+                 tableOutput("tabla_equilibrio")),
+        tabPanel("Análisis de Sensibilidad", plotOutput("sensibilidad_plot"))
+      )
+    )
+  )
+)
+```
+```{r server-logic, context="server"}
+observeEvent(input$calcular, {
+  a <- input$a_param; beta <- input$beta_param
+  gamma <- input$gamma_param; delta <- input$delta_param
+  P_star <- (a + gamma) / (beta + delta)
+  Q_star <- (a * delta - beta * gamma) / (beta + delta)
+  validez <- if(a * delta > beta * gamma) "✓ Válido" else "✗ Inválido"
+  
+  output$grafico_equilibrio <- renderPlotly({
+    P_seq <- seq(0, max(a / beta, gamma / delta) * 1.2, length.out = 300)
+    datos <- tibble(P = P_seq, Qd = pmax(0, a - beta * P), Qs = pmax(0, -gamma + delta * P))
+    plot_ly(datos, x = ~P) %>%
+      add_trace(y = ~Qd, name = 'Demanda', type = 'scatter', mode = 'lines', 
+                line = list(color = colores_economia["demanda"], width = 3)) %>%
+      add_trace(y = ~Qs, name = 'Oferta', type = 'scatter', mode = 'lines', 
+                line = list(color = colores_economia["oferta"], width = 3)) %>%
+      add_markers(x = P_star, y = Q_star, name = 'Equilibrio', 
+                  marker = list(size = 15, color = colores_economia["equilibrio"])) %>%
+      add_annotations(x = P_star, y = Q_star, 
+                      text = paste0("E* (", round(P_star, 2), ", ", round(Q_star, 2), ")"), 
+                      showarrow = TRUE, arrowhead = 2) %>%
+      layout(title = "Equilibrio de Mercado Interactivo", 
+             xaxis = list(title = "Precio"), 
+             yaxis = list(title = "Cantidad"), 
+             hovermode = 'x unified')
+  })
+  
+  output$solucion_math <- renderUI({
+    withMathJax(
+      sprintf("$$P^* = \\frac{%g + %g}{%g + %g} = \\frac{%g}{%g} = %s$$", 
+              a, gamma, beta, delta, a + gamma, beta + delta, formatear_numero(P_star)),
+      sprintf("$$Q^* = \\frac{%g \\cdot %g - %g \\cdot %g}{%g + %g} = \\frac{%g}{%g} = %s$$",
+              a, delta, beta, gamma, beta, delta, a * delta - beta * gamma, beta + delta, formatear_numero(Q_star)),
+      sprintf("$$\\text{Condición: } %g \\cdot %g = %g %s %g = %g \\cdot %g \\quad %s$$",
+              a, delta, a * delta, ifelse(a * delta > beta * gamma, ">", "≤"), beta * gamma, beta, gamma, validez)
+    )
+  })
+  
+  output$tabla_equilibrio <- renderTable({
+    tibble(Variable = c("Precio Equilibrio", "Cantidad Equilibrio", "Ingreso Total", 
+                        "Excedente Consumidor", "Excedente Productor"),
+           Valor = c(P_star, Q_star, P_star * Q_star, 
+                     0.5 * (a / beta - P_star) * Q_star, 
+                     0.5 * (P_star - gamma / delta) * Q_star))
+  }, digits = 3)
+  
+  output$sensibilidad_plot <- renderPlot({
+    a_seq <- seq(a * 0.5, a * 1.5, length.out = 50)
+    sens_data <- map_df(a_seq, ~tibble(
+      a_var = .x, 
+      P_eq = (.x + gamma) / (beta + delta), 
+      Q_eq = (.x * delta - beta * gamma) / (beta + delta)
+    ))
+    p1 <- ggplot(sens_data, aes(x = a_var, y = P_eq)) + 
+      geom_line(linewidth = 1.5, color = colores_economia["demanda"]) +
+      geom_vline(xintercept = a, linetype = "dashed") + 
+      labs(title = "Sensibilidad al Intercepto de Demanda", x = "Parámetro a", y = "P*")
+    p2 <- ggplot(sens_data, aes(x = a_var, y = Q_eq)) + 
+      geom_line(linewidth = 1.5, color = colores_economia["oferta"]) +
+      geom_vline(xintercept = a, linetype = "dashed") + 
+      labs(x = "Parámetro a", y = "Q*")
+    gridExtra::grid.arrange(p1, p2, ncol = 2)
+  })
+})
+```
+
+## Ejemplos Numéricos y Verificación
+
+### Ejemplo 1: Sistema $Q_d = 48 - P$, $Q_s = 6P - 10$
+```{r ejemplo-1}
+ej1 <- list(a=48, beta=1, gamma=10, delta=6)
+ej1_P <- (ej1$a + ej1$gamma) / (ej1$beta + ej1$delta)
+ej1_Q <- (ej1$a*ej1$delta - ej1$beta*ej1$gamma) / (ej1$beta + ej1$delta)
+cat("Solución Analítica:\n")
+cat(sprintf("P* = (48 + 10) / (1 + 6) = %s\n", formatear_numero(ej1_P)))
+cat(sprintf("Q* = (48·6 - 1·10) / 7 = %s\n\n", formatear_numero(ej1_Q)))
+cat("Verificación:\n")
+cat(sprintf("Qd(P*) = 48 - %s = %s ✓\n", formatear_numero(ej1_P), formatear_numero(48-ej1_P)))
+cat(sprintf("Qs(P*) = 6·%s - 10 = %s ✓\n", formatear_numero(ej1_P), formatear_numero(6*ej1_P-10)))
+```
+
+### Ejemplo 2: Sistema $Q_d = 51 - 3P$, $Q_s = 6P - 10$
+```{r ejemplo-2, fig.height=5}
+ej2 <- list(a=51, beta=3, gamma=10, delta=6)
+ej2_P <- (ej2$a + ej2$gamma) / (ej2$beta + ej2$delta)
+ej2_Q <- (ej2$a*ej2$delta - ej2$beta*ej2$gamma) / (ej2$beta + ej2$delta)
+P_range2 <- seq(0, 20, length.out=200)
+tibble(P=P_range2, Qd=ej2$a-ej2$beta*P, Qs=-ej2$gamma+ej2$delta*P) %>%
+  filter(Qd>=0, Qs>=0) %>%
+  pivot_longer(cols=c(Qd, Qs), names_to="Curva", values_to="Q") %>%
+  ggplot(aes(x=P, y=Q, color=Curva)) +
+  geom_line(linewidth=1.3) +
+  geom_point(aes(x=ej2_P, y=ej2_Q), size=6, color=colores_economia["equilibrio"]) +
+  annotate("text", x=ej2_P+1, y=ej2_Q+2, label=sprintf("E* (%.3f, %.3f)", ej2_P, ej2_Q), fontface="bold") +
+  scale_color_manual(values=c(Qd=colores_economia["demanda"], Qs=colores_economia["oferta"])) +
+  labs(title="Ejemplo 2: Demanda con Mayor Elasticidad",
+       subtitle=expression(Q[d]==51-3*P~~y~~Q[s]==6*P-10),
+       x="Precio", y="Cantidad")
+```
+
+### Tabla Comparativa de Ejemplos
+```{r tabla-ejemplos}
+tibble(
+  Ejemplo = c("Ej. 1", "Ej. 1", "Ej. 2", "Ej. 2", "Ej. 2(b)", "Ej. 2(b)"),
+  Sistema = rep(c("Demanda", "Oferta"), 3),
+  Ecuación = c("Q = 48 - P", "Q = 6P - 10", "Q = 51 - 3P", "Q = 6P - 10", "Q = 30 - 2P", "Q = 5P - 6"),
+  `P*` = rep(c(ej1_P, ej2_P, (30+6)/(2+5)), each=2),
+  `Q*` = rep(c(ej1_Q, ej2_Q, ((30*5)-(2*6))/(2+5)), each=2),
+  Validez = rep(c("✓", "✓", "✓"), each=2)
+) %>%
+  datatable(options=list(pageLength=6, dom='t'), rownames=FALSE, class='cell-border stripe',
+            caption="Comparación de Soluciones Numéricas") %>%
+  formatRound(columns=c('P*', 'Q*'), digits=3) %>%
+  formatStyle('Validez', color=styleEqual(c("✓", "✗"), c('green', 'red')))
+```
+
+# Modelos No Lineales y Ecuaciones Cuadráticas
+
+## Distinción Fundamental: Función vs. Ecuación Cuadrática
+
+El análisis de modelos no lineales requiere claridad conceptual sobre la naturaleza de las expresiones matemáticas:
+
+:::{.callout-warning}
+## Diferencia Crítica
+
+- **Función Cuadrática**: $f(P) = P^2 + 4P - 5$ 
+  - Expresión matemática que asigna cada valor de $P$ a un único valor de $f(P)$
+  - Posee **infinitos pares ordenados** $(P, f(P))$ como soluciones
+  - Representación gráfica: **parábola completa**
+
+- **Ecuación Cuadrática**: $P^2 + 4P - 5 = 0$
+  - Condición que restringe $f(P)$ a cero
+  - Posee **finitas soluciones** (máximo dos raíces reales)
+  - Representación gráfica: **intersecciones con eje horizontal** (ceros de la función)
+:::
+
+## Fórmula Cuadrática y Análisis del Discriminante
+
+Para una ecuación cuadrática en su forma general:
+
+$$
+aX^2 + bX + c = 0 \quad (a \neq 0)
+$$
+
+Las soluciones se obtienen mediante la **fórmula cuadrática**:
+
+$$
+X_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+### El Discriminante ($\Delta$)
+
+El término bajo el radical, $\Delta = b^2 - 4ac$, denominado **discriminante**, determina la naturaleza de las raíces:
+```{r discriminante-analisis}
+tibble(
+  Condición = c("Δ > 0", "Δ = 0", "Δ < 0"),
+  Interpretación = c("Raíces reales distintas", "Raíces reales repetidas (iguales)", "No existen raíces reales"),
+  `Número de Soluciones` = c("Dos", "Una (multiplicidad 2)", "Cero (en ℝ)"),
+  `Intersecciones con Eje X` = c("Dos puntos", "Un punto (tangente)", "Ninguna"),
+  Ejemplo = c("x² - 5x + 6 = 0", "x² - 4x + 4 = 0", "x² + 2x + 5 = 0")
+) %>%
+  datatable(options=list(pageLength=3, dom='t'), rownames=FALSE, class='cell-border stripe',
+            caption="Clasificación de Raíces según el Discriminante") %>%
+  formatStyle('Condición', 
+              backgroundColor=styleEqual(c("Δ > 0", "Δ = 0", "Δ < 0"), 
+                                        c('#D5F4E6', '#FFF4CC', '#FFE5E5')))
+```
+```{r ejemplos-discriminante, fig.width=14, fig.height=4.5}
+ejemplos <- list(
+  list(a=1, b=-5, c=6, titulo="Δ > 0: Dos raíces distintas", color="#2ECC71"),
+  list(a=1, b=-4, c=4, titulo="Δ = 0: Raíz repetida", color="#F39C12"),
+  list(a=1, b=2, c=5, titulo="Δ < 0: Sin raíces reales", color="#E74C3C")
+)
+plots <- map(ejemplos, function(ej) {
+  delta <- ej$b^2 - 4*ej$a*ej$c
+  raices <- if(delta >= 0) {
+    c((-ej$b - sqrt(delta))/(2*ej$a), (-ej$b + sqrt(delta))/(2*ej$a))
+  } else NULL
+  x_seq <- seq(-2, 6, length.out=400)
+  datos <- tibble(x=x_seq, y=ej$a*x^2 + ej$b*x + ej$c)
+  p <- ggplot(datos, aes(x=x, y=y)) +
+    geom_line(linewidth=1.3, color=ej$color) +
+    geom_hline(yintercept=0, linewidth=0.8, color="gray30") +
+    labs(title=ej$titulo, 
+         subtitle=sprintf("Δ = %d² - 4·%d·%d = %d", ej$b, ej$a, ej$c, delta),
+         x="x", y="f(x)")
+  if(!is.null(raices)) {
+    p <- p + geom_point(data=tibble(x=raices, y=0), size=5, color=ej$color, shape=19)
+  }
+  return(p)
+})
+gridExtra::grid.arrange(grobs=plots, ncol=3)
+```
+
+## Modelo de Mercado No Lineal
+
+Cuando las funciones de oferta y/o demanda son no lineales, el proceso de equilibrio conduce a ecuaciones cuadráticas o de mayor orden.
+
+### Ejemplo: Demanda Cuadrática y Oferta Lineal
+
+Considere el modelo:
+
+$$
+\begin{aligned}
+Q_d &= 4 - P^2 \\
+Q_s &= 4P - 1
+\end{aligned}
+$$
+
+**Condición de equilibrio**: $Q_d = Q_s \Rightarrow 4 - P^2 = 4P - 1$
+
+Reordenando:
+
+$$
+\begin{aligned}
+P^2 + 4P - 5 &= 0 \\
+\Delta &= 16 + 20 = 36 > 0 \quad \checkmark \\
+P_{1,2} &= \frac{-4 \pm 6}{2} = \{-5, 1\}
+\end{aligned}
+$$
+
+**Análisis económico**: Dado que el precio debe ser positivo, $P^* = 1$ y $Q^* = 4(1) - 1 = 3$.
+```{r mercado-nolineal, fig.width=12, fig.height=6}
+P_nl <- seq(-6, 4, length.out = 500)
+datos_nl <- tibble(
+  P = P_nl,
+  Qd = pmax(0, 4 - P^2),
+  Qs = pmax(0, 4*P - 1)
+)
+
+p1_nl <- ggplot(datos_nl, aes(x = P)) +
+  geom_line(aes(y = Qd, color = "Demanda (cuadrática)"), linewidth = 1.4) +
+  geom_line(aes(y = Qs, color = "Oferta (lineal)"), linewidth = 1.4) +
+  geom_point(aes(x = 1, y = 3), size = 7, color = colores_economia["equilibrio"]) +
+  geom_point(aes(x = -5, y = -21), size = 7, color = "#95A5A6") +
+  annotate("text", x = 1.5, y = 3.8, label = "E* viable (1, 3)", 
+           fontface = "bold", size = 5, color = colores_economia["equilibrio"]) +
+  annotate("text", x = -5.5, y = -21, label = "Solución no viable\n(-5, -21)", 
+           fontface = "italic", size = 4, color = "#95A5A6") +
+  scale_color_manual(values = c("Demanda (cuadrática)" = colores_economia["demanda"], 
+                               "Oferta (lineal)" = colores_economia["oferta"])) +
+  coord_cartesian(xlim = c(-6, 4), ylim = c(-25, 6)) +
+  labs(title = "Equilibrio en Mercado No Lineal", 
+       subtitle = expression(Q[d] == 4 - P^2 ~~ y ~~ Q[s] == 4*P - 1),
+       x = "Precio (P)", y = "Cantidad (Q)", color = "Función")
+
+E_func <- function(P) (4 - P^2) - (4*P - 1)
+P_roots <- c(-5, 1)
+
+p2_nl <- tibble(P = P_nl, E = E_func(P)) %>%
+  ggplot(aes(x = P, y = E)) +
+  geom_line(linewidth = 1.4, color = colores_economia["exceso"]) +
+  geom_hline(yintercept = 0, linewidth = 1, color = "gray30") +
+  geom_vline(xintercept = P_roots, linetype = "dashed", 
+             color = c("#95A5A6", colores_economia["equilibrio"]), linewidth = 1) +
+  geom_point(data = tibble(P = P_roots, E = 0), size = 6, 
+             color = c("#95A5A6", colores_economia["equilibrio"])) +
+  annotate("text", x = 1, y = 5, label = "P* = 1\n(viable)", 
+           fontface = "bold", color = colores_economia["equilibrio"]) +
+  annotate("text", x = -5, y = 5, label = "P = -5\n(no viable)", 
+           fontface = "italic", color = "#95A5A6") +
+  labs(title = "Función de Exceso de Demanda (Modelo No Lineal)",
+       subtitle = expression(E(P) == Q[d] - Q[s]),
+       x = "Precio (P)", y = "Exceso E(P)")
+
+gridExtra::grid.arrange(p1_nl, p2_nl, ncol = 2)
+```
+
+:::{.callout-tip}
+## Interpretación de Soluciones Múltiples
+
+En modelos no lineales, es común obtener **múltiples soluciones matemáticas**. Sin embargo, solo aquellas que satisfacen las **restricciones económicas** (precios y cantidades positivas) constituyen equilibrios viables. El análisis gráfico ayuda a identificar visualmente estas restricciones.
+:::
+
+## Ejercicios Resueltos: Modelos No Lineales
+
+### Ejercicio 6(a): $Q_d = 8 - P^2$, $Q_s = 6P$
+```{r ejercicio-6a}
+cat("Modelo: Qd = 8 - P², Qs = 6P\n\n")
+cat("Condición de equilibrio: 8 - P² = 6P\n")
+cat("Reordenando: P² + 6P - 8 = 0\n\n")
+a_6a <- 1; b_6a <- 6; c_6a <- -8
+delta_6a <- b_6a^2 - 4*a_6a*c_6a
+cat(sprintf("Discriminante: Δ = %d² - 4·%d·%d = %d > 0 ✓\n\n", b_6a, a_6a, c_6a, delta_6a))
+P_6a <- (-b_6a + sqrt(delta_6a)) / (2*a_6a)
+Q_6a <- 6 * P_6a
+cat(sprintf("Fórmula cuadrática: P = (-6 ± √%d) / 2 = {%.4f, %.4f}\n", delta_6a, 
+            (-b_6a - sqrt(delta_6a))/(2*a_6a), P_6a))
+cat(sprintf("\nSolución económicamente viable:\n"))
+cat(sprintf("P* = %.4f\n", P_6a))
+cat(sprintf("Q* = 6 × %.4f = %.4f\n\n", P_6a, Q_6a))
+cat("Verificación:\n")
+cat(sprintf("Qd(P*) = 8 - (%.4f)² = %.4f ✓\n", P_6a, 8-P_6a^2))
+cat(sprintf("Qs(P*) = 6 × %.4f = %.4f ✓\n", P_6a, Q_6a))
+```
+
+### Ejercicio 6(b): $Q_d = 8P - P^2$, $Q_s = P^2 - 2$
+```{r ejercicio-6b}
+cat("Modelo: Qd = 8P - P², Qs = P² - 2\n\n")
+cat("Condición de equilibrio: 8P - P² = P² - 2\n")
+cat("Reordenando: 2P² - 8P - 2 = 0\n")
+cat("Simplificando (÷2): P² - 4P - 1 = 0\n\n")
+a_6b <- 1; b_6b <- -4; c_6b <- -1
+delta_6b <- b_6b^2 - 4*a_6b*c_6b
+cat(sprintf("Discriminante: Δ = (-4)² - 4·1·(-1) = %d > 0 ✓\n\n", delta_6b))
+P_6b <- (-b_6b + sqrt(delta_6b)) / (2*a_6b)
+Q_6b <- P_6b^2 - 2
+cat(sprintf("Fórmula cuadrática: P = (4 ± √%d) / 2 = 2 ± √5\n", delta_6b))
+cat(sprintf("\nSolución económicamente viable:\n"))
+cat(sprintf("P* = 2 + √5 ≈ %.4f\n", P_6b))
+cat(sprintf("Q* = (%.4f)² - 2 = %.4f\n\n", P_6b, Q_6b))
+cat("Verificación:\n")
+cat(sprintf("Qd(P*) = 8·%.4f - (%.4f)² = %.4f ✓\n", P_6b, P_6b, 8*P_6b-P_6b^2))
+cat(sprintf("Qs(P*) = (%.4f)² - 2 = %.4f ✓\n", P_6b, Q_6b))
+```
+
+# Ecuaciones Polinomiales de Orden Superior
+
+## Teoremas Fundamentales para Raíces Racionales
+
+El análisis de ecuaciones polinomiales de grado $n \geq 3$ requiere métodos algebraicos más sofisticados. Los siguientes teoremas proporcionan herramientas sistemáticas para identificar posibles raíces racionales.
+
+### Teorema I: Raíces Enteras
+
+:::{.callout-note}
+## Teorema de Raíces Enteras
+
+Dada una ecuación polinomial con **coeficiente principal unitario**:
+
+$$
+x^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0 = 0 \quad (a_i \in \mathbb{Z})
+$$
+
+Si existe una **raíz entera** $r$, entonces $r$ debe ser un **divisor del término constante** $a_0$.
+
+**Candidatos**: $r \in \{\pm d : d | a_0\}$
+:::
+
+### Teorema II: Raíces Racionales
+
+:::{.callout-note}
+## Teorema General de Raíces Racionales
+
+Para una ecuación polinomial con **coeficientes enteros**:
+
+$$
+a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0 = 0 \quad (a_i \in \mathbb{Z}, a_n \neq 0)
+$$
+
+Si existe una **raíz racional** $\frac{p}{q}$ (en forma reducida, $\gcd(p,q)=1$), entonces:
+
+- El numerador $p$ debe dividir a $a_0$ (término constante)
+- El denominador $q$ debe dividir a $a_n$ (coeficiente principal)
+
+**Candidatos**: $\frac{p}{q}$ donde $p | a_0$ y $q | a_n$
+:::
+
+### Teorema III: Raíz $x = 1$
+
+:::{.callout-tip}
+## Criterio de Suma de Coeficientes
+
+Para cualquier ecuación polinomial:
+
+$$
+a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0 = 0
+$$
+
+$x = 1$ es raíz si y solo si:
+
+$$
+\sum_{i=0}^{n} a_i = 0 \quad \text{(Suma de todos los coeficientes es cero)}
+$$
+
+**Demostración**: $P(1) = a_n + a_{n-1} + \cdots + a_1 + a_0 = 0$
+:::
+```{r teoremas-raices, fig.width=12, fig.height=5}
+# Cargar el paquete necesario
+library(numbers)
+
+crear_diagrama_raices <- function(a0, an, titulo) {
+  divisores_a0 <- divisors(abs(a0))
+  divisores_an <- divisors(abs(an))
+  candidatos <- expand.grid(p = c(-divisores_a0, divisores_a0), q = divisores_an) %>%
+    mutate(raiz_candidata = p / q) %>%
+    distinct(raiz_candidata) %>%
+    arrange(raiz_candidata)
+  
+  ggplot(candidatos, aes(x = raiz_candidata, y = 1)) +
+    geom_point(size = 5, color = "#3498DB", shape = 19) +
+    geom_text(aes(label = sprintf("%.2f", raiz_candidata)), vjust = -1.2, fontface = "bold", size = 3.5) +
+    geom_hline(yintercept = 1, linewidth = 1.5, color = "gray70") +
+    labs(title = titulo, 
+         subtitle = sprintf("Divisores de a₀ = %d: {%s}   |   Divisores de aₙ = %d: {%s}", 
+                         a0, paste(divisores_a0, collapse = ", "),
+                         an, paste(divisores_an, collapse = ", ")),
+         x = "Raíces Candidatas (p/q)", y = "") +
+    theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(),
+          panel.grid = element_blank()) +
+    coord_cartesian(ylim = c(0.5, 1.5))
+}
+
+p1_teo <- crear_diagrama_raices(6, 1, "Teorema I: x³ - 4x² + x + 6 = 0")
+p2_teo <- crear_diagrama_raices(-1, 8, "Teorema II: 8x³ + 6x² - 3x - 1 = 0")
+gridExtra::grid.arrange(p1_teo, p2_teo, ncol = 2)
+```
+
+## Ejercicios Resueltos: Aplicación de Teoremas
+
+### Ejercicio 4: Verificar si $x=1$ es raíz
+```{r ejercicio-4}
+polinomios <- list(
+  list(coefs=c(1, -2, 3, -2), expr="x³ - 2x² + 3x - 2 = 0"),
+  list(coefs=c(2, -5, 1, -2), expr="2x³ - 5x² + x - 2 = 0"),
+  list(coefs=c(3, 0, -1, 2, -4), expr="3x⁴ - x² + 2x - 4 = 0")
+)
+resultados_ej4 <- map_df(1:3, function(i) {
+  suma <- sum(polinomios[[i]]$coefs)
+  es_raiz <- suma == 0
+  tibble(
+    Ecuación = polinomios[[i]]$expr,
+    Coeficientes = paste(polinomios[[i]]$coefs, collapse=", "),
+    `Σ coefs` = suma,
+    `x=1 es raíz?` = ifelse(es_raiz, "✓ Sí", "✗ No")
+  )
+})
+datatable(resultados_ej4, options=list(pageLength=3, dom='t'), rownames=FALSE, class='cell-border stripe',
+          caption="Ejercicio 4: Aplicación del Teorema III") %>%
+  formatStyle('x=1 es raíz?', color=styleEqual(c("✓ Sí", "✗ No"), c('green', 'red')))
+```
+
+### Ejercicio 5: Encontrar todas las raíces racionales
+
+#### (a) $x^3 - 4x^2 + x + 6 = 0$
+```{r ejercicio-5a}
+cat("Ecuación: x³ - 4x² + x + 6 = 0\n\n")
+cat("Paso 1: Identificar candidatos (Teorema I)\n")
+cat("Divisores de a₀ = 6: ±1, ±2, ±3, ±6\n\n")
+cat("Paso 2: Probar candidatos por sustitución directa\n")
+candidatos_5a <- c(-1, 1, -2, 2, -3, 3, -6, 6)
+poly_5a <- function(x) x^3 - 4*x^2 + x + 6
+pruebas_5a <- map_df(candidatos_5a, ~tibble(x=.x, `P(x)`=poly_5a(.x), Raíz=abs(poly_5a(.x))<1e-10))
+cat("\nTabla de Pruebas:\n")
+print(pruebas_5a %>% mutate(Raíz=ifelse(Raíz, "✓", "")))
+raices_5a <- filter(pruebas_5a, Raíz)$x
+cat(sprintf("\n✓ Raíces encontradas: {%s}\n", paste(raices_5a, collapse=", ")))
+```
+
+#### (b) $8x^3 + 6x^2 - 3x - 1 = 0$
+```{r ejercicio-5b}
+cat("Ecuación: 8x³ + 6x² - 3x - 1 = 0\n\n")
+cat("Paso 1: Identificar candidatos (Teorema II)\n")
+cat("p (divisores de a₀=-1): ±1\n")
+cat("q (divisores de aₙ=8): ±1, ±2, ±4, ±8\n")
+cat("Candidatos p/q: ±1, ±1/2, ±1/4, ±1/8\n\n")
+candidatos_5b <- c(1, -1, 0.5, -0.5, 0.25, -0.25, 0.125, -0.125)
+poly_5b <- function(x) 8*x^3 + 6*x^2 - 3*x - 1
+pruebas_5b <- map_df(candidatos_5b, ~tibble(x=.x, `P(x)`=poly_5b(.x), Raíz=abs(poly_5b(.x))<1e-10))
+cat("Tabla de Pruebas:\n")
+print(pruebas_5b %>% mutate(Raíz=ifelse(Raíz, "✓", ""), `P(x)`=round(`P(x)`, 4)))
+raices_5b <- filter(pruebas_5b, Raíz)$x
+cat(sprintf("\n✓ Raíces encontradas: {%s}\n", paste(raices_5b, collapse=", ")))
+```
+
+#### (c) $x^3 + \frac{1}{2}x^2 - \frac{1}{4}x - \frac{1}{8} = 0$
+```{r ejercicio-5c}
+cat("Ecuación original: x³ + (1/2)x² - (1/4)x - 1/8 = 0\n\n")
+cat("Paso 1: Eliminar fracciones (multiplicar por MCM=8)\n")
+cat("Ecuación equivalente: 8x³ + 4x² - 2x - 1 = 0\n\n")
+cat("Paso 2: Aplicar Teorema II\n")
+cat("p (divisores de -1): ±1\n")
+cat("q (divisores de 8): ±1, ±2, ±4, ±8\n\n")
+candidatos_5c <- c(1, -1, 0.5, -0.5, 0.25, -0.25, 0.125, -0.125)
+poly_5c <- function(x) 8*x^3 + 4*x^2 - 2*x - 1
+pruebas_5c <- map_df(candidatos_5c, ~tibble(x=.x, `P(x)`=poly_5c(.x), Raíz=abs(poly_5c(.x))<1e-10))
+raices_5c <- filter(pruebas_5c, Raíz)$x
+cat(sprintf("✓ Raíces: {%s}\n", paste(raices_5c, collapse=", ")))
+```
+```{r visualizacion-polinomios, fig.width=14, fig.height=5}
+x_seq <- seq(-3, 4, length.out=500)
+poly_plots <- list(
+  tibble(x=x_seq, y=poly_5a(x), eq="(a)") %>%
+    ggplot(aes(x, y)) + geom_line(linewidth=1.3, color="#E74C3C") + 
+    geom_hline(yintercept=0, linewidth=0.8) +
+    geom_point(data=tibble(x=raices_5a, y=0), size=5, color="#2ECC71") +
+    geom_vline(xintercept=raices_5a, linetype="dashed", alpha=0.5) +
+    labs(title="(a) x³ - 4x² + x + 6 = 0", x="x", y="P(x)"),
+  
+  tibble(x=x_seq, y=poly_5b(x), eq="(b)") %>%
+    ggplot(aes(x, y)) + geom_line(linewidth=1.3, color="#3498DB") +
+    geom_hline(yintercept=0, linewidth=0.8) +
+    geom_point(data=tibble(x=raices_5b, y=0), size=5, color="#2ECC71") +
+    geom_vline(xintercept=raices_5b, linetype="dashed", alpha=0.5) +
+    coord_cartesian(ylim=c(-5, 5)) +
+    labs(title="(b) 8x³ + 6x² - 3x - 1 = 0", x="x", y="P(x)"),
+  
+  tibble(x=x_seq, y=poly_5c(x), eq="(c)") %>%
+    ggplot(aes(x, y)) + geom_line(linewidth=1.3, color="#9B59B6") +
+    geom_hline(yintercept=0, linewidth=0.8) +
+    geom_point(data=tibble(x=raices_5c, y=0), size=5, color="#2ECC71") +
+    geom_vline(xintercept=raices_5c, linetype="dashed", alpha=0.5) +
+    coord_cartesian(ylim=c(-2, 2)) +
+    labs(title="(c) 8x³ + 4x² - 2x - 1 = 0", x="x", y="P(x)")
+)
+gridExtra::grid.arrange(grobs=poly_plots, ncol=3)
+```
+
+# Equilibrio General de Mercado: Múltiples Bienes
+
+## Modelo de Dos Artículos Interdependientes
+
+El análisis de **equilibrio general** extiende el marco de mercado parcial para considerar la interdependencia explícita entre múltiples bienes. Walras (1874) estableció los fundamentos de esta teoría, demostrando que el equilibrio simultáneo de todos los mercados es conceptualmente distinto del equilibrio parcial.
+
+### Especificación del Modelo Lineal de Dos Bienes
+
+**Variables Endógenas**: $P_1, P_2, Q_{d1}, Q_{s1}, Q_{d2}, Q_{s2}$ (6 variables)
+
+**Ecuaciones** (6 ecuaciones):
+
+**Funciones de Demanda**:
+$$
+\begin{aligned}
+Q_{d1} &= \alpha_0 + \alpha_1 P_1 + \alpha_2 P_2 \\
+Q_{d2} &= a_0 + a_1 P_1 + a_2 P_2
+\end{aligned}
+$$
+
+**Funciones de Oferta**:
+$$
+\begin{aligned}
+Q_{s1} &= \beta_0 + \beta_1 P_1 + \beta_2 P_2 \\
+Q_{s2} &= b_0 + b_1 P_1 + b_2 P_2
+\end{aligned}
+$$
+
+**Condiciones de Equilibrio**:
+$$
+\begin{aligned}
+E_1 &= Q_{d1} - Q_{s1} = 0 \\
+E_2 &= Q_{d2} - Q_{s2} = 0
+\end{aligned}
+$$
+
+### Interpretación de Coeficientes Cruzados
+
+Los coeficientes $\alpha_2$ y $a_1$ capturan los *efectos de precio cruzado*:
+
+
+### Forma Reducida del Sistema
+
+Sustituyendo las funciones de comportamiento en las condiciones de equilibrio y definiendo *coeficientes de exceso de demanda*:
+
+$$
+c_i = \alpha_i - \beta_i \quad ; \quad \gamma_i = a_i - b_i \quad (i=0,1,2)
+$$
+
+El sistema se reduce a:
+
+$$
+\begin{cases}
+c_1 P_1 + c_2 P_2 = -c_0 \\
+\gamma_1 P_1 + \gamma_2 P_2 = -\gamma_0
+\end{cases}
+$$
+
+*Solución mediante eliminación de variables*:
+
+$$
+\boxed{
+\begin{aligned}
+P_1^* &= \frac{c_2\gamma_0 - c_0\gamma_2}{c_1\gamma_2 - c_2\gamma_1} \\
+P_2^* &= \frac{c_0\gamma_1 - c_1\gamma_0}{c_1\gamma_2 - c_2\gamma_1}
+\end{aligned}
+}
+$$
+
+:::{.callout-important}
+## Condición de Existencia
+
+El denominador común $\Delta = c_1\gamma_2 - c_2\gamma_1$ debe ser *no nulo* para que exista solución única. Si $\Delta = 0$, el sistema es *singular* (infinitas soluciones o ninguna).
+:::
+
+## Ejemplo Numérico: Sistema de Dos Bienes
+
+Considere el modelo:
+
+$$
+\begin{aligned}
+Q_{d1} &= 18 - 3P_1 + P_2 \\
+Q_{s1} &= -2 + 4P_1 \\
+Q_{d2} &= 12 + 2P_1 - P_2 \\
+Q_{s2} &= 2 + 3P_2
+\end{aligned}
+$$
+
+## Generalización a $n$ Bienes
+
+Para una economía con $n$ bienes interdependientes:
+
+- *Total de ecuaciones*: $3n$ (n funciones de demanda, n de oferta, n condiciones de equilibrio)
+- *Variables endógenas*: $2n$ cantidades + $n$ precios = $3n$ variables
+- *Forma reducida*: Sistema de $n$ ecuaciones en $n$ precios
+
+$$
+\begin{bmatrix}
+c_{11} & c_{12} & \cdots & c_{1n} \\
+c_{21} & c_{22} & \cdots & c_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+c_{n1} & c_{n2} & \cdots & c_{nn}
+\end{bmatrix}
+\begin{bmatrix}
+P_1 \\ P_2 \\ \vdots \\ P_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+-c_{10} \\ -c_{20} \\ \vdots \\ -c_{n0}
+\end{bmatrix}
+$$
+
+*Solución: $\mathbf{P}^ = \mathbf{C}^{-1}\mathbf{b}$ (requiere que $\det(\mathbf{C}) \neq 0$)
+
+:::{.callout-note}
+## Ley de Walras
+
+En un sistema de $n$ mercados, si $n-1$ mercados están en equilibrio, el $n$-ésimo mercado *necesariamente* estará en equilibrio. Esto implica que una de las ecuaciones es *linealmente dependiente* de las demás (redundante).
+:::
+
+# Análisis de Equilibrio en Macroeconomía
+
+## Modelo Keynesiano Simple de Ingreso Nacional
+
+El modelo keynesiano establece el marco fundamental para el análisis macroeconómico de corto plazo, donde el *ingreso de equilibrio* se determina por la igualdad entre demanda agregada y oferta agregada.
+
+### Modelo con Impuestos Endógenos
+
+*Variables Endógenas*: $Y$ (Ingreso nacional), $C$ (Consumo), $T$ (Impuestos)
+
+*Variables Exógenas*: $I_0$ (Inversión autónoma), $G_0$ (Gasto público)
+
+*Ecuaciones del Modelo*:
+$$
+\begin{aligned}
+\text{(1) Condición de Equilibrio:} \quad & Y = C + I_0 + G_0 \\
+\text{(2) Función de Consumo:} \quad & C = a + b(Y - T) \quad (0 < b < 1) \\
+\text{(3) Función de Impuestos:} \quad & T = d + tY \quad (0 < t < 1)
+\end{aligned}
+$$
+
+Donde:
+- $b$: Propensión marginal a consumir (PMC)
+- $t$: Tasa impositiva marginal
+- $a$: Consumo autónomo
+- $d$: Impuestos autónomos
+
+### Solución Analítica del Modelo
+
+*PASO 1*: Sustituir la función de impuestos en la función de consumo:
+
+$$
+\begin{aligned}
+C &= a + b(Y - T) \\
+&= a + b(Y - (d + tY)) \\
+&= a + bY - bd - btY \\
+&= (a - bd) + b(1-t)Y
+\end{aligned}
+$$
+
+*PASO 2*: Sustituir en la condición de equilibrio:
+
+$$
+\begin{aligned}
+Y &= C + I_0 + G_0 \\
+Y &= (a - bd) + b(1-t)Y + I_0 + G_0 \\
+Y - b(1-t)Y &= a - bd + I_0 + G_0 \\
+Y[1 - b(1-t)] &= a - bd + I_0 + G_0
+\end{aligned}
+$$
+
+*PASO 3*: Despejar el ingreso de equilibrio:
+
+$$
+\boxed{
+Y^* = \frac{a - bd + I_0 + G_0}{1 - b(1-t)}
+}
+$$
+
+*PASO 4*: Calcular impuestos y consumo de equilibrio:
+
+$$
+\begin{aligned}
+T^* &= d + tY^* \\
+C^* &= (a - bd) + b(1-t)Y^*
+\end{aligned}
+$$
+### Multiplicadores Fiscales
+
+Los *multiplicadores* cuantifican el impacto de cambios en variables exógenas sobre el ingreso de equilibrio:
+
+$$
+\begin{aligned}
+\text{Multiplicador del gasto:} \quad & \frac{\partial Y^*}{\partial G_0} = \frac{1}{1 - b(1-t)} \\
+\text{Multiplicador tributario:} \quad & \frac{\partial Y^*}{\partial d} = \frac{-b}{1 - b(1-t)} \\
+\text{Multiplicador de la inversión:} \quad & \frac{\partial Y^*}{\partial I_0} = \frac{1}{1 - b(1-t)}
+\end{aligned}
+$$
+
+
+
+# Condiciones Especiales y Casos Patológicos
+
+## Sistemas sin Solución Única
+
+### Caso 1: Denominador Nulo en Modelo Lineal
+
+En el modelo de mercado lineal, si $(β + δ) = 0$, las fórmulas de equilibrio se indeterminan:
+
+$$
+P^* = \frac{a + \gamma}{\beta + \delta} = \frac{a + \gamma}{0} \quad \text{(indefinido)}
+$$
+
+**Interpretación Geométrica**: $β + δ = 0$ implica que las pendientes de las curvas de demanda y oferta son iguales en valor absoluto pero con signo opuesto, resultando en **curvas paralelas**.
+```{r caso-paralelas, fig.width=12, fig.height=5}
+a_par <- 50; beta_par <- 2; gamma_par <- 10; delta_par <- 2
+P_par <- seq(0, 30, length.out=300)
+caso1 <- tibble(P=P_par, Qd=a_par-beta_par*P, Qs=-gamma_par+delta_par*P)
+p_paralelas <- ggplot(caso1, aes(x=P)) +
+  geom_line(aes(y=Qd, color="Demanda"), linewidth=1.5) +
+  geom_line(aes(y=Qs, color="Oferta"), linewidth=1.5) +
+  annotate("text", x=15, y=a_par-beta_par*15+5, label="Pendiente = -β", fontface="italic", size=4) +
+  annotate("text", x=15, y=-gamma_par+delta_par*15-5, label="Pendiente = +δ", fontface="italic", size=4) +
+  scale_color_manual(values=c(Demanda=colores_economia["demanda"], Oferta=colores_economia["oferta"])) +
+  labs(title="Caso Inconsistente: β = δ (Curvas Paralelas)",
+       subtitle="No existe punto de intersección → Sin equilibrio",
+       x="Precio (P)", y="Cantidad (Q)", color="")
+a_par2 <- 50; beta_par2 <- 2; gamma_par2 <- -50; delta_par2 <- 2
+caso2 <- tibble(P=P_par, Qd=a_par2-beta_par2*P, Qs=-gamma_par2+delta_par2*P)
+p_identicas <- ggplot(caso2, aes(x=P)) +
+  geom_line(aes(y=Qd), linewidth=2.5, color=colores_economia["equilibrio"]) +
+  annotate("text", x=15, y=a_par2-beta_par2*15+5, label="Demanda = Oferta\n(Curvas idénticas)", fontface="bold", size=5) +
+  labs(title="Caso Dependiente: Curvas Coincidentes",
+       subtitle="Infinitos puntos de equilibrio",
+       x="Precio (P)", y="Cantidad (Q)")
+gridExtra::grid.arrange(p_paralelas, p_identicas, ncol=2)
+```
+
+:::{.callout-warning}
+## Casos Patológicos
+
+- **Inconsistencia** ($β = δ$ con $a/β \neq \gamma/δ$): Curvas paralelas que no se intersectan → **Sin equilibrio**
+- **Dependencia** (curvas idénticas): Infinitos puntos de equilibrio → **Indeterminación**
+
+Ambos casos violan el supuesto de que el sistema tiene **solución única**.
+:::
+
+### Caso 2: Condición $ad = bc$ en Modelo Lineal
+
+La condición para que $Q^* > 0$ es $ad > bc$. Si $ad = bc$:
+
+$$
+Q^* = \frac{ad - bc}{\beta + \delta} = \frac{0}{\beta + \delta} = 0
+$$
+
+**Interpretación**: El equilibrio ocurre **en el origen** $(P^*, 0)$, lo cual puede carecer de significado económico.
+```{r caso-origen}
+a_cero <- 30; beta_cero <- 2; gamma_cero <- 15; delta_cero <- 1
+P_cero_eq <- (a_cero + gamma_cero) / (beta_cero + delta_cero)
+Q_cero_eq <- (a_cero*delta_cero - beta_cero*gamma_cero) / (beta_cero + delta_cero)
+cat(sprintf("Verificación: ad = %g × %g = %g\n", a_cero, delta_cero, a_cero*delta_cero))
+cat(sprintf("             bc = %g × %g = %g\n", beta_cero, gamma_cero, beta_cero*gamma_cero))
+cat(sprintf("             ad - bc = %g\n\n", a_cero*delta_cero - beta_cero*gamma_cero))
+cat(sprintf("Equilibrio: P* = %.2f, Q* = %.2f\n", P_cero_eq, Q_cero_eq))
+tibble(P=seq(0, 25, 0.1), Qd=a_cero-beta_cero*P, Qs=-gamma_cero+delta_cero*P) %>%
+  filter(Qd >= 0, Qs >= 0) %>%
+  pivot_longer(cols=c(Qd, Qs), names_to="Curva", values_to="Q") %>%
+  ggplot(aes(x=P, y=Q, color=Curva)) +
+  geom_line(linewidth=1.5) +
+  geom_point(aes(x=P_cero_eq, y=Q_cero_eq), size=10, color=colores_economia["equilibrio"]) +
+  annotate("text", x=P_cero_eq+1.5, y=2, label=sprintf("E* (%.1f, 0)", P_cero_eq), fontface="bold", size=5) +
+  scale_color_manual(values=c(Qd=colores_economia["demanda"], Qs=colores_economia["oferta"])) +
+  labs(title="Caso Límite: Equilibrio en el Origen (Q*=0)",
+       subtitle="Condición: ad = bc",
+       x="Precio (P)", y="Cantidad (Q)", color="")
+```
+
+# Resumen y Síntesis del Capítulo
+
+## Cuadro Sinóptico de Conceptos Clave
+```{r cuadro-sinoptico, fig.width=14, fig.height=10}
+library(DiagrammeR)
+grViz("
+digraph sintesis {
+  graph [rankdir=TB, bgcolor='#F9F9F9', fontname='Arial']
+  node [shape=box, style='filled,rounded', fontname='Arial', fontsize=11]
+  
+  # Nodo principal
+  analisis [label='ANÁLISIS ESTÁTICO\nY EQUILIBRIO', fillcolor='#3498DB', fontcolor='white', fontsize=14, penwidth=3]
+  
+  # Nivel 1: Conceptos fundamentales
+  equilibrio [label='Concepto de\nEquilibrio', fillcolor='#E8F4F8']
+  tipos [label='Tipos de\nEquilibrio', fillcolor='#E8F4F8']
+  metodos [label='Métodos de\nSolución', fillcolor='#E8F4F8']
+  
+  # Nivel 2: Equilibrio
+  eq_def [label='Variables en reposo\ncompatible', fillcolor='#D5E8F7']
+  eq_comp [label='• Seleccionadas\n• Interrelacionadas\n• Fuerzas internas', fillcolor='#D5E8F7']
+  
+  # Nivel 2: Tipos
+  parcial [label='Equilibrio\nParcial', fillcolor='#FFE5E5']
+  general [label='Equilibrio\nGeneral', fillcolor='#E5FFE5']
+  macro [label='Equilibrio\nMacroeconómico', fillcolor='#FFF4E6']
+  
+  # Nivel 3: Parcial
+  lineal [label='Modelo Lineal\nP*=(a+γ)/(β+δ)\nQ*=(aδ-βγ)/(β+δ)', fillcolor='#FFD5D5', fontsize=10]
+  nolineal [label='Modelo No Lineal\nEcuaciones cuadráticas\nSoluciones múltiples', fillcolor='#FFD5D5', fontsize=10]
+  
+  # Nivel 3: General
+  dos_bienes [label='Dos Bienes\nSistema 2x2\nInterdependencia', fillcolor='#D5FFD5', fontsize=10]
+  n_bienes [label='n Bienes\nÁlgebra matricial\nLey de Walras', fillcolor='#D5FFD5', fontsize=10]
+  
+  # Nivel 3: Macro
+  keynesiano [label='Modelo Keynesiano\nY*=C+I+G\nMultiplicadores', fillcolor='#FFE5CC', fontsize=10]
+  
+  # Nivel 2: Métodos
+  eliminacion [label='Eliminación de\nVariables', fillcolor='#E8D5F7']
+  cuadratica [label='Fórmula\nCuadrática', fillcolor='#E8D5F7']
+  teoremas [label='Teoremas de\nRaíces', fillcolor='#E8D5F7']
+  
+  # Conexiones principales
+  analisis -> equilibrio
+  analisis -> tipos
+  analisis -> metodos
+  
+  equilibrio -> eq_def
+  equilibrio -> eq_comp
+  
+  tipos -> parcial
+  tipos -> general
+  tipos -> macro
+  
+  parcial -> lineal
+  parcial -> nolineal
+  
+  general -> dos_bienes
+  general -> n_bienes
+  
+  macro -> keynesiano
+  
+  metodos -> eliminacion
+  metodos -> cuadratica
+  metodos -> teoremas
+  
+  # Estilos de conexión
+  edge [color='#2C3E50', penwidth=1.5]
+}
+")
+```
+
+## Tabla Comparativa de Modelos
+```{r tabla-comparativa-final}
+tibble(
+  Modelo = c("Mercado Lineal", "Mercado No Lineal", "Dos Bienes", "n Bienes", "Keynesiano Simple"),
+  `Nº Ecuaciones` = c(3, 3, 6, "3n", 3),
+  `Nº Variables` = c(3, 3, 6, "3n", 3),
+  `Tipo Sistema` = c("Lineal 2×1", "No lineal", "Lineal 2×2", "Lineal n×n", "Lineal 3×3"),
+  `Método Solución` = c("Sustitución", "Fórmula cuadrática", "Eliminación", "Matrices", "Sustitución"),
+  `Característica` = c("Solución única", "Múltiples soluciones", "Interdependencia", "Equilibrio general", "Multiplicadores"),
+  Aplicación = c("Mercado aislado", "Demanda cuadrática", "Sustitutos/Complementos", "Equilibrio walrasiano", "Política fiscal")
+) %>%
+  datatable(options=list(pageLength=5, dom='t'), rownames=FALSE, class='cell-border stripe',
+            caption="Comparación de Modelos de Equilibrio Estudiados") %>%
+  formatStyle(columns=1:7, fontSize='13px') %>%
+  formatStyle('Modelo', fontWeight='bold')
+```
+
+## Conceptos Clave para Recordar
+
+:::{.callout-tip collapse="true"}
+## Principios Fundamentales del Análisis Estático
+
+1. **Equilibrio = Ausencia de Tendencia al Cambio**: Las variables están en reposo compatible dado el conjunto de parámetros.
+
+2. **Distinción Variables Endógenas/Exógenas**: Las endógenas se determinan dentro del modelo; las exógenas son datos.
+
+3. **Número de Ecuaciones = Número de Incógnitas**: Condición necesaria (no suficiente) para solución única.
+
+4. **Restricciones Económicas**: No todas las soluciones matemáticas tienen sentido económico (P, Q > 0).
+
+5. **Análisis de Sensibilidad**: Los multiplicadores cuantifican cómo responde el equilibrio a cambios paramétricos.
+
+6. **Equilibrio ≠ Óptimo**: Un sistema puede estar en equilibrio sin ser socialmente deseable.
+
+7. **Interdependencia**: En equilibrio general, todos los mercados se afectan mutuamente (efectos cruzados).
+
+8. **Métodos Algebraicos vs. Gráficos**: Ambos enfoques son complementarios; el gráfico ayuda a visualizar restricciones.
+:::
+
+# Referencias y Recursos Adicionales
+
+## Bibliografía Principal
+
+1. **Chiang, A. C., & Wainwright, K. (2006)**. *Métodos fundamentales de economía matemática* (4ª ed.). McGraw-Hill.
+
+2. **Simon, C. P., & Blume, L. (1994)**. *Mathematics for economists*. W.W. Norton & Company.
+
+3. **Sydsæter, K., Hammond, P., Seierstad, A., & Strøm, A. (2008)**. *Further mathematics for economic analysis* (2nd ed.). Pearson Education.
+
+4. **Mas-Colell, A., Whinston, M. D., & Green, J. R. (1995)**. *Microeconomic theory*. Oxford University Press.
+
+5. **Varian, H. R. (2010)**. *Intermediate microeconomics: A modern approach* (8th ed.). W.W. Norton & Company.
+
+## Recursos en Línea
+
+- [Khan Academy: Equilibrio de Mercado](https://www.khanacademy.org/economics-finance-domain/microeconomics)
+- [MIT OpenCourseWare: Mathematical Economics](https://ocw.mit.edu/)
+- [Wolfram MathWorld: Equilibrium Theory](https://mathworld.wolfram.com/)
+
+## Código Fuente
+
+Todo el código R utilizado en este documento está disponible en el repositorio GitHub del curso. Las visualizaciones interactivas utilizan las librerías `plotly`, `shiny` y `ggplot2`.
+
+---
+
+<div style="text-align: center; margin-top: 50px; padding: 20px; background-color: #F0F0F0; border-radius: 10px;">
+**Capítulo 3: Ecuaciones y Gráficas en Análisis Económico**  
+*Universidad Pedagógica y Tecnológica de Colombia (UPTC)*  
+Elaborado por: Emanuel Quintana Silva  
+`r Sys.Date()`
+</div>
+```{r session-info}
+cat("Información de la Sesión R:\n")
+sessionInfo()
+```

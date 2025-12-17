@@ -106,3 +106,4 @@ _quarto.yml.backup*
 *.log
 *.toc
 index.pdf
+.Rproj.user

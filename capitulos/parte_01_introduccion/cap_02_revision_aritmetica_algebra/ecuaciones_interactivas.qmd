@@ -1,0 +1,66 @@
+---
+title: "Ecuaciones Gráficas - Versión Interactiva"
+format: html
+server: shiny
+---
+
+## Gráfico interactivo de ecuaciones lineales
+
+```{r}
+#| context: server
+#| echo: false
+
+library(shiny)
+library(ggplot2)
+
+ui <- fluidPage(
+  titlePanel("Explorador de Rectas: y = mx + b"),
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("m", "Pendiente (m):", -5, 5, 2, 0.1),
+      sliderInput("b", "Intercepto (b):", -10, 10, 1, 0.1),
+      sliderInput("xrange", "Rango de X:", -10, 10, c(-5, 5)),
+      hr(),
+      h4("Intersecciones:"),
+      numericInput("find_x", "Calcular Y para X =", 0, -10, 10),
+      verbatimTextOutput("resultado")
+    ),
+    mainPanel(
+      plotOutput("grafico", height = "400px"),
+      hr(),
+      h4("Tabla de valores"),
+      tableOutput("tabla")
+    )
+  )
+)
+
+server <- function(input, output) {
+  output$grafico <- renderPlot({
+    x <- seq(input$xrange[1], input$xrange[2], length.out = 100)
+    y <- input$m * x + input$b
+    
+    ggplot(data.frame(x = x, y = y), aes(x, y)) +
+      geom_line(color = "steelblue", size = 1.5) +
+      geom_hline(yintercept = 0, linetype = "dashed", alpha = 0.5) +
+      geom_vline(xintercept = 0, linetype = "dashed", alpha = 0.5) +
+      geom_point(aes(x = input$find_x, y = input$m * input$find_x + input$b), 
+                 color = "red", size = 3) +
+      labs(title = paste("y =", input$m, "x +", input$b),
+           x = "Variable X", y = "Variable Y") +
+      theme_minimal()
+  })
+  
+  output$resultado <- renderText({
+    y_val <- input$m * input$find_x + input$b
+    paste("Cuando x =", input$find_x, ", y =", round(y_val, 3))
+  })
+  
+  output$tabla <- renderTable({
+    x_vals <- seq(input$xrange[1], input$xrange[2], length.out = 6)
+    data.frame(
+      x = round(x_vals, 1),
+      y = round(input$m * x_vals + input$b, 2)
+    )
+  })
+}
+```
