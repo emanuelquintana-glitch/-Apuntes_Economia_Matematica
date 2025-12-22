@@ -1186,8 +1186,8 @@ Este trabajo está licenciado bajo [Creative Commons Attribution-NonCommercial-S
 ![GitHub stars](https://img.shields.io/github/stars/emanuelquintana-glitch/-Apuntes_Economia_Matematica?style=social)
 
 ### Progreso por Parte
-- [ ] Parte I: Introducción (11%)
-- [ ] Parte II: Análisis Estático (0%)
+- [ ] Parte I: Introducción (13%)
+- [ ] Parte II: Análisis Estático (5%)
 - [ ] Parte III: Estática Comparativa (0%)
 - [ ] Parte IV: Optimización (0%)
 - [ ] Parte V: Análisis Dinámico (0%)
