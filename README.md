@@ -1206,5 +1206,7 @@ Este trabajo está licenciado bajo [Creative Commons Attribution-NonCommercial-S
 <center>
   
 *Emanuel Quintana Silva*
+
 *Universidad Pedagogica y Tecnologica de Colombia*
+
 </center>
