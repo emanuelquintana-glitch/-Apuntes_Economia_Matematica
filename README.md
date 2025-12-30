@@ -1203,10 +1203,45 @@ Este trabajo está licenciado bajo [Creative Commons Attribution-NonCommercial-S
  ---
  ![Logo de la UPTC](uptc-logo.png)
 
-<center>
-  
-*Emanuel Quintana Silva*
+<div align="center">
+  <img src="uptc-logo.png" alt="Logo UPTC" width="150">
 
-*Universidad Pedagogica y Tecnologica de Colombia*
+  # Hola, soy Emanuel Quintana Silva 
+  ### Estudiante de Economía | Apasionado por la Computación y los Datos
+  *Universidad Pedagógica y Tecnológica de Colombia (UPTC)*
 
-</center>
+  [![LinkedIn](img.shields.io)](EmanuelQuintanaSilva)
+  [![Email](img.shields.io)](mailto:emanuel.quintana@uptc.edu.co)
+</div>
+
+---
+
+###  Sobre mí
+Soy un economista en formación con un enfoque híbrido. Creo firmemente que el futuro de la economía reside en la capacidad de procesar y modelar grandes volúmenes de datos mediante la computación avanzada.
+
+-  **Institución:** Estudiante en la **UPTC**.
+-  **Intereses:** Econometría con Python/R, Machine Learning aplicado a finanzas y desarrollo de software.
+-  **Dato curioso:** Me encanta desglosar problemas económicos complejos a través de algoritmos eficientes.
+
+### Tecnologías y Herramientas
+Aquí puedes mostrar tus "badges" (insignias) que son tendencia este 2025 para que tu perfil sea visualmente atractivo:
+
+<div align="left">
+  <img src="img.shields.io" alt="Python">
+  <img src="img.shields.io" alt="R Language">
+  <img src="img.shields.io" alt="Pandas">
+  <img src="img.shields.io" alt="SQL">
+  <img src="img.shields.io" alt="Git">
+</div>
+
+###  Mis Estadísticas de GitHub
+Añade este gráfico dinámico para mostrar tu actividad (solo cambia `TU_USUARIO` por el tuyo):
+
+![Estadísticas de GitHub](github-readme-stats.vercel.app)
+
+---
+
+<p align="center">
+  "La economía nos dice qué hacer, la computación nos da la escala para hacerlo realidad."
+</p>
+
