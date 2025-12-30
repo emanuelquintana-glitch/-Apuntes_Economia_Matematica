@@ -1199,3 +1199,12 @@ Este trabajo está licenciado bajo [Creative Commons Attribution-NonCommercial-S
  **Mantente actualizado**: Watch este repositorio para recibir notificaciones de actualizaciones
 
  **Preguntas o sugerencias**: Abre un [Issue](https://github.com/emanuelquintana-glitch/-Apuntes_Economia_Matematica/issues)
+ 
+ ---
+ ![Logo de la UPTC](uptc-logo.png)
+
+<center>
+  
+*Emanuel Quintana Silva*
+*Universidad Pedagogica y Tecnologica de Colombia*
+</center>
