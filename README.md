@@ -1221,14 +1221,6 @@ Soy un economista en formación con un enfoque híbrido. Creo firmemente que el 
 -  **Intereses:** Econometría con Python/R, Machine Learning aplicado a finanzas y desarrollo de software.
 -  **Dato curioso:** Me encanta desglosar problemas económicos complejos a través de algoritmos eficientes.
 
-### Tecnologías y Herramientas
-Aquí puedes mostrar tus "badges" (insignias) que son tendencia este 2025 para que tu perfil sea visualmente atractivo:
-
-
-###  Mis Estadísticas de GitHub
-Añade este gráfico dinámico para mostrar tu actividad (solo cambia `TU_USUARIO` por el tuyo):
-
-
 ---
 
 <p align="center">
