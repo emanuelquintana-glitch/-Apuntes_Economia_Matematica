@@ -31,6 +31,17 @@ El repositorio está organizado en **cinco partes principales**, siguiendo la es
 - **Capítulo 4**: Modelos Lineales y Álgebra de Matrices
 - **Capítulo 5**: Modelos Lineales (continuación)
 
+
+###  Nota sobre interactividad
+Al revisar estos apartados, te invito a interactuar con los archivos **PDF**, ya que contienen **elementos con movimiento** diseñados para facilitar el aprendizaje. 
+
+Para una experiencia completa, por favor **descarga los archivos** (tanto el PDF como el código LaTeX) y ábrelos con **Adobe Acrobat** (recomendado) o **Firefox** si utilizas Linux.
+
+*¡Siempre en el cora!* ❤️
+
+
+
+
 ###  Parte III: Análisis Estático Comparativo
 - **Capítulo 6**: Estática Comparativa y el Concepto de Derivada
 - **Capítulo 7**: Reglas de Diferenciación y su Uso en Estática Comparativa
@@ -133,982 +144,2019 @@ jupyter lab
 ##  Organización de Archivos
 
 ```
-.
-├── Apuntes_Economia_Matematica-2.pdf
-├── Apuntes_Economia_Matematica.pdf
-├── -Apuntes_Economia_Matematica.Rproj
-├── _book
-│   ├── capitulos
-│   │   ├── parte_01_introduccion
-│   │   │   ├── cap_01_naturaleza_economia_matematica
-│   │   │   │   └── notas.html
-│   │   │   ├── cap_02_revision_aritmetica_algebra
-│   │   │   │   └── notas.html
-│   │   │   └── cap_03_ecuaciones_graficas
-│   │   │       └── notas.html
-│   │   ├── parte_02_analisis_estatico
-│   │   │   ├── cap_04_modelos_lineales_algebra_matrices
-│   │   │   │   └── notas_completas.html
-│   │   │   └── cap_05_modelos_lineales_continuacion
-│   │   │       └── notas_completas.html
-│   │   ├── parte_03_estatica_comparativa
-│   │   │   ├── cap_06_derivadas
-│   │   │   │   └── notas_completas.html
-│   │   │   ├── cap_07_reglas_diferenciacion
-│   │   │   │   └── notas_completas.html
-│   │   │   └── cap_08_funciones_generales
-│   │   │       └── notas_completas.html
-│   │   ├── parte_04_optimizacion
-│   │   │   ├── cap_09_optimizacion_una_variable
-│   │   │   │   └── notas_completas.html
-│   │   │   ├── cap_10_funciones_exponenciales_logaritmicas
-│   │   │   │   └── notas_completas.html
-│   │   │   ├── cap_11_mas_de_una_variable
-│   │   │   │   └── notas_completas.html
-│   │   │   ├── cap_12_restricciones_igualdad
-│   │   │   │   └── notas_completas.html
-│   │   │   └── cap_13_temas_adicionales
-│   │   │       └── notas_completas.html
-│   │   └── parte_05_analisis_dinamico
-│   │       ├── cap_14_calculo_integral
-│   │       │   └── notas_completas.html
-│   │       ├── cap_15_ecuaciones_diferenciales_primer_orden
-│   │       │   └── notas_completas.html
-│   │       ├── cap_16_ecuaciones_diferenciales_orden_superior
-│   │       │   └── notas_completas.html
-│   │       ├── cap_17_ecuaciones_diferencias_primer_orden
-│   │       │   └── notas_completas.html
-│   │       ├── cap_18_ecuaciones_diferencias_orden_superior
-│   │       │   └── notas_completas.html
-│   │       ├── cap_19_ecuaciones_simultaneas
-│   │       │   └── notas_completas.html
-│   │       └── cap_20_teoria_control_optimo
-│   │           └── notas_completas.html
-│   ├── index.html
-│   ├── prefacio.html
-│   ├── search.json
-│   ├── site_libs
-│   │   ├── bootstrap
-│   │   │   ├── bootstrap-icons.css
-│   │   │   ├── bootstrap-icons.woff
-│   │   │   ├── bootstrap.min.css
-│   │   │   └── bootstrap.min.js
-│   │   ├── clipboard
-│   │   │   └── clipboard.min.js
-│   │   ├── quarto-html
-│   │   │   ├── anchor.min.js
-│   │   │   ├── popper.min.js
-│   │   │   ├── quarto.js
-│   │   │   ├── quarto-syntax-highlighting.css
-│   │   │   ├── tippy.css
-│   │   │   └── tippy.umd.min.js
-│   │   ├── quarto-nav
-│   │   │   ├── headroom.min.js
-│   │   │   └── quarto-nav.js
-│   │   └── quarto-search
-│   │       ├── autocomplete.umd.js
-│   │       ├── fuse.min.js
-│   │       └── quarto-search.js
-│   └── styles.css
-├── capitulos
-│   ├── parte_01_introduccion
-│   │   ├── cap_01_naturaleza_economia_matematica
-│   │   │   ├── formulas.tex
-│   │   │   ├── notas.ipynb
-│   │   │   ├── notas.pdf
-│   │   │   ├── notas.qmd
-│   │   │   ├── notas.synctex.gz
-│   │   │   ├── notas.tex
-│   │   │   └── README.md
-│   │   ├── cap_02_revision_aritmetica_algebra
-│   │   │   ├── ecuaciones_interactivas_files
-│   │   │   │   └── libs
-│   │   │   │       ├── bootstrap
-│   │   │   │       │   ├── bootstrap-icons.css
-│   │   │   │       │   ├── bootstrap-icons.woff
-│   │   │   │       │   ├── bootstrap.min.css
-│   │   │   │       │   └── bootstrap.min.js
-│   │   │   │       ├── clipboard
-│   │   │   │       │   └── clipboard.min.js
-│   │   │   │       └── quarto-html
-│   │   │   │           ├── anchor.min.js
-│   │   │   │           ├── popper.min.js
-│   │   │   │           ├── quarto.js
-│   │   │   │           ├── quarto-syntax-highlighting.css
-│   │   │   │           ├── tippy.css
-│   │   │   │           └── tippy.umd.min.js
-│   │   │   ├── ecuaciones_interactivas.html
-│   │   │   ├── ecuaciones_interactivas.qmd
-│   │   │   ├── formulas.aux
-│   │   │   ├── formulas.fdb_latexmk
-│   │   │   ├── formulas.fls
-│   │   │   ├── formulas.log
-│   │   │   ├── formulas.pdf
-│   │   │   ├── formulas.synctex.gz
-│   │   │   ├── formulas.tex
-│   │   │   ├── notas.qmd
-│   │   │   ├── README_files
-│   │   │   │   └── libs
-│   │   │   │       ├── bootstrap
-│   │   │   │       │   ├── bootstrap-icons.css
-│   │   │   │       │   ├── bootstrap-icons.woff
-│   │   │   │       │   ├── bootstrap.min.css
-│   │   │   │       │   └── bootstrap.min.js
-│   │   │   │       ├── clipboard
-│   │   │   │       │   └── clipboard.min.js
-│   │   │   │       └── quarto-html
-│   │   │   │           ├── anchor.min.js
-│   │   │   │           ├── popper.min.js
-│   │   │   │           ├── quarto.js
-│   │   │   │           ├── quarto-syntax-highlighting.css
-│   │   │   │           ├── tippy.css
-│   │   │   │           └── tippy.umd.min.js
-│   │   │   ├── README.html
-│   │   │   └── README.md
-│   │   ├── cap_03_ecuaciones_graficas
-│   │   │   ├── formulas.log
-│   │   │   ├── formulas.pdf
-│   │   │   ├── formulas.synctex.gz
-│   │   │   ├── formulas.tex
-│   │   │   ├── notas_cache
-│   │   │   │   └── html
-│   │   │   │       ├── caso-origen_fdf503e9167f55f79fe47049df3bb42d.RData
-│   │   │   │       ├── caso-origen_fdf503e9167f55f79fe47049df3bb42d.rdb
-│   │   │   │       ├── caso-origen_fdf503e9167f55f79fe47049df3bb42d.rdx
-│   │   │   │       ├── caso-paralelas_1423b91e76525a99bb49e7ddd6404fba.RData
-│   │   │   │       ├── caso-paralelas_1423b91e76525a99bb49e7ddd6404fba.rdb
-│   │   │   │       ├── caso-paralelas_1423b91e76525a99bb49e7ddd6404fba.rdx
-│   │   │   │       ├── cuadro-sinoptico_e680a1548e97510111f18f4aa13cd606.RData
-│   │   │   │       ├── cuadro-sinoptico_e680a1548e97510111f18f4aa13cd606.rdb
-│   │   │   │       ├── cuadro-sinoptico_e680a1548e97510111f18f4aa13cd606.rdx
-│   │   │   │       ├── discriminante-analisis_37e53bad64ef4518963da081b7a69a44.RData
-│   │   │   │       ├── discriminante-analisis_37e53bad64ef4518963da081b7a69a44.rdb
-│   │   │   │       ├── discriminante-analisis_37e53bad64ef4518963da081b7a69a44.rdx
-│   │   │   │       ├── ejemplo-1_7058e5ea9e01a2a0d38087937ee6c7c6.RData
-│   │   │   │       ├── ejemplo-1_7058e5ea9e01a2a0d38087937ee6c7c6.rdb
-│   │   │   │       ├── ejemplo-1_7058e5ea9e01a2a0d38087937ee6c7c6.rdx
-│   │   │   │       ├── ejemplo-2_284b5df6d3a5906e92a275526d8fcded.RData
-│   │   │   │       ├── ejemplo-2_284b5df6d3a5906e92a275526d8fcded.rdb
-│   │   │   │       ├── ejemplo-2_284b5df6d3a5906e92a275526d8fcded.rdx
-│   │   │   │       ├── ejemplos-discriminante_8caa25683acde9e93ef44b2d77101741.RData
-│   │   │   │       ├── ejemplos-discriminante_8caa25683acde9e93ef44b2d77101741.rdb
-│   │   │   │       ├── ejemplos-discriminante_8caa25683acde9e93ef44b2d77101741.rdx
-│   │   │   │       ├── ejercicio-4_d32e340114c64127d7d3a25fd03bff8e.RData
-│   │   │   │       ├── ejercicio-4_d32e340114c64127d7d3a25fd03bff8e.rdb
-│   │   │   │       ├── ejercicio-4_d32e340114c64127d7d3a25fd03bff8e.rdx
-│   │   │   │       ├── ejercicio-5a_3834eac2bfc3f9d7f533f3ba05067bcd.RData
-│   │   │   │       ├── ejercicio-5a_3834eac2bfc3f9d7f533f3ba05067bcd.rdb
-│   │   │   │       ├── ejercicio-5a_3834eac2bfc3f9d7f533f3ba05067bcd.rdx
-│   │   │   │       ├── ejercicio-5b_18227c9c7c5733ea23e568e4c05f8d45.RData
-│   │   │   │       ├── ejercicio-5b_18227c9c7c5733ea23e568e4c05f8d45.rdb
-│   │   │   │       ├── ejercicio-5b_18227c9c7c5733ea23e568e4c05f8d45.rdx
-│   │   │   │       ├── ejercicio-5c_bb55473c1877953ba2b1f8ecbf8dfecf.RData
-│   │   │   │       ├── ejercicio-5c_bb55473c1877953ba2b1f8ecbf8dfecf.rdb
-│   │   │   │       ├── ejercicio-5c_bb55473c1877953ba2b1f8ecbf8dfecf.rdx
-│   │   │   │       ├── ejercicio-6a_483d02f511fc3147faf67ae3e1944d98.RData
-│   │   │   │       ├── ejercicio-6a_483d02f511fc3147faf67ae3e1944d98.rdb
-│   │   │   │       ├── ejercicio-6a_483d02f511fc3147faf67ae3e1944d98.rdx
-│   │   │   │       ├── ejercicio-6b_0b086aaf2615803fe57263b737c2de0b.RData
-│   │   │   │       ├── ejercicio-6b_0b086aaf2615803fe57263b737c2de0b.rdb
-│   │   │   │       ├── ejercicio-6b_0b086aaf2615803fe57263b737c2de0b.rdx
-│   │   │   │       ├── equilibrio-conceptual_03e5f497f6d21825c9cb2d96b722cbb8.RData
-│   │   │   │       ├── equilibrio-conceptual_03e5f497f6d21825c9cb2d96b722cbb8.rdb
-│   │   │   │       ├── equilibrio-conceptual_03e5f497f6d21825c9cb2d96b722cbb8.rdx
-│   │   │   │       ├── interceptos-analisis_8f0d578284c6a8847e0192a7fe41fdfe.RData
-│   │   │   │       ├── interceptos-analisis_8f0d578284c6a8847e0192a7fe41fdfe.rdb
-│   │   │   │       ├── interceptos-analisis_8f0d578284c6a8847e0192a7fe41fdfe.rdx
-│   │   │   │       ├── mercado-nolineal_82e935cfa365a1e95290af497ad08c88.RData
-│   │   │   │       ├── mercado-nolineal_82e935cfa365a1e95290af497ad08c88.rdb
-│   │   │   │       ├── mercado-nolineal_82e935cfa365a1e95290af497ad08c88.rdx
-│   │   │   │       ├── modelo-lineal-visual_786ac795ed5ccab16985e8ee2b79466d.RData
-│   │   │   │       ├── modelo-lineal-visual_786ac795ed5ccab16985e8ee2b79466d.rdb
-│   │   │   │       ├── modelo-lineal-visual_786ac795ed5ccab16985e8ee2b79466d.rdx
-│   │   │   │       ├── __packages
-│   │   │   │       ├── server-logic_15b92f928f86c6a53870045d70de3c7f.RData
-│   │   │   │       ├── server-logic_15b92f928f86c6a53870045d70de3c7f.rdb
-│   │   │   │       ├── server-logic_15b92f928f86c6a53870045d70de3c7f.rdx
-│   │   │   │       ├── session-info_5dc9f449a5479da0432d6606076a9659.RData
-│   │   │   │       ├── session-info_5dc9f449a5479da0432d6606076a9659.rdb
-│   │   │   │       ├── session-info_5dc9f449a5479da0432d6606076a9659.rdx
-│   │   │   │       ├── setup_f698d05e3b2e598ac6f6d91b29b6f385.RData
-│   │   │   │       ├── setup_f698d05e3b2e598ac6f6d91b29b6f385.rdb
-│   │   │   │       ├── setup_f698d05e3b2e598ac6f6d91b29b6f385.rdx
-│   │   │   │       ├── solucion-interactiva_d3a7098039e435512b1cf8476b6da379.RData
-│   │   │   │       ├── solucion-interactiva_d3a7098039e435512b1cf8476b6da379.rdb
-│   │   │   │       ├── solucion-interactiva_d3a7098039e435512b1cf8476b6da379.rdx
-│   │   │   │       ├── tabla-comparativa-final_b300be87bd7c9c6252f1222ce878d248.RData
-│   │   │   │       ├── tabla-comparativa-final_b300be87bd7c9c6252f1222ce878d248.rdb
-│   │   │   │       ├── tabla-comparativa-final_b300be87bd7c9c6252f1222ce878d248.rdx
-│   │   │   │       ├── tabla-ejemplos_2091b3346c735b8e8c315853abab1720.RData
-│   │   │   │       ├── tabla-ejemplos_2091b3346c735b8e8c315853abab1720.rdb
-│   │   │   │       ├── tabla-ejemplos_2091b3346c735b8e8c315853abab1720.rdx
-│   │   │   │       ├── teoremas-raices_635ebbae595fbedad5262e379d8a6b55.RData
-│   │   │   │       ├── teoremas-raices_635ebbae595fbedad5262e379d8a6b55.rdb
-│   │   │   │       ├── teoremas-raices_635ebbae595fbedad5262e379d8a6b55.rdx
-│   │   │   │       ├── tipos-equilibrio_93e1236a2d7551434d38edea57b939e1.RData
-│   │   │   │       ├── tipos-equilibrio_93e1236a2d7551434d38edea57b939e1.rdb
-│   │   │   │       ├── tipos-equilibrio_93e1236a2d7551434d38edea57b939e1.rdx
-│   │   │   │       ├── visualizacion-polinomios_9211dcbce6b60f1b447f482b5b26d356.RData
-│   │   │   │       ├── visualizacion-polinomios_9211dcbce6b60f1b447f482b5b26d356.rdb
-│   │   │   │       └── visualizacion-polinomios_9211dcbce6b60f1b447f482b5b26d356.rdx
-│   │   │   ├── notas_files
-│   │   │   │   ├── figure-html
-│   │   │   │   │   ├── caso-origen-1.png
-│   │   │   │   │   ├── caso-paralelas-1.png
-│   │   │   │   │   ├── ejemplo-2-1.png
-│   │   │   │   │   ├── ejemplos-discriminante-1.png
-│   │   │   │   │   ├── equilibrio-conceptual-1.png
-│   │   │   │   │   ├── mercado-nolineal-1.png
-│   │   │   │   │   ├── modelo-lineal-visual-1.png
-│   │   │   │   │   ├── teoremas-raices-1.png
-│   │   │   │   │   └── visualizacion-polinomios-1.png
-│   │   │   │   └── libs
-│   │   │   │       ├── bootstrap
-│   │   │   │       │   ├── bootstrap-icons.css
-│   │   │   │       │   ├── bootstrap-icons.woff
-│   │   │   │       │   ├── bootstrap.min.css
-│   │   │   │       │   └── bootstrap.min.js
-│   │   │   │       ├── clipboard
-│   │   │   │       │   └── clipboard.min.js
-│   │   │   │       ├── crosstalk-1.2.2
-│   │   │   │       │   ├── css
-│   │   │   │       │   │   └── crosstalk.min.css
-│   │   │   │       │   ├── js
-│   │   │   │       │   │   ├── crosstalk.js
-│   │   │   │       │   │   ├── crosstalk.js.map
-│   │   │   │       │   │   ├── crosstalk.min.js
-│   │   │   │       │   │   └── crosstalk.min.js.map
-│   │   │   │       │   └── scss
-│   │   │   │       │       └── crosstalk.scss
-│   │   │   │       ├── datatables-binding-0.34.0
-│   │   │   │       │   └── datatables.js
-│   │   │   │       ├── datatables-css-0.0.0
-│   │   │   │       │   └── datatables-crosstalk.css
-│   │   │   │       ├── DiagrammeR-styles-0.2
-│   │   │   │       │   └── styles.css
-│   │   │   │       ├── dt-core-1.13.6
-│   │   │   │       │   ├── css
-│   │   │   │       │   │   ├── jquery.dataTables.extra.css
-│   │   │   │       │   │   └── jquery.dataTables.min.css
-│   │   │   │       │   └── js
-│   │   │   │       │       └── jquery.dataTables.min.js
-│   │   │   │       ├── grViz-binding-1.0.11
-│   │   │   │       │   └── grViz.js
-│   │   │   │       ├── htmltools-fill-0.5.9
-│   │   │   │       │   └── fill.css
-│   │   │   │       ├── htmlwidgets-1.6.4
-│   │   │   │       │   └── htmlwidgets.js
-│   │   │   │       ├── ionrangeslider-css-2.3.1
-│   │   │   │       │   ├── css
-│   │   │   │       │   │   └── ion.rangeSlider.css
-│   │   │   │       │   ├── js
-│   │   │   │       │   │   ├── ion.rangeSlider.js
-│   │   │   │       │   │   └── ion.rangeSlider.min.js
-│   │   │   │       │   └── scss
-│   │   │   │       │       ├── _base.scss
-│   │   │   │       │       ├── _mixins.scss
-│   │   │   │       │       └── shiny.scss
-│   │   │   │       ├── ionrangeslider-javascript-2.3.1
-│   │   │   │       │   ├── css
-│   │   │   │       │   │   └── ion.rangeSlider.css
-│   │   │   │       │   ├── js
-│   │   │   │       │   │   ├── ion.rangeSlider.js
-│   │   │   │       │   │   └── ion.rangeSlider.min.js
-│   │   │   │       │   └── scss
-│   │   │   │       │       ├── _base.scss
-│   │   │   │       │       ├── _mixins.scss
-│   │   │   │       │       └── shiny.scss
-│   │   │   │       ├── jquery-3.7.1
-│   │   │   │       │   └── jquery.min.js
-│   │   │   │       ├── plotly-binding-4.11.0
-│   │   │   │       │   └── plotly.js
-│   │   │   │       ├── quarto-html
-│   │   │   │       │   ├── anchor.min.js
-│   │   │   │       │   ├── popper.min.js
-│   │   │   │       │   ├── quarto.js
-│   │   │   │       │   ├── quarto-syntax-highlighting.css
-│   │   │   │       │   ├── tippy.css
-│   │   │   │       │   ├── tippy.umd.min.js
-│   │   │   │       │   └── zenscroll-min.js
-│   │   │   │       ├── strftime-0.9.2
-│   │   │   │       │   └── strftime-min.js
-│   │   │   │       └── viz-1.8.2
-│   │   │   │           └── viz.js
-│   │   │   ├── notas.html
-│   │   │   ├── notas.qmd
-│   │   │   ├── notas.Rmd
-│   │   │   ├── README_files
-│   │   │   │   └── libs
-│   │   │   │       ├── bootstrap
-│   │   │   │       │   ├── bootstrap-icons.css
-│   │   │   │       │   ├── bootstrap-icons.woff
-│   │   │   │       │   ├── bootstrap.min.css
-│   │   │   │       │   └── bootstrap.min.js
-│   │   │   │       ├── clipboard
-│   │   │   │       │   └── clipboard.min.js
-│   │   │   │       └── quarto-html
-│   │   │   │           ├── anchor.min.js
-│   │   │   │           ├── popper.min.js
-│   │   │   │           ├── quarto.js
-│   │   │   │           ├── quarto-syntax-highlighting.css
-│   │   │   │           ├── tippy.css
-│   │   │   │           └── tippy.umd.min.js
-│   │   │   ├── README.html
-│   │   │   └── README.md
-│   │   └── README.qmd
-│   ├── parte_02_analisis_estatico
-│   │   ├── cap_04_modelos_lineales_algebra_matrices
-│   │   │   ├── notas_completas.qmd
-│   │   │   ├── README.md
-│   │   │   ├── sec_01_matrices
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_02_operaciones_matrices
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_03_vectores
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_04_leyes_algebraicas
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_05_identidad_nulas
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_06_transpuestas_inversas
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   └── sec_07_cadenas_markov
-│   │   │       ├── aplicaciones.qmd
-│   │   │       └── notas.qmd
-│   │   ├── cap_05_modelos_lineales_continuacion
-│   │   │   ├── notas_completas.qmd
-│   │   │   ├── README.md
-│   │   │   ├── sec_01_no_singularidad
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_02_determinantes
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_03_propiedades_determinantes
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_04_matriz_inversa
-│   │   │   │   ├── algoritmos.qmd
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_05_regla_cramer
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_06_aplicaciones_modelos
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_07_leontief_insumo_producto
-│   │   │   │   └── notas.qmd
-│   │   │   └── sec_08_limitaciones_analisis_estatico
-│   │   │       └── {notas.qmd}
-│   │   └── README.qmd
-│   ├── parte_03_estatica_comparativa
-│   │   ├── cap_06_derivadas
-│   │   │   ├── notas_completas.qmd
-│   │   │   ├── README.md
-│   │   │   ├── sec_01_naturaleza
-│   │   │   │   └── {notas.qmd}
-│   │   │   ├── sec_02_tasa_cambio
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_03_pendiente_curva
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_04_limites
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_05_desigualdades
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_06_teoremas_limites
-│   │   │   │   └── notas.qmd
-│   │   │   └── sec_07_continuidad_diferenciabilidad
-│   │   │       ├── formulas.tex
-│   │   │       └── notas.qmd
-│   │   ├── cap_07_reglas_diferenciacion
-│   │   │   ├── notas_completas.qmd
-│   │   │   ├── README.md
-│   │   │   ├── sec_01_una_variable
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_02_dos_o_mas_funciones
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_03_variables_diferentes
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_04_diferenciacion_parcial
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_05_aplicaciones_estatica_comparativa
-│   │   │   │   └── modelos_economia.qmd
-│   │   │   └── sec_06_jacobianos
-│   │   │       └── notas.qmd
-│   │   ├── cap_08_funciones_generales
-│   │   │   ├── notas_completas.qmd
-│   │   │   ├── README.md
-│   │   │   ├── sec_01_diferenciales
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_02_diferenciales_totales
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_03_reglas_diferenciales
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_04_derivadas_totales
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_05_funciones_implicitas
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_06_estatica_comparativa
-│   │   │   │   └── modelos.qmd
-│   │   │   └── sec_07_limitaciones
-│   │   │       └── {notas.qmd}
-│   │   └── README.qmd
-│   ├── parte_04_optimizacion
-│   │   ├── cap_09_optimizacion_una_variable
-│   │   │   ├── notas_completas.qmd
-│   │   │   ├── README.md
-│   │   │   ├── sec_01_valores_optimos
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_02_primera_derivada
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_03_derivadas_superiores
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_04_segunda_derivada
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_05_series_taylor_maclaurin
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   └── sec_06_n_esima_derivada
-│   │   │       └── notas.qmd
-│   │   ├── cap_10_funciones_exponenciales_logaritmicas
-│   │   │   ├── notas_completas.qmd
-│   │   │   ├── README.md
-│   │   │   ├── sec_01_naturaleza_exponenciales
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_02_funcion_natural_crecimiento
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_03_logaritmos
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_04_funciones_logaritmicas
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_05_derivadas
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_06_fecha_optima
-│   │   │   │   └── notas.qmd
-│   │   │   └── sec_07_mas_aplicaciones
-│   │   │       └── aplicaciones.qmd
-│   │   ├── cap_11_mas_de_una_variable
-│   │   │   ├── notas_completas.qmd
-│   │   │   ├── README.md
-│   │   │   ├── sec_01_version_diferencial
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_02_dos_variables
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_03_formas_cuadraticas
-│   │   │   │   ├── notas.qmd
-│   │   │   │   └── teoria.tex
-│   │   │   ├── sec_04_mas_de_dos_variables
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_05_concavidad_convexidad
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_06_aplicaciones_economicas
-│   │   │   └── sec_07_estatica_comparativa
-│   │   │       └── notas.qmd
-│   │   ├── cap_12_restricciones_igualdad
-│   │   │   ├── notas_completas.qmd
-│   │   │   ├── README.md
-│   │   │   ├── sec_01_efectos_restriccion
-│   │   │   │   └── {notas.qmd}
-│   │   │   ├── sec_02_valores_estacionarios
-│   │   │   │   ├── lagrange.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_03_segunda_orden
-│   │   │   │   ├── hessiano_orlado.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_04_cuasiconcavidad
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_05_maximizacion_utilidad
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_06_funciones_homogeneas
-│   │   │   │   └── notas.qmd
-│   │   │   └── sec_07_combinacion_insumos
-│   │   │       └── notas.qmd
-│   │   ├── cap_13_temas_adicionales
-│   │   │   ├── notas_completas.qmd
-│   │   │   ├── README.md
-│   │   │   ├── sec_01_kuhn_tucker
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_02_calificacion_restriccion
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_03_aplicaciones_economicas
-│   │   │   ├── sec_04_teoremas_suficiencia
-│   │   │   │   ├── formulas.tex
-│   │   │   │   └── notas.qmd
-│   │   │   ├── sec_05_funciones_valor_maximo
-│   │   │   │   └── notas.qmd
-│   │   │   └── sec_06_dualidad
-│   │   │       └── notas.qmd
-│   │   └── README.qmd
-│   └── parte_05_analisis_dinamico
-│       ├── cap_14_calculo_integral
-│       │   ├── notas_completas.qmd
-│       │   ├── README.md
-│       │   ├── sec_01_dinamica_integracion
-│       │   │   └── {notas.qmd}
-│       │   ├── sec_02_integrales_indefinidas
-│       │   │   ├── formulas.tex
-│       │   │   └── notas.qmd
-│       │   ├── sec_03_integrales_definidas
-│       │   │   └── notas.qmd
-│       │   ├── sec_04_integrales_impropias
-│       │   │   └── notas.qmd
-│       │   ├── sec_05_aplicaciones_economia
-│       │   │   └── aplicaciones.qmd
-│       │   └── sec_06_modelo_domar
-│       │       └── notas.qmd
-│       ├── cap_15_ecuaciones_diferenciales_primer_orden
-│       │   ├── notas_completas.qmd
-│       │   ├── README.md
-│       │   ├── sec_01_lineales_coeficientes_constantes
-│       │   │   ├── formulas.tex
-│       │   │   └── notas.qmd
-│       │   ├── sec_02_dinamica_precio_mercado
-│       │   │   └── notas.qmd
-│       │   ├── sec_03_coeficiente_variable
-│       │   │   └── notas.qmd
-│       │   ├── sec_04_ecuaciones_exactas
-│       │   │   ├── metodos.tex
-│       │   │   └── notas.qmd
-│       │   ├── sec_05_no_lineales
-│       │   │   └── notas.qmd
-│       │   ├── sec_06_enfoque_cualitativo
-│       │   │   └── notas.qmd
-│       │   └── sec_07_modelo_solow
-│       │       └── notas.qmd
-│       ├── cap_16_ecuaciones_diferenciales_orden_superior
-│       │   ├── notas_completas.qmd
-│       │   ├── README.md
-│       │   ├── sec_01_segundo_orden
-│       │   │   ├── formulas.tex
-│       │   │   └── notas.qmd
-│       │   ├── sec_02_numeros_complejos
-│       │   │   ├── euler.tex
-│       │   │   └── notas.qmd
-│       │   ├── sec_03_raices_complejas
-│       │   │   └── notas.qmd
-│       │   ├── sec_04_modelo_expectativas
-│       │   │   └── notas.qmd
-│       │   ├── sec_05_inflacion_desempleo
-│       │   │   └── notas.qmd
-│       │   ├── sec_06_termino_variable
-│       │   │   └── notas.qmd
-│       │   └── sec_07_orden_superior
-│       │       └── notas.qmd
-│       ├── cap_17_ecuaciones_diferencias_primer_orden
-│       │   ├── notas_completas.qmd
-│       │   ├── README.md
-│       │   ├── sec_01_tiempo_discreto
-│       │   │   └── {notas.qmd}
-│       │   ├── sec_02_solucion
-│       │   │   ├── formulas.tex
-│       │   │   └── notas.qmd
-│       │   ├── sec_03_estabilidad
-│       │   │   └── notas.qmd
-│       │   ├── sec_04_modelo_telarana
-│       │   │   └── notas.qmd
-│       │   ├── sec_05_modelo_inventario
-│       │   │   └── notas.qmd
-│       │   └── sec_06_no_lineales_metodo_grafico
-│       │       └── notas.qmd
-│       ├── cap_18_ecuaciones_diferencias_orden_superior
-│       │   ├── notas_completas.qmd
-│       │   ├── README.md
-│       │   ├── sec_01_segundo_orden
-│       │   │   ├── formulas.tex
-│       │   │   └── notas.qmd
-│       │   ├── sec_02_modelo_samuelson
-│       │   │   └── notas.qmd
-│       │   ├── sec_03_inflacion_desempleo_discreto
-│       │   │   └── notas.qmd
-│       │   └── sec_04_generalizaciones
-│       │       └── notas.qmd
-│       ├── cap_19_ecuaciones_simultaneas
-│       │   ├── notas_completas.qmd
-│       │   ├── README.md
-│       │   ├── sec_01_genesis_sistemas
-│       │   │   └── {notas.qmd}
-│       │   ├── sec_02_solucion
-│       │   │   ├── notacion_matricial.tex
-│       │   │   └── notas.qmd
-│       │   ├── sec_03_modelos_insumo_producto
-│       │   │   └── notas.qmd
-│       │   ├── sec_04_inflacion_desempleo
-│       │   │   └── notas.qmd
-│       │   ├── sec_05_diagramas_fase
-│       │   │   └── notas.qmd
-│       │   └── sec_06_linealizacion
-│       │       └── notas.qmd
-│       ├── cap_20_teoria_control_optimo
-│       │   ├── notas_completas.qmd
-│       │   ├── README.md
-│       │   ├── sec_01_naturaleza
-│       │   │   ├── notas.qmd
-│       │   │   └── principio_pontryagin.tex
-│       │   ├── sec_02_condiciones_terminales
-│       │   │   └── notas.qmd
-│       │   ├── sec_03_problemas_autonomos
-│       │   │   └── {notas.qmd}
-│       │   ├── sec_04_aplicaciones_economicas
-│       │   ├── sec_05_horizonte_infinito
-│       │   │   └── notas.qmd
-│       │   └── sec_06_limitaciones
-│       │       └── {notas.qmd}
-│       └── README.qmd
-├── datos
-├── docs
-│   ├── capitulos
-│   │   ├── parte_01_introduccion
-│   │   │   ├── cap_01_naturaleza_economia_matematica
-│   │   │   │   ├── notas_files
-│   │   │   │   │   ├── figure-html
-│   │   │   │   │   │   ├── fig-cpo-consumidor-output-1.png
-│   │   │   │   │   │   ├── fig-demanda-intro-output-2.png
-│   │   │   │   │   │   ├── fig-demand-analysis-output-1.png
-│   │   │   │   │   │   ├── fig-funcion-implicita-output-1.png
-│   │   │   │   │   │   ├── fig-market-equilibrium-output-2.png
-│   │   │   │   │   │   ├── fig-optimizacion-n-dimensional-output-1.png
-│   │   │   │   │   │   ├── fig-phillips-integracion-output-2.png
-│   │   │   │   │   │   ├── fig-producer-optimization-output-2.png
-│   │   │   │   │   │   ├── fig-utilidad-marginal-output-1.png
-│   │   │   │   │   │   └── fig-utility-surface-output-1.png
-│   │   │   │   │   └── figure-pdf
-│   │   │   │   │       ├── fig-cpo-consumidor-output-1.png
-│   │   │   │   │       ├── fig-demanda-intro-output-2.png
-│   │   │   │   │       ├── fig-demand-analysis-output-1.pdf
-│   │   │   │   │       ├── fig-funcion-implicita-output-1.png
-│   │   │   │   │       ├── fig-market-equilibrium-output-2.pdf
-│   │   │   │   │       ├── fig-optimizacion-n-dimensional-output-1.png
-│   │   │   │   │       ├── fig-phillips-integracion-output-2.png
-│   │   │   │   │       ├── fig-producer-optimization-output-2.pdf
-│   │   │   │   │       ├── fig-utilidad-marginal-output-1.png
-│   │   │   │   │       └── fig-utility-surface-output-1.pdf
-│   │   │   │   └── notas.html
-│   │   │   ├── cap_02_revision_aritmetica_algebra
-│   │   │   │   ├── notas_files
-│   │   │   │   │   └── figure-html
-│   │   │   │   │       ├── fig-funcion-vs-relacion-1.png
-│   │   │   │   │       ├── fig-plano-cartesiano-1.png
-│   │   │   │   │       └── fig-recta-real-1.png
-│   │   │   │   └── notas.html
-│   │   │   ├── cap_03_ecuaciones_graficas
-│   │   │   │   └── notas.html
-│   │   │   └── README.html
-│   │   ├── parte_02_analisis_estatico
-│   │   │   ├── cap_04_modelos_lineales_algebra_matrices
-│   │   │   │   ├── notas_completas.html
-│   │   │   │   ├── sec_01_matrices
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_02_operaciones_matrices
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_03_vectores
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_04_leyes_algebraicas
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_05_identidad_nulas
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_06_transpuestas_inversas
-│   │   │   │   │   └── notas.html
-│   │   │   │   └── sec_07_cadenas_markov
-│   │   │   │       ├── aplicaciones.html
-│   │   │   │       └── notas.html
-│   │   │   ├── cap_05_modelos_lineales_continuacion
-│   │   │   │   ├── notas_completas.html
-│   │   │   │   ├── sec_01_no_singularidad
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_02_determinantes
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_03_propiedades_determinantes
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_04_matriz_inversa
-│   │   │   │   │   ├── algoritmos.html
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_05_regla_cramer
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_06_aplicaciones_modelos
-│   │   │   │   │   └── notas.html
-│   │   │   │   └── sec_07_leontief_insumo_producto
-│   │   │   │       └── notas.html
-│   │   │   └── README.html
-│   │   ├── parte_03_estatica_comparativa
-│   │   │   ├── cap_06_derivadas
-│   │   │   │   ├── notas_completas.html
-│   │   │   │   ├── sec_02_tasa_cambio
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_03_pendiente_curva
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_04_limites
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_05_desigualdades
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_06_teoremas_limites
-│   │   │   │   │   └── notas.html
-│   │   │   │   └── sec_07_continuidad_diferenciabilidad
-│   │   │   │       └── notas.html
-│   │   │   ├── cap_07_reglas_diferenciacion
-│   │   │   │   ├── notas_completas.html
-│   │   │   │   ├── sec_01_una_variable
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_02_dos_o_mas_funciones
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_03_variables_diferentes
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_04_diferenciacion_parcial
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_05_aplicaciones_estatica_comparativa
-│   │   │   │   │   └── modelos_economia.html
-│   │   │   │   └── sec_06_jacobianos
-│   │   │   │       └── notas.html
-│   │   │   ├── cap_08_funciones_generales
-│   │   │   │   ├── notas_completas.html
-│   │   │   │   ├── sec_01_diferenciales
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_02_diferenciales_totales
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_03_reglas_diferenciales
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_04_derivadas_totales
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_05_funciones_implicitas
-│   │   │   │   │   └── notas.html
-│   │   │   │   └── sec_06_estatica_comparativa
-│   │   │   │       └── modelos.html
-│   │   │   └── README.html
-│   │   ├── parte_04_optimizacion
-│   │   │   ├── cap_09_optimizacion_una_variable
-│   │   │   │   ├── notas_completas.html
-│   │   │   │   ├── sec_01_valores_optimos
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_02_primera_derivada
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_03_derivadas_superiores
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_04_segunda_derivada
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_05_series_taylor_maclaurin
-│   │   │   │   │   └── notas.html
-│   │   │   │   └── sec_06_n_esima_derivada
-│   │   │   │       └── notas.html
-│   │   │   ├── cap_10_funciones_exponenciales_logaritmicas
-│   │   │   │   ├── notas_completas.html
-│   │   │   │   ├── sec_01_naturaleza_exponenciales
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_02_funcion_natural_crecimiento
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_03_logaritmos
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_04_funciones_logaritmicas
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_05_derivadas
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_06_fecha_optima
-│   │   │   │   │   └── notas.html
-│   │   │   │   └── sec_07_mas_aplicaciones
-│   │   │   │       └── aplicaciones.html
-│   │   │   ├── cap_11_mas_de_una_variable
-│   │   │   │   ├── notas_completas.html
-│   │   │   │   ├── sec_01_version_diferencial
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_02_dos_variables
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_03_formas_cuadraticas
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_04_mas_de_dos_variables
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_05_concavidad_convexidad
-│   │   │   │   │   └── notas.html
-│   │   │   │   └── sec_07_estatica_comparativa
-│   │   │   │       └── notas.html
-│   │   │   ├── cap_12_restricciones_igualdad
-│   │   │   │   ├── notas_completas.html
-│   │   │   │   ├── sec_02_valores_estacionarios
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_03_segunda_orden
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_04_cuasiconcavidad
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_05_maximizacion_utilidad
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_06_funciones_homogeneas
-│   │   │   │   │   └── notas.html
-│   │   │   │   └── sec_07_combinacion_insumos
-│   │   │   │       └── notas.html
-│   │   │   ├── cap_13_temas_adicionales
-│   │   │   │   ├── notas_completas.html
-│   │   │   │   ├── sec_01_kuhn_tucker
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_02_calificacion_restriccion
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_04_teoremas_suficiencia
-│   │   │   │   │   └── notas.html
-│   │   │   │   ├── sec_05_funciones_valor_maximo
-│   │   │   │   │   └── notas.html
-│   │   │   │   └── sec_06_dualidad
-│   │   │   │       └── notas.html
-│   │   │   └── README.html
-│   │   └── parte_05_analisis_dinamico
-│   │       ├── cap_14_calculo_integral
-│   │       │   ├── notas_completas.html
-│   │       │   ├── sec_02_integrales_indefinidas
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_03_integrales_definidas
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_04_integrales_impropias
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_05_aplicaciones_economia
-│   │       │   │   └── aplicaciones.html
-│   │       │   └── sec_06_modelo_domar
-│   │       │       └── notas.html
-│   │       ├── cap_15_ecuaciones_diferenciales_primer_orden
-│   │       │   ├── notas_completas.html
-│   │       │   ├── sec_01_lineales_coeficientes_constantes
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_02_dinamica_precio_mercado
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_03_coeficiente_variable
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_04_ecuaciones_exactas
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_05_no_lineales
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_06_enfoque_cualitativo
-│   │       │   │   └── notas.html
-│   │       │   └── sec_07_modelo_solow
-│   │       │       └── notas.html
-│   │       ├── cap_16_ecuaciones_diferenciales_orden_superior
-│   │       │   ├── notas_completas.html
-│   │       │   ├── sec_01_segundo_orden
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_02_numeros_complejos
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_03_raices_complejas
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_04_modelo_expectativas
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_05_inflacion_desempleo
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_06_termino_variable
-│   │       │   │   └── notas.html
-│   │       │   └── sec_07_orden_superior
-│   │       │       └── notas.html
-│   │       ├── cap_17_ecuaciones_diferencias_primer_orden
-│   │       │   ├── notas_completas.html
-│   │       │   ├── sec_02_solucion
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_03_estabilidad
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_04_modelo_telarana
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_05_modelo_inventario
-│   │       │   │   └── notas.html
-│   │       │   └── sec_06_no_lineales_metodo_grafico
-│   │       │       └── notas.html
-│   │       ├── cap_18_ecuaciones_diferencias_orden_superior
-│   │       │   ├── notas_completas.html
-│   │       │   ├── sec_01_segundo_orden
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_02_modelo_samuelson
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_03_inflacion_desempleo_discreto
-│   │       │   │   └── notas.html
-│   │       │   └── sec_04_generalizaciones
-│   │       │       └── notas.html
-│   │       ├── cap_19_ecuaciones_simultaneas
-│   │       │   ├── notas_completas.html
-│   │       │   ├── sec_02_solucion
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_03_modelos_insumo_producto
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_04_inflacion_desempleo
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_05_diagramas_fase
-│   │       │   │   └── notas.html
-│   │       │   └── sec_06_linealizacion
-│   │       │       └── notas.html
-│   │       ├── cap_20_teoria_control_optimo
-│   │       │   ├── notas_completas.html
-│   │       │   ├── sec_01_naturaleza
-│   │       │   │   └── notas.html
-│   │       │   ├── sec_02_condiciones_terminales
-│   │       │   │   └── notas.html
-│   │       │   └── sec_05_horizonte_infinito
-│   │       │       └── notas.html
-│   │       └── README.html
-│   ├── index.html
-│   ├── prefacio.html
-│   ├── search.json
-│   ├── site_libs
-│   │   ├── bootstrap
-│   │   │   ├── bootstrap-icons.css
-│   │   │   ├── bootstrap-icons.woff
-│   │   │   ├── bootstrap.min.css
-│   │   │   └── bootstrap.min.js
-│   │   ├── clipboard
-│   │   │   └── clipboard.min.js
-│   │   ├── quarto-html
-│   │   │   ├── anchor.min.js
-│   │   │   ├── popper.min.js
-│   │   │   ├── quarto.js
-│   │   │   ├── quarto-syntax-highlighting.css
-│   │   │   ├── tippy.css
-│   │   │   ├── tippy.umd.min.js
-│   │   │   └── zenscroll-min.js
-│   │   ├── quarto-nav
-│   │   │   ├── headroom.min.js
-│   │   │   └── quarto-nav.js
-│   │   └── quarto-search
-│   │       ├── autocomplete.umd.js
-│   │       ├── fuse.min.js
-│   │       └── quarto-search.js
-│   └── styles.css
-├── ejercicios
-├── estructura_report.txt
-├── index.aux
-├── index.log
-├── index.pdf
-├── index.qmd
-├── index.tex
-├── index.toc
-├── LICENSE
-├── main.tex
-├── _metadata.yml
-├── preamble.tex
-├── prefacio.qmd
-├── quarto-1.4.553-linux-amd64.deb
-├── _quarto.yml
-├── _quarto.yml.backup
-├── _quarto.yml.backup.original
-├── README.md
-├── referencias
-│   ├── apa.csl
-│   └── bibliografia.bib
-├── referencias.bib
-├── requirements.txt
-├── scripts
-│   ├── detectar_archivos_faltantes.py
-│   ├── expandir_estructura.py
-│   ├── migracion_completa.sh
-│   └── migracion_gradual.py
-├── styles.css
-├── template_capitulo.qmd
-├── teoria
-│   ├── economia matematica
-│   └── microeconomia
-│       └── optimizacion_basica.txt.txt
-└── uptc-logo.png
+Listado de rutas de carpetas
+El número de serie del volumen es 7C8D-B18B
+C:.
+├───.jupyter_cache
+│   └───executed
+│       └───07ae6302bca2620fe36ce2902cb24eff
+├───.quarto
+│   ├───embed
+│   │   ├───.quarto
+│   │   │   └───embed
+│   │   │       ├───apendices
+│   │   │       ├───capitulos
+│   │   │       └───partes
+│   │   ├───apendices
+│   │   ├───capitulos
+│   │   ├───partes
+│   │   └───teoria
+│   │       ├───economia-matematica
+│   │       └───microeconomia
+│   ├───idx
+│   │   ├───apendices
+│   │   ├───capitulos
+│   │   ├───partes
+│   │   └───teoria
+│   │       ├───economia-matematica
+│   │       └───microeconomia
+│   ├───preview
+│   ├───project-cache
+│   ├───quarto-session-temp3c32a7aa3c9f482f
+│   ├───quarto-session-tempa60f6351eac607ee
+│   ├───quarto-session-tempb180eaeea0d3d75f
+│   ├───quarto-session-tempb60235205bf5916e
+│   ├───quarto-session-tempf1ebe9e2e1e0c69e
+│   ├───xref
+│   └───_freeze
+│       ├───capitulos
+│       │   ├───01-naturaleza-economia-matematica
+│       │   │   ├───execute-results
+│       │   │   └───figure-html
+│       │   └───02-modelos-economicos
+│       │       ├───execute-results
+│       │       └───figure-html
+│       ├───index
+│       │   ├───execute-results
+│       │   └───figure-html
+│       ├───partes
+│       │   └───parte-uno
+│       │       ├───execute-results
+│       │       └───figure-html
+│       └───site_libs
+│           ├───bootstrap
+│           ├───clipboard
+│           ├───manuscript-notebook
+│           ├───quarto-contrib
+│           │   └───glightbox
+│           └───quarto-html
+│               ├───axe
+│               └───tabsets
+├───.venv
+│   ├───Include
+│   │   └───site
+│   │       └───python3.14
+│   │           └───greenlet
+│   ├───Lib
+│   │   └───site-packages
+│   │       ├───asttokens
+│   │       │   └───__pycache__
+│   │       ├───asttokens-3.0.1.dist-info
+│   │       │   └───licenses
+│   │       ├───attr
+│   │       │   └───__pycache__
+│   │       ├───attrs
+│   │       │   └───__pycache__
+│   │       ├───attrs-25.4.0.dist-info
+│   │       │   └───licenses
+│   │       ├───click
+│   │       │   └───__pycache__
+│   │       ├───click-8.3.1.dist-info
+│   │       │   └───licenses
+│   │       ├───colorama
+│   │       │   ├───tests
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───colorama-0.4.6.dist-info
+│   │       │   └───licenses
+│   │       ├───comm
+│   │       │   └───__pycache__
+│   │       ├───comm-0.2.3.dist-info
+│   │       │   └───licenses
+│   │       ├───contourpy
+│   │       │   ├───util
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───contourpy-1.3.3.dist-info
+│   │       ├───cycler
+│   │       │   └───__pycache__
+│   │       ├───cycler-0.12.1.dist-info
+│   │       ├───dateutil
+│   │       │   ├───parser
+│   │       │   │   └───__pycache__
+│   │       │   ├───tz
+│   │       │   │   └───__pycache__
+│   │       │   ├───zoneinfo
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───debugpy
+│   │       │   ├───adapter
+│   │       │   │   └───__pycache__
+│   │       │   ├───common
+│   │       │   │   └───__pycache__
+│   │       │   ├───launcher
+│   │       │   │   └───__pycache__
+│   │       │   ├───server
+│   │       │   │   └───__pycache__
+│   │       │   ├───_vendored
+│   │       │   │   ├───pydevd
+│   │       │   │   │   ├───pydevd_attach_to_process
+│   │       │   │   │   │   ├───common
+│   │       │   │   │   │   ├───linux_and_mac
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   ├───winappdbg
+│   │       │   │   │   │   │   ├───win32
+│   │       │   │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   ├───windows
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───pydevd_plugins
+│   │       │   │   │   │   ├───extensions
+│   │       │   │   │   │   │   ├───types
+│   │       │   │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───pydev_ipython
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───pydev_sitecustomize
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───_pydevd_bundle
+│   │       │   │   │   │   ├───pydevd_concurrency_analyser
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   ├───_debug_adapter
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───_pydevd_frame_eval
+│   │       │   │   │   │   ├───vendored
+│   │       │   │   │   │   │   ├───bytecode
+│   │       │   │   │   │   │   │   ├───tests
+│   │       │   │   │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───_pydevd_sys_monitoring
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───_pydev_bundle
+│   │       │   │   │   │   ├───fsnotify
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───_pydev_runfiles
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───debugpy-1.8.17.dist-info
+│   │       │   └───licenses
+│   │       ├───decorator-5.2.1.dist-info
+│   │       ├───executing
+│   │       │   └───__pycache__
+│   │       ├───executing-2.2.1.dist-info
+│   │       ├───fastjsonschema
+│   │       │   └───__pycache__
+│   │       ├───fastjsonschema-2.21.2.dist-info
+│   │       │   └───licenses
+│   │       ├───fontTools
+│   │       │   ├───cffLib
+│   │       │   │   └───__pycache__
+│   │       │   ├───colorLib
+│   │       │   │   └───__pycache__
+│   │       │   ├───config
+│   │       │   │   └───__pycache__
+│   │       │   ├───cu2qu
+│   │       │   │   └───__pycache__
+│   │       │   ├───designspaceLib
+│   │       │   │   └───__pycache__
+│   │       │   ├───encodings
+│   │       │   │   └───__pycache__
+│   │       │   ├───feaLib
+│   │       │   │   └───__pycache__
+│   │       │   ├───merge
+│   │       │   │   └───__pycache__
+│   │       │   ├───misc
+│   │       │   │   ├───filesystem
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───plistlib
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───mtiLib
+│   │       │   │   └───__pycache__
+│   │       │   ├───otlLib
+│   │       │   │   ├───optimize
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───pens
+│   │       │   │   └───__pycache__
+│   │       │   ├───qu2cu
+│   │       │   │   └───__pycache__
+│   │       │   ├───subset
+│   │       │   │   └───__pycache__
+│   │       │   ├───svgLib
+│   │       │   │   ├───path
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───t1Lib
+│   │       │   │   └───__pycache__
+│   │       │   ├───ttLib
+│   │       │   │   ├───tables
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───ufoLib
+│   │       │   │   └───__pycache__
+│   │       │   ├───unicodedata
+│   │       │   │   └───__pycache__
+│   │       │   ├───varLib
+│   │       │   │   ├───avar
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───instancer
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───voltLib
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───fonttools-4.60.1.dist-info
+│   │       │   └───licenses
+│   │       ├───greenlet
+│   │       │   ├───platform
+│   │       │   │   └───__pycache__
+│   │       │   ├───tests
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───greenlet-3.2.4.dist-info
+│   │       │   └───licenses
+│   │       ├───importlib_metadata
+│   │       │   ├───compat
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───importlib_metadata-8.7.0.dist-info
+│   │       │   └───licenses
+│   │       ├───ipykernel
+│   │       │   ├───comm
+│   │       │   │   └───__pycache__
+│   │       │   ├───gui
+│   │       │   │   └───__pycache__
+│   │       │   ├───inprocess
+│   │       │   │   └───__pycache__
+│   │       │   ├───pylab
+│   │       │   │   └───__pycache__
+│   │       │   ├───resources
+│   │       │   └───__pycache__
+│   │       ├───ipykernel-7.1.0.dist-info
+│   │       │   └───licenses
+│   │       ├───IPython
+│   │       │   ├───core
+│   │       │   │   ├───magics
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───profile
+│   │       │   │   └───__pycache__
+│   │       │   ├───extensions
+│   │       │   │   ├───deduperreload
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───external
+│   │       │   │   └───__pycache__
+│   │       │   ├───lib
+│   │       │   │   └───__pycache__
+│   │       │   ├───sphinxext
+│   │       │   │   └───__pycache__
+│   │       │   ├───terminal
+│   │       │   │   ├───pt_inputhooks
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───shortcuts
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───testing
+│   │       │   │   ├───plugin
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───utils
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───ipython-9.7.0.dist-info
+│   │       │   └───licenses
+│   │       ├───ipython_pygments_lexers-1.1.1.dist-info
+│   │       ├───jedi
+│   │       │   ├───api
+│   │       │   │   ├───refactoring
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───inference
+│   │       │   │   ├───compiled
+│   │       │   │   │   ├───subprocess
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───gradual
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───value
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───plugins
+│   │       │   │   └───__pycache__
+│   │       │   ├───third_party
+│   │       │   │   ├───django-stubs
+│   │       │   │   │   └───django-stubs
+│   │       │   │   │       ├───apps
+│   │       │   │   │       ├───conf
+│   │       │   │   │       │   ├───locale
+│   │       │   │   │       │   └───urls
+│   │       │   │   │       ├───contrib
+│   │       │   │   │       │   ├───admin
+│   │       │   │   │       │   │   ├───templatetags
+│   │       │   │   │       │   │   └───views
+│   │       │   │   │       │   ├───admindocs
+│   │       │   │   │       │   ├───auth
+│   │       │   │   │       │   │   ├───handlers
+│   │       │   │   │       │   │   └───management
+│   │       │   │   │       │   │       └───commands
+│   │       │   │   │       │   ├───contenttypes
+│   │       │   │   │       │   │   └───management
+│   │       │   │   │       │   │       └───commands
+│   │       │   │   │       │   ├───flatpages
+│   │       │   │   │       │   │   └───templatetags
+│   │       │   │   │       │   ├───gis
+│   │       │   │   │       │   │   └───db
+│   │       │   │   │       │   │       └───models
+│   │       │   │   │       │   ├───humanize
+│   │       │   │   │       │   │   └───templatetags
+│   │       │   │   │       │   ├───messages
+│   │       │   │   │       │   │   └───storage
+│   │       │   │   │       │   ├───postgres
+│   │       │   │   │       │   │   ├───aggregates
+│   │       │   │   │       │   │   └───fields
+│   │       │   │   │       │   ├───redirects
+│   │       │   │   │       │   ├───sessions
+│   │       │   │   │       │   │   ├───backends
+│   │       │   │   │       │   │   └───management
+│   │       │   │   │       │   │       └───commands
+│   │       │   │   │       │   ├───sitemaps
+│   │       │   │   │       │   │   └───management
+│   │       │   │   │       │   │       └───commands
+│   │       │   │   │       │   ├───sites
+│   │       │   │   │       │   ├───staticfiles
+│   │       │   │   │       │   │   ├───management
+│   │       │   │   │       │   │   │   └───commands
+│   │       │   │   │       │   │   └───templatetags
+│   │       │   │   │       │   └───syndication
+│   │       │   │   │       ├───core
+│   │       │   │   │       │   ├───cache
+│   │       │   │   │       │   │   └───backends
+│   │       │   │   │       │   ├───checks
+│   │       │   │   │       │   │   └───security
+│   │       │   │   │       │   ├───files
+│   │       │   │   │       │   ├───handlers
+│   │       │   │   │       │   ├───mail
+│   │       │   │   │       │   │   └───backends
+│   │       │   │   │       │   ├───management
+│   │       │   │   │       │   │   └───commands
+│   │       │   │   │       │   ├───serializers
+│   │       │   │   │       │   └───servers
+│   │       │   │   │       ├───db
+│   │       │   │   │       │   ├───backends
+│   │       │   │   │       │   │   ├───base
+│   │       │   │   │       │   │   ├───dummy
+│   │       │   │   │       │   │   ├───mysql
+│   │       │   │   │       │   │   ├───postgresql
+│   │       │   │   │       │   │   └───sqlite3
+│   │       │   │   │       │   ├───migrations
+│   │       │   │   │       │   │   └───operations
+│   │       │   │   │       │   └───models
+│   │       │   │   │       │       ├───fields
+│   │       │   │   │       │       ├───functions
+│   │       │   │   │       │       └───sql
+│   │       │   │   │       ├───dispatch
+│   │       │   │   │       ├───forms
+│   │       │   │   │       ├───http
+│   │       │   │   │       ├───middleware
+│   │       │   │   │       ├───template
+│   │       │   │   │       │   ├───backends
+│   │       │   │   │       │   └───loaders
+│   │       │   │   │       ├───templatetags
+│   │       │   │   │       ├───test
+│   │       │   │   │       ├───urls
+│   │       │   │   │       ├───utils
+│   │       │   │   │       │   └───translation
+│   │       │   │   │       └───views
+│   │       │   │   │           ├───decorators
+│   │       │   │   │           └───generic
+│   │       │   │   └───typeshed
+│   │       │   │       ├───stdlib
+│   │       │   │       │   ├───2
+│   │       │   │       │   │   ├───distutils
+│   │       │   │       │   │   │   └───command
+│   │       │   │       │   │   ├───email
+│   │       │   │       │   │   │   └───mime
+│   │       │   │       │   │   ├───encodings
+│   │       │   │       │   │   ├───multiprocessing
+│   │       │   │       │   │   │   └───dummy
+│   │       │   │       │   │   └───os
+│   │       │   │       │   ├───2and3
+│   │       │   │       │   │   ├───ctypes
+│   │       │   │       │   │   ├───curses
+│   │       │   │       │   │   ├───ensurepip
+│   │       │   │       │   │   ├───lib2to3
+│   │       │   │       │   │   │   └───pgen2
+│   │       │   │       │   │   ├───logging
+│   │       │   │       │   │   ├───msilib
+│   │       │   │       │   │   ├───pydoc_data
+│   │       │   │       │   │   ├───pyexpat
+│   │       │   │       │   │   ├───sqlite3
+│   │       │   │       │   │   ├───wsgiref
+│   │       │   │       │   │   ├───xml
+│   │       │   │       │   │   │   ├───dom
+│   │       │   │       │   │   │   ├───etree
+│   │       │   │       │   │   │   ├───parsers
+│   │       │   │       │   │   │   │   └───expat
+│   │       │   │       │   │   │   └───sax
+│   │       │   │       │   │   └───_typeshed
+│   │       │   │       │   ├───3
+│   │       │   │       │   │   ├───asyncio
+│   │       │   │       │   │   ├───collections
+│   │       │   │       │   │   ├───concurrent
+│   │       │   │       │   │   │   └───futures
+│   │       │   │       │   │   ├───dbm
+│   │       │   │       │   │   ├───distutils
+│   │       │   │       │   │   │   └───command
+│   │       │   │       │   │   ├───email
+│   │       │   │       │   │   │   └───mime
+│   │       │   │       │   │   ├───encodings
+│   │       │   │       │   │   ├───html
+│   │       │   │       │   │   ├───http
+│   │       │   │       │   │   ├───importlib
+│   │       │   │       │   │   ├───json
+│   │       │   │       │   │   ├───multiprocessing
+│   │       │   │       │   │   │   └───dummy
+│   │       │   │       │   │   ├───os
+│   │       │   │       │   │   ├───tkinter
+│   │       │   │       │   │   ├───unittest
+│   │       │   │       │   │   ├───urllib
+│   │       │   │       │   │   ├───venv
+│   │       │   │       │   │   └───xmlrpc
+│   │       │   │       │   ├───3.7
+│   │       │   │       │   └───3.9
+│   │       │   │       │       └───zoneinfo
+│   │       │   │       └───third_party
+│   │       │   │           ├───2
+│   │       │   │           │   ├───concurrent
+│   │       │   │           │   │   └───futures
+│   │       │   │           │   ├───fb303
+│   │       │   │           │   ├───kazoo
+│   │       │   │           │   │   └───recipe
+│   │       │   │           │   ├───OpenSSL
+│   │       │   │           │   ├───routes
+│   │       │   │           │   ├───scribe
+│   │       │   │           │   ├───six
+│   │       │   │           │   │   └───moves
+│   │       │   │           │   │       └───urllib
+│   │       │   │           │   └───tornado
+│   │       │   │           ├───2and3
+│   │       │   │           │   ├───atomicwrites
+│   │       │   │           │   ├───attr
+│   │       │   │           │   ├───backports
+│   │       │   │           │   ├───bleach
+│   │       │   │           │   ├───boto
+│   │       │   │           │   │   ├───ec2
+│   │       │   │           │   │   ├───elb
+│   │       │   │           │   │   ├───kms
+│   │       │   │           │   │   └───s3
+│   │       │   │           │   ├───cachetools
+│   │       │   │           │   ├───characteristic
+│   │       │   │           │   ├───chardet
+│   │       │   │           │   ├───click
+│   │       │   │           │   ├───cryptography
+│   │       │   │           │   │   ├───hazmat
+│   │       │   │           │   │   │   ├───backends
+│   │       │   │           │   │   │   ├───bindings
+│   │       │   │           │   │   │   │   └───openssl
+│   │       │   │           │   │   │   └───primitives
+│   │       │   │           │   │   │       ├───asymmetric
+│   │       │   │           │   │   │       ├───ciphers
+│   │       │   │           │   │   │       ├───kdf
+│   │       │   │           │   │   │       ├───serialization
+│   │       │   │           │   │   │       └───twofactor
+│   │       │   │           │   │   └───x509
+│   │       │   │           │   ├───datetimerange
+│   │       │   │           │   ├───dateutil
+│   │       │   │           │   │   └───tz
+│   │       │   │           │   ├───deprecated
+│   │       │   │           │   ├───emoji
+│   │       │   │           │   ├───flask
+│   │       │   │           │   │   └───json
+│   │       │   │           │   ├───geoip2
+│   │       │   │           │   ├───google
+│   │       │   │           │   │   └───protobuf
+│   │       │   │           │   │       ├───compiler
+│   │       │   │           │   │       ├───internal
+│   │       │   │           │   │       └───util
+│   │       │   │           │   ├───jinja2
+│   │       │   │           │   ├───markdown
+│   │       │   │           │   │   └───extensions
+│   │       │   │           │   ├───markupsafe
+│   │       │   │           │   ├───maxminddb
+│   │       │   │           │   ├───nmap
+│   │       │   │           │   ├───paramiko
+│   │       │   │           │   ├───pymysql
+│   │       │   │           │   │   └───constants
+│   │       │   │           │   ├───pynamodb
+│   │       │   │           │   │   └───connection
+│   │       │   │           │   ├───pytz
+│   │       │   │           │   ├───pyVmomi
+│   │       │   │           │   │   ├───vim
+│   │       │   │           │   │   └───vmodl
+│   │       │   │           │   ├───redis
+│   │       │   │           │   ├───requests
+│   │       │   │           │   │   └───packages
+│   │       │   │           │   │       └───urllib3
+│   │       │   │           │   │           ├───contrib
+│   │       │   │           │   │           ├───packages
+│   │       │   │           │   │           │   └───ssl_match_hostname
+│   │       │   │           │   │           └───util
+│   │       │   │           │   ├───retry
+│   │       │   │           │   ├───simplejson
+│   │       │   │           │   ├───slugify
+│   │       │   │           │   ├───tzlocal
+│   │       │   │           │   ├───werkzeug
+│   │       │   │           │   │   ├───contrib
+│   │       │   │           │   │   ├───debug
+│   │       │   │           │   │   └───middleware
+│   │       │   │           │   └───yaml
+│   │       │   │           └───3
+│   │       │   │               ├───aiofiles
+│   │       │   │               │   └───threadpool
+│   │       │   │               ├───docutils
+│   │       │   │               │   └───parsers
+│   │       │   │               │       └───rst
+│   │       │   │               ├───filelock
+│   │       │   │               ├───freezegun
+│   │       │   │               ├───jwt
+│   │       │   │               │   └───contrib
+│   │       │   │               │       └───algorithms
+│   │       │   │               ├───pkg_resources
+│   │       │   │               ├───pyrfc3339
+│   │       │   │               ├───six
+│   │       │   │               │   └───moves
+│   │       │   │               │       └───urllib
+│   │       │   │               ├───typed_ast
+│   │       │   │               └───waitress
+│   │       │   └───__pycache__
+│   │       ├───jedi-0.19.2.dist-info
+│   │       ├───jsonschema
+│   │       │   ├───benchmarks
+│   │       │   │   ├───issue232
+│   │       │   │   └───__pycache__
+│   │       │   ├───tests
+│   │       │   │   ├───typing
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───jsonschema-4.25.1.dist-info
+│   │       │   └───licenses
+│   │       ├───jsonschema_specifications
+│   │       │   ├───schemas
+│   │       │   │   ├───draft201909
+│   │       │   │   │   └───vocabularies
+│   │       │   │   ├───draft202012
+│   │       │   │   │   └───vocabularies
+│   │       │   │   ├───draft3
+│   │       │   │   ├───draft4
+│   │       │   │   ├───draft6
+│   │       │   │   └───draft7
+│   │       │   ├───tests
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───jsonschema_specifications-2025.9.1.dist-info
+│   │       │   └───licenses
+│   │       ├───jupyter_cache
+│   │       │   ├───cache
+│   │       │   │   └───__pycache__
+│   │       │   ├───cli
+│   │       │   │   ├───commands
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───executors
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───jupyter_cache-1.0.1.dist-info
+│   │       ├───jupyter_client
+│   │       │   ├───asynchronous
+│   │       │   │   └───__pycache__
+│   │       │   ├───blocking
+│   │       │   │   └───__pycache__
+│   │       │   ├───ioloop
+│   │       │   │   └───__pycache__
+│   │       │   ├───provisioning
+│   │       │   │   └───__pycache__
+│   │       │   ├───ssh
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───jupyter_client-8.6.3.dist-info
+│   │       │   └───licenses
+│   │       ├───jupyter_core
+│   │       │   ├───utils
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───jupyter_core-5.9.1.dist-info
+│   │       │   └───licenses
+│   │       ├───kiwisolver
+│   │       │   └───__pycache__
+│   │       ├───kiwisolver-1.4.9.dist-info
+│   │       │   └───licenses
+│   │       ├───matplotlib
+│   │       │   ├───axes
+│   │       │   │   └───__pycache__
+│   │       │   ├───backends
+│   │       │   │   ├───qt_editor
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───web_backend
+│   │       │   │   │   ├───css
+│   │       │   │   │   └───js
+│   │       │   │   └───__pycache__
+│   │       │   ├───mpl-data
+│   │       │   │   ├───fonts
+│   │       │   │   │   ├───afm
+│   │       │   │   │   ├───pdfcorefonts
+│   │       │   │   │   └───ttf
+│   │       │   │   ├───images
+│   │       │   │   ├───plot_directive
+│   │       │   │   ├───sample_data
+│   │       │   │   │   └───axes_grid
+│   │       │   │   └───stylelib
+│   │       │   ├───projections
+│   │       │   │   └───__pycache__
+│   │       │   ├───sphinxext
+│   │       │   │   └───__pycache__
+│   │       │   ├───style
+│   │       │   │   └───__pycache__
+│   │       │   ├───testing
+│   │       │   │   ├───jpl_units
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───tests
+│   │       │   │   └───__pycache__
+│   │       │   ├───tri
+│   │       │   │   └───__pycache__
+│   │       │   ├───_api
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───matplotlib-3.10.7.dist-info
+│   │       ├───matplotlib_inline
+│   │       │   └───__pycache__
+│   │       ├───matplotlib_inline-0.2.1.dist-info
+│   │       │   └───licenses
+│   │       ├───mpl_toolkits
+│   │       │   ├───axes_grid1
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───axisartist
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   └───mplot3d
+│   │       │       ├───tests
+│   │       │       │   └───__pycache__
+│   │       │       └───__pycache__
+│   │       ├───mpmath
+│   │       │   ├───calculus
+│   │       │   │   └───__pycache__
+│   │       │   ├───functions
+│   │       │   │   └───__pycache__
+│   │       │   ├───libmp
+│   │       │   │   └───__pycache__
+│   │       │   ├───matrices
+│   │       │   │   └───__pycache__
+│   │       │   ├───tests
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───mpmath-1.3.0.dist-info
+│   │       ├───nbclient
+│   │       │   └───__pycache__
+│   │       ├───nbclient-0.10.2.dist-info
+│   │       │   └───licenses
+│   │       ├───nbformat
+│   │       │   ├───corpus
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───v1
+│   │       │   │   └───__pycache__
+│   │       │   ├───v2
+│   │       │   │   └───__pycache__
+│   │       │   ├───v3
+│   │       │   │   └───__pycache__
+│   │       │   ├───v4
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───nbformat-5.10.4.dist-info
+│   │       │   └───licenses
+│   │       ├───nest_asyncio-1.6.0.dist-info
+│   │       ├───numpy
+│   │       │   ├───char
+│   │       │   │   └───__pycache__
+│   │       │   ├───core
+│   │       │   │   └───__pycache__
+│   │       │   ├───ctypeslib
+│   │       │   │   └───__pycache__
+│   │       │   ├───doc
+│   │       │   │   └───__pycache__
+│   │       │   ├───f2py
+│   │       │   │   ├───src
+│   │       │   │   ├───tests
+│   │       │   │   │   ├───src
+│   │       │   │   │   │   ├───abstract_interface
+│   │       │   │   │   │   ├───array_from_pyobj
+│   │       │   │   │   │   ├───assumed_shape
+│   │       │   │   │   │   ├───block_docstring
+│   │       │   │   │   │   ├───callback
+│   │       │   │   │   │   ├───cli
+│   │       │   │   │   │   ├───common
+│   │       │   │   │   │   ├───crackfortran
+│   │       │   │   │   │   ├───f2cmap
+│   │       │   │   │   │   ├───isocintrin
+│   │       │   │   │   │   ├───kind
+│   │       │   │   │   │   ├───mixed
+│   │       │   │   │   │   ├───modules
+│   │       │   │   │   │   │   ├───gh25337
+│   │       │   │   │   │   │   └───gh26920
+│   │       │   │   │   │   ├───negative_bounds
+│   │       │   │   │   │   ├───parameter
+│   │       │   │   │   │   ├───quoted_character
+│   │       │   │   │   │   ├───regression
+│   │       │   │   │   │   ├───return_character
+│   │       │   │   │   │   ├───return_complex
+│   │       │   │   │   │   ├───return_integer
+│   │       │   │   │   │   ├───return_logical
+│   │       │   │   │   │   ├───return_real
+│   │       │   │   │   │   ├───routines
+│   │       │   │   │   │   ├───size
+│   │       │   │   │   │   ├───string
+│   │       │   │   │   │   └───value_attrspec
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───_backends
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───fft
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───lib
+│   │       │   │   ├───tests
+│   │       │   │   │   ├───data
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───linalg
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───ma
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───matrixlib
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───polynomial
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───random
+│   │       │   │   ├───lib
+│   │       │   │   ├───tests
+│   │       │   │   │   ├───data
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───_examples
+│   │       │   │   │   ├───cffi
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───cython
+│   │       │   │   │   └───numba
+│   │       │   │   │       └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───rec
+│   │       │   │   └───__pycache__
+│   │       │   ├───strings
+│   │       │   │   └───__pycache__
+│   │       │   ├───testing
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───_private
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───tests
+│   │       │   │   └───__pycache__
+│   │       │   ├───typing
+│   │       │   │   ├───tests
+│   │       │   │   │   ├───data
+│   │       │   │   │   │   ├───fail
+│   │       │   │   │   │   ├───misc
+│   │       │   │   │   │   ├───pass
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───reveal
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───_core
+│   │       │   │   ├───include
+│   │       │   │   │   └───numpy
+│   │       │   │   │       └───random
+│   │       │   │   ├───lib
+│   │       │   │   │   ├───npy-pkg-config
+│   │       │   │   │   └───pkgconfig
+│   │       │   │   ├───tests
+│   │       │   │   │   ├───data
+│   │       │   │   │   ├───examples
+│   │       │   │   │   │   ├───cython
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───limited_api
+│   │       │   │   │   │       └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───_pyinstaller
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───_typing
+│   │       │   │   └───__pycache__
+│   │       │   ├───_utils
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───numpy-2.3.5.dist-info
+│   │       ├───numpy.libs
+│   │       ├───packaging
+│   │       │   ├───licenses
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───packaging-25.0.dist-info
+│   │       │   └───licenses
+│   │       ├───pandas
+│   │       │   ├───api
+│   │       │   │   ├───extensions
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───indexers
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───interchange
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───types
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───typing
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───arrays
+│   │       │   │   └───__pycache__
+│   │       │   ├───compat
+│   │       │   │   ├───numpy
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───core
+│   │       │   │   ├───arrays
+│   │       │   │   │   ├───arrow
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───sparse
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───array_algos
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───computation
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───dtypes
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───groupby
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───indexers
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───indexes
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───interchange
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───internals
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───methods
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───ops
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───reshape
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───sparse
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───strings
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tools
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───util
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───window
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───_numba
+│   │       │   │   │   ├───kernels
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───errors
+│   │       │   │   └───__pycache__
+│   │       │   ├───io
+│   │       │   │   ├───clipboard
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───excel
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───formats
+│   │       │   │   │   ├───templates
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───json
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───parsers
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───sas
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───plotting
+│   │       │   │   ├───_matplotlib
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───tests
+│   │       │   │   ├───api
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───apply
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───arithmetic
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───arrays
+│   │       │   │   │   ├───boolean
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───categorical
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───datetimes
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───floating
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───integer
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───interval
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───masked
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───numpy_
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───period
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───sparse
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───string_
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───timedeltas
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───base
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───computation
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───config
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───construction
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───copy_view
+│   │       │   │   │   ├───index
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───dtypes
+│   │       │   │   │   ├───cast
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───extension
+│   │       │   │   │   ├───array_with_attr
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───base
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───date
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───decimal
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───json
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───list
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───frame
+│   │       │   │   │   ├───constructors
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───indexing
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───methods
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───generic
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───groupby
+│   │       │   │   │   ├───aggregate
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───methods
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───transform
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───indexes
+│   │       │   │   │   ├───base_class
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───categorical
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───datetimelike_
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───datetimes
+│   │       │   │   │   │   ├───methods
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───interval
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───multi
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───numeric
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───object
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───period
+│   │       │   │   │   │   ├───methods
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───ranges
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───string
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───timedeltas
+│   │       │   │   │   │   ├───methods
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───indexing
+│   │       │   │   │   ├───interval
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───multiindex
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───interchange
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───internals
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───io
+│   │       │   │   │   ├───excel
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───formats
+│   │       │   │   │   │   ├───style
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───json
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───parser
+│   │       │   │   │   │   ├───common
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   ├───dtypes
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   ├───usecols
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───pytables
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───sas
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───xml
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───libs
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───plotting
+│   │       │   │   │   ├───frame
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───reductions
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───resample
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───reshape
+│   │       │   │   │   ├───concat
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───merge
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───scalar
+│   │       │   │   │   ├───interval
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───period
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───timedelta
+│   │       │   │   │   │   ├───methods
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───timestamp
+│   │       │   │   │   │   ├───methods
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───series
+│   │       │   │   │   ├───accessors
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───indexing
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───methods
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───strings
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tools
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tseries
+│   │       │   │   │   ├───frequencies
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───holiday
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───offsets
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tslibs
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───util
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───window
+│   │       │   │   │   ├───moments
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───tseries
+│   │       │   │   └───__pycache__
+│   │       │   ├───util
+│   │       │   │   ├───version
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───_config
+│   │       │   │   └───__pycache__
+│   │       │   ├───_libs
+│   │       │   │   ├───tslibs
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───window
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───_testing
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───pandas-2.3.3.dist-info
+│   │       ├───pandas.libs
+│   │       ├───parso
+│   │       │   ├───pgen2
+│   │       │   │   └───__pycache__
+│   │       │   ├───python
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───parso-0.8.5.dist-info
+│   │       │   └───licenses
+│   │       ├───PIL
+│   │       │   └───__pycache__
+│   │       ├───pillow-12.0.0.dist-info
+│   │       │   └───licenses
+│   │       ├───pip
+│   │       │   ├───_internal
+│   │       │   │   ├───cli
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───commands
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───distributions
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───index
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───locations
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───metadata
+│   │       │   │   │   ├───importlib
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───models
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───network
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───operations
+│   │       │   │   │   ├───build
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───install
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───req
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───resolution
+│   │       │   │   │   ├───legacy
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───resolvelib
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───utils
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───vcs
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───_vendor
+│   │       │   │   ├───cachecontrol
+│   │       │   │   │   ├───caches
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───certifi
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───dependency_groups
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───distlib
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───distro
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───idna
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───msgpack
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───packaging
+│   │       │   │   │   ├───licenses
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───pkg_resources
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───platformdirs
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───pygments
+│   │       │   │   │   ├───filters
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───formatters
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───lexers
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───styles
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───pyproject_hooks
+│   │       │   │   │   ├───_in_process
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───requests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───resolvelib
+│   │       │   │   │   ├───resolvers
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───rich
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tomli
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tomli_w
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───truststore
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───urllib3
+│   │       │   │   │   ├───contrib
+│   │       │   │   │   │   ├───_securetransport
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───packages
+│   │       │   │   │   │   ├───backports
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───util
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───pip-25.3.dist-info
+│   │       │   └───licenses
+│   │       │       └───src
+│   │       │           └───pip
+│   │       │               └───_vendor
+│   │       │                   ├───cachecontrol
+│   │       │                   ├───certifi
+│   │       │                   ├───dependency_groups
+│   │       │                   ├───distlib
+│   │       │                   ├───distro
+│   │       │                   ├───idna
+│   │       │                   ├───msgpack
+│   │       │                   ├───packaging
+│   │       │                   ├───pkg_resources
+│   │       │                   ├───platformdirs
+│   │       │                   ├───pygments
+│   │       │                   ├───pyproject_hooks
+│   │       │                   ├───requests
+│   │       │                   ├───resolvelib
+│   │       │                   ├───rich
+│   │       │                   ├───tomli
+│   │       │                   ├───tomli_w
+│   │       │                   ├───truststore
+│   │       │                   └───urllib3
+│   │       ├───platformdirs
+│   │       │   └───__pycache__
+│   │       ├───platformdirs-4.5.0.dist-info
+│   │       │   └───licenses
+│   │       ├───prompt_toolkit
+│   │       │   ├───application
+│   │       │   │   └───__pycache__
+│   │       │   ├───clipboard
+│   │       │   │   └───__pycache__
+│   │       │   ├───completion
+│   │       │   │   └───__pycache__
+│   │       │   ├───contrib
+│   │       │   │   ├───completers
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───regular_languages
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───ssh
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───telnet
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───eventloop
+│   │       │   │   └───__pycache__
+│   │       │   ├───filters
+│   │       │   │   └───__pycache__
+│   │       │   ├───formatted_text
+│   │       │   │   └───__pycache__
+│   │       │   ├───input
+│   │       │   │   └───__pycache__
+│   │       │   ├───key_binding
+│   │       │   │   ├───bindings
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───layout
+│   │       │   │   └───__pycache__
+│   │       │   ├───lexers
+│   │       │   │   └───__pycache__
+│   │       │   ├───output
+│   │       │   │   └───__pycache__
+│   │       │   ├───shortcuts
+│   │       │   │   ├───progress_bar
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───styles
+│   │       │   │   └───__pycache__
+│   │       │   ├───widgets
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───prompt_toolkit-3.0.52.dist-info
+│   │       │   └───licenses
+│   │       ├───psutil
+│   │       │   ├───tests
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───psutil-7.1.3.dist-info
+│   │       ├───pure_eval
+│   │       │   └───__pycache__
+│   │       ├───pure_eval-0.2.3.dist-info
+│   │       ├───pygments
+│   │       │   ├───filters
+│   │       │   │   └───__pycache__
+│   │       │   ├───formatters
+│   │       │   │   └───__pycache__
+│   │       │   ├───lexers
+│   │       │   │   └───__pycache__
+│   │       │   ├───styles
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───pygments-2.19.2.dist-info
+│   │       │   └───licenses
+│   │       ├───pyparsing
+│   │       │   ├───diagram
+│   │       │   │   └───__pycache__
+│   │       │   ├───tools
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───pyparsing-3.2.5.dist-info
+│   │       │   └───licenses
+│   │       ├───python_dateutil-2.9.0.post0.dist-info
+│   │       ├───pytz
+│   │       │   ├───zoneinfo
+│   │       │   │   ├───Africa
+│   │       │   │   ├───America
+│   │       │   │   │   ├───Argentina
+│   │       │   │   │   ├───Indiana
+│   │       │   │   │   ├───Kentucky
+│   │       │   │   │   └───North_Dakota
+│   │       │   │   ├───Antarctica
+│   │       │   │   ├───Arctic
+│   │       │   │   ├───Asia
+│   │       │   │   ├───Atlantic
+│   │       │   │   ├───Australia
+│   │       │   │   ├───Brazil
+│   │       │   │   ├───Canada
+│   │       │   │   ├───Chile
+│   │       │   │   ├───Etc
+│   │       │   │   ├───Europe
+│   │       │   │   ├───Indian
+│   │       │   │   ├───Mexico
+│   │       │   │   ├───Pacific
+│   │       │   │   └───US
+│   │       │   └───__pycache__
+│   │       ├───pytz-2025.2.dist-info
+│   │       ├───pyyaml-6.0.3.dist-info
+│   │       │   └───licenses
+│   │       ├───pyzmq-27.1.0.dist-info
+│   │       │   └───licenses
+│   │       │       └───licenses
+│   │       ├───referencing
+│   │       │   ├───tests
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───referencing-0.37.0.dist-info
+│   │       │   └───licenses
+│   │       ├───rpds
+│   │       │   └───__pycache__
+│   │       ├───rpds_py-0.29.0.dist-info
+│   │       │   └───licenses
+│   │       ├───six-1.17.0.dist-info
+│   │       ├───sqlalchemy
+│   │       │   ├───connectors
+│   │       │   │   └───__pycache__
+│   │       │   ├───cyextension
+│   │       │   │   └───__pycache__
+│   │       │   ├───dialects
+│   │       │   │   ├───mssql
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───mysql
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───oracle
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───postgresql
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───sqlite
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───engine
+│   │       │   │   └───__pycache__
+│   │       │   ├───event
+│   │       │   │   └───__pycache__
+│   │       │   ├───ext
+│   │       │   │   ├───asyncio
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───declarative
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───mypy
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───future
+│   │       │   │   └───__pycache__
+│   │       │   ├───orm
+│   │       │   │   └───__pycache__
+│   │       │   ├───pool
+│   │       │   │   └───__pycache__
+│   │       │   ├───sql
+│   │       │   │   └───__pycache__
+│   │       │   ├───testing
+│   │       │   │   ├───fixtures
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───plugin
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───suite
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───util
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───sqlalchemy-2.0.44.dist-info
+│   │       │   └───licenses
+│   │       ├───stack_data
+│   │       │   └───__pycache__
+│   │       ├───stack_data-0.6.3.dist-info
+│   │       ├───sympy
+│   │       │   ├───algebras
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───assumptions
+│   │       │   │   ├───handlers
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───predicates
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───relation
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───benchmarks
+│   │       │   │   └───__pycache__
+│   │       │   ├───calculus
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───categories
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───codegen
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───combinatorics
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───concrete
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───core
+│   │       │   │   ├───benchmarks
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───crypto
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───diffgeom
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───discrete
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───external
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───functions
+│   │       │   │   ├───combinatorial
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───elementary
+│   │       │   │   │   ├───benchmarks
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───special
+│   │       │   │   │   ├───benchmarks
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───geometry
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───holonomic
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───integrals
+│   │       │   │   ├───benchmarks
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───interactive
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───liealgebras
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───logic
+│   │       │   │   ├───algorithms
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───utilities
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───matrices
+│   │       │   │   ├───benchmarks
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───expressions
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───multipledispatch
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───ntheory
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───parsing
+│   │       │   │   ├───autolev
+│   │       │   │   │   ├───test-examples
+│   │       │   │   │   │   ├───pydy-example-repo
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───_antlr
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───c
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───fortran
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───latex
+│   │       │   │   │   ├───lark
+│   │       │   │   │   │   ├───grammar
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───_antlr
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───physics
+│   │       │   │   ├───biomechanics
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───continuum_mechanics
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───control
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───hep
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───mechanics
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───optics
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───quantum
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───units
+│   │       │   │   │   ├───definitions
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───systems
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───vector
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───plotting
+│   │       │   │   ├───backends
+│   │       │   │   │   ├───matplotlibbackend
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───textbackend
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───intervalmath
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───pygletplot
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───polys
+│   │       │   │   ├───agca
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───benchmarks
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───domains
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───matrices
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───numberfields
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───printing
+│   │       │   │   ├───pretty
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───sandbox
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───series
+│   │       │   │   ├───benchmarks
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───sets
+│   │       │   │   ├───handlers
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───simplify
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───solvers
+│   │       │   │   ├───benchmarks
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───diophantine
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───ode
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───stats
+│   │       │   │   ├───sampling
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───strategies
+│   │       │   │   ├───branch
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───tensor
+│   │       │   │   ├───array
+│   │       │   │   │   ├───expressions
+│   │       │   │   │   │   ├───tests
+│   │       │   │   │   │   │   └───__pycache__
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───testing
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───unify
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───utilities
+│   │       │   │   ├───mathml
+│   │       │   │   │   ├───data
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───_compilation
+│   │       │   │   │   ├───tests
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───vector
+│   │       │   │   ├───tests
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───sympy-1.14.0.dist-info
+│   │       │   └───licenses
+│   │       ├───tabulate
+│   │       │   └───__pycache__
+│   │       ├───tabulate-0.9.0.dist-info
+│   │       ├───tornado
+│   │       │   ├───platform
+│   │       │   │   └───__pycache__
+│   │       │   ├───test
+│   │       │   │   ├───csv_translations
+│   │       │   │   ├───gettext_translations
+│   │       │   │   │   └───fr_FR
+│   │       │   │   │       └───LC_MESSAGES
+│   │       │   │   ├───static
+│   │       │   │   │   └───dir
+│   │       │   │   ├───templates
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───tornado-6.5.2.dist-info
+│   │       │   └───licenses
+│   │       ├───traitlets
+│   │       │   ├───config
+│   │       │   │   └───__pycache__
+│   │       │   ├───tests
+│   │       │   │   └───__pycache__
+│   │       │   ├───utils
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───traitlets-5.14.3.dist-info
+│   │       │   └───licenses
+│   │       ├───typing_extensions-4.15.0.dist-info
+│   │       │   └───licenses
+│   │       ├───tzdata
+│   │       │   ├───zoneinfo
+│   │       │   │   ├───Africa
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───America
+│   │       │   │   │   ├───Argentina
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───Indiana
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───Kentucky
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   ├───North_Dakota
+│   │       │   │   │   │   └───__pycache__
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───Antarctica
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───Arctic
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───Asia
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───Atlantic
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───Australia
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───Brazil
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───Canada
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───Chile
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───Etc
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───Europe
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───Indian
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───Mexico
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───Pacific
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───US
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───tzdata-2025.2.dist-info
+│   │       │   └───licenses
+│   │       │       └───licenses
+│   │       ├───wcwidth
+│   │       │   └───__pycache__
+│   │       ├───wcwidth-0.2.14.dist-info
+│   │       │   └───licenses
+│   │       ├───yaml
+│   │       │   └───__pycache__
+│   │       ├───zipp
+│   │       │   ├───compat
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───zipp-3.23.0.dist-info
+│   │       │   └───licenses
+│   │       ├───zmq
+│   │       │   ├───auth
+│   │       │   │   └───__pycache__
+│   │       │   ├───backend
+│   │       │   │   ├───cffi
+│   │       │   │   │   └───__pycache__
+│   │       │   │   ├───cython
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───devices
+│   │       │   │   └───__pycache__
+│   │       │   ├───eventloop
+│   │       │   │   └───__pycache__
+│   │       │   ├───green
+│   │       │   │   ├───eventloop
+│   │       │   │   │   └───__pycache__
+│   │       │   │   └───__pycache__
+│   │       │   ├───log
+│   │       │   │   └───__pycache__
+│   │       │   ├───ssh
+│   │       │   │   └───__pycache__
+│   │       │   ├───sugar
+│   │       │   │   └───__pycache__
+│   │       │   ├───tests
+│   │       │   │   └───__pycache__
+│   │       │   ├───utils
+│   │       │   │   └───__pycache__
+│   │       │   └───__pycache__
+│   │       ├───_yaml
+│   │       │   └───__pycache__
+│   │       └───__pycache__
+│   ├───Scripts
+│   └───share
+│       ├───jupyter
+│       │   └───kernels
+│       │       └───python3
+│       └───man
+│           └───man1
+├───apendices
+├───capitulos
+│   └───.jupyter_cache
+│       └───executed
+│           ├───74bf473a2cb53b33a05bf84cf01b86cc
+│           ├───8ac2803f41d042ce7d12cb01e96475e2
+│           ├───8eca987e1309fabf0092801c5530703c
+│           ├───c0ae56a6fa4bb75d1a00e019f15871a2
+│           └───f97a4804fb08b5017bd30016a31bf29e
+├───data
+├───figures
+├───filters
+├───images
+│   ├───diagramas
+│   └───graficos
+├───partes
+│   └───.jupyter_cache
+│       └───executed
+│           └───2195f33e416a934beae74a09193d866b
+├───preamble
+├───README_files
+│   └───libs
+│       ├───bootstrap
+│       ├───clipboard
+│       └───quarto-html
+│           ├───axe
+│           └───tabsets
+├───referencias
+├───scripts
+├───templates
+├───teoria
+│   ├───economia matematica
+│   │   └───Clase2_Economia_Matematica_files
+│   │       ├───figure-html
+│   │       ├───figure-ipynb
+│   │       └───mediabag
+│   ├───economia-matematica
+│   └───microeconomia
+├───_cache
+├───_freeze
+│   ├───capitulos
+│   │   ├───01-naturaleza-economia-matematica
+│   │   │   ├───execute-results
+│   │   │   └───figure-html
+│   │   └───02-modelos-economicos
+│   │       ├───execute-results
+│   │       └───figure-html
+│   ├───index
+│   │   ├───execute-results
+│   │   └───figure-html
+│   ├───partes
+│   │   └───parte-uno
+│   │       ├───execute-results
+│   │       └───figure-html
+│   └───site_libs
+│       ├───bootstrap
+│       ├───clipboard
+│       ├───manuscript-notebook
+│       ├───quarto-contrib
+│       │   └───glightbox
+│       └───quarto-html
+│           ├───axe
+│           └───tabsets
+├───_manuscript
+│   ├───apendices
+│   ├───capitulos
+│   │   ├───01-naturaleza-economia-matematica_files
+│   │   │   └───figure-html
+│   │   └───02-modelos-economicos_files
+│   │       └───figure-html
+│   ├───index_files
+│   │   └───figure-html
+│   ├───partes
+│   │   └───parte-uno_files
+│   │       └───figure-html
+│   ├───site_libs
+│   │   ├───bootstrap
+│   │   ├───clipboard
+│   │   ├───manuscript-notebook
+│   │   ├───quarto-contrib
+│   │   │   └───glightbox
+│   │   └───quarto-html
+│   │       ├───axe
+│   │       └───tabsets
+│   └───teoria
+│       ├───economia matematica
+│       │   └───Clase1_Economia_Matematica_files
+│       │       └───figure-html
+│       ├───economia-matematica
+│       └───microeconomia
+├───_output
+└───_problematic_files
 ```
 ##  Metodología de Estudio
 
