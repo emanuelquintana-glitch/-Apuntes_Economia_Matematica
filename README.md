@@ -20,13 +20,9 @@ Este material cubre desde fundamentos de álgebra lineal hasta teoría de contro
 
 ## Ejemplo detallado usando Latex y parte de Quarto
 
-<h2> Cheat Interactivo</h2>
+##  Cheat Interactivo
 
-<video controls width="800">
-  <source src="Cheat_Interactivo.mp4" type="video/mp4">
-  Tu navegador no soporta video HTML5.
-</video>
-
+![Cheat Interactivo](Cheat_Interactivo.gif)
 
 
 ##  Estructura del Repositorio

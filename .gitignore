@@ -43,6 +43,7 @@ venv/
 .jupyter_cache/
 **/.jupyter_cache/
 *_cache/
+*.quarto_ipynb
 
 # ============================================
 # R
@@ -69,6 +70,13 @@ Thumbs.db
 .idea/
 
 # ============================================
+# HTML GENERADO (FUERA DE docs/)
+# ============================================
+README.html
+capitulos/**/README.html
+README_files/
+
+# ============================================
 # QUARTO BOOK / GITHUB PAGES
 # ============================================
 
@@ -87,8 +95,7 @@ Thumbs.db
 !*.css
 
 # ============================================
-# BASURA CONOCIDA
+# BASURA CONOCIDA / ARCHIVOS SUELTOS
 # ============================================
-README_files/
 sec_01_matrices/5
-
+setup_proyecto.bat
