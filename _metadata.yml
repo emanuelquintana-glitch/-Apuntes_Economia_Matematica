@@ -1,11 +1,21 @@
-# Metadatos globales para todos los documentos
-bibliography: referencias/bibliografia.bib
-csl: referencias/apa.csl
-link-citations: true
-crossref:
-  chapters: true
-date-format: long
-lang: es
-theme: cosmo
-author: Emanuel Quintana Silva
-date: '2025'
+# _metadata.yml
+# Coloca este archivo en la misma carpeta que notas_completas.qmd
+
+jupyter:
+  kernelspec:
+    name: python3
+    language: python
+    display_name: "Python 3"
+
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: true
+  freeze: auto
+  daemon: false
+
+format:
+  html:
+    code-fold: show
+    code-tools: true

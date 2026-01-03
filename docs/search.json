@@ -6,7 +6,7 @@
     "section": "",
     "text": "1 Bienvenido\nBienvenido al repositorio de Economía Matemática.",
     "crumbs": [
-      "<span class='chapter-number'>119</span>  <span class='chapter-title'>Economía Matemática</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Economía Matemática</span>"
     ]
   },
   {
@@ -16,7 +16,7 @@
     "section": "1.1 Contenido",
     "text": "1.1 Contenido\nEste repositorio contiene apuntes completos de Economía Matemática basados en Métodos Fundamentales de Economía Matemática.\n\n1.1.1 Estructura\n\nParte I: Fundamentos Matemáticos\nParte II: Álgebra de Matrices\nParte III: Estática Comparativa\nParte IV: Optimización\nParte V: Análisis Dinámico",
     "crumbs": [
-      "<span class='chapter-number'>119</span>  <span class='chapter-title'>Economía Matemática</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Economía Matemática</span>"
     ]
   },
   {
@@ -26,37 +26,37 @@
     "section": "1.2 Autor",
     "text": "1.2 Autor\nEmanuel Quintana Silva\nEconomista en formación - UPTC\nemanuel.quintana@uptc.edu.co",
     "crumbs": [
-      "<span class='chapter-number'>119</span>  <span class='chapter-title'>Economía Matemática</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Economía Matemática</span>"
     ]
   },
   {
     "objectID": "prefacio.html",
     "href": "prefacio.html",
-    "title": "120  Prefacio",
+    "title": "2  Prefacio",
     "section": "",
-    "text": "121 Prefacio\nEste trabajo representa mi esfuerzo por organizar y sistematizar los métodos matemáticos fundamentales aplicados al análisis económico.",
+    "text": "3 Prefacio\nEste trabajo representa mi esfuerzo por organizar y sistematizar los métodos matemáticos fundamentales aplicados al análisis económico.",
     "crumbs": [
-      "<span class='chapter-number'>120</span>  <span class='chapter-title'>Prefacio</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Prefacio</span>"
     ]
   },
   {
     "objectID": "prefacio.html#motivación",
     "href": "prefacio.html#motivación",
-    "title": "120  Prefacio",
-    "section": "121.1 Motivación",
-    "text": "121.1 Motivación\nLa necesidad de un recurso integral en español que combine rigor matemático con aplicaciones económicas concretas.",
+    "title": "2  Prefacio",
+    "section": "3.1 Motivación",
+    "text": "3.1 Motivación\nLa necesidad de un recurso integral en español que combine rigor matemático con aplicaciones económicas concretas.",
     "crumbs": [
-      "<span class='chapter-number'>120</span>  <span class='chapter-title'>Prefacio</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Prefacio</span>"
     ]
   },
   {
     "objectID": "prefacio.html#estructura",
     "href": "prefacio.html#estructura",
-    "title": "120  Prefacio",
-    "section": "121.2 Estructura",
-    "text": "121.2 Estructura\nEl material sigue la estructura clásica del libro de Chiang y Wainwright, organizado en cinco partes progresivas.\n\nEmanuel Quintana Silva\nUPTC, 2025",
+    "title": "2  Prefacio",
+    "section": "3.2 Estructura",
+    "text": "3.2 Estructura\nEl material sigue la estructura clásica del libro de Chiang y Wainwright, organizado en cinco partes progresivas.\n\nEmanuel Quintana Silva\nUPTC, 2025",
     "crumbs": [
-      "<span class='chapter-number'>120</span>  <span class='chapter-title'>Prefacio</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Prefacio</span>"
     ]
   },
   {
@@ -82,11 +82,11 @@
   {
     "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html",
     "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html",
-    "title": "126  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
     "section": "",
-    "text": "127 Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "text": "9 Introducción al Álgebra Matricial",
     "crumbs": [
-      "<span class='chapter-number'>126</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
     ]
   },
   {
@@ -142,171 +142,171 @@
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
     "section": "",
-    "text": "124 Introducción\nEl análisis económico matemático se fundamenta en el sistema de números reales y las estructuras algebraicas que permiten representar relaciones económicas de manera precisa y rigurosa. Este capítulo establece las bases matemáticas necesarias para el estudio de modelos económicos, desde los conceptos elementales de conjuntos hasta las funciones generales que caracterizan el comportamiento de variables económicas.\nLa importancia de una sólida comprensión de estos fundamentos radica en que las variables económicas—precio, costo, ingreso, producción, entre otras—adoptan valores numéricos que deben ser manipulados mediante operaciones algebraicas precisas. Más aún, las relaciones entre estas variables se expresan típicamente mediante funciones matemáticas cuyas propiedades determinan el comportamiento del sistema económico bajo análisis (Chiang & Wainwright, 2005).",
+    "text": "6 Introducción\nEl análisis económico matemático se fundamenta en el sistema de números reales y las estructuras algebraicas que permiten representar relaciones económicas de manera precisa y rigurosa. Este capítulo establece las bases matemáticas necesarias para el estudio de modelos económicos, desde los conceptos elementales de conjuntos hasta las funciones generales que caracterizan el comportamiento de variables económicas.\nLa importancia de una sólida comprensión de estos fundamentos radica en que las variables económicas—precio, costo, ingreso, producción, entre otras—adoptan valores numéricos que deben ser manipulados mediante operaciones algebraicas precisas. Más aún, las relaciones entre estas variables se expresan típicamente mediante funciones matemáticas cuyas propiedades determinan el comportamiento del sistema económico bajo análisis (Chiang & Wainwright, 2005).",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#definición-y-estructura",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#definición-y-estructura",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "125.1 Definición y Estructura",
-    "text": "125.1 Definición y Estructura\nEl sistema de números reales, denotado por \\(\\mathbb{R}\\), constituye un continuo numérico fundamental para el análisis económico matemático. Este sistema proporciona el marco dentro del cual se definen y operan las variables económicas.\n\n\n\n\n\n\nDefinición: Números Reales\n\n\n\nEl conjunto \\(\\mathbb{R}\\) de los números reales es la unión de los conjuntos de números racionales (\\(\\mathbb{Q}\\)) e irracionales (\\(\\mathbb{I}\\)):\n\\[\\mathbb{R} = \\mathbb{Q} \\cup \\mathbb{I}\\]\nEste conjunto forma un campo ordenado completo bajo las operaciones de adición y multiplicación.",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "7.1 Definición y Estructura",
+    "text": "7.1 Definición y Estructura\nEl sistema de números reales, denotado por \\(\\mathbb{R}\\), constituye un continuo numérico fundamental para el análisis económico matemático. Este sistema proporciona el marco dentro del cual se definen y operan las variables económicas.\n\n\n\n\n\n\nImportanteDefinición: Números Reales\n\n\n\nEl conjunto \\(\\mathbb{R}\\) de los números reales es la unión de los conjuntos de números racionales (\\(\\mathbb{Q}\\)) e irracionales (\\(\\mathbb{I}\\)):\n\\[\\mathbb{R} = \\mathbb{Q} \\cup \\mathbb{I}\\]\nEste conjunto forma un campo ordenado completo bajo las operaciones de adición y multiplicación.",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#números-racionales",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#números-racionales",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "125.2 Números Racionales",
-    "text": "125.2 Números Racionales\nLos números racionales constituyen el subconjunto de números reales que pueden expresarse como el cociente de dos enteros.\nDefinición formal:\n\\[\\mathbb{Q} = \\left\\{\\frac{p}{q} \\mid p, q \\in \\mathbb{Z}, \\, q \\neq 0\\right\\}\\]\ndonde \\(\\mathbb{Z}\\) denota el conjunto de los números enteros.\nComponentes del conjunto racional:\n\nEnteros positivos (\\(\\mathbb{Z}^+\\)): Utilizados para conteo y enumeración: \\(\\{1, 2, 3, 4, \\ldots\\}\\)\nEnteros negativos (\\(\\mathbb{Z}^-\\)): Representan magnitudes con sentido opuesto: \\(\\{-1, -2, -3, \\ldots\\}\\)\nCero: Elemento neutro de la adición, denotado por \\(0\\)\nFracciones: Cocientes de enteros donde el denominador es distinto de cero\n\nPropiedades características:\n\n\n\n\n\n\nRepresentación decimal de racionales\n\n\n\nTodo número racional admite una representación decimal que es:\n\nFinita (terminante): \\(\\frac{1}{4} = 0.25\\), \\(\\frac{3}{8} = 0.375\\)\nPeriódica (infinita repetitiva): \\(\\frac{1}{3} = 0.\\overline{3} = 0.333\\ldots\\), \\(\\frac{2}{11} = 0.\\overline{18} = 0.181818\\ldots\\)\n\nLa barra superior indica el bloque de dígitos que se repite indefinidamente.\n\n\nEjemplos económicos:\n\nTasas de interés expresadas como fracciones: \\(r = \\frac{5}{100} = 0.05\\) (5%)\nProporciones de consumo: \\(c = \\frac{3}{4}\\) del ingreso disponible\nPrecios en unidades monetarias: \\(P = \\frac{125}{10} = 12.5\\) (doce unidades y media)",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "7.2 Números Racionales",
+    "text": "7.2 Números Racionales\nLos números racionales constituyen el subconjunto de números reales que pueden expresarse como el cociente de dos enteros.\nDefinición formal:\n\\[\\mathbb{Q} = \\left\\{\\frac{p}{q} \\mid p, q \\in \\mathbb{Z}, \\, q \\neq 0\\right\\}\\]\ndonde \\(\\mathbb{Z}\\) denota el conjunto de los números enteros.\nComponentes del conjunto racional:\n\nEnteros positivos (\\(\\mathbb{Z}^+\\)): Utilizados para conteo y enumeración: \\(\\{1, 2, 3, 4, \\ldots\\}\\)\nEnteros negativos (\\(\\mathbb{Z}^-\\)): Representan magnitudes con sentido opuesto: \\(\\{-1, -2, -3, \\ldots\\}\\)\nCero: Elemento neutro de la adición, denotado por \\(0\\)\nFracciones: Cocientes de enteros donde el denominador es distinto de cero\n\nPropiedades características:\n\n\n\n\n\n\nTipRepresentación decimal de racionales\n\n\n\nTodo número racional admite una representación decimal que es:\n\nFinita (terminante): \\(\\frac{1}{4} = 0.25\\), \\(\\frac{3}{8} = 0.375\\)\nPeriódica (infinita repetitiva): \\(\\frac{1}{3} = 0.\\overline{3} = 0.333\\ldots\\), \\(\\frac{2}{11} = 0.\\overline{18} = 0.181818\\ldots\\)\n\nLa barra superior indica el bloque de dígitos que se repite indefinidamente.\n\n\nEjemplos económicos:\n\nTasas de interés expresadas como fracciones: \\(r = \\frac{5}{100} = 0.05\\) (5%)\nProporciones de consumo: \\(c = \\frac{3}{4}\\) del ingreso disponible\nPrecios en unidades monetarias: \\(P = \\frac{125}{10} = 12.5\\) (doce unidades y media)",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#números-irracionales",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#números-irracionales",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "125.3 Números Irracionales",
-    "text": "125.3 Números Irracionales\nLos números irracionales son aquellos números reales que no pueden expresarse como cociente de dos enteros.\nDefinición formal:\n\\[\\mathbb{I} = \\mathbb{R} \\setminus \\mathbb{Q} = \\{x \\in \\mathbb{R} \\mid x \\notin \\mathbb{Q}\\}\\]\nPropiedades características:\n\n\n\n\n\n\nRepresentación decimal de irracionales\n\n\n\nLos números irracionales poseen representaciones decimales infinitas no periódicas. No existe un patrón repetitivo en su expansión decimal.\n\n\nEjemplos fundamentales:\n\n\n\nTabla 125.1: Números irracionales fundamentales\n\n\n\n\n\n\n\n\n\n\n\nNúmero\nSímbolo\nValor aproximado\nContexto\n\n\n\n\nRaíz cuadrada de 2\n\\(\\sqrt{2}\\)\n\\(1.41421356\\ldots\\)\nGeometría, optimización\n\n\nPi\n\\(\\pi\\)\n\\(3.14159265\\ldots\\)\nGeometría circular, funciones trigonométricas\n\n\nEuler\n\\(e\\)\n\\(2.71828182\\ldots\\)\nCrecimiento exponencial continuo\n\n\nRazón áurea\n\\(\\phi\\)\n\\(1.61803398\\ldots\\)\nProporciones, series de Fibonacci\n\n\n\n\n\n\nAplicaciones económicas:\n\nLa constante \\(e\\) aparece en modelos de crecimiento continuo: \\(Q(t) = Q_0 e^{rt}\\)\n\\(\\pi\\) surge en modelos con simetría circular o periódica\n\\(\\sqrt{2}\\) aparece en problemas de optimización geométrica",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "7.3 Números Irracionales",
+    "text": "7.3 Números Irracionales\nLos números irracionales son aquellos números reales que no pueden expresarse como cociente de dos enteros.\nDefinición formal:\n\\[\\mathbb{I} = \\mathbb{R} \\setminus \\mathbb{Q} = \\{x \\in \\mathbb{R} \\mid x \\notin \\mathbb{Q}\\}\\]\nPropiedades características:\n\n\n\n\n\n\nTipRepresentación decimal de irracionales\n\n\n\nLos números irracionales poseen representaciones decimales infinitas no periódicas. No existe un patrón repetitivo en su expansión decimal.\n\n\nEjemplos fundamentales:\n\n\n\nTabla 7.1: Números irracionales fundamentales\n\n\n\n\n\n\n\n\n\n\n\nNúmero\nSímbolo\nValor aproximado\nContexto\n\n\n\n\nRaíz cuadrada de 2\n\\(\\sqrt{2}\\)\n\\(1.41421356\\ldots\\)\nGeometría, optimización\n\n\nPi\n\\(\\pi\\)\n\\(3.14159265\\ldots\\)\nGeometría circular, funciones trigonométricas\n\n\nEuler\n\\(e\\)\n\\(2.71828182\\ldots\\)\nCrecimiento exponencial continuo\n\n\nRazón áurea\n\\(\\phi\\)\n\\(1.61803398\\ldots\\)\nProporciones, series de Fibonacci\n\n\n\n\n\n\nAplicaciones económicas:\n\nLa constante \\(e\\) aparece en modelos de crecimiento continuo: \\(Q(t) = Q_0 e^{rt}\\)\n\\(\\pi\\) surge en modelos con simetría circular o periódica\n\\(\\sqrt{2}\\) aparece en problemas de optimización geométrica",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#la-recta-real",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#la-recta-real",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "125.4 La Recta Real",
-    "text": "125.4 La Recta Real\nLa representación geométrica del conjunto \\(\\mathbb{R}\\) es la recta real, donde cada punto corresponde biunívocamente a un número real.\n\n\n\n\n\n\n\n\nFigura 125.1: Representación geométrica de la recta real\n\n\n\n\n\n\n\n\n\n\n\nCompletitud de los números reales\n\n\n\nLos números irracionales “llenan” los espacios entre los números racionales, completando así el continuo numérico. Esta propiedad de completitud es fundamental para el análisis matemático y garantiza la existencia de límites y valores extremos en el análisis económico (Simon & Blume, 1994).",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "7.4 La Recta Real",
+    "text": "7.4 La Recta Real\nLa representación geométrica del conjunto \\(\\mathbb{R}\\) es la recta real, donde cada punto corresponde biunívocamente a un número real.\n\n\n\n\n\n\n\n\nFigura 7.1: Representación geométrica de la recta real\n\n\n\n\n\n\n\n\n\n\n\nNotaCompletitud de los números reales\n\n\n\nLos números irracionales “llenan” los espacios entre los números racionales, completando así el continuo numérico. Esta propiedad de completitud es fundamental para el análisis matemático y garantiza la existencia de límites y valores extremos en el análisis económico (Simon & Blume, 1994).",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#conceptos-fundamentales",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#conceptos-fundamentales",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "126.1 Conceptos Fundamentales",
-    "text": "126.1 Conceptos Fundamentales\nLa teoría de conjuntos proporciona el lenguaje formal para expresar colecciones de objetos y sus relaciones, constituyendo la base sobre la cual se construyen las estructuras matemáticas utilizadas en economía.\n\n\n\n\n\n\nDefinición: Conjunto\n\n\n\nUn conjunto es una colección bien definida de objetos distintos. Los objetos que pertenecen a un conjunto se denominan elementos o miembros del conjunto.",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "8.1 Conceptos Fundamentales",
+    "text": "8.1 Conceptos Fundamentales\nLa teoría de conjuntos proporciona el lenguaje formal para expresar colecciones de objetos y sus relaciones, constituyendo la base sobre la cual se construyen las estructuras matemáticas utilizadas en economía.\n\n\n\n\n\n\nImportanteDefinición: Conjunto\n\n\n\nUn conjunto es una colección bien definida de objetos distintos. Los objetos que pertenecen a un conjunto se denominan elementos o miembros del conjunto.",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#notación-y-representación",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#notación-y-representación",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "126.2 Notación y Representación",
-    "text": "126.2 Notación y Representación\nNotación estándar: Los conjuntos se denotan con letras mayúsculas (\\(A, B, C, \\ldots\\)) y se encierran entre llaves: \\(\\{\\}\\)\nMétodos de especificación:\n\nPor enumeración (extensión): Se listan explícitamente todos los elementos.\n\\[S = \\{2, 3, 5, 7, 11\\}\\]\nPor comprensión (descripción): Se especifica la propiedad que caracteriza a los elementos.\n\\[S = \\{x \\mid x \\text{ es un número primo menor que 12}\\}\\]\nLectura: “El conjunto \\(S\\) de todos los objetos \\(x\\) tales que \\(x\\) es un número primo menor que 12”\n\nRelación de pertenencia:\n\n\\(x \\in A\\): “\\(x\\) es elemento de \\(A\\)” o “\\(x\\) pertenece a \\(A\\)”\n\\(x \\notin A\\): “\\(x\\) no es elemento de \\(A\\)” o “\\(x\\) no pertenece a \\(A\\)”\n\n\n\n\n\n\n\nEjemplo económico\n\n\n\nSea \\(\\mathcal{B}\\) el conjunto de bienes en una economía:\n\\[\\mathcal{B} = \\{\\text{trigo}, \\text{acero}, \\text{energía}, \\text{transporte}\\}\\]\nEntonces: \\(\\text{trigo} \\in \\mathcal{B}\\) pero \\(\\text{oro} \\notin \\mathcal{B}\\)",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "8.2 Notación y Representación",
+    "text": "8.2 Notación y Representación\nNotación estándar: Los conjuntos se denotan con letras mayúsculas (\\(A, B, C, \\ldots\\)) y se encierran entre llaves: \\(\\{\\}\\)\nMétodos de especificación:\n\nPor enumeración (extensión): Se listan explícitamente todos los elementos.\n\\[S = \\{2, 3, 5, 7, 11\\}\\]\nPor comprensión (descripción): Se especifica la propiedad que caracteriza a los elementos.\n\\[S = \\{x \\mid x \\text{ es un número primo menor que 12}\\}\\]\nLectura: “El conjunto \\(S\\) de todos los objetos \\(x\\) tales que \\(x\\) es un número primo menor que 12”\n\nRelación de pertenencia:\n\n\\(x \\in A\\): “\\(x\\) es elemento de \\(A\\)” o “\\(x\\) pertenece a \\(A\\)”\n\\(x \\notin A\\): “\\(x\\) no es elemento de \\(A\\)” o “\\(x\\) no pertenece a \\(A\\)”\n\n\n\n\n\n\n\nTipEjemplo económico\n\n\n\nSea \\(\\mathcal{B}\\) el conjunto de bienes en una economía:\n\\[\\mathcal{B} = \\{\\text{trigo}, \\text{acero}, \\text{energía}, \\text{transporte}\\}\\]\nEntonces: \\(\\text{trigo} \\in \\mathcal{B}\\) pero \\(\\text{oro} \\notin \\mathcal{B}\\)",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#clasificación-de-conjuntos",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#clasificación-de-conjuntos",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "126.3 Clasificación de Conjuntos",
-    "text": "126.3 Clasificación de Conjuntos\nPor cardinalidad:\n\nConjunto finito: Contiene un número finito de elementos.\n\\[A = \\{1, 2, 3, 4, 5\\} \\quad \\text{donde } |A| = 5\\]\nConjunto infinito: Contiene infinitos elementos.\n\nNumerable (contable): \\(\\mathbb{N} = \\{1, 2, 3, \\ldots\\}\\)\nNo numerable: \\(\\mathbb{R}\\) (los números reales)\n\nConjunto vacío: No contiene ningún elemento. Se denota \\(\\emptyset\\) o \\(\\{\\}\\)\n\n\n\n\n\n\n\nDistinción importante\n\n\n\nEl conjunto \\(\\{0\\}\\) no es vacío, pues contiene al número \\(0\\) como elemento. Es decir:\n\\[\\{0\\} \\neq \\emptyset \\quad \\text{ya que } |\\{0\\}| = 1\\]",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "8.3 Clasificación de Conjuntos",
+    "text": "8.3 Clasificación de Conjuntos\nPor cardinalidad:\n\nConjunto finito: Contiene un número finito de elementos.\n\\[A = \\{1, 2, 3, 4, 5\\} \\quad \\text{donde } |A| = 5\\]\nConjunto infinito: Contiene infinitos elementos.\n\nNumerable (contable): \\(\\mathbb{N} = \\{1, 2, 3, \\ldots\\}\\)\nNo numerable: \\(\\mathbb{R}\\) (los números reales)\n\nConjunto vacío: No contiene ningún elemento. Se denota \\(\\emptyset\\) o \\(\\{\\}\\)\n\n\n\n\n\n\n\nAdvertenciaDistinción importante\n\n\n\nEl conjunto \\(\\{0\\}\\) no es vacío, pues contiene al número \\(0\\) como elemento. Es decir:\n\\[\\{0\\} \\neq \\emptyset \\quad \\text{ya que } |\\{0\\}| = 1\\]",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#relaciones-entre-conjuntos",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#relaciones-entre-conjuntos",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "126.4 Relaciones entre Conjuntos",
-    "text": "126.4 Relaciones entre Conjuntos\nIgualdad:\n\n\n\n\n\n\nDefinición: Igualdad de conjuntos\n\n\n\nDos conjuntos \\(A\\) y \\(B\\) son iguales si y solo si contienen exactamente los mismos elementos:\n\\[A = B \\iff (\\forall x)(x \\in A \\leftrightarrow x \\in B)\\]\n\n\nObservación: El orden de aparición de los elementos es irrelevante:\n\\[\\{1, 2, 3\\} = \\{3, 1, 2\\} = \\{2, 3, 1\\}\\]\nSubconjunto:\n\n\n\n\n\n\nDefinición: Subconjunto\n\n\n\n\\(A\\) es subconjunto de \\(B\\) (denotado \\(A \\subseteq B\\) o \\(B \\supseteq A\\)) si todo elemento de \\(A\\) es también elemento de \\(B\\):\n\\[A \\subseteq B \\iff (\\forall x)(x \\in A \\Rightarrow x \\in B)\\]\n\n\nSubconjunto propio:\n\\[A \\subset B \\iff (A \\subseteq B) \\land (A \\neq B)\\]\nEs decir, \\(A\\) es subconjunto propio de \\(B\\) si \\(A \\subseteq B\\) y existe al menos un elemento en \\(B\\) que no está en \\(A\\).\nEjemplo:\n\\[\\{1, 2\\} \\subset \\{1, 2, 3\\} \\quad \\text{pero} \\quad \\{1, 2\\} \\not\\subset \\{1, 2\\}\\]\nProposición fundamental:\n\n\n\n\n\n\nNota\n\n\n\nEl conjunto vacío es subconjunto de cualquier conjunto:\n\\[\\forall A: \\emptyset \\subseteq A\\]\n\n\nConjuntos disjuntos:\n\n\n\n\n\n\nDefinición: Conjuntos disjuntos\n\n\n\nDos conjuntos \\(A\\) y \\(B\\) son disjuntos si no tienen elementos en común:\n\\[A \\cap B = \\emptyset\\]",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "8.4 Relaciones entre Conjuntos",
+    "text": "8.4 Relaciones entre Conjuntos\nIgualdad:\n\n\n\n\n\n\nImportanteDefinición: Igualdad de conjuntos\n\n\n\nDos conjuntos \\(A\\) y \\(B\\) son iguales si y solo si contienen exactamente los mismos elementos:\n\\[A = B \\iff (\\forall x)(x \\in A \\leftrightarrow x \\in B)\\]\n\n\nObservación: El orden de aparición de los elementos es irrelevante:\n\\[\\{1, 2, 3\\} = \\{3, 1, 2\\} = \\{2, 3, 1\\}\\]\nSubconjunto:\n\n\n\n\n\n\nImportanteDefinición: Subconjunto\n\n\n\n\\(A\\) es subconjunto de \\(B\\) (denotado \\(A \\subseteq B\\) o \\(B \\supseteq A\\)) si todo elemento de \\(A\\) es también elemento de \\(B\\):\n\\[A \\subseteq B \\iff (\\forall x)(x \\in A \\Rightarrow x \\in B)\\]\n\n\nSubconjunto propio:\n\\[A \\subset B \\iff (A \\subseteq B) \\land (A \\neq B)\\]\nEs decir, \\(A\\) es subconjunto propio de \\(B\\) si \\(A \\subseteq B\\) y existe al menos un elemento en \\(B\\) que no está en \\(A\\).\nEjemplo:\n\\[\\{1, 2\\} \\subset \\{1, 2, 3\\} \\quad \\text{pero} \\quad \\{1, 2\\} \\not\\subset \\{1, 2\\}\\]\nProposición fundamental:\n\n\n\n\n\n\nNota\n\n\n\nEl conjunto vacío es subconjunto de cualquier conjunto:\n\\[\\forall A: \\emptyset \\subseteq A\\]\n\n\nConjuntos disjuntos:\n\n\n\n\n\n\nImportanteDefinición: Conjuntos disjuntos\n\n\n\nDos conjuntos \\(A\\) y \\(B\\) son disjuntos si no tienen elementos en común:\n\\[A \\cap B = \\emptyset\\]",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#operaciones-con-conjuntos",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#operaciones-con-conjuntos",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "126.5 Operaciones con Conjuntos",
-    "text": "126.5 Operaciones con Conjuntos\nUnión:\n\n\n\n\n\n\nDefinición: Unión\n\n\n\nLa unión de \\(A\\) y \\(B\\) (denotada \\(A \\cup B\\)) es el conjunto de elementos que pertenecen a \\(A\\) o a \\(B\\) (o a ambos):\n\\[A \\cup B = \\{x \\mid x \\in A \\lor x \\in B\\}\\]\n\n\nIntersección:\n\n\n\n\n\n\nDefinición: Intersección\n\n\n\nLa intersección de \\(A\\) y \\(B\\) (denotada \\(A \\cap B\\)) es el conjunto de elementos que pertenecen tanto a \\(A\\) como a \\(B\\):\n\\[A \\cap B = \\{x \\mid x \\in A \\land x \\in B\\}\\]\n\n\nComplemento:\n\n\n\n\n\n\nDefinición: Complemento\n\n\n\nSea \\(U\\) un conjunto universal. El complemento de \\(A\\) (denotado \\(A^c\\) o \\(\\overline{A}\\)) es el conjunto de elementos de \\(U\\) que no pertenecen a \\(A\\):\n\\[A^c = \\{x \\in U \\mid x \\notin A\\}\\]\n\n\nDiferencia:\n\\[A \\setminus B = \\{x \\mid x \\in A \\land x \\notin B\\} = A \\cap B^c\\]",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "8.5 Operaciones con Conjuntos",
+    "text": "8.5 Operaciones con Conjuntos\nUnión:\n\n\n\n\n\n\nImportanteDefinición: Unión\n\n\n\nLa unión de \\(A\\) y \\(B\\) (denotada \\(A \\cup B\\)) es el conjunto de elementos que pertenecen a \\(A\\) o a \\(B\\) (o a ambos):\n\\[A \\cup B = \\{x \\mid x \\in A \\lor x \\in B\\}\\]\n\n\nIntersección:\n\n\n\n\n\n\nImportanteDefinición: Intersección\n\n\n\nLa intersección de \\(A\\) y \\(B\\) (denotada \\(A \\cap B\\)) es el conjunto de elementos que pertenecen tanto a \\(A\\) como a \\(B\\):\n\\[A \\cap B = \\{x \\mid x \\in A \\land x \\in B\\}\\]\n\n\nComplemento:\n\n\n\n\n\n\nImportanteDefinición: Complemento\n\n\n\nSea \\(U\\) un conjunto universal. El complemento de \\(A\\) (denotado \\(A^c\\) o \\(\\overline{A}\\)) es el conjunto de elementos de \\(U\\) que no pertenecen a \\(A\\):\n\\[A^c = \\{x \\in U \\mid x \\notin A\\}\\]\n\n\nDiferencia:\n\\[A \\setminus B = \\{x \\mid x \\in A \\land x \\notin B\\} = A \\cap B^c\\]",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#leyes-algebraicas-de-conjuntos",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#leyes-algebraicas-de-conjuntos",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "126.6 Leyes Algebraicas de Conjuntos",
-    "text": "126.6 Leyes Algebraicas de Conjuntos\nLeyes conmutativas:\n\\[A \\cup B = B \\cup A\\] \\[A \\cap B = B \\cap A\\]\nLeyes asociativas:\n\\[(A \\cup B) \\cup C = A \\cup (B \\cup C)\\] \\[(A \\cap B) \\cap C = A \\cap (B \\cap C)\\]\nLeyes distributivas:\n\\[A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)\\] \\[A \\cup (B \\cap C) = (A \\cup B) \\cap (A \\cup C)\\]\nLeyes de De Morgan:\n\\[(A \\cup B)^c = A^c \\cap B^c\\] \\[(A \\cap B)^c = A^c \\cup B^c\\]\nLeyes de idempotencia:\n\\[A \\cup A = A\\] \\[A \\cap A = A\\]\nLeyes de identidad:\n\\[A \\cup \\emptyset = A\\] \\[A \\cap U = A\\]\nLeyes de dominación:\n\\[A \\cup U = U\\] \\[A \\cap \\emptyset = \\emptyset\\]\nLeyes de complemento:\n\\[A \\cup A^c = U\\] \\[A \\cap A^c = \\emptyset\\] \\[(A^c)^c = A\\]",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "8.6 Leyes Algebraicas de Conjuntos",
+    "text": "8.6 Leyes Algebraicas de Conjuntos\nLeyes conmutativas:\n\\[A \\cup B = B \\cup A\\] \\[A \\cap B = B \\cap A\\]\nLeyes asociativas:\n\\[(A \\cup B) \\cup C = A \\cup (B \\cup C)\\] \\[(A \\cap B) \\cap C = A \\cap (B \\cap C)\\]\nLeyes distributivas:\n\\[A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)\\] \\[A \\cup (B \\cap C) = (A \\cup B) \\cap (A \\cup C)\\]\nLeyes de De Morgan:\n\\[(A \\cup B)^c = A^c \\cap B^c\\] \\[(A \\cap B)^c = A^c \\cup B^c\\]\nLeyes de idempotencia:\n\\[A \\cup A = A\\] \\[A \\cap A = A\\]\nLeyes de identidad:\n\\[A \\cup \\emptyset = A\\] \\[A \\cap U = A\\]\nLeyes de dominación:\n\\[A \\cup U = U\\] \\[A \\cap \\emptyset = \\emptyset\\]\nLeyes de complemento:\n\\[A \\cup A^c = U\\] \\[A \\cap A^c = \\emptyset\\] \\[(A^c)^c = A\\]",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#número-de-subconjuntos",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#número-de-subconjuntos",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "126.7 Número de Subconjuntos",
-    "text": "126.7 Número de Subconjuntos\n\n\n\n\n\n\nTeorema: Cardinalidad del conjunto potencia\n\n\n\nSi un conjunto \\(A\\) tiene \\(n\\) elementos, el número total de subconjuntos de \\(A\\) (incluyendo \\(\\emptyset\\) y el propio \\(A\\)) es:\n\\[|\\mathcal{P}(A)| = 2^n\\]\ndonde \\(\\mathcal{P}(A)\\) denota el conjunto potencia de \\(A\\).\n\n\nEjemplo: Si \\(A = \\{a, b, c\\}\\), entonces \\(|A| = 3\\) y:\n\\[\\mathcal{P}(A) = \\{\\emptyset, \\{a\\}, \\{b\\}, \\{c\\}, \\{a,b\\}, \\{a,c\\}, \\{b,c\\}, \\{a,b,c\\}\\}\\]\ncon \\(|\\mathcal{P}(A)| = 2^3 = 8\\) subconjuntos.",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "8.7 Número de Subconjuntos",
+    "text": "8.7 Número de Subconjuntos\n\n\n\n\n\n\nNotaTeorema: Cardinalidad del conjunto potencia\n\n\n\nSi un conjunto \\(A\\) tiene \\(n\\) elementos, el número total de subconjuntos de \\(A\\) (incluyendo \\(\\emptyset\\) y el propio \\(A\\)) es:\n\\[|\\mathcal{P}(A)| = 2^n\\]\ndonde \\(\\mathcal{P}(A)\\) denota el conjunto potencia de \\(A\\).\n\n\nEjemplo: Si \\(A = \\{a, b, c\\}\\), entonces \\(|A| = 3\\) y:\n\\[\\mathcal{P}(A) = \\{\\emptyset, \\{a\\}, \\{b\\}, \\{c\\}, \\{a,b\\}, \\{a,c\\}, \\{b,c\\}, \\{a,b,c\\}\\}\\]\ncon \\(|\\mathcal{P}(A)| = 2^3 = 8\\) subconjuntos.",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#pares-ordenados",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#pares-ordenados",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "127.1 Pares Ordenados",
-    "text": "127.1 Pares Ordenados\nA diferencia de los conjuntos simples, en los pares ordenados el orden de los elementos es significativo.\n\n\n\n\n\n\nDefinición: Par ordenado\n\n\n\nUn par ordenado \\((a, b)\\) es una estructura donde el orden de los elementos importa:\n\\[(a, b) = (c, d) \\iff (a = c) \\land (b = d)\\]\nEn particular: \\((a, b) \\neq (b, a)\\) a menos que \\(a = b\\)\n\n\nNotación: Los pares ordenados se encierran entre paréntesis \\(()\\), a diferencia de los conjuntos que usan llaves \\(\\{\\}\\).\nGeneralización: Las n-tuplas ordenadas extienden este concepto:\n\nTerna ordenada: \\((a, b, c)\\)\nCuádrupla ordenada: \\((a, b, c, d)\\)\nn-tupla ordenada: \\((a_1, a_2, \\ldots, a_n)\\)",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "9.1 Pares Ordenados",
+    "text": "9.1 Pares Ordenados\nA diferencia de los conjuntos simples, en los pares ordenados el orden de los elementos es significativo.\n\n\n\n\n\n\nImportanteDefinición: Par ordenado\n\n\n\nUn par ordenado \\((a, b)\\) es una estructura donde el orden de los elementos importa:\n\\[(a, b) = (c, d) \\iff (a = c) \\land (b = d)\\]\nEn particular: \\((a, b) \\neq (b, a)\\) a menos que \\(a = b\\)\n\n\nNotación: Los pares ordenados se encierran entre paréntesis \\(()\\), a diferencia de los conjuntos que usan llaves \\(\\{\\}\\).\nGeneralización: Las n-tuplas ordenadas extienden este concepto:\n\nTerna ordenada: \\((a, b, c)\\)\nCuádrupla ordenada: \\((a, b, c, d)\\)\nn-tupla ordenada: \\((a_1, a_2, \\ldots, a_n)\\)",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#producto-cartesiano",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#producto-cartesiano",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "127.2 Producto Cartesiano",
-    "text": "127.2 Producto Cartesiano\n\n\n\n\n\n\nDefinición: Producto cartesiano\n\n\n\nEl producto cartesiano de dos conjuntos \\(X\\) y \\(Y\\) (denotado \\(X \\times Y\\)) es el conjunto de todos los pares ordenados \\((x, y)\\) donde \\(x \\in X\\) e \\(y \\in Y\\):\n\\[X \\times Y = \\{(x, y) \\mid x \\in X \\land y \\in Y\\}\\]\n\n\nPropiedades:\n\nCardinalidad: Si \\(|X| = m\\) y \\(|Y| = n\\), entonces \\(|X \\times Y| = m \\cdot n\\)\nNo conmutatividad: En general, \\(X \\times Y \\neq Y \\times X\\)\nAsociatividad: \\((X \\times Y) \\times Z \\neq X \\times (Y \\times Z)\\), pero ambos son isomorfos a \\(X \\times Y \\times Z\\)\n\n\n\n\n\n\n\nEjemplo numérico\n\n\n\nSean \\(A = \\{1, 2\\}\\) y \\(B = \\{x, y, z\\}\\). Entonces:\n\\[A \\times B = \\{(1,x), (1,y), (1,z), (2,x), (2,y), (2,z)\\}\\]\n\\[B \\times A = \\{(x,1), (x,2), (y,1), (y,2), (z,1), (z,2)\\}\\]\nClaramente \\(A \\times B \\neq B \\times A\\), aunque \\(|A \\times B| = |B \\times A| = 6\\)",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "9.2 Producto Cartesiano",
+    "text": "9.2 Producto Cartesiano\n\n\n\n\n\n\nImportanteDefinición: Producto cartesiano\n\n\n\nEl producto cartesiano de dos conjuntos \\(X\\) y \\(Y\\) (denotado \\(X \\times Y\\)) es el conjunto de todos los pares ordenados \\((x, y)\\) donde \\(x \\in X\\) e \\(y \\in Y\\):\n\\[X \\times Y = \\{(x, y) \\mid x \\in X \\land y \\in Y\\}\\]\n\n\nPropiedades:\n\nCardinalidad: Si \\(|X| = m\\) y \\(|Y| = n\\), entonces \\(|X \\times Y| = m \\cdot n\\)\nNo conmutatividad: En general, \\(X \\times Y \\neq Y \\times X\\)\nAsociatividad: \\((X \\times Y) \\times Z \\neq X \\times (Y \\times Z)\\), pero ambos son isomorfos a \\(X \\times Y \\times Z\\)\n\n\n\n\n\n\n\nTipEjemplo numérico\n\n\n\nSean \\(A = \\{1, 2\\}\\) y \\(B = \\{x, y, z\\}\\). Entonces:\n\\[A \\times B = \\{(1,x), (1,y), (1,z), (2,x), (2,y), (2,z)\\}\\]\n\\[B \\times A = \\{(x,1), (x,2), (y,1), (y,2), (z,1), (z,2)\\}\\]\nClaramente \\(A \\times B \\neq B \\times A\\), aunque \\(|A \\times B| = |B \\times A| = 6\\)",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#el-plano-cartesiano",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#el-plano-cartesiano",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "127.3 El Plano Cartesiano",
-    "text": "127.3 El Plano Cartesiano\nConstrucción geométrica:\nEl producto cartesiano \\(\\mathbb{R} \\times \\mathbb{R} = \\mathbb{R}^2\\) representa el plano cartesiano, donde cada par ordenado \\((x, y) \\in \\mathbb{R}^2\\) corresponde a un punto único en el plano.\n\n\n\n\n\n\n\n\nFigura 127.1: Representación de pares ordenados en el plano cartesiano\n\n\n\n\n\nCuadrantes del plano:\n\n\n\nTabla 127.1: División del plano cartesiano en cuadrantes\n\n\n\n\n\nCuadrante\nRegión\nCondiciones\n\n\n\n\nI\nSuperior derecha\n\\(x &gt; 0, y &gt; 0\\)\n\n\nII\nSuperior izquierda\n\\(x &lt; 0, y &gt; 0\\)\n\n\nIII\nInferior izquierda\n\\(x &lt; 0, y &lt; 0\\)\n\n\nIV\nInferior derecha\n\\(x &gt; 0, y &lt; 0\\)",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "9.3 El Plano Cartesiano",
+    "text": "9.3 El Plano Cartesiano\nConstrucción geométrica:\nEl producto cartesiano \\(\\mathbb{R} \\times \\mathbb{R} = \\mathbb{R}^2\\) representa el plano cartesiano, donde cada par ordenado \\((x, y) \\in \\mathbb{R}^2\\) corresponde a un punto único en el plano.\n\n\n\n\n\n\n\n\nFigura 9.1: Representación de pares ordenados en el plano cartesiano\n\n\n\n\n\nCuadrantes del plano:\n\n\n\nTabla 9.1: División del plano cartesiano en cuadrantes\n\n\n\n\n\nCuadrante\nRegión\nCondiciones\n\n\n\n\nI\nSuperior derecha\n\\(x &gt; 0, y &gt; 0\\)\n\n\nII\nSuperior izquierda\n\\(x &lt; 0, y &gt; 0\\)\n\n\nIII\nInferior izquierda\n\\(x &lt; 0, y &lt; 0\\)\n\n\nIV\nInferior derecha\n\\(x &gt; 0, y &lt; 0\\)",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#producto-cartesiano-de-múltiples-conjuntos",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#producto-cartesiano-de-múltiples-conjuntos",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "127.4 Producto Cartesiano de Múltiples Conjuntos",
-    "text": "127.4 Producto Cartesiano de Múltiples Conjuntos\nGeneralización: El producto cartesiano se extiende a \\(n\\) conjuntos:\n\\[X_1 \\times X_2 \\times \\cdots \\times X_n = \\{(x_1, x_2, \\ldots, x_n) \\mid x_i \\in X_i \\text{ para } i = 1, 2, \\ldots, n\\}\\]\nCaso especial: \\(\\mathbb{R}^n = \\underbrace{\\mathbb{R} \\times \\mathbb{R} \\times \\cdots \\times \\mathbb{R}}_{n \\text{ veces}}\\)\nAplicaciones económicas:\n\n\\(\\mathbb{R}^2\\): Pares de variables (precio-cantidad, consumo-ingreso)\n\\(\\mathbb{R}^n\\): Vectores de precios, cantidades, o dotaciones en economías con \\(n\\) bienes\nEspacios de estrategias en teoría de juegos",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "9.4 Producto Cartesiano de Múltiples Conjuntos",
+    "text": "9.4 Producto Cartesiano de Múltiples Conjuntos\nGeneralización: El producto cartesiano se extiende a \\(n\\) conjuntos:\n\\[X_1 \\times X_2 \\times \\cdots \\times X_n = \\{(x_1, x_2, \\ldots, x_n) \\mid x_i \\in X_i \\text{ para } i = 1, 2, \\ldots, n\\}\\]\nCaso especial: \\(\\mathbb{R}^n = \\underbrace{\\mathbb{R} \\times \\mathbb{R} \\times \\cdots \\times \\mathbb{R}}_{n \\text{ veces}}\\)\nAplicaciones económicas:\n\n\\(\\mathbb{R}^2\\): Pares de variables (precio-cantidad, consumo-ingreso)\n\\(\\mathbb{R}^n\\): Vectores de precios, cantidades, o dotaciones en economías con \\(n\\) bienes\nEspacios de estrategias en teoría de juegos",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#relaciones",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#relaciones",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "128.1 Relaciones",
-    "text": "128.1 Relaciones\nUna relación formaliza la idea de asociación entre elementos de dos conjuntos.\n\n\n\n\n\n\nDefinición: Relación\n\n\n\nUna relación \\(R\\) de \\(X\\) en \\(Y\\) es cualquier subconjunto del producto cartesiano \\(X \\times Y\\):\n\\[R \\subseteq X \\times Y\\]\nSi \\((x, y) \\in R\\), decimos que “\\(x\\) está relacionado con \\(y\\)” y escribimos \\(xRy\\).\n\n\nCaracterísticas:\n\nUna relación puede asociar uno o más valores de \\(y\\) con un valor dado de \\(x\\)\nUna relación puede asociar ningún valor de \\(y\\) con ciertos valores de \\(x\\)\n\n\n\n\n\n\n\nEjemplo económico\n\n\n\nSea \\(X\\) el conjunto de empresas y \\(Y\\) el conjunto de productos. La relación \\(P\\) definida por:\n\\[P = \\{(e, p) \\mid \\text{la empresa } e \\text{ produce el producto } p\\}\\]\nindica qué productos fabrica cada empresa. Una empresa puede producir múltiples productos.",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "10.1 Relaciones",
+    "text": "10.1 Relaciones\nUna relación formaliza la idea de asociación entre elementos de dos conjuntos.\n\n\n\n\n\n\nImportanteDefinición: Relación\n\n\n\nUna relación \\(R\\) de \\(X\\) en \\(Y\\) es cualquier subconjunto del producto cartesiano \\(X \\times Y\\):\n\\[R \\subseteq X \\times Y\\]\nSi \\((x, y) \\in R\\), decimos que “\\(x\\) está relacionado con \\(y\\)” y escribimos \\(xRy\\).\n\n\nCaracterísticas:\n\nUna relación puede asociar uno o más valores de \\(y\\) con un valor dado de \\(x\\)\nUna relación puede asociar ningún valor de \\(y\\) con ciertos valores de \\(x\\)\n\n\n\n\n\n\n\nTipEjemplo económico\n\n\n\nSea \\(X\\) el conjunto de empresas y \\(Y\\) el conjunto de productos. La relación \\(P\\) definida por:\n\\[P = \\{(e, p) \\mid \\text{la empresa } e \\text{ produce el producto } p\\}\\]\nindica qué productos fabrica cada empresa. Una empresa puede producir múltiples productos.",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
@@ -322,31 +322,31 @@
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#funciones",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#funciones",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "128.2 Funciones",
-    "text": "128.2 Funciones\nLas funciones son relaciones especiales que satisfacen una condición de unicidad.\n\n\n\n\n\n\nDefinición: Función\n\n\n\nUna función \\(f\\) de \\(X\\) en \\(Y\\) (denotada \\(f: X \\to Y\\)) es una relación que asigna a cada elemento \\(x \\in X\\) exactamente un elemento \\(y \\in Y\\):\n\\[f \\subseteq X \\times Y \\quad \\text{tal que} \\quad (\\forall x \\in X)(\\exists! y \\in Y)[(x,y) \\in f]\\]\nNotación: \\(y = f(x)\\) (se lee “\\(y\\) es igual a \\(f\\) de \\(x\\)”)\n\n\nComponentes de una función:\n\n\n\n\n\n\nNota\n\n\n\nPara \\(f: X \\to Y\\):\n\nDominio (\\(\\text{Dom}(f)\\)): Conjunto de valores permitidos para la variable independiente \\(x\\). Por definición, \\(\\text{Dom}(f) = X\\).\nCodominio: El conjunto \\(Y\\) donde toman valores las imágenes.\nImagen o Rango (\\(\\text{Im}(f)\\) o \\(\\text{Ran}(f)\\)): Conjunto de valores que efectivamente toma la variable dependiente \\(y\\):\n\\[\\text{Im}(f) = \\{y \\in Y \\mid \\exists x \\in X: y = f(x)\\} \\subseteq Y\\]\nVariable independiente (o argumento): \\(x\\)\nVariable dependiente (o valor): \\(y = f(x)\\)\n\n\n\nTerminología alternativa:\n\nMapeo o aplicación: Sinónimo de función\nTransformación: Usado frecuentemente cuando \\(X = Y\\)",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "10.2 Funciones",
+    "text": "10.2 Funciones\nLas funciones son relaciones especiales que satisfacen una condición de unicidad.\n\n\n\n\n\n\nImportanteDefinición: Función\n\n\n\nUna función \\(f\\) de \\(X\\) en \\(Y\\) (denotada \\(f: X \\to Y\\)) es una relación que asigna a cada elemento \\(x \\in X\\) exactamente un elemento \\(y \\in Y\\):\n\\[f \\subseteq X \\times Y \\quad \\text{tal que} \\quad (\\forall x \\in X)(\\exists! y \\in Y)[(x,y) \\in f]\\]\nNotación: \\(y = f(x)\\) (se lee “\\(y\\) es igual a \\(f\\) de \\(x\\)”)\n\n\nComponentes de una función:\n\n\n\n\n\n\nNota\n\n\n\nPara \\(f: X \\to Y\\):\n\nDominio (\\(\\text{Dom}(f)\\)): Conjunto de valores permitidos para la variable independiente \\(x\\). Por definición, \\(\\text{Dom}(f) = X\\).\nCodominio: El conjunto \\(Y\\) donde toman valores las imágenes.\nImagen o Rango (\\(\\text{Im}(f)\\) o \\(\\text{Ran}(f)\\)): Conjunto de valores que efectivamente toma la variable dependiente \\(y\\):\n\\[\\text{Im}(f) = \\{y \\in Y \\mid \\exists x \\in X: y = f(x)\\} \\subseteq Y\\]\nVariable independiente (o argumento): \\(x\\)\nVariable dependiente (o valor): \\(y = f(x)\\)\n\n\n\nTerminología alternativa:\n\nMapeo o aplicación: Sinónimo de función\nTransformación: Usado frecuentemente cuando \\(X = Y\\)",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#distinción-entre-relación-y-función",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#distinción-entre-relación-y-función",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "128.3 Distinción entre Relación y Función",
-    "text": "128.3 Distinción entre Relación y Función\nCriterio fundamental:\n\nToda función es una relación, pero no toda relación es una función.\n\nTest de la línea vertical: Una relación gráfica representa una función si y solo si toda línea vertical interseca la gráfica en a lo sumo un punto.\n\n\n\n\n\n\n\n\nFigura 128.1: Comparación entre función y relación",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "10.3 Distinción entre Relación y Función",
+    "text": "10.3 Distinción entre Relación y Función\nCriterio fundamental:\n\nToda función es una relación, pero no toda relación es una función.\n\nTest de la línea vertical: Una relación gráfica representa una función si y solo si toda línea vertical interseca la gráfica en a lo sumo un punto.\n\n\n\n\n\n\n\n\nFigura 10.1: Comparación entre función y relación",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
     "objectID": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#propiedades-de-funciones",
     "href": "capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html#propiedades-de-funciones",
-    "title": "123  Capítulo 2: Revisión de Aritmética y Álgebra",
-    "section": "128.4 Propiedades de Funciones",
-    "text": "128.4 Propiedades de Funciones\nInyectividad (función uno a uno):\n\n\n\n\n\n\nDefinición: Función inyectiva\n\n\n\n\\(f: X \\to Y\\) es inyectiva si elementos distintos del dominio se mapean a elementos distintos del codominio:\n\\[(\\forall x_1, x_2 \\in X)[x_1 \\neq x_2 \\Rightarrow f(x_1) \\neq f(x_2)]\\]\nEquivalentemente: \\(f(x_1) = f(x_2) \\Rightarrow x_1 = x_2\\)\n\n\nSobreyectividad (función onto):\n\n\n\n\n\n\nDefinición: Función sobreyectiva\n\n\n\n\\(f: X \\to Y\\) es sobreyectiva si cada elemento del codominio es imagen de al menos un elemento del dominio:\n\\[(\\forall y \\in Y)(\\exists x \\in X)[y = f(x)]\\]\nEs decir: \\(\\text{Im}(f) = Y\\)\n\n\nBiyectividad:\n\n\n\n\n\n\nDefinición: Función biyectiva\n\n\n\n\\(f: X \\to Y\\) es biyectiva si es simultáneamente inyectiva y sobreyectiva. Establece una correspondencia uno a uno entre \\(X\\) e \\(Y\\).\n\n\n\n\n\n\n\n\nChiang, A. C., & Wainwright, K. (2005). Fundamental Methods of Mathematical Economics (4th ed.). McGraw-Hill.\n\n\nSimon, C. P., & Blume, L. (1994). Mathematics for Economists. W.W. Norton & Company.",
+    "title": "5  Capítulo 2: Revisión de Aritmética y Álgebra",
+    "section": "10.4 Propiedades de Funciones",
+    "text": "10.4 Propiedades de Funciones\nInyectividad (función uno a uno):\n\n\n\n\n\n\nNotaDefinición: Función inyectiva\n\n\n\n\\(f: X \\to Y\\) es inyectiva si elementos distintos del dominio se mapean a elementos distintos del codominio:\n\\[(\\forall x_1, x_2 \\in X)[x_1 \\neq x_2 \\Rightarrow f(x_1) \\neq f(x_2)]\\]\nEquivalentemente: \\(f(x_1) = f(x_2) \\Rightarrow x_1 = x_2\\)\n\n\nSobreyectividad (función onto):\n\n\n\n\n\n\nNotaDefinición: Función sobreyectiva\n\n\n\n\\(f: X \\to Y\\) es sobreyectiva si cada elemento del codominio es imagen de al menos un elemento del dominio:\n\\[(\\forall y \\in Y)(\\exists x \\in X)[y = f(x)]\\]\nEs decir: \\(\\text{Im}(f) = Y\\)\n\n\nBiyectividad:\n\n\n\n\n\n\nNotaDefinición: Función biyectiva\n\n\n\n\\(f: X \\to Y\\) es biyectiva si es simultáneamente inyectiva y sobreyectiva. Establece una correspondencia uno a uno entre \\(X\\) e \\(Y\\).\n\n\n\n\n\n\n\n\nChiang, A. C., & Wainwright, K. (2005). Fundamental Methods of Mathematical Economics (4th ed.). McGraw-Hill.\n\n\nSimon, C. P., & Blume, L. (1994). Mathematics for Economists. W.W. Norton & Company.",
     "crumbs": [
-      "<span class='chapter-number'>123</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Capítulo 2: Revisión de Aritmética y Álgebra</span>"
     ]
   },
   {
@@ -447,6 +447,846 @@
     "text": "123.6 Referencias\n\n\nChiang, A. C., & Wainwright, K. (2005). Fundamental methods of\nmathematical economics (4th ed.). McGraw-Hill.\n\n\nDebreu, G. (1959). Theory of value: An axiomatic analysis of\neconomic equilibrium. Yale University Press.\n\n\nSimon, C. P., & Blume, L. (1994). Mathematics for\neconomists. W.W. Norton & Company.\n\n\nVarian, H. R. (1992). Microeconomic analysis (3rd ed.). W.W.\nNorton & Company.\n\n\n\nEmanuel Quintana Silva\nUniversidad Pedagógica y Tecnológica de Colombia (UPTC)",
     "crumbs": [
       "<span class='chapter-number'>122</span>  <span class='chapter-title'>Capítulo 1: Naturaleza de la Economía Matemática</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ventajas-del-álgebra-matricial",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ventajas-del-álgebra-matricial",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "9.1 Ventajas del Álgebra Matricial",
+    "text": "9.1 Ventajas del Álgebra Matricial\n\nCompacidad Notacional: Forma compacta de escribir sistemas de ecuaciones\nTeoría de Existencia: Prueba de existencia mediante determinantes\nMétodo Sistemático: Procedimiento algorítmico para encontrar soluciones",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#transformaciones-lineales",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#transformaciones-lineales",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "9.2 Transformaciones Lineales",
+    "text": "9.2 Transformaciones Lineales\n\n\nMostrar código\nfig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))\n\nx = np.linspace(0.1, 10, 100)\na, b = 2, 1.5\ny = a * x**b\n\n# Gráfica original (no lineal)\nax1.plot(x, y, 'b-', linewidth=2, label=f'$y = {a}x^{{{b}}}$')\nax1.set_xlabel('x', fontsize=12)\nax1.set_ylabel('y', fontsize=12)\nax1.set_title('Función Original (No Lineal)', fontsize=14, fontweight='bold')\nax1.legend()\nax1.grid(True, alpha=0.3)\n\n# Gráfica transformada (lineal)\nlog_x = np.log(x)\nlog_y = np.log(y)\nax2.plot(log_x, log_y, 'r-', linewidth=2, label=f'$\\\\log y = \\\\log {a} + {b}\\\\log x$')\nax2.set_xlabel('log(x)', fontsize=12)\nax2.set_ylabel('log(y)', fontsize=12)\nax2.set_title('Función Transformada (Lineal)', fontsize=14, fontweight='bold')\nax2.legend()\nax2.grid(True, alpha=0.3)\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nFigura 9.1: Transformación logarítmica de función no lineal a lineal",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición-de-matriz",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición-de-matriz",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "10.1 Definición de Matriz",
+    "text": "10.1 Definición de Matriz\n\n\n\n\n\n\nTipDefinición\n\n\n\nUna matriz \\(\\mathbf{A}\\) de dimensión \\(m \\times n\\) es un arreglo rectangular:\n\\[\\mathbf{A} = \\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1n} \\\\\na_{21} & a_{22} & \\cdots & a_{2n} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mn}\n\\end{bmatrix}\\]\n\n\n\n\nMostrar código\n# Ejemplo de matriz\nA = np.array([\n    [6, 3, 1],\n    [1, 4, -2],\n    [4, -1, 5]\n])\n\nprint(\"Matriz A (3×3):\")\nprint(A)\nprint(f\"\\nDimensión: {A.shape[0]}×{A.shape[1]}\")\n\n\nMatriz A (3×3):\n[[ 6  3  1]\n [ 1  4 -2]\n [ 4 -1  5]]\n\nDimensión: 3×3",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#vectores",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#vectores",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "10.2 Vectores",
+    "text": "10.2 Vectores\n\n\nMostrar código\n# Vectores columna y renglón\nv_columna = np.array([[3], [2], [1]])\nv_renglon = np.array([[1, 4, 5]])\n\nprint(\"Vector columna (3×1):\")\nprint(v_columna)\nprint(f\"\\nVector renglón (1×3):\")\nprint(v_renglon)\n\n\nVector columna (3×1):\n[[3]\n [2]\n [1]]\n\nVector renglón (1×3):\n[[1 4 5]]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#suma-de-matrices",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#suma-de-matrices",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "11.1 Suma de Matrices",
+    "text": "11.1 Suma de Matrices\n\n\nMostrar código\nA = np.array([[4, 9], [2, 1]])\nB = np.array([[2, 0], [0, 7]])\nC = A + B\n\nprint(\"A + B =\")\nprint(C)\n\n\nA + B =\n[[6 9]\n [2 8]]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#multiplicación-escalar",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#multiplicación-escalar",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "12.3 Multiplicación Escalar",
+    "text": "12.3 Multiplicación Escalar\nMultiplicar una matriz por un escalar \\(\\alpha\\) implica multiplicar cada elemento:\n\\[\\alpha\\mathbf{A} = [\\alpha a_{ij}]\\]\nPropiedades: - \\(\\alpha(\\mathbf{A + B}) = \\alpha\\mathbf{A} + \\alpha\\mathbf{B}\\) (Distributiva) - \\((\\alpha + \\beta)\\mathbf{A} = \\alpha\\mathbf{A} + \\beta\\mathbf{A}\\) (Distributiva)\n\n\nMostrar código\n# Multiplicación escalar\nA = np.array([[3, -1], [0, 5]])\nalpha = 7\nresultado = alpha * A\n\nprint(f\"Matriz A:\")\nprint(A)\nprint(f\"\\nEscalar α = {alpha}\")\nprint(f\"\\nResultado {alpha}A:\")\nprint(resultado)\n\n\nMatriz A:\n[[ 3 -1]\n [ 0  5]]\n\nEscalar α = 7\n\nResultado 7A:\n[[21 -7]\n [ 0 35]]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#multiplicación-de-matrices",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#multiplicación-de-matrices",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "11.3 Multiplicación de Matrices",
+    "text": "11.3 Multiplicación de Matrices\n\n\nMostrar código\nA = np.array([[2, 3], [1, 4]])\nB = np.array([[5, 1], [2, 3]])\nC = np.dot(A, B)\n\nprint(\"AB =\")\nprint(C)\n\n\nAB =\n[[16 11]\n [13 13]]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#equilibrio-de-mercado",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#equilibrio-de-mercado",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "15.1 Equilibrio de Mercado",
+    "text": "15.1 Equilibrio de Mercado\n\n\nMostrar código\n# Sistema: AP = d\nA = np.array([\n    [5, -1, 0],\n    [-1, 7, -1],\n    [0, -1, 4]\n])\n\nd = np.array([14, 12, 7])\n\n# Solución\nP = np.linalg.solve(A, d)\n\nprint(\"Precios de equilibrio:\")\nfor i, p in enumerate(P, 1):\n    print(f\"P{i} = {p:.4f}\")\n\n\nPrecios de equilibrio:\nP1 = 3.3053\nP2 = 2.5267\nP3 = 2.3817",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#modelo-insumo-producto",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#modelo-insumo-producto",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "15.2 Modelo Insumo-Producto",
+    "text": "15.2 Modelo Insumo-Producto\n\n\nMostrar código\nA = np.array([\n    [0.3, 0.2, 0.1],\n    [0.2, 0.4, 0.2],\n    [0.1, 0.1, 0.3]\n])\n\nd = np.array([100, 150, 200])\n\nI = np.eye(3)\nx = np.linalg.solve(I - A, d)\n\nprint(\"Producción total requerida:\")\nfor i, xi in enumerate(x, 1):\n    print(f\"Sector {i}: {xi:.2f}\")\n\n\nProducción total requerida:\nSector 1: 343.75\nSector 2: 500.00\nSector 3: 406.25",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "",
+    "text": "10 Introducción al Álgebra Matricial",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#introducción",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#introducción",
+    "title": "9  Capítulo 4-1: Matrices",
+    "section": "10.1 Introducción",
+    "text": "10.1 Introducción\nContenido del capítulo.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#desarrollo-teórico",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#desarrollo-teórico",
+    "title": "9  Capítulo 4-1: Matrices",
+    "section": "10.2 Desarrollo teórico",
+    "text": "10.2 Desarrollo teórico\n\n10.2.1 Sección 1\nContenido de la sección 1.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#ejemplos",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#ejemplos",
+    "title": "9  Capítulo 4-1: Matrices",
+    "section": "10.3 Ejemplos",
+    "text": "10.3 Ejemplos\n\n10.3.1 Ejemplo 1.1\nEjemplo práctico.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#ejercicios",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#ejercicios",
+    "title": "9  Capítulo 4-1: Matrices",
+    "section": "10.4 Ejercicios",
+    "text": "10.4 Ejercicios\n\n10.4.1 Ejercicio 1\nEnunciado del ejercicio.\n\nCapítulo en desarrollo",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/README.html",
+    "href": "capitulos/parte_02_analisis_estatico/README.html",
+    "title": "7  Parte II: Análisis Estático",
+    "section": "",
+    "text": "8 Análisis Estático (Modelos de Equilibrio)\nEsta parte trata sobre modelos de equilibrio y álgebra lineal aplicada.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Parte II: Análisis Estático</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/README.html#capítulos",
+    "href": "capitulos/parte_02_analisis_estatico/README.html#capítulos",
+    "title": "7  Parte II: Análisis Estático",
+    "section": "8.1 Capítulos",
+    "text": "8.1 Capítulos\n\nModelos Lineales y Álgebra de Matrices\nModelos Lineales (continuación)",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Parte II: Análisis Estático</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#el-desafío-dimensional-en-economía",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#el-desafío-dimensional-en-economía",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "10.1 El Desafío Dimensional en Economía",
+    "text": "10.1 El Desafío Dimensional en Economía\nEn economía matemática, el análisis de modelos con múltiples variables requiere metodologías que vayan más allá de las técnicas escalares tradicionales. El álgebra de matrices emerge como la herramienta fundamental para abordar el análisis estático o de equilibrio cuando el número de variables es grande.\n\n\n\n\n\n\nImportanteNecesidad del Álgebra Matricial\n\n\n\nCuando un modelo de mercado aumenta de uno a dos o más artículos, las fórmulas de eliminación de variables se vuelven rápidamente inmanejables. El álgebra de matrices proporciona una solución sistemática y elegante a este problema de complejidad.\n\n\n\n10.1.1 Tres Ventajas Fundamentales\nEl álgebra de matrices ofrece ventajas cruciales para el análisis económico:\n\nCompacidad Notacional: Proporciona una forma compacta de escribir sistemas de ecuaciones, incluso muy grandes\nTeoría de Existencia: Permite probar la existencia de soluciones mediante la evaluación de determinantes\nMétodo Sistemático: Suministra un procedimiento algorítmico para encontrar soluciones cuando existen\n\n\n\n10.1.2 Linealidad y Transformaciones\nEl álgebra de matrices se aplica específicamente a sistemas de ecuaciones lineales. Sin embargo, esta restricción no es limitante: modelos no lineales pueden transformarse mediante cambios de variables en relaciones lineales equivalentes.\nEjemplo de Transformación: \\[y = ax^b \\quad \\xrightarrow{\\log} \\quad \\log y = \\log a + b\\log x\\]\n\n\nMostrar código\nfig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))\n\nx = np.linspace(0.1, 10, 100)\na, b = 2, 1.5\ny = a * x**b\n\n# Gráfica original (no lineal)\nax1.plot(x, y, 'b-', linewidth=2, label=f'$y = {a}x^{{{b}}}$')\nax1.set_xlabel('x', fontsize=12)\nax1.set_ylabel('y', fontsize=12)\nax1.set_title('Función Original (No Lineal)', fontsize=14, fontweight='bold')\nax1.legend()\nax1.grid(True, alpha=0.3)\n\n# Gráfica transformada (lineal)\nlog_x = np.log(x)\nlog_y = np.log(y)\nax2.plot(log_x, log_y, 'r-', linewidth=2, label=f'$\\\\log y = \\\\log {a} + {b}\\\\log x$')\nax2.set_xlabel('log(x)', fontsize=12)\nax2.set_ylabel('log(y)', fontsize=12)\nax2.set_title('Función Transformada (Lineal)', fontsize=14, fontweight='bold')\nax2.legend()\nax2.grid(True, alpha=0.3)\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nFigura 10.1: Transformación logarítmica de función no lineal a lineal",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#definición-formal",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#definición-formal",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "11.1 Definición Formal",
+    "text": "11.1 Definición Formal\nUna matriz se define como un arreglo rectangular de números, parámetros o variables. Los elementos individuales se identifican mediante subíndices dobles.\n\n\n\n\n\n\nTipDefinición: Matriz\n\n\n\nUna matriz \\(\\mathbf{A}\\) de dimensión \\(m \\times n\\) es un arreglo rectangular de \\(m\\) filas y \\(n\\) columnas:\n\\[\\mathbf{A} = \\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1n} \\\\\na_{21} & a_{22} & \\cdots & a_{2n} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mn}\n\\end{bmatrix}\\]\nDonde \\(a_{ij}\\) denota el elemento en la fila \\(i\\) y columna \\(j\\).\n\n\n\n\nMostrar código\n# Ejemplo de matriz\nA = np.array([\n    [6, 3, 1],\n    [1, 4, -2],\n    [4, -1, 5]\n])\n\nprint(\"Matriz A (3×3):\")\nprint(A)\nprint(f\"\\nDimensión: {A.shape[0]}×{A.shape[1]}\")\nprint(f\"Elemento a₂₃ = {A[1, 2]}\")\n\n\nMatriz A (3×3):\n[[ 6  3  1]\n [ 1  4 -2]\n [ 4 -1  5]]\n\nDimensión: 3×3\nElemento a₂₃ = -2",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#representación-de-sistemas-lineales",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#representación-de-sistemas-lineales",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "11.2 Representación de Sistemas Lineales",
+    "text": "11.2 Representación de Sistemas Lineales\nUn sistema de \\(m\\) ecuaciones lineales en \\(n\\) variables se puede escribir de manera compacta mediante la notación matricial \\(\\mathbf{Ax = d}\\).\nPara el sistema general: \\[\\begin{cases}\na_{11}x_1 + a_{12}x_2 + \\cdots + a_{1n}x_n = d_1 \\\\\na_{21}x_1 + a_{22}x_2 + \\cdots + a_{2n}x_n = d_2 \\\\\n\\vdots \\\\\na_{m1}x_1 + a_{m2}x_2 + \\cdots + a_{mn}x_n = d_m\n\\end{cases}\\]\nLa representación matricial es: \\[\\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1n} \\\\\na_{21} & a_{22} & \\cdots & a_{2n} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mn}\n\\end{bmatrix}\n\\begin{bmatrix} x_1 \\\\ x_2 \\\\ \\vdots \\\\ x_n \\end{bmatrix}\n=\n\\begin{bmatrix} d_1 \\\\ d_2 \\\\ \\vdots \\\\ d_m \\end{bmatrix}\\]\nDonde: - \\(\\mathbf{A}\\): Matriz de coeficientes \\((m \\times n)\\) - \\(\\mathbf{x}\\): Vector de variables \\((n \\times 1)\\) - \\(\\mathbf{d}\\): Vector de términos constantes \\((m \\times 1)\\)\n\n\nMostrar código\n# Sistema matricial ejemplo\nA_sym = Matrix([[6, 3, 1], [1, 4, -2], [4, -1, 5]])\nx_sym = Matrix([symbols('x_1'), symbols('x_2'), symbols('x_3')])\nd_sym = Matrix([symbols('d_1'), symbols('d_2'), symbols('d_3')])\n\nprint(\"Sistema: Ax = d\")\nprint(\"\\nMatriz A:\")\ndisplay(A_sym)\nprint(\"\\nVector x:\")\ndisplay(x_sym)\nprint(\"\\nVector d:\")\ndisplay(d_sym)\n\n\nSistema: Ax = d\n\nMatriz A:\n\n\n\\(\\displaystyle \\left[\\begin{matrix}6 & 3 & 1\\\\1 & 4 & -2\\\\4 & -1 & 5\\end{matrix}\\right]\\)\n\n\n\nVector x:\n\n\n\\(\\displaystyle \\left[\\begin{matrix}x_{1}\\\\x_{2}\\\\x_{3}\\end{matrix}\\right]\\)\n\n\n\nVector d:\n\n\n\\(\\displaystyle \\left[\\begin{matrix}d_{1}\\\\d_{2}\\\\d_{3}\\end{matrix}\\right]\\)",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#tipos-de-vectores",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#tipos-de-vectores",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "12.1 Tipos de Vectores",
+    "text": "12.1 Tipos de Vectores\nUn vector es una matriz que posee una única columna o un único renglón.\n\n\n\n\n\n\nTipClasificación Vectorial\n\n\n\nVector Columna (\\(m \\times 1\\)): \\[\\mathbf{x} = \\begin{bmatrix} x_1 \\\\ x_2 \\\\ \\vdots \\\\ x_m \\end{bmatrix}\\]\nVector Renglón (\\(1 \\times n\\)): \\[\\mathbf{x}' = \\begin{bmatrix} x_1 & x_2 & \\cdots & x_n \\end{bmatrix}\\]\n\n\n\n\nMostrar código\n# Vectores columna y renglón\nv_columna = np.array([[3], [2], [1]])\nv_renglon = np.array([[1, 4, 5]])\n\nprint(\"Vector columna (3×1):\")\nprint(v_columna)\nprint(f\"Dimensión: {v_columna.shape}\")\n\nprint(\"\\nVector renglón (1×3):\")\nprint(v_renglon)\nprint(f\"Dimensión: {v_renglon.shape}\")\n\n\nVector columna (3×1):\n[[3]\n [2]\n [1]]\nDimensión: (3, 1)\n\nVector renglón (1×3):\n[[1 4 5]]\nDimensión: (1, 3)",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#interpretación-geométrica",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#interpretación-geométrica",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "12.2 Interpretación Geométrica",
+    "text": "12.2 Interpretación Geométrica\nTodo vector con \\(n\\) componentes puede interpretarse como una \\(n\\)-tupla ordenada, equivalente a un punto en el espacio euclidiano \\(\\mathbb{R}^n\\).\n\n\nMostrar código\nfig = plt.figure(figsize=(10, 8))\nax = fig.add_subplot(111)\n\n# Vectores\nv1 = np.array([3, 2])\nv2 = np.array([1, 4])\nv_suma = v1 + v2\n\n# Dibujar vectores\nax.quiver(0, 0, v1[0], v1[1], angles='xy', scale_units='xy', scale=1, \n          color='red', width=0.006, label=r'$\\mathbf{v}_1 = (3, 2)$')\nax.quiver(0, 0, v2[0], v2[1], angles='xy', scale_units='xy', scale=1, \n          color='blue', width=0.006, label=r'$\\mathbf{v}_2 = (1, 4)$')\nax.quiver(0, 0, v_suma[0], v_suma[1], angles='xy', scale_units='xy', scale=1, \n          color='green', width=0.008, label=r'$\\mathbf{v}_1 + \\mathbf{v}_2 = (4, 6)$')\n\n# Configuración\nax.set_xlim(-0.5, 5)\nax.set_ylim(-0.5, 7)\nax.set_xlabel('$x_1$', fontsize=12)\nax.set_ylabel('$x_2$', fontsize=12)\nax.set_title('Vectores en $\\mathbb{R}^2$', fontsize=14, fontweight='bold')\nax.axhline(y=0, color='k', linewidth=0.5)\nax.axvline(x=0, color='k', linewidth=0.5)\nax.grid(True, alpha=0.3)\nax.legend(fontsize=11)\nax.set_aspect('equal')\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nFigura 12.1: Interpretación geométrica de vectores en ℝ²",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#producto-escalar-norma",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#producto-escalar-norma",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "12.3 Producto Escalar (Norma)",
+    "text": "12.3 Producto Escalar (Norma)\nEl producto escalar o producto punto de un vector consigo mismo define su norma (longitud euclidiana):\n\\[\\|\\mathbf{x}\\| = \\sqrt{\\mathbf{x}'\\mathbf{x}} = \\sqrt{\\sum_{i=1}^{n} x_i^2}\\]\n\n\nMostrar código\n# Norma de un vector\nv = np.array([[3], [4]])\nnorma = np.linalg.norm(v)\nproducto_escalar = np.dot(v.T, v)[0,0]\n\nprint(f\"Vector v: {v.T}\")\nprint(f\"Producto escalar v'v = {producto_escalar}\")\nprint(f\"Norma ||v|| = √{producto_escalar} = {norma:.4f}\")\n\n\nVector v: [[3 4]]\nProducto escalar v'v = 25\nNorma ||v|| = √25 = 5.0000",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#igualdad-de-matrices",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#igualdad-de-matrices",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "13.1 Igualdad de Matrices",
+    "text": "13.1 Igualdad de Matrices\n\n\n\n\n\n\nTipDefinición: Igualdad Matricial\n\n\n\nDos matrices \\(\\mathbf{A} = [a_{ij}]\\) y \\(\\mathbf{B} = [b_{ij}]\\) son iguales si y solo si:\n\nPoseen la misma dimensión: \\(m \\times n\\)\nTodos los elementos correspondientes son idénticos: \\(a_{ij} = b_{ij}\\) para todo \\(i, j\\)",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#suma-y-resta-de-matrices",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#suma-y-resta-de-matrices",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "13.2 Suma y Resta de Matrices",
+    "text": "13.2 Suma y Resta de Matrices\nCondición de Conformabilidad: Las matrices deben tener la misma dimensión.\n\\[\\mathbf{C} = \\mathbf{A} + \\mathbf{B} \\implies c_{ij} = a_{ij} + b_{ij}\\]\nPropiedades: - Conmutativa: \\(\\mathbf{A + B = B + A}\\) - Asociativa: \\(\\mathbf{(A + B) + C = A + (B + C)}\\)\n\n\nMostrar código\n# Suma de matrices\nA = np.array([[4, 9], [2, 1]])\nB = np.array([[2, 0], [0, 7]])\nC = A + B\n\nprint(\"Matriz A:\")\nprint(A)\nprint(\"\\nMatriz B:\")\nprint(B)\nprint(\"\\nMatriz C = A + B:\")\nprint(C)\nprint(\"\\n¿A + B = B + A?\", np.array_equal(A + B, B + A))\n\n\nMatriz A:\n[[4 9]\n [2 1]]\n\nMatriz B:\n[[2 0]\n [0 7]]\n\nMatriz C = A + B:\n[[6 9]\n [2 8]]\n\n¿A + B = B + A? True",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#multiplicación-escalar",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#multiplicación-escalar",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "13.3 Multiplicación Escalar",
+    "text": "13.3 Multiplicación Escalar\nMultiplicar una matriz por un escalar \\(\\alpha\\) implica multiplicar cada elemento:\n\\[\\alpha\\mathbf{A} = [\\alpha a_{ij}]\\]\nPropiedades: - \\(\\alpha(\\mathbf{A + B}) = \\alpha\\mathbf{A} + \\alpha\\mathbf{B}\\) (Distributiva) - \\((\\alpha + \\beta)\\mathbf{A} = \\alpha\\mathbf{A} + \\beta\\mathbf{A}\\) (Distributiva)\n\n\nMostrar código\n# Multiplicación escalar\nA = np.array([[3, -1], [0, 5]])\nalpha = 7\nresultado = alpha * A\n\nprint(f\"Matriz A:\")\nprint(A)\nprint(f\"\\nEscalar α = {alpha}\")\nprint(f\"\\nResultado {alpha}A:\")\nprint(resultado)\n\n\nMatriz A:\n[[ 3 -1]\n [ 0  5]]\n\nEscalar α = 7\n\nResultado 7A:\n[[21 -7]\n [ 0 35]]",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#condición-de-conformabilidad",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#condición-de-conformabilidad",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "14.1 Condición de Conformabilidad",
+    "text": "14.1 Condición de Conformabilidad\n\n\n\n\n\n\nImportanteRegla Dimensional\n\n\n\nEl producto \\(\\mathbf{AB}\\) está definido si y solo si:\n\\[\\mathbf{A}_{m \\times n} \\times \\mathbf{B}_{n \\times q} = \\mathbf{C}_{m \\times q}\\]\nEl número de columnas de \\(\\mathbf{A}\\) debe ser igual al número de filas de \\(\\mathbf{B}\\).",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#definición-del-producto",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#definición-del-producto",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "14.2 Definición del Producto",
+    "text": "14.2 Definición del Producto\nCada elemento \\(c_{ij}\\) de la matriz producto se define como el producto interior de la fila \\(i\\) de \\(\\mathbf{A}\\) con la columna \\(j\\) de \\(\\mathbf{B}\\):\n\\[c_{ij} = \\sum_{k=1}^{n} a_{ik}b_{kj} = a_{i1}b_{1j} + a_{i2}b_{2j} + \\cdots + a_{in}b_{nj}\\]\n\n\nMostrar código\n# Multiplicación de matrices\nA = np.array([[2, 3], [1, 4]])\nB = np.array([[5, 1], [2, 3]])\nC = np.dot(A, B)\n\nprint(\"Matriz A (2×2):\")\nprint(A)\nprint(\"\\nMatriz B (2×2):\")\nprint(B)\nprint(\"\\nMatriz C = AB:\")\nprint(C)\n\n# Verificación elemento por elemento\nprint(f\"\\nc₁₁ = {A[0,0]}·{B[0,0]} + {A[0,1]}·{B[1,0]} = {A[0,0]*B[0,0] + A[0,1]*B[1,0]}\")\nprint(f\"c₁₂ = {A[0,0]}·{B[0,1]} + {A[0,1]}·{B[1,1]} = {A[0,0]*B[0,1] + A[0,1]*B[1,1]}\")\n\n\nMatriz A (2×2):\n[[2 3]\n [1 4]]\n\nMatriz B (2×2):\n[[5 1]\n [2 3]]\n\nMatriz C = AB:\n[[16 11]\n [13 13]]\n\nc₁₁ = 2·5 + 3·2 = 16\nc₁₂ = 2·1 + 3·3 = 11",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#propiedades-algebraicas",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#propiedades-algebraicas",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "14.3 Propiedades Algebraicas",
+    "text": "14.3 Propiedades Algebraicas\n\n\n\n\n\n\nAdvertenciaNo Conmutatividad\n\n\n\nEn general: \\(\\mathbf{AB} \\neq \\mathbf{BA}\\)\nEl orden de los factores sí altera el producto. Esta es la diferencia más importante respecto al álgebra escalar.\n\n\n\n\nMostrar código\n# Demostración de no conmutatividad\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\n\nAB = np.dot(A, B)\nBA = np.dot(B, A)\n\nprint(\"AB:\")\nprint(AB)\nprint(\"\\nBA:\")\nprint(BA)\nprint(f\"\\n¿AB = BA? {np.array_equal(AB, BA)}\")\n\n\nAB:\n[[19 22]\n [43 50]]\n\nBA:\n[[23 34]\n [31 46]]\n\n¿AB = BA? False\n\n\n\n\n\n\n\n\nTipPropiedades Importantes\n\n\n\n\nAsociativa: \\((\\mathbf{AB})\\mathbf{C} = \\mathbf{A}(\\mathbf{BC}) = \\mathbf{ABC}\\)\nDistributiva: \\(\\mathbf{A(B + C) = AB + AC}\\) y \\(\\mathbf{(A + B)C = AC + BC}\\)\nTranspuesta del producto: \\((\\mathbf{AB})' = \\mathbf{B}'\\mathbf{A}'\\) (orden inverso)",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#vector-columna-vector-renglón-producto-exterior",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#vector-columna-vector-renglón-producto-exterior",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "15.1 Vector Columna × Vector Renglón (Producto Exterior)",
+    "text": "15.1 Vector Columna × Vector Renglón (Producto Exterior)\nProducto Exterior (\\(\\mathbf{uv}'\\)): Genera una matriz\n\\[\\mathbf{u}_{m \\times 1} \\times \\mathbf{v}'_{1 \\times n} = \\mathbf{M}_{m \\times n}\\]\n\n\nMostrar código\n# Producto exterior\nu = np.array([[3], [2]])\nv_t = np.array([[1, 4, 5]])\n\nM = np.dot(u, v_t)\n\nprint(\"Vector u (columna):\")\nprint(u)\nprint(\"\\nVector v' (renglón):\")\nprint(v_t)\nprint(\"\\nProducto exterior uv':\")\nprint(M)\n\n\nVector u (columna):\n[[3]\n [2]]\n\nVector v' (renglón):\n[[1 4 5]]\n\nProducto exterior uv':\n[[ 3 12 15]\n [ 2  8 10]]",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#vector-renglón-vector-columna-producto-interior",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#vector-renglón-vector-columna-producto-interior",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "15.2 Vector Renglón × Vector Columna (Producto Interior)",
+    "text": "15.2 Vector Renglón × Vector Columna (Producto Interior)\nProducto Interior (\\(\\mathbf{u}'\\mathbf{v}\\)): Genera un escalar\n\\[\\mathbf{u}'_{1 \\times n} \\times \\mathbf{v}_{n \\times 1} = s_{1 \\times 1}\\]\n\\[\\mathbf{u} \\cdot \\mathbf{v} = \\sum_{i=1}^{n} u_iv_i\\]\n\n\nMostrar código\n# Producto interior (producto punto)\nu_t = np.array([[3, 4]])\nv = np.array([[9], [7]])\n\ns = np.dot(u_t, v)\n\nprint(\"Vector u' (renglón):\")\nprint(u_t)\nprint(\"\\nVector v (columna):\")\nprint(v)\nprint(\"\\nProducto interior u'v:\")\nprint(s)\nprint(f\"\\nCálculo: 3(9) + 4(7) = {3*9 + 4*7}\")\n\n\nVector u' (renglón):\n[[3 4]]\n\nVector v (columna):\n[[9]\n [7]]\n\nProducto interior u'v:\n[[55]]\n\nCálculo: 3(9) + 4(7) = 55",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#aplicación-económica-costo-total",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#aplicación-económica-costo-total",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "15.3 Aplicación Económica: Costo Total",
+    "text": "15.3 Aplicación Económica: Costo Total\n\n\nMostrar código\n# Ejemplo: Costo total de compra\ncantidades = np.array([[10, 5, 3]])  # Q' (renglón)\nprecios = np.array([[50], [100], [200]])  # P (columna)\n\ncosto_total = np.dot(cantidades, precios)[0, 0]\n\nprint(\"Cantidades Q' (unidades):\")\nprint(cantidades)\nprint(\"\\nPrecios P ($/unidad):\")\nprint(precios)\nprint(f\"\\nCosto Total = Q'·P = ${costo_total:,.0f}\")\n\n\nCantidades Q' (unidades):\n[[10  5  3]]\n\nPrecios P ($/unidad):\n[[ 50]\n [100]\n [200]]\n\nCosto Total = Q'·P = $1,600",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#matrices-cuadradas",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#matrices-cuadradas",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "16.1 Matrices Cuadradas",
+    "text": "16.1 Matrices Cuadradas\nUna matriz es cuadrada cuando tiene el mismo número de filas que de columnas (\\(m = n\\)).\nPropiedades especiales: - Solo las matrices cuadradas pueden tener inversa - El determinante solo está definido para matrices cuadradas - Las potencias de matrices solo están definidas para matrices cuadradas\n\n16.1.1 Diagonal Principal\nLos elementos \\(a_{ii}\\) donde \\(i = j\\) forman la diagonal principal:\n\\[\\text{diag}(\\mathbf{A}) = \\{a_{11}, a_{22}, \\ldots, a_{nn}\\}\\]\n\n\n16.1.2 Traza\nLa traza de una matriz cuadrada es la suma de los elementos de su diagonal principal:\n\\[\\text{tr}(\\mathbf{A}) = \\sum_{i=1}^{n} a_{ii}\\]\n\n\nMostrar código\n# Matriz cuadrada y sus propiedades\nA = np.array([\n    [5, 2, 1],\n    [3, 7, 4],\n    [2, 1, 9]\n])\n\ndiagonal = np.diag(A)\ntraza = np.trace(A)\n\nprint(\"Matriz cuadrada A (3×3):\")\nprint(A)\nprint(f\"\\nDiagonal principal: {diagonal}\")\nprint(f\"Traza tr(A) = {traza}\")\n\n\nMatriz cuadrada A (3×3):\n[[5 2 1]\n [3 7 4]\n [2 1 9]]\n\nDiagonal principal: [5 7 9]\nTraza tr(A) = 21",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#matriz-diagonal",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#matriz-diagonal",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "16.2 Matriz Diagonal",
+    "text": "16.2 Matriz Diagonal\nUna matriz cuadrada donde todos los elementos fuera de la diagonal principal son cero:\n\\[\\mathbf{D} = \\begin{bmatrix}\nd_1 & 0 & \\cdots & 0 \\\\\n0 & d_2 & \\cdots & 0 \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n0 & 0 & \\cdots & d_n\n\\end{bmatrix}\\]\nPropiedades: - Producto de matrices diagonales es diagonal - La potencia n-ésima: \\(\\mathbf{D}^n = \\text{diag}(d_1^n, d_2^n, \\ldots, d_n^n)\\)\n\n\nMostrar código\n# Matriz diagonal\nD = np.diag([3, -1, 5])\n\nprint(\"Matriz diagonal D:\")\nprint(D)\n\n# Potencias de matriz diagonal\nD_cuadrada = np.linalg.matrix_power(D, 2)\nD_cubica = np.linalg.matrix_power(D, 3)\n\nprint(\"\\nD²:\")\nprint(D_cuadrada)\nprint(\"\\nD³:\")\nprint(D_cubica)\n\n\nMatriz diagonal D:\n[[ 3  0  0]\n [ 0 -1  0]\n [ 0  0  5]]\n\nD²:\n[[ 9  0  0]\n [ 0  1  0]\n [ 0  0 25]]\n\nD³:\n[[ 27   0   0]\n [  0  -1   0]\n [  0   0 125]]",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#matriz-identidad",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#matriz-identidad",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "16.3 Matriz Identidad",
+    "text": "16.3 Matriz Identidad\nLa matriz identidad \\(\\mathbf{I}\\) es una matriz diagonal con todos los elementos diagonales iguales a 1:\n\\[\\mathbf{I}_n = \\begin{bmatrix}\n1 & 0 & \\cdots & 0 \\\\\n0 & 1 & \\cdots & 0 \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n0 & 0 & \\cdots & 1\n\\end{bmatrix}\\]\nPropiedad fundamental: \\[\\mathbf{I}_m\\mathbf{A} = \\mathbf{A}\\mathbf{I}_n = \\mathbf{A}\\]\n\n\nMostrar código\n# Matriz identidad\nI3 = np.eye(3)\nA = np.array([[2, 3, 1], [4, 1, 5], [2, 0, 3]])\n\nIA = np.dot(I3, A)\nAI = np.dot(A, I3)\n\nprint(\"Matriz Identidad I₃:\")\nprint(I3)\nprint(\"\\n¿I·A = A?\", np.allclose(IA, A))\nprint(\"¿A·I = A?\", np.allclose(AI, A))\n\n\nMatriz Identidad I₃:\n[[1. 0. 0.]\n [0. 1. 0.]\n [0. 0. 1.]]\n\n¿I·A = A? True\n¿A·I = A? True",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#matriz-nula",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#matriz-nula",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "16.4 Matriz Nula",
+    "text": "16.4 Matriz Nula\nLa matriz nula \\(\\mathbf{0}\\) tiene todos sus elementos iguales a cero:\n\\[\\mathbf{0}_{m \\times n} = \\begin{bmatrix}\n0 & 0 & \\cdots & 0 \\\\\n0 & 0 & \\cdots & 0 \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n0 & 0 & \\cdots & 0\n\\end{bmatrix}\\]\nPropiedades: - \\(\\mathbf{A} + \\mathbf{0} = \\mathbf{A}\\) - \\(\\mathbf{A} \\cdot \\mathbf{0} = \\mathbf{0}\\)",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#definición",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#definición",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "17.1 Definición",
+    "text": "17.1 Definición\nLa transpuesta \\(\\mathbf{A}'\\) (o \\(\\mathbf{A}^T\\)) se obtiene intercambiando filas por columnas:\n\\[\\text{Si } \\mathbf{A} = [a_{ij}]_{m \\times n} \\implies \\mathbf{A}' = [a_{ji}]_{n \\times m}\\]\n\n\nMostrar código\n# Transpuesta\nA = np.array([[1, 2, 3], [4, 5, 6]])\nA_T = A.T\n\nprint(\"Matriz A (2×3):\")\nprint(A)\nprint(\"\\nTranspuesta A' (3×2):\")\nprint(A_T)\n\n\nMatriz A (2×3):\n[[1 2 3]\n [4 5 6]]\n\nTranspuesta A' (3×2):\n[[1 4]\n [2 5]\n [3 6]]",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#propiedades-de-la-transpuesta",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#propiedades-de-la-transpuesta",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "17.2 Propiedades de la Transpuesta",
+    "text": "17.2 Propiedades de la Transpuesta\n\n\n\n\n\n\nTipPropiedades Fundamentales\n\n\n\n\n\\((\\mathbf{A}')' = \\mathbf{A}\\)\n\\((\\mathbf{A} + \\mathbf{B})' = \\mathbf{A}' + \\mathbf{B}'\\)\n\\((\\alpha\\mathbf{A})' = \\alpha\\mathbf{A}'\\)\n\\((\\mathbf{AB})' = \\mathbf{B}'\\mathbf{A}'\\) (orden inverso)\n\\((\\mathbf{A}^{-1})' = (\\mathbf{A}')^{-1}\\)\n\n\n\n\n\nMostrar código\n# Verificación de (AB)' = B'A'\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\n\nAB = np.dot(A, B)\nAB_T = AB.T\nB_T_A_T = np.dot(B.T, A.T)\n\nprint(\"¿(AB)' = B'A'?\", np.allclose(AB_T, B_T_A_T))\n\n\n¿(AB)' = B'A'? True",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#matrices-simétricas-y-antisimétricas",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#matrices-simétricas-y-antisimétricas",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "17.3 Matrices Simétricas y Antisimétricas",
+    "text": "17.3 Matrices Simétricas y Antisimétricas\n\n17.3.1 Matriz Simétrica\nUna matriz cuadrada es simétrica si \\(\\mathbf{A} = \\mathbf{A}'\\)\n\\[a_{ij} = a_{ji} \\quad \\forall i, j\\]\n\n\nMostrar código\n# Matriz simétrica\nA_sim = np.array([[5, 2, 1], [2, 3, 4], [1, 4, 6]])\n\nprint(\"Matriz simétrica A:\")\nprint(A_sim)\nprint(f\"\\n¿Es simétrica? {np.allclose(A_sim, A_sim.T)}\")\n\n\nMatriz simétrica A:\n[[5 2 1]\n [2 3 4]\n [1 4 6]]\n\n¿Es simétrica? True\n\n\n\n\n17.3.2 Matriz Antisimétrica\nUna matriz cuadrada es antisimétrica si \\(\\mathbf{A} = -\\mathbf{A}'\\)\n\\[a_{ij} = -a_{ji} \\quad \\forall i, j\\]\n\n\nMostrar código\n# Matriz antisimétrica\nA_antisim = np.array([[0, 2, -3], [-2, 0, 5], [3, -5, 0]])\n\nprint(\"Matriz antisimétrica A:\")\nprint(A_antisim)\nprint(f\"\\n¿Es antisimétrica? {np.allclose(A_antisim, -A_antisim.T)}\")\n\n\nMatriz antisimétrica A:\n[[ 0  2 -3]\n [-2  0  5]\n [ 3 -5  0]]\n\n¿Es antisimétrica? True",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#definición-y-propiedades",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html#definición-y-propiedades",
+    "title": "9  Capítulo 4-1: Modelos Lineales y Álgebra de Matrices",
+    "section": "18.1 Definición y Propiedades",
+    "text": "18.1 Definición y Propiedades\nEl determinante es una función escalar que asigna a cada matriz cuadrada \\(\\mathbf{A}\\) un número real, denotado \\(|\\mathbf{A}|\\) o \\(\\det(\\mathbf{A})\\).\n\n18.1.1 Determinante 2×2\n\\[|\\mathbf{A}| = \\begin{vmatrix}\na_{11} & a_{12} \\\\\na_{21} & a_{22}\n\\end{vmatrix}\n= a_{11}a_{22} - a_{12}a_{21}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#el-desafío-dimensional-en-economía",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#el-desafío-dimensional-en-economía",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "9.1 El Desafío Dimensional en Economía",
+    "text": "9.1 El Desafío Dimensional en Economía\nEn economía matemática, el análisis de modelos con múltiples variables requiere metodologías que vayan más allá de las técnicas escalares tradicionales. El álgebra de matrices emerge como la herramienta fundamental para abordar el análisis estático o de equilibrio cuando el número de variables es grande.\n\n\n\n\n\n\nImportanteNecesidad del Álgebra Matricial\n\n\n\nCuando un modelo de mercado aumenta de uno a dos o más artículos, las fórmulas de eliminación de variables se vuelven rápidamente inmanejables. El álgebra de matrices proporciona una solución sistemática y elegante a este problema de complejidad.\n\n\n\n9.1.1 Tres Ventajas Fundamentales\nEl álgebra de matrices ofrece ventajas cruciales para el análisis económico:\n\nCompacidad Notacional: Proporciona una forma compacta de escribir sistemas de ecuaciones, incluso muy grandes\nTeoría de Existencia: Permite probar la existencia de soluciones mediante la evaluación de determinantes\nMétodo Sistemático: Suministra un procedimiento algorítmico para encontrar soluciones cuando existen\n\n\n\n9.1.2 Linealidad y Transformaciones\nEl álgebra de matrices se aplica específicamente a sistemas de ecuaciones lineales. Sin embargo, esta restricción no es limitante: modelos no lineales pueden transformarse mediante cambios de variables en relaciones lineales equivalentes.\nEjemplo de Transformación: \\[y = ax^b \\quad \\xrightarrow{\\log} \\quad \\log y = \\log a + b\\log x\\]\n\n\nMostrar código\nfig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))\n\nx = np.linspace(0.1, 10, 100)\na, b = 2, 1.5\ny = a * x**b\n\n# Gráfica original (no lineal)\nax1.plot(x, y, 'b-', linewidth=2, label=f'$y = {a}x^{{{b}}}$')\nax1.set_xlabel('x', fontsize=12)\nax1.set_ylabel('y', fontsize=12)\nax1.set_title('Función Original (No Lineal)', fontsize=14, fontweight='bold')\nax1.legend()\nax1.grid(True, alpha=0.3)\n\n# Gráfica transformada (lineal)\nlog_x = np.log(x)\nlog_y = np.log(y)\nax2.plot(log_x, log_y, 'r-', linewidth=2, label=f'$\\\\log y = \\\\log {a} + {b}\\\\log x$')\nax2.set_xlabel('log(x)', fontsize=12)\nax2.set_ylabel('log(y)', fontsize=12)\nax2.set_title('Función Transformada (Lineal)', fontsize=14, fontweight='bold')\nax2.legend()\nax2.grid(True, alpha=0.3)\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nFigura 9.1: Transformación logarítmica de función no lineal a lineal",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición-formal",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición-formal",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "10.1 Definición Formal",
+    "text": "10.1 Definición Formal\nUna matriz se define como un arreglo rectangular de números, parámetros o variables. Los elementos individuales se identifican mediante subíndices dobles.\n\n\n\n\n\n\nTipDefinición: Matriz\n\n\n\nUna matriz \\(\\mathbf{A}\\) de dimensión \\(m \\times n\\) es un arreglo rectangular de \\(m\\) filas y \\(n\\) columnas:\n\\[\\mathbf{A} = \\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1n} \\\\\na_{21} & a_{22} & \\cdots & a_{2n} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mn}\n\\end{bmatrix}\\]\nDonde \\(a_{ij}\\) denota el elemento en la fila \\(i\\) y columna \\(j\\).\n\n\n\n\nMostrar código\n# Ejemplo de matriz\nA = np.array([\n    [6, 3, 1],\n    [1, 4, -2],\n    [4, -1, 5]\n])\n\nprint(\"Matriz A (3×3):\")\nprint(A)\nprint(f\"\\nDimensión: {A.shape[0]}×{A.shape[1]}\")\nprint(f\"Elemento a₂₃ = {A[1, 2]}\")\n\n\nMatriz A (3×3):\n[[ 6  3  1]\n [ 1  4 -2]\n [ 4 -1  5]]\n\nDimensión: 3×3\nElemento a₂₃ = -2",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#representación-de-sistemas-lineales",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#representación-de-sistemas-lineales",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "10.2 Representación de Sistemas Lineales",
+    "text": "10.2 Representación de Sistemas Lineales\nUn sistema de \\(m\\) ecuaciones lineales en \\(n\\) variables se puede escribir de manera compacta mediante la notación matricial \\(\\mathbf{Ax = d}\\).\nPara el sistema general: \\[\\begin{cases}\na_{11}x_1 + a_{12}x_2 + \\cdots + a_{1n}x_n = d_1 \\\\\na_{21}x_1 + a_{22}x_2 + \\cdots + a_{2n}x_n = d_2 \\\\\n\\vdots \\\\\na_{m1}x_1 + a_{m2}x_2 + \\cdots + a_{mn}x_n = d_m\n\\end{cases}\\]\nLa representación matricial es: \\[\\begin{bmatrix}\na_{11} & a_{12} & \\cdots & a_{1n} \\\\\na_{21} & a_{22} & \\cdots & a_{2n} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{m1} & a_{m2} & \\cdots & a_{mn}\n\\end{bmatrix}\n\\begin{bmatrix} x_1 \\\\ x_2 \\\\ \\vdots \\\\ x_n \\end{bmatrix}\n=\n\\begin{bmatrix} d_1 \\\\ d_2 \\\\ \\vdots \\\\ d_m \\end{bmatrix}\\]\nDonde: - \\(\\mathbf{A}\\): Matriz de coeficientes \\((m \\times n)\\) - \\(\\mathbf{x}\\): Vector de variables \\((n \\times 1)\\) - \\(\\mathbf{d}\\): Vector de términos constantes \\((m \\times 1)\\)\n\n\nMostrar código\n# Sistema matricial ejemplo\nA_sym = Matrix([[6, 3, 1], [1, 4, -2], [4, -1, 5]])\nx_sym = Matrix([symbols('x_1'), symbols('x_2'), symbols('x_3')])\nd_sym = Matrix([symbols('d_1'), symbols('d_2'), symbols('d_3')])\n\nprint(\"Sistema: Ax = d\")\nprint(\"\\nMatriz A:\")\ndisplay(A_sym)\nprint(\"\\nVector x:\")\ndisplay(x_sym)\nprint(\"\\nVector d:\")\ndisplay(d_sym)\n\n\nSistema: Ax = d\n\nMatriz A:\n\n\n\\(\\displaystyle \\left[\\begin{matrix}6 & 3 & 1\\\\1 & 4 & -2\\\\4 & -1 & 5\\end{matrix}\\right]\\)\n\n\n\nVector x:\n\n\n\\(\\displaystyle \\left[\\begin{matrix}x_{1}\\\\x_{2}\\\\x_{3}\\end{matrix}\\right]\\)\n\n\n\nVector d:\n\n\n\\(\\displaystyle \\left[\\begin{matrix}d_{1}\\\\d_{2}\\\\d_{3}\\end{matrix}\\right]\\)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#tipos-de-vectores",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#tipos-de-vectores",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "11.1 Tipos de Vectores",
+    "text": "11.1 Tipos de Vectores\nUn vector es una matriz que posee una única columna o un único renglón.\n\n\n\n\n\n\nTipClasificación Vectorial\n\n\n\nVector Columna (\\(m \\times 1\\)): \\[\\mathbf{x} = \\begin{bmatrix} x_1 \\\\ x_2 \\\\ \\vdots \\\\ x_m \\end{bmatrix}\\]\nVector Renglón (\\(1 \\times n\\)): \\[\\mathbf{x}' = \\begin{bmatrix} x_1 & x_2 & \\cdots & x_n \\end{bmatrix}\\]\n\n\n\n\nMostrar código\n# Vectores columna y renglón\nv_columna = np.array([[3], [2], [1]])\nv_renglon = np.array([[1, 4, 5]])\n\nprint(\"Vector columna (3×1):\")\nprint(v_columna)\nprint(f\"Dimensión: {v_columna.shape}\")\n\nprint(\"\\nVector renglón (1×3):\")\nprint(v_renglon)\nprint(f\"Dimensión: {v_renglon.shape}\")\n\n\nVector columna (3×1):\n[[3]\n [2]\n [1]]\nDimensión: (3, 1)\n\nVector renglón (1×3):\n[[1 4 5]]\nDimensión: (1, 3)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#interpretación-geométrica",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#interpretación-geométrica",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "11.2 Interpretación Geométrica",
+    "text": "11.2 Interpretación Geométrica\nTodo vector con \\(n\\) componentes puede interpretarse como una \\(n\\)-tupla ordenada, equivalente a un punto en el espacio euclidiano \\(\\mathbb{R}^n\\).\n\n\nMostrar código\nfig = plt.figure(figsize=(10, 8))\nax = fig.add_subplot(111)\n\n# Vectores\nv1 = np.array([3, 2])\nv2 = np.array([1, 4])\nv_suma = v1 + v2\n\n# Dibujar vectores\nax.quiver(0, 0, v1[0], v1[1], angles='xy', scale_units='xy', scale=1, \n          color='red', width=0.006, label=r'$\\mathbf{v}_1 = (3, 2)$')\nax.quiver(0, 0, v2[0], v2[1], angles='xy', scale_units='xy', scale=1, \n          color='blue', width=0.006, label=r'$\\mathbf{v}_2 = (1, 4)$')\nax.quiver(0, 0, v_suma[0], v_suma[1], angles='xy', scale_units='xy', scale=1, \n          color='green', width=0.008, label=r'$\\mathbf{v}_1 + \\mathbf{v}_2 = (4, 6)$')\n\n# Configuración\nax.set_xlim(-0.5, 5)\nax.set_ylim(-0.5, 7)\nax.set_xlabel('$x_1$', fontsize=12)\nax.set_ylabel('$x_2$', fontsize=12)\nax.set_title('Vectores en $\\mathbb{R}^2$', fontsize=14, fontweight='bold')\nax.axhline(y=0, color='k', linewidth=0.5)\nax.axvline(x=0, color='k', linewidth=0.5)\nax.grid(True, alpha=0.3)\nax.legend(fontsize=11)\nax.set_aspect('equal')\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nFigura 11.1: Interpretación geométrica de vectores en ℝ²",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#producto-escalar-norma",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#producto-escalar-norma",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "11.3 Producto Escalar (Norma)",
+    "text": "11.3 Producto Escalar (Norma)\nEl producto escalar o producto punto de un vector consigo mismo define su norma (longitud euclidiana):\n\\[\\|\\mathbf{x}\\| = \\sqrt{\\mathbf{x}'\\mathbf{x}} = \\sqrt{\\sum_{i=1}^{n} x_i^2}\\]\n\n\nMostrar código\n# Norma de un vector\nv = np.array([[3], [4]])\nnorma = np.linalg.norm(v)\nproducto_escalar = np.dot(v.T, v)[0,0]\n\nprint(f\"Vector v: {v.T}\")\nprint(f\"Producto escalar v'v = {producto_escalar}\")\nprint(f\"Norma ||v|| = √{producto_escalar} = {norma:.4f}\")\n\n\nVector v: [[3 4]]\nProducto escalar v'v = 25\nNorma ||v|| = √25 = 5.0000",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#igualdad-de-matrices",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#igualdad-de-matrices",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "12.1 Igualdad de Matrices",
+    "text": "12.1 Igualdad de Matrices\n\n\n\n\n\n\nTipDefinición: Igualdad Matricial\n\n\n\nDos matrices \\(\\mathbf{A} = [a_{ij}]\\) y \\(\\mathbf{B} = [b_{ij}]\\) son iguales si y solo si:\n\nPoseen la misma dimensión: \\(m \\times n\\)\nTodos los elementos correspondientes son idénticos: \\(a_{ij} = b_{ij}\\) para todo \\(i, j\\)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#suma-y-resta-de-matrices",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#suma-y-resta-de-matrices",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "12.2 Suma y Resta de Matrices",
+    "text": "12.2 Suma y Resta de Matrices\nCondición de Conformabilidad: Las matrices deben tener la misma dimensión.\n\\[\\mathbf{C} = \\mathbf{A} + \\mathbf{B} \\implies c_{ij} = a_{ij} + b_{ij}\\]\nPropiedades: - Conmutativa: \\(\\mathbf{A + B = B + A}\\) - Asociativa: \\(\\mathbf{(A + B) + C = A + (B + C)}\\)\n\n\nMostrar código\n# Suma de matrices\nA = np.array([[4, 9], [2, 1]])\nB = np.array([[2, 0], [0, 7]])\nC = A + B\n\nprint(\"Matriz A:\")\nprint(A)\nprint(\"\\nMatriz B:\")\nprint(B)\nprint(\"\\nMatriz C = A + B:\")\nprint(C)\nprint(\"\\n¿A + B = B + A?\", np.array_equal(A + B, B + A))\n\n\nMatriz A:\n[[4 9]\n [2 1]]\n\nMatriz B:\n[[2 0]\n [0 7]]\n\nMatriz C = A + B:\n[[6 9]\n [2 8]]\n\n¿A + B = B + A? True",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#condición-de-conformabilidad",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#condición-de-conformabilidad",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "13.1 Condición de Conformabilidad",
+    "text": "13.1 Condición de Conformabilidad\n\n\n\n\n\n\nImportanteRegla Dimensional\n\n\n\nEl producto \\(\\mathbf{AB}\\) está definido si y solo si:\n\\[\\mathbf{A}_{m \\times n} \\times \\mathbf{B}_{n \\times q} = \\mathbf{C}_{m \\times q}\\]\nEl número de columnas de \\(\\mathbf{A}\\) debe ser igual al número de filas de \\(\\mathbf{B}\\).",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición-del-producto",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición-del-producto",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "13.2 Definición del Producto",
+    "text": "13.2 Definición del Producto\nCada elemento \\(c_{ij}\\) de la matriz producto se define como el producto interior de la fila \\(i\\) de \\(\\mathbf{A}\\) con la columna \\(j\\) de \\(\\mathbf{B}\\):\n\\[c_{ij} = \\sum_{k=1}^{n} a_{ik}b_{kj} = a_{i1}b_{1j} + a_{i2}b_{2j} + \\cdots + a_{in}b_{nj}\\]\n\n\nMostrar código\n# Multiplicación de matrices\nA = np.array([[2, 3], [1, 4]])\nB = np.array([[5, 1], [2, 3]])\nC = np.dot(A, B)\n\nprint(\"Matriz A (2×2):\")\nprint(A)\nprint(\"\\nMatriz B (2×2):\")\nprint(B)\nprint(\"\\nMatriz C = AB:\")\nprint(C)\n\n# Verificación elemento por elemento\nprint(f\"\\nc₁₁ = {A[0,0]}·{B[0,0]} + {A[0,1]}·{B[1,0]} = {A[0,0]*B[0,0] + A[0,1]*B[1,0]}\")\nprint(f\"c₁₂ = {A[0,0]}·{B[0,1]} + {A[0,1]}·{B[1,1]} = {A[0,0]*B[0,1] + A[0,1]*B[1,1]}\")\n\n\nMatriz A (2×2):\n[[2 3]\n [1 4]]\n\nMatriz B (2×2):\n[[5 1]\n [2 3]]\n\nMatriz C = AB:\n[[16 11]\n [13 13]]\n\nc₁₁ = 2·5 + 3·2 = 16\nc₁₂ = 2·1 + 3·3 = 11",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#propiedades-algebraicas",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#propiedades-algebraicas",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "13.3 Propiedades Algebraicas",
+    "text": "13.3 Propiedades Algebraicas\n\n\n\n\n\n\nAdvertenciaNo Conmutatividad\n\n\n\nEn general: \\(\\mathbf{AB} \\neq \\mathbf{BA}\\)\nEl orden de los factores sí altera el producto. Esta es la diferencia más importante respecto al álgebra escalar.\n\n\n\n\nMostrar código\n# Demostración de no conmutatividad\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\n\nAB = np.dot(A, B)\nBA = np.dot(B, A)\n\nprint(\"AB:\")\nprint(AB)\nprint(\"\\nBA:\")\nprint(BA)\nprint(f\"\\n¿AB = BA? {np.array_equal(AB, BA)}\")\n\n\nAB:\n[[19 22]\n [43 50]]\n\nBA:\n[[23 34]\n [31 46]]\n\n¿AB = BA? False\n\n\n\n\n\n\n\n\nTipPropiedades Importantes\n\n\n\n\nAsociativa: \\((\\mathbf{AB})\\mathbf{C} = \\mathbf{A}(\\mathbf{BC}) = \\mathbf{ABC}\\)\nDistributiva: \\(\\mathbf{A(B + C) = AB + AC}\\) y \\(\\mathbf{(A + B)C = AC + BC}\\)\nTranspuesta del producto: \\((\\mathbf{AB})' = \\mathbf{B}'\\mathbf{A}'\\) (orden inverso)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#vector-columna-vector-renglón-producto-exterior",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#vector-columna-vector-renglón-producto-exterior",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "14.1 Vector Columna × Vector Renglón (Producto Exterior)",
+    "text": "14.1 Vector Columna × Vector Renglón (Producto Exterior)\nProducto Exterior (\\(\\mathbf{uv}'\\)): Genera una matriz\n\\[\\mathbf{u}_{m \\times 1} \\times \\mathbf{v}'_{1 \\times n} = \\mathbf{M}_{m \\times n}\\]\n\n\nMostrar código\n# Producto exterior\nu = np.array([[3], [2]])\nv_t = np.array([[1, 4, 5]])\n\nM = np.dot(u, v_t)\n\nprint(\"Vector u (columna):\")\nprint(u)\nprint(\"\\nVector v' (renglón):\")\nprint(v_t)\nprint(\"\\nProducto exterior uv':\")\nprint(M)\n\n\nVector u (columna):\n[[3]\n [2]]\n\nVector v' (renglón):\n[[1 4 5]]\n\nProducto exterior uv':\n[[ 3 12 15]\n [ 2  8 10]]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#vector-renglón-vector-columna-producto-interior",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#vector-renglón-vector-columna-producto-interior",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "14.2 Vector Renglón × Vector Columna (Producto Interior)",
+    "text": "14.2 Vector Renglón × Vector Columna (Producto Interior)\nProducto Interior (\\(\\mathbf{u}'\\mathbf{v}\\)): Genera un escalar\n\\[\\mathbf{u}'_{1 \\times n} \\times \\mathbf{v}_{n \\times 1} = s_{1 \\times 1}\\]\n\\[\\mathbf{u} \\cdot \\mathbf{v} = \\sum_{i=1}^{n} u_iv_i\\]\n\n\nMostrar código\n# Producto interior (producto punto)\nu_t = np.array([[3, 4]])\nv = np.array([[9], [7]])\n\ns = np.dot(u_t, v)\n\nprint(\"Vector u' (renglón):\")\nprint(u_t)\nprint(\"\\nVector v (columna):\")\nprint(v)\nprint(\"\\nProducto interior u'v:\")\nprint(s)\nprint(f\"\\nCálculo: 3(9) + 4(7) = {3*9 + 4*7}\")\n\n\nVector u' (renglón):\n[[3 4]]\n\nVector v (columna):\n[[9]\n [7]]\n\nProducto interior u'v:\n[[55]]\n\nCálculo: 3(9) + 4(7) = 55",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#aplicación-económica-costo-total",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#aplicación-económica-costo-total",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "14.3 Aplicación Económica: Costo Total",
+    "text": "14.3 Aplicación Económica: Costo Total\n\n\nMostrar código\n# Ejemplo: Costo total de compra\ncantidades = np.array([[10, 5, 3]])  # Q' (renglón)\nprecios = np.array([[50], [100], [200]])  # P (columna)\n\ncosto_total = np.dot(cantidades, precios)[0, 0]\n\nprint(\"Cantidades Q' (unidades):\")\nprint(cantidades)\nprint(\"\\nPrecios P ($/unidad):\")\nprint(precios)\nprint(f\"\\nCosto Total = Q'·P = ${costo_total:,.0f}\")\n\n\nCantidades Q' (unidades):\n[[10  5  3]]\n\nPrecios P ($/unidad):\n[[ 50]\n [100]\n [200]]\n\nCosto Total = Q'·P = $1,600",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#matrices-cuadradas",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#matrices-cuadradas",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "15.1 Matrices Cuadradas",
+    "text": "15.1 Matrices Cuadradas\nUna matriz es cuadrada cuando tiene el mismo número de filas que de columnas (\\(m = n\\)).\nPropiedades especiales: - Solo las matrices cuadradas pueden tener inversa - El determinante solo está definido para matrices cuadradas - Las potencias de matrices solo están definidas para matrices cuadradas\n\n15.1.1 Diagonal Principal\nLos elementos \\(a_{ii}\\) donde \\(i = j\\) forman la diagonal principal:\n\\[\\text{diag}(\\mathbf{A}) = \\{a_{11}, a_{22}, \\ldots, a_{nn}\\}\\]\n\n\n15.1.2 Traza\nLa traza de una matriz cuadrada es la suma de los elementos de su diagonal principal:\n\\[\\text{tr}(\\mathbf{A}) = \\sum_{i=1}^{n} a_{ii}\\]\n\n\nMostrar código\n# Matriz cuadrada y sus propiedades\nA = np.array([\n    [5, 2, 1],\n    [3, 7, 4],\n    [2, 1, 9]\n])\n\ndiagonal = np.diag(A)\ntraza = np.trace(A)\n\nprint(\"Matriz cuadrada A (3×3):\")\nprint(A)\nprint(f\"\\nDiagonal principal: {diagonal}\")\nprint(f\"Traza tr(A) = {traza}\")\n\n\nMatriz cuadrada A (3×3):\n[[5 2 1]\n [3 7 4]\n [2 1 9]]\n\nDiagonal principal: [5 7 9]\nTraza tr(A) = 21",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#matriz-diagonal",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#matriz-diagonal",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "15.2 Matriz Diagonal",
+    "text": "15.2 Matriz Diagonal\nUna matriz cuadrada donde todos los elementos fuera de la diagonal principal son cero:\n\\[\\mathbf{D} = \\begin{bmatrix}\nd_1 & 0 & \\cdots & 0 \\\\\n0 & d_2 & \\cdots & 0 \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n0 & 0 & \\cdots & d_n\n\\end{bmatrix}\\]\nPropiedades: - Producto de matrices diagonales es diagonal - La potencia n-ésima: \\(\\mathbf{D}^n = \\text{diag}(d_1^n, d_2^n, \\ldots, d_n^n)\\)\n\n\nMostrar código\n# Matriz diagonal\nD = np.diag([3, -1, 5])\n\nprint(\"Matriz diagonal D:\")\nprint(D)\n\n# Potencias de matriz diagonal\nD_cuadrada = np.linalg.matrix_power(D, 2)\nD_cubica = np.linalg.matrix_power(D, 3)\n\nprint(\"\\nD²:\")\nprint(D_cuadrada)\nprint(\"\\nD³:\")\nprint(D_cubica)\n\n\nMatriz diagonal D:\n[[ 3  0  0]\n [ 0 -1  0]\n [ 0  0  5]]\n\nD²:\n[[ 9  0  0]\n [ 0  1  0]\n [ 0  0 25]]\n\nD³:\n[[ 27   0   0]\n [  0  -1   0]\n [  0   0 125]]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#matriz-identidad",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#matriz-identidad",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "15.3 Matriz Identidad",
+    "text": "15.3 Matriz Identidad\nLa matriz identidad \\(\\mathbf{I}\\) es una matriz diagonal con todos los elementos diagonales iguales a 1:\n\\[\\mathbf{I}_n = \\begin{bmatrix}\n1 & 0 & \\cdots & 0 \\\\\n0 & 1 & \\cdots & 0 \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n0 & 0 & \\cdots & 1\n\\end{bmatrix}\\]\nPropiedad fundamental: \\[\\mathbf{I}_m\\mathbf{A} = \\mathbf{A}\\mathbf{I}_n = \\mathbf{A}\\]\n\n\nMostrar código\n# Matriz identidad\nI3 = np.eye(3)\nA = np.array([[2, 3, 1], [4, 1, 5], [2, 0, 3]])\n\nIA = np.dot(I3, A)\nAI = np.dot(A, I3)\n\nprint(\"Matriz Identidad I₃:\")\nprint(I3)\nprint(\"\\n¿I·A = A?\", np.allclose(IA, A))\nprint(\"¿A·I = A?\", np.allclose(AI, A))\n\n\nMatriz Identidad I₃:\n[[1. 0. 0.]\n [0. 1. 0.]\n [0. 0. 1.]]\n\n¿I·A = A? True\n¿A·I = A? True",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#matriz-nula",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#matriz-nula",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "15.4 Matriz Nula",
+    "text": "15.4 Matriz Nula\nLa matriz nula \\(\\mathbf{0}\\) tiene todos sus elementos iguales a cero:\n\\[\\mathbf{0}_{m \\times n} = \\begin{bmatrix}\n0 & 0 & \\cdots & 0 \\\\\n0 & 0 & \\cdots & 0 \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\n0 & 0 & \\cdots & 0\n\\end{bmatrix}\\]\nPropiedades: - \\(\\mathbf{A} + \\mathbf{0} = \\mathbf{A}\\) - \\(\\mathbf{A} \\cdot \\mathbf{0} = \\mathbf{0}\\)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "16.1 Definición",
+    "text": "16.1 Definición\nLa transpuesta \\(\\mathbf{A}'\\) (o \\(\\mathbf{A}^T\\)) se obtiene intercambiando filas por columnas:\n\\[\\text{Si } \\mathbf{A} = [a_{ij}]_{m \\times n} \\implies \\mathbf{A}' = [a_{ji}]_{n \\times m}\\]\n\n\nMostrar código\n# Transpuesta\nA = np.array([[1, 2, 3], [4, 5, 6]])\nA_T = A.T\n\nprint(\"Matriz A (2×3):\")\nprint(A)\nprint(\"\\nTranspuesta A' (3×2):\")\nprint(A_T)\n\n\nMatriz A (2×3):\n[[1 2 3]\n [4 5 6]]\n\nTranspuesta A' (3×2):\n[[1 4]\n [2 5]\n [3 6]]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#propiedades-de-la-transpuesta",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#propiedades-de-la-transpuesta",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "16.2 Propiedades de la Transpuesta",
+    "text": "16.2 Propiedades de la Transpuesta\n\n\n\n\n\n\nTipPropiedades Fundamentales\n\n\n\n\n\\((\\mathbf{A}')' = \\mathbf{A}\\)\n\\((\\mathbf{A} + \\mathbf{B})' = \\mathbf{A}' + \\mathbf{B}'\\)\n\\((\\alpha\\mathbf{A})' = \\alpha\\mathbf{A}'\\)\n\\((\\mathbf{AB})' = \\mathbf{B}'\\mathbf{A}'\\) (orden inverso)\n\\((\\mathbf{A}^{-1})' = (\\mathbf{A}')^{-1}\\)\n\n\n\n\n\nMostrar código\n# Verificación de (AB)' = B'A'\nA = np.array([[1, 2], [3, 4]])\nB = np.array([[5, 6], [7, 8]])\n\nAB = np.dot(A, B)\nAB_T = AB.T\nB_T_A_T = np.dot(B.T, A.T)\n\nprint(\"¿(AB)' = B'A'?\", np.allclose(AB_T, B_T_A_T))\n\n\n¿(AB)' = B'A'? True",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#matrices-simétricas-y-antisimétricas",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#matrices-simétricas-y-antisimétricas",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "16.3 Matrices Simétricas y Antisimétricas",
+    "text": "16.3 Matrices Simétricas y Antisimétricas\n\n16.3.1 Matriz Simétrica\nUna matriz cuadrada es simétrica si \\(\\mathbf{A} = \\mathbf{A}'\\)\n\\[a_{ij} = a_{ji} \\quad \\forall i, j\\]\n\n\nMostrar código\n# Matriz simétrica\nA_sim = np.array([[5, 2, 1], [2, 3, 4], [1, 4, 6]])\n\nprint(\"Matriz simétrica A:\")\nprint(A_sim)\nprint(f\"\\n¿Es simétrica? {np.allclose(A_sim, A_sim.T)}\")\n\n\nMatriz simétrica A:\n[[5 2 1]\n [2 3 4]\n [1 4 6]]\n\n¿Es simétrica? True\n\n\n\n\n16.3.2 Matriz Antisimétrica\nUna matriz cuadrada es antisimétrica si \\(\\mathbf{A} = -\\mathbf{A}'\\)\n\\[a_{ij} = -a_{ji} \\quad \\forall i, j\\]\n\n\nMostrar código\n# Matriz antisimétrica\nA_antisim = np.array([[0, 2, -3], [-2, 0, 5], [3, -5, 0]])\n\nprint(\"Matriz antisimétrica A:\")\nprint(A_antisim)\nprint(f\"\\n¿Es antisimétrica? {np.allclose(A_antisim, -A_antisim.T)}\")\n\n\nMatriz antisimétrica A:\n[[ 0  2 -3]\n [-2  0  5]\n [ 3 -5  0]]\n\n¿Es antisimétrica? True",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición-y-propiedades",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición-y-propiedades",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "17.1 Definición y Propiedades",
+    "text": "17.1 Definición y Propiedades\nEl determinante es una función escalar que asigna a cada matriz cuadrada \\(\\mathbf{A}\\) un número real, denotado \\(|\\mathbf{A}|\\) o \\(\\det(\\mathbf{A})\\).\n\n17.1.1 Determinante 2×2\n\\[|\\mathbf{A}| = \\begin{vmatrix}\na_{11} & a_{12} \\\\\na_{21} & a_{22}\n\\end{vmatrix}\n= a_{11}a_{22} - a_{12}a_{21}\\]\n\n\nMostrar código\n# Determinante 2×2\nA = np.array([[3, 1], [2, 4]])\ndet_A = np.linalg.det(A)\n\nprint(\"Matriz A:\")\nprint(A)\nprint(f\"\\ndet(A) = {A[0,0]}·{A[1,1]} - {A[0,1]}·{A[1,0]}\")\nprint(f\"det(A) = {det_A:.4f}\")\n\n\nMatriz A:\n[[3 1]\n [2 4]]\n\ndet(A) = 3·4 - 1·2\ndet(A) = 10.0000\n\n\n\n\n17.1.2 Determinante 3×3 (Regla de Sarrus)\nPara matrices 3×3, se puede usar la regla de Sarrus o la expansión de Laplace.\n\n\nMostrar código\n# Determinante 3×3\nA = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])\ndet_A = np.linalg.det(A)\n\nprint(\"Matriz A:\")\nprint(A)\nprint(f\"\\ndet(A) = {det_A:.10f}\")\n\n\nMatriz A:\n[[1 2 3]\n [4 5 6]\n [7 8 9]]\n\ndet(A) = 0.0000000000",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#expansión-de-laplace-por-cofactores",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#expansión-de-laplace-por-cofactores",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "17.2 Expansión de Laplace por Cofactores",
+    "text": "17.2 Expansión de Laplace por Cofactores\nLa Expansión de Laplace permite calcular el determinante mediante menores y cofactores.\n\n17.2.1 Menores y Cofactores\n\n\n\n\n\n\nTipDefiniciones\n\n\n\nMenor \\(|M_{ij}|\\): Determinante de la submatriz obtenida al eliminar la fila \\(i\\) y columna \\(j\\).\nCofactor \\(|C_{ij}|\\): Menor con signo algebraico: \\(|C_{ij}| = (-1)^{i+j}|M_{ij}|\\)\n\n\n\n\n17.2.2 Fórmula de Expansión\nEl determinante se puede expandir por cualquier fila \\(i\\) o columna \\(j\\):\n\\(|\\mathbf{A}| = \\sum_{j=1}^{n} a_{ij}|C_{ij}| \\quad \\text{(por fila } i\\text{)}\\)\n\\(|\\mathbf{A}| = \\sum_{i=1}^{n} a_{ij}|C_{ij}| \\quad \\text{(por columna } j\\text{)}\\)\n\n\nMostrar código\n# Expansión por cofactores\nfrom sympy import Matrix, symbols\n\nA = Matrix([[2, 3, 1], [1, 4, 2], [3, 1, 5]])\n\nprint(\"Matriz A:\")\ndisplay(A)\nprint(f\"\\nDeterminante |A| = {A.det()}\")\n\n# Cofactor de a₁₁\nM_11 = A.minor(0, 0)\nC_11 = (-1)**(0+0) * M_11\nprint(f\"\\nCofactor C₁₁ = (-1)^(1+1) × M₁₁ = {C_11}\")\n\n\nMatriz A:\n\n\n\\(\\displaystyle \\left[\\begin{matrix}2 & 3 & 1\\\\1 & 4 & 2\\\\3 & 1 & 5\\end{matrix}\\right]\\)\n\n\n\nDeterminante |A| = 28\n\nCofactor C₁₁ = (-1)^(1+1) × M₁₁ = 18",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#propiedades-fundamentales-del-determinante",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#propiedades-fundamentales-del-determinante",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "17.3 Propiedades Fundamentales del Determinante",
+    "text": "17.3 Propiedades Fundamentales del Determinante\n\n\n\n\n\n\nTipPropiedades Importantes\n\n\n\n\n\\(|\\mathbf{I}| = 1\\)\n\\(|\\mathbf{A}'| = |\\mathbf{A}|\\)\nSi dos filas (o columnas) son iguales, \\(|\\mathbf{A}| = 0\\)\n\\(|\\mathbf{AB}| = |\\mathbf{A}||\\mathbf{B}|\\)\n\\(|\\alpha\\mathbf{A}| = \\alpha^n|\\mathbf{A}|\\) (para matriz \\(n \\times n\\))\n\\(|\\mathbf{A}^{-1}| = \\frac{1}{|\\mathbf{A}|}\\) si \\(\\mathbf{A}\\) es no singular\n\n\n\n\n\nMostrar código\n# Verificación de propiedades\nA = np.array([[2, 3], [1, 4]])\nB = np.array([[5, 1], [2, 3]])\n\ndet_A = np.linalg.det(A)\ndet_B = np.linalg.det(B)\ndet_AB = np.linalg.det(np.dot(A, B))\n\nprint(f\"det(A) = {det_A:.4f}\")\nprint(f\"det(B) = {det_B:.4f}\")\nprint(f\"det(AB) = {det_AB:.4f}\")\nprint(f\"det(A)·det(B) = {det_A * det_B:.4f}\")\nprint(f\"\\n¿|AB| = |A||B|? {np.isclose(det_AB, det_A * det_B)}\")\n\n\ndet(A) = 5.0000\ndet(B) = 13.0000\ndet(AB) = 65.0000\ndet(A)·det(B) = 65.0000\n\n¿|AB| = |A||B|? True",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#condición-de-no-singularidad",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#condición-de-no-singularidad",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "18.1 Condición de No Singularidad",
+    "text": "18.1 Condición de No Singularidad\nUna matriz cuadrada \\(\\mathbf{A}\\) de orden \\(n \\times n\\) es no singular si cumple:\n\n\n\n\n\n\nImportanteCondiciones Equivalentes\n\n\n\n\nDeterminante no nulo: \\(|\\mathbf{A}| \\neq 0\\)\nRango completo: \\(r(\\mathbf{A}) = n\\)\nInversa existe: \\(\\mathbf{A}^{-1}\\) está definida\nFilas/columnas linealmente independientes\n\n\n\nSi \\(|\\mathbf{A}| = 0\\), la matriz es singular y no tiene inversa.\n\n\nMostrar código\n# Matriz no singular vs singular\nA_no_sing = np.array([[4, 2], [3, 1]])\nA_sing = np.array([[2, 4], [1, 2]])\n\nprint(\"Matriz no singular:\")\nprint(A_no_sing)\nprint(f\"det(A) = {np.linalg.det(A_no_sing):.4f}\")\n\nprint(\"\\nMatriz singular:\")\nprint(A_sing)\nprint(f\"det(A) = {np.linalg.det(A_sing):.10f}\")\n\n\nMatriz no singular:\n[[4 2]\n [3 1]]\ndet(A) = -2.0000\n\nMatriz singular:\n[[2 4]\n [1 2]]\ndet(A) = 0.0000000000",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#rango-de-una-matriz",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#rango-de-una-matriz",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "18.2 Rango de una Matriz",
+    "text": "18.2 Rango de una Matriz\nEl rango \\(r(\\mathbf{A})\\) es el número máximo de filas (o columnas) linealmente independientes.\nPropiedades: - \\(r(\\mathbf{A}) = r(\\mathbf{A}')\\) - \\(r(\\mathbf{A}) \\leq \\min(m, n)\\) para matriz \\(m \\times n\\) - \\(r(\\mathbf{A}) = n\\) para matriz cuadrada \\(n \\times n\\) no singular\n\n\nMostrar código\n# Rango de matrices\nA = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])\nrango_A = np.linalg.matrix_rank(A)\n\nprint(\"Matriz A:\")\nprint(A)\nprint(f\"\\nRango r(A) = {rango_A}\")\nprint(f\"Dimensión: 3×3\")\nprint(f\"¿Rango completo? {rango_A == 3}\")\n\n\nMatriz A:\n[[1 2 3]\n [4 5 6]\n [7 8 9]]\n\nRango r(A) = 2\nDimensión: 3×3\n¿Rango completo? False",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición-y-existencia",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición-y-existencia",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "19.1 Definición y Existencia",
+    "text": "19.1 Definición y Existencia\nLa inversa \\(\\mathbf{A}^{-1}\\) de una matriz cuadrada \\(\\mathbf{A}\\) satisface:\n\\(\\mathbf{AA}^{-1} = \\mathbf{A}^{-1}\\mathbf{A} = \\mathbf{I}\\)\n\n\n\n\n\n\nImportanteCondición de Existencia\n\n\n\n\\(\\mathbf{A}^{-1}\\) existe si y solo si: - \\(\\mathbf{A}\\) es cuadrada - \\(|\\mathbf{A}| \\neq 0\\) (no singular)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#fórmula-mediante-matriz-adjunta",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#fórmula-mediante-matriz-adjunta",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "19.2 Fórmula Mediante Matriz Adjunta",
+    "text": "19.2 Fórmula Mediante Matriz Adjunta\nLa matriz adjunta \\(\\mathbf{A}^{\\#}\\) (o \\(\\text{adj}\\mathbf{A}\\)) es la transpuesta de la matriz de cofactores.\nFórmula de la inversa: \\(\\mathbf{A}^{-1} = \\frac{1}{|\\mathbf{A}|} \\mathbf{A}^{\\#}\\)\n\n\nMostrar código\n# Cálculo de la inversa\nA = np.array([[4, 2], [3, 1]])\ndet_A = np.linalg.det(A)\n\nif det_A != 0:\n    A_inv = np.linalg.inv(A)\n    \n    print(\"Matriz A:\")\n    print(A)\n    print(f\"\\nDeterminante: {det_A:.4f}\")\n    print(\"\\nInversa A⁻¹:\")\n    print(A_inv)\n    \n    # Verificación\n    print(\"\\nVerificación A·A⁻¹:\")\n    print(np.dot(A, A_inv))\n\n\nMatriz A:\n[[4 2]\n [3 1]]\n\nDeterminante: -2.0000\n\nInversa A⁻¹:\n[[-0.5  1. ]\n [ 1.5 -2. ]]\n\nVerificación A·A⁻¹:\n[[1. 0.]\n [0. 1.]]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#fórmula-para-matrices-22",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#fórmula-para-matrices-22",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "19.3 Fórmula para Matrices 2×2",
+    "text": "19.3 Fórmula para Matrices 2×2\nPara matrices 2×2, existe una fórmula explícita:\n\\(\\mathbf{A}^{-1} = \\frac{1}{ad-bc}\\begin{bmatrix}\nd & -b \\\\\n-c & a\n\\end{bmatrix}\\)\ndonde \\(\\mathbf{A} = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}\\)\n\n\nMostrar código\n# Fórmula explícita para 2×2\nA = np.array([[4, 2], [3, 1]])\na, b = A[0, 0], A[0, 1]\nc, d = A[1, 0], A[1, 1]\n\ndet_A = a*d - b*c\nA_inv_manual = (1/det_A) * np.array([[d, -b], [-c, a]])\nA_inv_numpy = np.linalg.inv(A)\n\nprint(\"Inversa (fórmula manual):\")\nprint(A_inv_manual)\nprint(\"\\nInversa (NumPy):\")\nprint(A_inv_numpy)\nprint(f\"\\n¿Son iguales? {np.allclose(A_inv_manual, A_inv_numpy)}\")\n\n\nInversa (fórmula manual):\n[[-0.5  1. ]\n [ 1.5 -2. ]]\n\nInversa (NumPy):\n[[-0.5  1. ]\n [ 1.5 -2. ]]\n\n¿Son iguales? True",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#propiedades-de-la-inversa",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#propiedades-de-la-inversa",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "19.4 Propiedades de la Inversa",
+    "text": "19.4 Propiedades de la Inversa\n\n\n\n\n\n\nTipPropiedades Fundamentales\n\n\n\n\n\\((\\mathbf{A}^{-1})^{-1} = \\mathbf{A}\\)\n\\((\\mathbf{AB})^{-1} = \\mathbf{B}^{-1}\\mathbf{A}^{-1}\\) (orden inverso)\n\\((\\mathbf{A}')^{-1} = (\\mathbf{A}^{-1})'\\)\n\\(|\\mathbf{A}^{-1}| = \\frac{1}{|\\mathbf{A}|}\\)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#método-de-inversión-de-matrices",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#método-de-inversión-de-matrices",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "20.1 Método de Inversión de Matrices",
+    "text": "20.1 Método de Inversión de Matrices\nPara el sistema \\(\\mathbf{Ax = d}\\), si \\(\\mathbf{A}\\) es no singular:\n\\(\\mathbf{x}^* = \\mathbf{A}^{-1}\\mathbf{d}\\)\n\n\nMostrar código\n# Solución por inversión\nA = np.array([[2, 1], [1, 3]])\nd = np.array([[5], [8]])\n\nA_inv = np.linalg.inv(A)\nx = np.dot(A_inv, d)\n\nprint(\"Sistema Ax = d:\")\nprint(\"\\nMatriz A:\")\nprint(A)\nprint(\"\\nVector d:\")\nprint(d.T)\nprint(\"\\nSolución x = A⁻¹d:\")\nprint(x.T)\n\n# Verificación\nprint(\"\\nVerificación Ax:\")\nprint(np.dot(A, x).T)\n\n\nSistema Ax = d:\n\nMatriz A:\n[[2 1]\n [1 3]]\n\nVector d:\n[[5 8]]\n\nSolución x = A⁻¹d:\n[[1.4 2.2]]\n\nVerificación Ax:\n[[5. 8.]]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#regla-de-cramer",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#regla-de-cramer",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "20.2 Regla de Cramer",
+    "text": "20.2 Regla de Cramer\nLa Regla de Cramer proporciona una fórmula explícita para cada variable:\n\\(x_j^* = \\frac{|\\mathbf{A}_j|}{|\\mathbf{A}|}\\)\ndonde \\(|\\mathbf{A}_j|\\) es el determinante de \\(\\mathbf{A}\\) con su columna \\(j\\) reemplazada por \\(\\mathbf{d}\\).\n\n\nMostrar código\n# Regla de Cramer\nA = np.array([[2, 1], [1, 3]])\nd = np.array([5, 8])\n\ndet_A = np.linalg.det(A)\n\n# Para x₁: reemplazar primera columna\nA1 = A.copy()\nA1[:, 0] = d\ndet_A1 = np.linalg.det(A1)\nx1 = det_A1 / det_A\n\n# Para x₂: reemplazar segunda columna\nA2 = A.copy()\nA2[:, 1] = d\ndet_A2 = np.linalg.det(A2)\nx2 = det_A2 / det_A\n\nprint(f\"x₁ = |A₁|/|A| = {det_A1:.0f}/{det_A:.0f} = {x1:.0f}\")\nprint(f\"x₂ = |A₂|/|A| = {det_A2:.0f}/{det_A:.0f} = {x2:.0f}\")\n\n\nx₁ = |A₁|/|A| = 7/5 = 1\nx₂ = |A₂|/|A| = 11/5 = 2",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición-1",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#definición-1",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "21.1 Definición",
+    "text": "21.1 Definición\nPara una matriz cuadrada \\(\\mathbf{A}\\), encontrar escalares \\(\\lambda\\) (valores propios) y vectores no nulos \\(\\mathbf{v}\\) (vectores propios) tales que:\n\\(\\mathbf{Av} = \\lambda\\mathbf{v}\\)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ecuación-característica",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ecuación-característica",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "21.2 Ecuación Característica",
+    "text": "21.2 Ecuación Característica\nReescribiendo: \\((\\mathbf{A} - \\lambda\\mathbf{I})\\mathbf{v} = \\mathbf{0}\\)\nPara soluciones no triviales: \\(|\\mathbf{A} - \\lambda\\mathbf{I}| = 0\\)\nEsta es la ecuación característica que determina los valores propios.\n\n\nMostrar código\n# Valores y vectores propios\nA = np.array([[4, 1], [2, 3]])\n\nvalores_propios, vectores_propios = np.linalg.eig(A)\n\nprint(\"Matriz A:\")\nprint(A)\nprint(\"\\nValores propios λ:\")\nfor i, val in enumerate(valores_propios, 1):\n    print(f\"λ{i} = {val:.4f}\")\n\nprint(\"\\nVectores propios v:\")\nprint(vectores_propios)\n\n\nMatriz A:\n[[4 1]\n [2 3]]\n\nValores propios λ:\nλ1 = 5.0000\nλ2 = 2.0000\n\nVectores propios v:\n[[ 0.70710678 -0.4472136 ]\n [ 0.70710678  0.89442719]]",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#verificación-y-propiedades",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#verificación-y-propiedades",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "21.3 Verificación y Propiedades",
+    "text": "21.3 Verificación y Propiedades\n\n\nMostrar código\n# Verificación: Av = λv\nv1 = vectores_propios[:, 0].reshape(-1, 1)\nlambda1 = valores_propios[0]\n\nAv1 = np.dot(A, v1)\nlambda1_v1 = lambda1 * v1\n\nprint(f\"Verificación para λ₁ = {lambda1:.4f}:\")\nprint(f\"\\nAv₁ =\")\nprint(Av1)\nprint(f\"\\nλ₁v₁ =\")\nprint(lambda1_v1)\nprint(f\"\\n¿Son iguales? {np.allclose(Av1, lambda1_v1)}\")\n\n\nVerificación para λ₁ = 5.0000:\n\nAv₁ =\n[[3.53553391]\n [3.53553391]]\n\nλ₁v₁ =\n[[3.53553391]\n [3.53553391]]\n\n¿Son iguales? True\n\n\n\n\n\n\n\n\nTipPropiedades\n\n\n\n\nTraza: \\(\\text{tr}(\\mathbf{A}) = \\sum_{i=1}^{n} \\lambda_i\\)\nDeterminante: \\(|\\mathbf{A}| = \\prod_{i=1}^{n} \\lambda_i\\)\nMatriz simétrica: Todos los valores propios son reales\nMatriz positiva definida: Todos los valores propios son positivos\n\n\n\n\n\nMostrar código\n# Verificación de propiedades\nA = np.array([[5, 2], [2, 3]])\nvalores_propios = np.linalg.eigvals(A)\n\ntraza = np.trace(A)\nsuma_vp = np.sum(valores_propios)\n\ndeterminante = np.linalg.det(A)\nproducto_vp = np.prod(valores_propios)\n\nprint(f\"Traza: {traza}\")\nprint(f\"Suma valores propios: {suma_vp:.4f}\")\nprint(f\"\\nDeterminante: {determinante:.4f}\")\nprint(f\"Producto valores propios: {producto_vp:.4f}\")\n\n\nTraza: 8\nSuma valores propios: 8.0000\n\nDeterminante: 11.0000\nProducto valores propios: 11.0000",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#equilibrio-de-mercado-un-bien",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#equilibrio-de-mercado-un-bien",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "22.1 Equilibrio de Mercado: Un Bien",
+    "text": "22.1 Equilibrio de Mercado: Un Bien\nConsideremos un mercado simple con demanda y oferta lineales:\n\nDemanda: \\(q_d = a - \\beta p\\)\nOferta: \\(q_s = -\\gamma + \\delta p\\)\n\nCondición de equilibrio: \\(q_d = q_s\\)\n\n\nMostrar código\n# Equilibrio de mercado simple\n# Parámetros\na, beta = 50, 2\ngamma, delta = 10, 3\n\n# En equilibrio: a - β*p = -γ + δ*p\n# (β + δ)*p = a + γ\np_eq = (a + gamma) / (beta + delta)\nq_eq = a - beta * p_eq\n\nprint(\"Modelo de Equilibrio de Mercado\")\nprint(f\"\\nDemanda: qd = {a} - {beta}p\")\nprint(f\"Oferta: qs = -{gamma} + {delta}p\")\nprint(f\"\\nPrecio de equilibrio: p* = {p_eq:.2f}\")\nprint(f\"Cantidad de equilibrio: q* = {q_eq:.2f}\")\n\n\nModelo de Equilibrio de Mercado\n\nDemanda: qd = 50 - 2p\nOferta: qs = -10 + 3p\n\nPrecio de equilibrio: p* = 12.00\nCantidad de equilibrio: q* = 26.00",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#equilibrio-general-dos-bienes",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#equilibrio-general-dos-bienes",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "22.2 Equilibrio General: Dos Bienes",
+    "text": "22.2 Equilibrio General: Dos Bienes\nSistema de ecuaciones para dos mercados relacionados:\n\n\nMostrar código\n# Equilibrio general de 2 bienes\n# Funciones de demanda y oferta\n# Mercado 1: qd1 = 53 - 2p1 - 3p2, qs1 = -4 + 3p1\n# Mercado 2: qd2 = 64 - 3p1 - 4p2, qs2 = -8 + 2p2\n\n# Sistema en forma Ax = d\nA = np.array([[5, 3], [3, 6]])\nd = np.array([57, 72])\n\n# Solución\np_eq = np.linalg.solve(A, d)\np1, p2 = p_eq\n\n# Cantidades\nq1 = -4 + 3*p1\nq2 = -8 + 2*p2\n\nprint(\"Equilibrio General de 2 Bienes\")\nprint(f\"\\nPrecios de equilibrio:\")\nprint(f\"p₁* = {p1:.2f}\")\nprint(f\"p₂* = {p2:.2f}\")\nprint(f\"\\nCantidades de equilibrio:\")\nprint(f\"q₁* = {q1:.2f}\")\nprint(f\"q₂* = {q2:.2f}\")\n\n# Relación entre bienes\nprint(\"\\nRelación entre bienes:\")\nprint(\"Coeficiente de p₂ en qd₁: -3 (negativo)\")\nprint(\"Coeficiente de p₁ en qd₂: -3 (negativo)\")\nprint(\"→ Los bienes son COMPLEMENTOS\")\n\n\nEquilibrio General de 2 Bienes\n\nPrecios de equilibrio:\np₁* = 6.00\np₂* = 9.00\n\nCantidades de equilibrio:\nq₁* = 14.00\nq₂* = 10.00\n\nRelación entre bienes:\nCoeficiente de p₂ en qd₁: -3 (negativo)\nCoeficiente de p₁ en qd₂: -3 (negativo)\n→ Los bienes son COMPLEMENTOS",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#equilibrio-general-tres-bienes",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#equilibrio-general-tres-bienes",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "22.3 Equilibrio General: Tres Bienes",
+    "text": "22.3 Equilibrio General: Tres Bienes\n\n\nMostrar código\n# Equilibrio de 3 bienes\nA = np.array([\n    [2, -2, 1],\n    [-1, 4, 2],\n    [2, 1, 7]\n])\nd = np.array([9, 32, 63])\n\n# Solución\nprecios = np.linalg.solve(A, d)\np1, p2, p3 = precios\n\n# Cantidades\nq1 = -6 + p1\nq2 = -4 + 2*p2\nq3 = -9 + 3*p3\n\nprint(\"Equilibrio General de 3 Bienes\")\nprint(f\"\\nPrecios de equilibrio:\")\nprint(f\"p₁* = {p1:.2f}\")\nprint(f\"p₂* = {p2:.2f}\")\nprint(f\"p₃* = {p3:.2f}\")\nprint(f\"\\nCantidades de equilibrio:\")\nprint(f\"q₁* = {q1:.2f}\")\nprint(f\"q₂* = {q2:.2f}\")\nprint(f\"q₃* = {q3:.2f}\")\n\n\nEquilibrio General de 3 Bienes\n\nPrecios de equilibrio:\np₁* = 10.00\np₂* = 8.00\np₃* = 5.00\n\nCantidades de equilibrio:\nq₁* = 4.00\nq₂* = 12.00\nq₃* = 6.00",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#modelo-de-ingreso-nacional-keynesiano",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#modelo-de-ingreso-nacional-keynesiano",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "22.4 Modelo de Ingreso Nacional (Keynesiano)",
+    "text": "22.4 Modelo de Ingreso Nacional (Keynesiano)\nEl modelo simple de ingreso nacional relaciona: - \\(Y\\): Renta Nacional - \\(C\\): Consumo - \\(I_0\\): Inversión (exógena) - \\(G_0\\): Gasto Público (exógeno)\nEcuaciones: 1. Identidad contable: \\(Y = C + I_0 + G_0\\) 2. Función de consumo: \\(C = \\alpha + \\beta Y\\)\n\n\nMostrar código\n# Modelo de Ingreso Nacional\n# Parámetros\nalpha = 100  # Consumo autónomo\nbeta = 0.75  # Propensión marginal a consumir\nI0 = 200     # Inversión\nG0 = 150     # Gasto público\n\n# Sistema: Y - C = I0 + G0\n#         -βY + C = α\nA = np.array([[1, -1], [-beta, 1]])\nd = np.array([I0 + G0, alpha])\n\n# Solución\nsolucion = np.linalg.solve(A, d)\nY_eq, C_eq = solucion\n\n# Multiplicador\nmultiplicador = 1 / (1 - beta)\n\nprint(\"Modelo de Ingreso Nacional\")\nprint(f\"\\nParámetros:\")\nprint(f\"Consumo autónomo α = {alpha}\")\nprint(f\"Propensión marginal a consumir β = {beta}\")\nprint(f\"Inversión I₀ = {I0}\")\nprint(f\"Gasto público G₀ = {G0}\")\nprint(f\"\\nEquilibrio:\")\nprint(f\"Renta nacional Y* = {Y_eq:.2f}\")\nprint(f\"Consumo C* = {C_eq:.2f}\")\nprint(f\"\\nMultiplicador = 1/(1-β) = {multiplicador:.4f}\")\n\n\nModelo de Ingreso Nacional\n\nParámetros:\nConsumo autónomo α = 100\nPropensión marginal a consumir β = 0.75\nInversión I₀ = 200\nGasto público G₀ = 150\n\nEquilibrio:\nRenta nacional Y* = 1800.00\nConsumo C* = 1450.00\n\nMultiplicador = 1/(1-β) = 4.0000",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#modelo-insumo-producto-de-leontief",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#modelo-insumo-producto-de-leontief",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "22.5 Modelo Insumo-Producto de Leontief",
+    "text": "22.5 Modelo Insumo-Producto de Leontief\nEl modelo de Leontief analiza las interrelaciones entre industrias.\nEcuación fundamental: \\(\\mathbf{x} = \\mathbf{Ax} + \\mathbf{d}\\) \\(\\mathbf{x} = (\\mathbf{I} - \\mathbf{A})^{-1}\\mathbf{d}\\)\ndonde: - \\(\\mathbf{x}\\): Vector de producción total - \\(\\mathbf{A}\\): Matriz de coeficientes técnicos - \\(\\mathbf{d}\\): Vector de demanda final\n\n\nMostrar código\n# Modelo Insumo-Producto\n# Matriz de coeficientes técnicos\nA = np.array([\n    [0.3, 0.2, 0.1],\n    [0.2, 0.4, 0.2],\n    [0.1, 0.1, 0.3]\n])\n\n# Demanda final\nd = np.array([100, 150, 200])\n\n# Matriz de tecnología\nI = np.eye(3)\nT = I - A\n\n# Producción total requerida\nx = np.linalg.solve(T, d)\n\nprint(\"Modelo Insumo-Producto de Leontief\")\nprint(\"\\nMatriz de coeficientes técnicos A:\")\nprint(A)\nprint(\"\\nDemanda final d:\")\nprint(d)\nprint(\"\\nMatriz de tecnología (I - A):\")\nprint(T)\nprint(\"\\nProducción total requerida x:\")\nfor i, xi in enumerate(x, 1):\n    print(f\"Sector {i}: {xi:.2f}\")\n\n# Verificación: x = Ax + d\nverificacion = np.dot(A, x) + d\nprint(\"\\nVerificación Ax + d:\")\nprint(verificacion)\nprint(f\"¿Ax + d = x? {np.allclose(verificacion, x)}\")\n\n\nModelo Insumo-Producto de Leontief\n\nMatriz de coeficientes técnicos A:\n[[0.3 0.2 0.1]\n [0.2 0.4 0.2]\n [0.1 0.1 0.3]]\n\nDemanda final d:\n[100 150 200]\n\nMatriz de tecnología (I - A):\n[[ 0.7 -0.2 -0.1]\n [-0.2  0.6 -0.2]\n [-0.1 -0.1  0.7]]\n\nProducción total requerida x:\nSector 1: 343.75\nSector 2: 500.00\nSector 3: 406.25\n\nVerificación Ax + d:\n[343.75 500.   406.25]\n¿Ax + d = x? True",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#visualización-del-modelo-insumo-producto",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#visualización-del-modelo-insumo-producto",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "22.6 Visualización del Modelo Insumo-Producto",
+    "text": "22.6 Visualización del Modelo Insumo-Producto\n\n\nMostrar código\nfig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))\n\n# Gráfica 1: Matriz de coeficientes\nim1 = ax1.imshow(A, cmap='YlOrRd', aspect='auto')\nax1.set_xticks([0, 1, 2])\nax1.set_yticks([0, 1, 2])\nax1.set_xticklabels(['Sector 1', 'Sector 2', 'Sector 3'])\nax1.set_yticklabels(['Sector 1', 'Sector 2', 'Sector 3'])\nax1.set_title('Matriz de Coeficientes Técnicos', fontsize=14, fontweight='bold')\n\nfor i in range(3):\n    for j in range(3):\n        text = ax1.text(j, i, f'{A[i, j]:.1f}',\n                       ha=\"center\", va=\"center\", color=\"black\", fontsize=12)\n\nplt.colorbar(im1, ax=ax1, label='Coeficiente')\n\n# Gráfica 2: Comparación demanda vs producción\nsectores = ['Sector 1', 'Sector 2', 'Sector 3']\nx_pos = np.arange(len(sectores))\nwidth = 0.35\n\nax2.bar(x_pos - width/2, d, width, label='Demanda Final', color='steelblue')\nax2.bar(x_pos + width/2, x, width, label='Producción Total', color='coral')\n\nax2.set_xlabel('Sectores', fontsize=12)\nax2.set_ylabel('Unidades', fontsize=12)\nax2.set_title('Demanda Final vs Producción Total Requerida', \n              fontsize=14, fontweight='bold')\nax2.set_xticks(x_pos)\nax2.set_xticklabels(sectores)\nax2.legend()\nax2.grid(True, alpha=0.3, axis='y')\n\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nFigura 22.1: Flujo de insumos entre sectores en el modelo de Leontief",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejercicio-1-multiplicación-de-matrices",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejercicio-1-multiplicación-de-matrices",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "23.1 Ejercicio 1: Multiplicación de Matrices",
+    "text": "23.1 Ejercicio 1: Multiplicación de Matrices\nProblema: Dados \\(\\mathbf{A} = \\begin{bmatrix} 2 & 3 \\\\ 1 & 4 \\end{bmatrix}\\) y \\(\\mathbf{B} = \\begin{bmatrix} 5 & 1 \\\\ 2 & 3 \\end{bmatrix}\\)\nCalcular: (a) \\(\\mathbf{AB}\\), (b) \\(\\mathbf{BA}\\), (c) \\((\\mathbf{AB})'\\)\n\n\nMostrar código\n# Solución Ejercicio 1\nA = np.array([[2, 3], [1, 4]])\nB = np.array([[5, 1], [2, 3]])\n\nAB = np.dot(A, B)\nBA = np.dot(B, A)\nAB_T = AB.T\n\nprint(\"(a) AB =\")\nprint(AB)\nprint(\"\\n(b) BA =\")\nprint(BA)\nprint(\"\\n(c) (AB)' =\")\nprint(AB_T)\nprint(f\"\\n¿AB = BA? {np.array_equal(AB, BA)}\")\n\n\n(a) AB =\n[[16 11]\n [13 13]]\n\n(b) BA =\n[[11 19]\n [ 7 18]]\n\n(c) (AB)' =\n[[16 13]\n [11 13]]\n\n¿AB = BA? False",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejercicio-2-determinante-e-inversa",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejercicio-2-determinante-e-inversa",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "23.2 Ejercicio 2: Determinante e Inversa",
+    "text": "23.2 Ejercicio 2: Determinante e Inversa\nProblema: Para \\(\\mathbf{A} = \\begin{bmatrix} 3 & 1 \\\\ 5 & 2 \\end{bmatrix}\\)\nCalcular: (a) \\(|\\mathbf{A}|\\), (b) \\(\\mathbf{A}^{-1}\\), (c) Verificar \\(\\mathbf{AA}^{-1} = \\mathbf{I}\\)\n\n\nMostrar código\n# Solución Ejercicio 2\nA = np.array([[3, 1], [5, 2]])\n\n# (a) Determinante\ndet_A = np.linalg.det(A)\nprint(f\"(a) |A| = {det_A:.0f}\")\n\n# (b) Inversa\nA_inv = np.linalg.inv(A)\nprint(\"\\n(b) A⁻¹ =\")\nprint(A_inv)\n\n# (c) Verificación\nverificacion = np.dot(A, A_inv)\nprint(\"\\n(c) AA⁻¹ =\")\nprint(verificacion)\nprint(f\"\\n¿AA⁻¹ = I? {np.allclose(verificacion, np.eye(2))}\")\n\n\n(a) |A| = 1\n\n(b) A⁻¹ =\n[[ 2. -1.]\n [-5.  3.]]\n\n(c) AA⁻¹ =\n[[1.0000000e+00 4.4408921e-16]\n [0.0000000e+00 1.0000000e+00]]\n\n¿AA⁻¹ = I? True",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejercicio-3-sistema-de-ecuaciones-regla-de-cramer",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejercicio-3-sistema-de-ecuaciones-regla-de-cramer",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "23.3 Ejercicio 3: Sistema de Ecuaciones (Regla de Cramer)",
+    "text": "23.3 Ejercicio 3: Sistema de Ecuaciones (Regla de Cramer)\nProblema: Resolver el sistema: \\(\\begin{cases}\n2p_1 + p_2 = 5 \\\\\np_1 + 3p_2 = 8\n\\end{cases}\\)\n\n\nMostrar código\n# Solución Ejercicio 3\nA = np.array([[2, 1], [1, 3]])\nd = np.array([5, 8])\n\n# Método 1: Inversión de matrices\np = np.linalg.solve(A, d)\nprint(\"Solución por inversión:\")\nprint(f\"p₁ = {p[0]:.0f}\")\nprint(f\"p₂ = {p[1]:.0f}\")\n\n# Método 2: Regla de Cramer\ndet_A = np.linalg.det(A)\n\nA1 = A.copy()\nA1[:, 0] = d\np1 = np.linalg.det(A1) / det_A\n\nA2 = A.copy()\nA2[:, 1] = d\np2 = np.linalg.det(A2) / det_A\n\nprint(\"\\nSolución por Regla de Cramer:\")\nprint(f\"p₁ = {p1:.0f}\")\nprint(f\"p₂ = {p2:.0f}\")\n\n\nSolución por inversión:\np₁ = 1\np₂ = 2\n\nSolución por Regla de Cramer:\np₁ = 1\np₂ = 2",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejercicio-4-valores-propios",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html#ejercicio-4-valores-propios",
+    "title": "8  Capítulo 4: Modelos Lineales y Álgebra de Matrices",
+    "section": "23.4 Ejercicio 4: Valores Propios",
+    "text": "23.4 Ejercicio 4: Valores Propios\nProblema: Encontrar valores y vectores propios de \\(\\mathbf{A} = \\begin{bmatrix} 6 & -2 \\\\ -2 & 3 \\end{bmatrix}\\)",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Capítulo 4: Modelos Lineales y Álgebra de Matrices</span>"
     ]
   }
 ]

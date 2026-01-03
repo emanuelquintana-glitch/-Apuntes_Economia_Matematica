@@ -1,10 +1,12 @@
 # ============================================
 # QUARTO / LaTeX
 # ============================================
+
 # Carpetas generadas por Quarto
 _book/
 _site/
 .quarto/
+_freeze/
 
 # Archivos temporales de LaTeX
 *.aux
@@ -18,12 +20,8 @@ _site/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
-*.tex
 
-# Archivos intermedios de Quarto
-*.ipynb  # Notebooks temporales
-
-# Imágenes generadas
+# Figuras generadas
 **/figure-pdf/
 **/figure-html/
 **/figure-latex/
@@ -33,21 +31,18 @@ _site/
 # ============================================
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
 .Python
 .env
 .venv/
 venv/
-ENV/
-env.bak/
-venv.bak/
 
 # ============================================
-# JUPYTER / IPYTHON
+# JUPYTER
 # ============================================
 .ipynb_checkpoints/
-*.ipynb_checkpoints/
+.jupyter_cache/
+**/.jupyter_cache/
+*_cache/
 
 # ============================================
 # R
@@ -57,53 +52,43 @@ venv.bak/
 .Rproj.user/
 
 # ============================================
-# SISTEMA / TEMPORALES
+# SISTEMA
 # ============================================
 .DS_Store
 Thumbs.db
 *.swp
 *.swo
 *~
-/tmp/
 *.tmp
 *.temp
 
 # ============================================
-# ARCHIVOS INSTALADORES / BINARIOS
-# ============================================
-*.deb
-*.exe
-*.dmg
-*.pkg
-*.tar.gz
-*.zip
-
-# ============================================
-# IDE / EDITORES
+# IDEs
 # ============================================
 .vscode/
 .idea/
-*.code-workspace
 
 # ============================================
-# IMPORTANTE: NO IGNORAR ESTOS
+# QUARTO BOOK / GITHUB PAGES
 # ============================================
-# Mantén estos si quieres GitHub Pages:
-# !docs/
-# !*.html
-# !*.pdf
 
-# Mantén tus archivos fuente:
-# !*.qmd
-# !*.bib
-# !*.csl
-# !*.css
-# !*.yml
-/.quarto/
-_quarto.yml.backup*
-*.synctex.gz
-*.aux
-*.log
-*.toc
-index.pdf
-.Rproj.user
+# Publicación (NO ignorar)
+!docs/
+!docs/**/*.html
+!docs/**/*.css
+!docs/**/*.js
+!docs/**/*.json
+
+# Fuentes importantes (NO ignorar)
+!*.qmd
+!*.bib
+!*.csl
+!*.yml
+!*.css
+
+# ============================================
+# BASURA CONOCIDA
+# ============================================
+README_files/
+sec_01_matrices/5
+

@@ -1,144 +1,18 @@
 project:
   type: book
   output-dir: docs
-  
+
 book:
   title: "Economía Matemática"
   subtitle: "Apuntes Completos"
   author: "Emanuel Quintana"
   date: today
   repo-url: https://github.com/emanuelquintana-glitch/-Apuntes_Economia_Matematica
-  
+
   chapters:
-    # ============ Parte 02 Analisis Estatico ============
-    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_03_vectores/notas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_04_leyes_algebraicas/notas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_05_identidad_nulas/notas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_06_transpuestas_inversas/notas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/aplicaciones.qmd
-    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/notas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_01_no_singularidad/notas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_02_determinantes/notas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_03_propiedades_determinantes/notas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/algoritmos.qmd
-    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/notas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_05_regla_cramer/notas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_06_aplicaciones_modelos/notas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_07_leontief_insumo_producto/notas.qmd
-
-    # ============ Parte 03 Estatica Comparativa ============
-    - capitulos/parte_03_estatica_comparativa/README.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_02_tasa_cambio/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_03_pendiente_curva/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_04_limites/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_05_desigualdades/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_06_teoremas_limites/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_07_continuidad_diferenciabilidad/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/notas_completas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_01_una_variable/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_02_dos_o_mas_funciones/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_03_variables_diferentes/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_04_diferenciacion_parcial/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_05_aplicaciones_estatica_comparativa/modelos_economia.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_06_jacobianos/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/notas_completas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_01_diferenciales/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_02_diferenciales_totales/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_03_reglas_diferenciales/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_04_derivadas_totales/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_05_funciones_implicitas/notas.qmd
-    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_06_estatica_comparativa/modelos.qmd
-
-    # ============ Parte 04 Optimizacion ============
-    - capitulos/parte_04_optimizacion/README.qmd
-    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/notas_completas.qmd
-    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_01_valores_optimos/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_02_primera_derivada/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_03_derivadas_superiores/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_04_segunda_derivada/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_05_series_taylor_maclaurin/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_06_n_esima_derivada/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/notas_completas.qmd
-    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_01_naturaleza_exponenciales/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_02_funcion_natural_crecimiento/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_03_logaritmos/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_04_funciones_logaritmicas/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_05_derivadas/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_06_fecha_optima/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_07_mas_aplicaciones/aplicaciones.qmd
-    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/notas_completas.qmd
-    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_01_version_diferencial/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_02_dos_variables/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_03_formas_cuadraticas/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_04_mas_de_dos_variables/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_05_concavidad_convexidad/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_07_estatica_comparativa/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/notas_completas.qmd
-    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_02_valores_estacionarios/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_03_segunda_orden/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_04_cuasiconcavidad/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_05_maximizacion_utilidad/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_06_funciones_homogeneas/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_07_combinacion_insumos/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_13_temas_adicionales/notas_completas.qmd
-    - capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_01_kuhn_tucker/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_02_calificacion_restriccion/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_04_teoremas_suficiencia/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_05_funciones_valor_maximo/notas.qmd
-    - capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_06_dualidad/notas.qmd
-
-    # ============ Parte 05 Analisis Dinamico ============
-    - capitulos/parte_05_analisis_dinamico/README.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/notas_completas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_02_integrales_indefinidas/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_03_integrales_definidas/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_04_integrales_impropias/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_05_aplicaciones_economia/aplicaciones.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_06_modelo_domar/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/notas_completas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_01_lineales_coeficientes_constantes/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_02_dinamica_precio_mercado/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_03_coeficiente_variable/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_04_ecuaciones_exactas/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_05_no_lineales/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_06_enfoque_cualitativo/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_07_modelo_solow/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/notas_completas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_01_segundo_orden/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_02_numeros_complejos/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_03_raices_complejas/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_04_modelo_expectativas/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_05_inflacion_desempleo/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_06_termino_variable/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_07_orden_superior/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/notas_completas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_02_solucion/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_03_estabilidad/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_04_modelo_telarana/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_05_modelo_inventario/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_06_no_lineales_metodo_grafico/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/notas_completas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_01_segundo_orden/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_02_modelo_samuelson/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_03_inflacion_desempleo_discreto/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_04_generalizaciones/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/notas_completas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_02_solucion/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_03_modelos_insumo_producto/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_04_inflacion_desempleo/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_05_diagramas_fase/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_06_linealizacion/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/notas_completas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_01_naturaleza/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_02_condiciones_terminales/notas.qmd
-    - capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_05_horizonte_infinito/notas.qmd
-
     - index.qmd
     - prefacio.qmd
-    
+
     # ============ PARTE I: INTRODUCCIÓN ============
     - capitulos/parte_01_introduccion/README.qmd
     - capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.qmd
@@ -148,31 +22,216 @@ book:
     # ============ PARTE II: ANÁLISIS ESTÁTICO ============
     - capitulos/parte_02_analisis_estatico/README.qmd
     - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.qmd
-    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/notas_completas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_03_vectores/notas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_04_leyes_algebraicas/notas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_05_identidad_nulas/notas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_06_transpuestas_inversas/notas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/notas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/aplicaciones.qmd
 
+    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/notas_completas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_01_no_singularidad/notas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_02_determinantes/notas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_03_propiedades_determinantes/notas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/notas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/algoritmos.qmd
+    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_05_regla_cramer/notas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_06_aplicaciones_modelos/notas.qmd
+    - capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_07_leontief_insumo_producto/notas.qmd
+
+    # ============ PARTE III: ESTÁTICA COMPARATIVA ============
+    - capitulos/parte_03_estatica_comparativa/README.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_02_tasa_cambio/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_03_pendiente_curva/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_04_limites/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_05_desigualdades/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_06_teoremas_limites/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_07_continuidad_diferenciabilidad/notas.qmd
+
+    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/notas_completas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_01_una_variable/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_02_dos_o_mas_funciones/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_03_variables_diferentes/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_04_diferenciacion_parcial/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_05_aplicaciones_estatica_comparativa/modelos_economia.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_06_jacobianos/notas.qmd
+
+    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/notas_completas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_01_diferenciales/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_02_diferenciales_totales/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_03_reglas_diferenciales/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_04_derivadas_totales/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_05_funciones_implicitas/notas.qmd
+    - capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_06_estatica_comparativa/modelos.qmd
+
+    # ============ PARTE IV: OPTIMIZACIÓN ============
+    - capitulos/parte_04_optimizacion/README.qmd
+    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/notas_completas.qmd
+    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_01_valores_optimos/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_02_primera_derivada/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_03_derivadas_superiores/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_04_segunda_derivada/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_05_series_taylor_maclaurin/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_06_n_esima_derivada/notas.qmd
+
+    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/notas_completas.qmd
+    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_01_naturaleza_exponenciales/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_02_funcion_natural_crecimiento/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_03_logaritmos/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_04_funciones_logaritmicas/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_05_derivadas/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_06_fecha_optima/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_07_mas_aplicaciones/aplicaciones.qmd
+
+    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/notas_completas.qmd
+    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_01_version_diferencial/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_02_dos_variables/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_03_formas_cuadraticas/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_04_mas_de_dos_variables/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_05_concavidad_convexidad/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_07_estatica_comparativa/notas.qmd
+
+    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/notas_completas.qmd
+    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_02_valores_estacionarios/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_03_segunda_orden/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_04_cuasiconcavidad/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_05_maximizacion_utilidad/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_06_funciones_homogeneas/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_07_combinacion_insumos/notas.qmd
+
+    - capitulos/parte_04_optimizacion/cap_13_temas_adicionales/notas_completas.qmd
+    - capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_01_kuhn_tucker/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_02_calificacion_restriccion/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_04_teoremas_suficiencia/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_05_funciones_valor_maximo/notas.qmd
+    - capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_06_dualidad/notas.qmd
+
+    # ============ PARTE V: ANÁLISIS DINÁMICO ============
+    - capitulos/parte_05_analisis_dinamico/README.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/notas_completas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_02_integrales_indefinidas/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_03_integrales_definidas/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_04_integrales_impropias/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_05_aplicaciones_economia/aplicaciones.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_06_modelo_domar/notas.qmd
+
+    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/notas_completas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_01_lineales_coeficientes_constantes/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_02_dinamica_precio_mercado/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_03_coeficiente_variable/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_04_ecuaciones_exactas/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_05_no_lineales/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_06_enfoque_cualitativo/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_07_modelo_solow/notas.qmd
+
+    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/notas_completas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_01_segundo_orden/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_02_numeros_complejos/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_03_raices_complejas/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_04_modelo_expectativas/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_05_inflacion_desempleo/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_06_termino_variable/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_07_orden_superior/notas.qmd
+
+    - capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/notas_completas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_02_solucion/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_03_estabilidad/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_04_modelo_telarana/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_05_modelo_inventario/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_06_no_lineales_metodo_grafico/notas.qmd
+
+    - capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/notas_completas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_01_segundo_orden/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_02_modelo_samuelson/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_03_inflacion_desempleo_discreto/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_04_generalizaciones/notas.qmd
+
+    - capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/notas_completas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_02_solucion/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_03_modelos_insumo_producto/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_04_inflacion_desempleo/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_05_diagramas_fase/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_06_linealizacion/notas.qmd
+
+    - capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/notas_completas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_01_naturaleza/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_02_condiciones_terminales/notas.qmd
+    - capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_05_horizonte_infinito/notas.qmd
+
+# ============ CONFIGURACIÓN DE FORMATO ============
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
     toc-depth: 4
+    toc-location: left
+    toc-title: "Contenido"
     number-sections: true
+    number-depth: 4
     code-fold: show
+    code-summary: "Mostrar código"
     code-tools: true
-    
+    code-copy: true
+    code-overflow: wrap
+    html-math-method: mathjax
+
   pdf:
     documentclass: book
     papersize: letter
     fontsize: 11pt
+    geometry:
+      - margin=1in
     number-sections: true
     toc: true
+    toc-depth: 3
+    colorlinks: true
 
+# ============ CONFIGURACIÓN DE JUPYTER ============
+jupyter:
+  kernel: python3
+
+# ============ CONFIGURACIÓN DE EJECUCIÓN ============
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: true
+  freeze: auto
+  daemon: false
+
+# ============ CONFIGURACIÓN DE PYTHON ============
+python:
+  version: "3.11"
+
+# ============ METADATOS ============
 metadata:
-  description: "Apuntes de Economía Matemática"
-  keywords: [economía matemática, matemáticas, economía, optimización, cálculo]
-  
+  description: "Apuntes completos de Economía Matemática basados en Chiang & Wainwright"
+  keywords:
+    - economía matemática
+    - matemáticas
+    - economía
+    - optimización
+    - cálculo
+    - álgebra lineal
+
   author:
-    - name: "Emanuel Quintana"
-  
-  site-title: "Economía Matemática"
+    - name: "Emanuel Quintana Silva"
+      affiliation: "Universidad Pedagógica y Tecnológica de Colombia (UPTC)"
+      email: "emanuel.quintana@uptc.edu.co"
+      orcid: "0009-0006-8419-2805"
+
+  site-title: "Economía Matemática - Apuntes Completos"
   site-url: https://emanuelquintana-glitch.github.io/-Apuntes_Economia_Matematica/
+
+# ============ BIBLIOGRAFÍA ============
+bibliography: referencias.bib
+csl: apa.csl
+link-citations: true
+
+# ============ IDIOMA ============
+lang: es
+date-format: "D [de] MMMM [de] YYYY"
