@@ -1,0 +1,36 @@
+---
+title: "Capítulo 4-1: Matrices"
+author: "Emanuel Quintana Silva"
+date: "2025"
+format:
+  html:
+    toc: true
+---
+
+# Capítulo 4: Modelos Lineales y Álgebra de Matrices
+
+## Introducción
+
+Contenido del capítulo.
+
+## Desarrollo teórico
+
+### Sección 1
+
+Contenido de la sección 1.
+
+## Ejemplos
+
+### Ejemplo 1.1
+
+Ejemplo práctico.
+
+## Ejercicios
+
+### Ejercicio 1
+
+Enunciado del ejercicio.
+
+---
+
+*Capítulo en desarrollo*
