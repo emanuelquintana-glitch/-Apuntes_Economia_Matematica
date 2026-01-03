@@ -18,6 +18,17 @@ Este material cubre desde fundamentos de álgebra lineal hasta teoría de contro
 - Implementar modelos económicos en código reproducible
 - Servir como referencia académica para estudiantes e investigadores
 
+## Ejemplo detallado usando Latex y parte de Quarto
+
+<h2> Cheat Interactivo</h2>
+
+<video controls width="800">
+  <source src="Cheat_Interactivo.mp4" type="video/mp4">
+  Tu navegador no soporta video HTML5.
+</video>
+
+
+
 ##  Estructura del Repositorio
 
 El repositorio está organizado en **cinco partes principales**, siguiendo la estructura clásica del texto de referencia:
