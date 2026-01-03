@@ -2163,7 +2163,7 @@ C:.
 Cada capítulo incluye:
 
 1. **Notas Teóricas** (`.qmd`): Desarrollo matemático riguroso
-2. ** Notebooks Interactivos** (`.ipynb`): Implementaciones computacionales
+2. **Notebooks Interactivos** (`.ipynb`): Implementaciones computacionales
 3. ** Fórmulas LaTeX** (`.tex`): Desarrollos matemáticos detallados
 4. ** Ejercicios**: Problemas resueltos y propuestos
 5. ** Aplicaciones**: Modelos económicos reales
