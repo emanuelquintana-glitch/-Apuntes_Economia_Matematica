@@ -1,0 +1,31 @@
+﻿---
+title: "1.ToUpper()1 m.ToUpper()ultiples v.ToUpper()ariables e.ToUpper()leccion"
+author: "Emanuel Quintana Silva"
+date: today
+---
+
+# 1.ToUpper()1 m.ToUpper()ultiples v.ToUpper()ariables e.ToUpper()leccion
+
+Contenido del capítulo...
+
+## Introducción
+
+Breve introducción al tema del capítulo.
+
+## Desarrollo
+
+Contenido principal...
+
+### Ejemplo Matemático
+
+Ejemplo de ecuación:
+
+) y = f(x) )
+
+### Análisis Económico
+
+Aplicación económica del concepto.
+
+## Conclusión
+
+Resumen y conclusiones.

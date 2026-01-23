@@ -1,0 +1,31 @@
+﻿---
+title: "2.ToUpper()0 t.ToUpper()eoria c.ToUpper()ontrol o.ToUpper()ptimo"
+author: "Emanuel Quintana Silva"
+date: today
+---
+
+# 2.ToUpper()0 t.ToUpper()eoria c.ToUpper()ontrol o.ToUpper()ptimo
+
+Contenido del capítulo...
+
+## Introducción
+
+Breve introducción al tema del capítulo.
+
+## Desarrollo
+
+Contenido principal...
+
+### Ejemplo Matemático
+
+Ejemplo de ecuación:
+
+) y = f(x) )
+
+### Análisis Económico
+
+Aplicación económica del concepto.
+
+## Conclusión
+
+Resumen y conclusiones.

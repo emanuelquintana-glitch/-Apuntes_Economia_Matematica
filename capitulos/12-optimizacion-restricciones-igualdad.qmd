@@ -1,0 +1,31 @@
+﻿---
+title: "1.ToUpper()2 o.ToUpper()ptimizacion r.ToUpper()estricciones i.ToUpper()gualdad"
+author: "Emanuel Quintana Silva"
+date: today
+---
+
+# 1.ToUpper()2 o.ToUpper()ptimizacion r.ToUpper()estricciones i.ToUpper()gualdad
+
+Contenido del capítulo...
+
+## Introducción
+
+Breve introducción al tema del capítulo.
+
+## Desarrollo
+
+Contenido principal...
+
+### Ejemplo Matemático
+
+Ejemplo de ecuación:
+
+) y = f(x) )
+
+### Análisis Económico
+
+Aplicación económica del concepto.
+
+## Conclusión
+
+Resumen y conclusiones.

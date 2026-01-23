@@ -1,0 +1,31 @@
+﻿---
+title: "0.ToUpper()8 a.ToUpper()nalisis e.ToUpper()statico c.ToUpper()omparativo m.ToUpper()odelos f.ToUpper()unciones g.ToUpper()enerales"
+author: "Emanuel Quintana Silva"
+date: today
+---
+
+# 0.ToUpper()8 a.ToUpper()nalisis e.ToUpper()statico c.ToUpper()omparativo m.ToUpper()odelos f.ToUpper()unciones g.ToUpper()enerales
+
+Contenido del capítulo...
+
+## Introducción
+
+Breve introducción al tema del capítulo.
+
+## Desarrollo
+
+Contenido principal...
+
+### Ejemplo Matemático
+
+Ejemplo de ecuación:
+
+) y = f(x) )
+
+### Análisis Económico
+
+Aplicación económica del concepto.
+
+## Conclusión
+
+Resumen y conclusiones.

@@ -1,0 +1,31 @@
+﻿---
+title: "0.ToUpper()9 o.ToUpper()ptimizacion a.ToUpper()nalisis e.ToUpper()quilibrio"
+author: "Emanuel Quintana Silva"
+date: today
+---
+
+# 0.ToUpper()9 o.ToUpper()ptimizacion a.ToUpper()nalisis e.ToUpper()quilibrio
+
+Contenido del capítulo...
+
+## Introducción
+
+Breve introducción al tema del capítulo.
+
+## Desarrollo
+
+Contenido principal...
+
+### Ejemplo Matemático
+
+Ejemplo de ecuación:
+
+) y = f(x) )
+
+### Análisis Económico
+
+Aplicación económica del concepto.
+
+## Conclusión
+
+Resumen y conclusiones.

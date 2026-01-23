@@ -1,0 +1,31 @@
+﻿---
+title: "0.ToUpper()4 m.ToUpper()odelos l.ToUpper()ineales a.ToUpper()lgebra m.ToUpper()atrices"
+author: "Emanuel Quintana Silva"
+date: today
+---
+
+# 0.ToUpper()4 m.ToUpper()odelos l.ToUpper()ineales a.ToUpper()lgebra m.ToUpper()atrices
+
+Contenido del capítulo...
+
+## Introducción
+
+Breve introducción al tema del capítulo.
+
+## Desarrollo
+
+Contenido principal...
+
+### Ejemplo Matemático
+
+Ejemplo de ecuación:
+
+) y = f(x) )
+
+### Análisis Económico
+
+Aplicación económica del concepto.
+
+## Conclusión
+
+Resumen y conclusiones.
