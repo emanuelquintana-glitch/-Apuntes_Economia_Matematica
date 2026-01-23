@@ -1,0 +1,40 @@
+﻿/* Estilos personalizados para matemáticas */
+.math {
+    font-family: "Latin Modern Math", "STIX Two Math", "Cambria Math", serif;
+}
+
+.display.math {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.equation {
+    background-color: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.theorem {
+    background-color: #e8f4f8;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.definition {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.proof {
+    background-color: #f8f9fa;
+    border-left: 4px solid #6c757d;
+    padding: 15px;
+    margin: 15px 0;
+    font-style: italic;
+}

@@ -1,0 +1,23 @@
+﻿---
+title: "PARTE TRES - ANÁLISIS ESTÁTICO COMPARATIVO"
+author: "Emanuel Quintana Silva"
+date: today
+---
+
+# PARTE TRES - ANÁLISIS ESTÁTICO COMPARATIVO
+
+## Introducción
+
+Esta parte del manuscrito cubre los fundamentos teóricos y aplicaciones prácticas.
+
+## Capítulos Incluidos
+
+- Capítulo 1: [Título del primer capítulo]
+- Capítulo 2: [Título del segundo capítulo]
+- Capítulo 3: [Título del tercer capítulo]
+
+## Objetivos de Aprendizaje
+
+- Comprender los conceptos fundamentales
+- Aplicar las técnicas matemáticas
+- Analizar problemas económicos

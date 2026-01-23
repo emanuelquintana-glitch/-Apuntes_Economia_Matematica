@@ -1,4 +1,5 @@
 ---
+<<<<<<< Updated upstream
 title: "Economía Matemática"
 author: "Emanuel Quintana Silva"
 format:
@@ -27,3 +28,110 @@ Este repositorio contiene apuntes completos de Economía Matemática basados en 
 **Emanuel Quintana Silva**  
 Economista en formación - UPTC  
 [emanuel.quintana@uptc.edu.co](mailto:emanuel.quintana@uptc.edu.co)
+=======
+title: "Economía Matemática: Teoría y Aplicaciones"
+author: "Emanuel Quintana Silva"
+institution: "UPTC - Universidad Pedagógica y Tecnológica de Colombia"
+date: today
+abstract: |
+  Este manuscrito presenta un tratamiento comprehensivo de la economía matemática,
+  integrando herramientas matemáticas avanzadas con teoría económica moderna.
+  Diseñado para estudiantes e investigadores, cubre desde los fundamentos del
+  análisis estático hasta técnicas sofisticadas de optimización y análisis dinámico.
+keywords:
+  - economía matemática
+  - análisis estático
+  - optimización económica
+  - ecuaciones diferenciales
+  - microeconomía avanzada
+  - UPTC
+---
+
+# Prefacio
+
+Bienvenido a este manuscrito sobre **Economía Matemática**. Este trabajo surge de la necesidad de integrar rigurosamente las herramientas matemáticas con la teoría económica, proporcionando un puente entre el análisis formal y las aplicaciones prácticas en economía.
+
+## Objetivo del Texto
+
+Este texto está diseñado para:
+
+- Proporcionar fundamentos sólidos en métodos matemáticos aplicados a economía
+- Desarrollar habilidades para modelar problemas económicos formalmente
+- Presentar técnicas de análisis estático y dinámico
+- Ofrecer aplicaciones prácticas en microeconomía y macroeconomía
+
+## Estructura del Manuscrito
+
+El contenido está organizado en **cinco partes** principales:
+
+### Parte I: Introducción
+Fundamentos conceptuales y metodológicos de la economía matemática.
+
+### Parte II: Análisis Estático  
+Modelos de equilibrio y álgebra de matrices aplicada a economía.
+
+### Parte III: Análisis Estático Comparativo
+Técnicas de diferenciación y análisis de sensibilidad en modelos económicos.
+
+### Parte IV: Problemas de Optimización
+Métodos de optimización con y sin restricciones aplicados a teoría económica.
+
+### Parte V: Análisis Dinámico
+Sistemas dinámicos, ecuaciones diferenciales y teoría de control óptimo.
+
+## Características Pedagógicas
+
+- **Ejemplos económicos** en cada concepto matemático
+- **Aplicaciones prácticas** con Python/R
+- **Ejercicios resueltos** paso a paso
+- **Conexiones con teoría económica** moderna
+
+## Prerrequisitos
+
+El texto asume familiaridad con:
+- Cálculo diferencial e integral
+- Álgebra lineal básica
+- Conceptos fundamentales de microeconomía
+
+## Convenciones Notacionales
+
+- Variables económicas en *cursiva*: $Q_d$, $P$, $C$
+- Vectores en negrita: $\mathbf{x}$, $\mathbf{p}$
+- Derivadas parciales: $\frac{\partial f}{\partial x}$
+
+```{python}
+# Ejemplo introductorio: Función de utilidad Cobb-Douglas
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Parámetros
+alpha, beta = 0.6, 0.4
+x = np.linspace(0.1, 10, 50)
+y = np.linspace(0.1, 10, 50)
+X, Y = np.meshgrid(x, y)
+
+# Función de utilidad Cobb-Douglas
+U = (X**alpha) * (Y**beta)
+
+# Gráfico 3D
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(X, Y, U, cmap='viridis', alpha=0.8)
+ax.set_xlabel('Bien X')
+ax.set_ylabel('Bien Y')
+ax.set_zlabel('Utilidad U(x,y)')
+ax.set_title('Función de Utilidad Cobb-Douglas\n$U(x,y) = x^{0.6} y^{0.4}$')
+plt.tight_layout()
+plt.show()
+```
+## Agradecimientos
+
+Este trabajo ha sido posible gracias al apoyo de la **Universidad Pedagógica y Tecnológica de Colombia (UPTC)** y a todos los estudiantes cuyas preguntas y discusiones han enriquecido este material.
+
+> *"Las matemáticas no son solo números y ecuaciones; son el lenguaje con el cual comprendemos la estructura de la realidad económica."*
+
+**Emanuel Quintana Silva**  
+UPTC, Colombia  
+`r format(Sys.Date(), "%B %Y")`
+>>>>>>> Stashed changes

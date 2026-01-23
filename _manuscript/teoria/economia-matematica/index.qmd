@@ -1,0 +1,9 @@
+---
+title: "Contenido Teórico"
+author: "Emanuel Quintana Silva"
+date: today
+---
+
+# Contenido Teórico
+
+Texto introductorio del área teórica.

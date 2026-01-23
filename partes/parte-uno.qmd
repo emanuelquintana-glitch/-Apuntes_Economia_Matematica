@@ -1,0 +1,54 @@
+﻿---
+title: "PARTE UNO - INTRODUCCIÓN"
+author: "Emanuel Quintana Silva"
+date: today
+---
+
+# PARTE UNO - INTRODUCCIÓN
+
+## Presentación de la Parte
+
+Esta parte introductoria establece los fundamentos conceptuales y metodológicos de la economía matemática, definiendo su naturaleza, alcance y relación con otras disciplinas económicas.
+
+## Capítulos Incluidos
+
+- **Capítulo 1**: Naturaleza de la Economía Matemática
+- **Capítulo 2**: Modelos Económicos y su Construcción
+
+## Naturaleza y Enfoque de la Economía Matemática
+
+La economía matemática no se considera una rama separada de la economía (como las finanzas públicas o el comercio internacional), sino **un método utilizado en el análisis económico**. En este método, el economista usa **símbolos matemáticos** para enunciar los problemas y se apoya en **teoremas matemáticos** para el razonamiento.
+
+La **diferencia principal** entre la "economía matemática" y la "economía literaria" es doble:
+
+1. Las suposiciones y conclusiones se expresan con **símbolos matemáticos en lugar de palabras**, y en **ecuaciones en vez de enunciados**.
+2. En el proceso de razonamiento, se usan **teoremas matemáticos** en lugar de lógica "literaria".
+
+### Ventajas del Enfoque Matemático
+
+```{python}
+# Ejemplo: Representación matemática vs. verbal
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Enfoque matemático: Q_d = a - bP
+a, b = 50, 2
+P = np.linspace(0, 25, 100)
+Q_d = a - b * P
+
+plt.figure(figsize=(10, 6))
+plt.plot(P, Q_d, 'b-', linewidth=2, label='Demanda: $Q_d = 50 - 2P$')
+plt.xlabel('Precio (P)')
+plt.ylabel('Cantidad Demandada (Q_d)')
+plt.title('Representación Matemática de la Función de Demanda')
+plt.grid(True, alpha=0.3)
+plt.legend()
+plt.show()
+```
+
+## Referencias Bibliográficas
+
+Los contenidos de esta parte se basan en obras fundamentales del área:
+
+- **Chiang, A. C. & Wainwright, K.** - *'Métodos Fundamentales de Economía Matemática'*
+- **Sydsaeter, K. & Hammond, P. J.** - *'Matemáticas para el Análisis Económico'*

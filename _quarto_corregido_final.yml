@@ -1,0 +1,124 @@
+project:
+  type: manuscript
+  title: "Economía Matemática: Teoría y Aplicaciones"
+
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: 
+      - styles.css
+      - custom-math.css
+    toc: true
+    toc-depth: 4
+    number-sections: true
+    number-depth: 3
+    code-fold: true
+    code-summary: "Mostrar código"
+    code-link: true
+    fig-align: "center"
+    fig-responsive: true
+    link-external-icon: true
+    link-external-newwindow: true
+    
+  pdf:
+    documentclass: book
+    papersize: letter
+    fontsize: 11pt
+    linestretch: 1.25
+    geometry:
+      - top=1in
+      - bottom=1in
+      - left=1.5in
+      - right=1in
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    
+  docx: default
+
+execute:
+  freeze: auto
+  warning: false
+  error: false
+  cache: true
+  fig-format: png
+  dpi: 300
+
+crossref:
+  chapters: true
+
+# Estructura de partes basada en tu contenido
+parts:
+  - id: parte-introduccion
+    title: "PARTE UNO - INTRODUCCIÓN"
+    chapters:
+      - "capitulos/01-naturaleza-economia-matematica.qmd"
+      - "capitulos/02-modelos-economicos.qmd"
+    
+  - id: parte-analisis-estatico
+    title: "PARTE DOS - ANÁLISIS ESTÁTICO (O DE EQUILIBRIO)"
+    chapters:
+      - "capitulos/03-analisis-equilibrio-economia.qmd"
+      - "capitulos/04-modelos-lineales-algebra-matrices.qmd"
+      - "capitulos/05-modelos-lineales-algebra-matrices-continuacion.qmd"
+    
+  - id: parte-estatica-comparativa
+    title: "PARTE TRES - ANÁLISIS ESTÁTICO COMPARATIVO"
+    chapters:
+      - "capitulos/06-estatica-comparativa-concepto-derivada.qmd"
+      - "capitulos/07-reglas-diferenciacion-estatica-comparativa.qmd"
+      - "capitulos/08-analisis-estatico-comparativo-modelos-funciones-generales.qmd"
+    
+  - id: parte-optimizacion
+    title: "PARTE CUATRO - PROBLEMAS DE OPTIMIZACIÓN"
+    chapters:
+      - "capitulos/09-optimizacion-analisis-equilibrio.qmd"
+      - "capitulos/10-funciones-exponenciales-logaritmicas.qmd"
+      - "capitulos/11-multiples-variables-eleccion.qmd"
+      - "capitulos/12-optimizacion-restricciones-igualdad.qmd"
+      - "capitulos/13-temas-adicionales-optimizacion.qmd"
+    
+  - id: parte-analisis-dinamico
+    title: "PARTE CINCO - ANÁLISIS DINÁMICO"
+    chapters:
+      - "capitulos/14-dinamica-economica-calculo-integral.qmd"
+      - "capitulos/15-ecuaciones-diferenciales-primer-orden.qmd"
+      - "capitulos/16-ecuaciones-diferenciales-orden-superior.qmd"
+      - "capitulos/17-ecuaciones-diferencias-primer-orden.qmd"
+      - "capitulos/18-ecuaciones-diferencias-orden-superior.qmd"
+      - "capitulos/19-ecuaciones-diferenciales-diferencias-simultaneas.qmd"
+      - "capitulos/20-teoria-control-optimo.qmd"
+
+# Configuración de numeración
+numbering:
+  sections: true
+  depth: 3
+
+# Opciones de visualización
+toc-expand: 3
+toc-title: "Tabla de Contenidos"
+toc-location: left
+
+resources:
+  - "images/"
+  - "data/"
+
+knitr:
+  opts_chunk:
+    echo: true
+    warning: false
+    message: false
+    fig.align: "center"
+    fig.width: 7
+    fig.height: 5
+    out.width: "90%"
+
+python:
+  packages:
+    - numpy
+    - matplotlib
+    - pandas
+    - sympy

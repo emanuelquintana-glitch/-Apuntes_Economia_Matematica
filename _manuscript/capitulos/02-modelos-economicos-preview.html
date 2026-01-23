@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="generator" content="quarto-1.8.25">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <meta name="author" content="Emanuel Quintana Silva">
+    <meta name="dcterms.date" content="2025-11-23">
+
+    <title>modelos-economicos</title>
+    <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+        vertical-align: middle;
+      }
+    </style>
+
+    <style>
+      body.hypothesis-enabled #quarto-embed-header {
+        padding-right: 36px;
+      }
+
+      #quarto-embed-header {
+        height: 3em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px;
+      }
+
+      #quarto-embed-header h6 {
+        font-size: 1.1em;
+        padding-top: 0.6em;
+        margin-left: 1em;
+        margin-right: 1em;
+        font-weight: 400;
+      }
+
+      #quarto-embed-header a.quarto-back-link,
+      #quarto-embed-header a.quarto-download-embed {
+        font-size: 0.8em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+
+      .quarto-back-container {
+        padding-left: 0.5em;
+        display: flex;
+      }
+
+      .headroom {
+          will-change: transform;
+          transition: transform 200ms linear;
+      }
+
+      .headroom--pinned {
+          transform: translateY(0%);
+      }
+
+      .headroom--unpinned {
+          transform: translateY(-100%);
+      }      
+    </style>
+
+    <script>
+    window.document.addEventListener("DOMContentLoaded", function () {
+
+      var header = window.document.querySelector("#quarto-embed-header");
+      const titleBannerEl = window.document.querySelector("body > #title-block-header");
+      if (titleBannerEl) {
+        titleBannerEl.style.paddingTop = header.clientHeight + "px";
+      }
+      const contentEl = window.document.getElementById('quarto-content');
+      for (const child of contentEl.children) {
+        child.style.paddingTop = header.clientHeight + "px";
+        child.style.marginTop = "1em";
+      }
+
+      // Use the article root if the `back` call doesn't work. This isn't perfect
+      // but should typically work
+      window.quartoBackToArticle = () => {
+        var currentUrl = window.location.href;
+        window.history.back();
+        setTimeout(() => {
+            // if location was not changed in 100 ms, then there is no history back
+            if(currentUrl === window.location.href){              
+                // redirect to site root
+                window.location.href = "...html";
+            }
+        }, 100);
+      }
+
+      const headroom = new window.Headroom(header, {
+        tolerance: 5,
+        onPin: function () {
+        },
+        onUnpin: function () {
+        },
+      });
+      headroom.init();
+    });
+    </script>
+
+    
+<script src="../site_libs/manuscript-notebook/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-4d7f0bce1131f3e5f9547cd857cfbfc8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script> 
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="../custom-math.css">
+      </head>
+
+  <body class="quarto-notebook quarto-light">
+    <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
+      
+      <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
+      <h6><i class="bi bi-journal-code"></i> 02 Modelos Económicos</h6>
+
+            <a href="../capitulos/02-modelos-economicos.qmd" class="btn btn-primary quarto-download-embed" download="02-modelos-economicos.qmd">Download Source</a>
+          </div>
+
+     <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">02 Modelos Económicos</h1>
+          </div>
+
+    
+    <div class="quarto-title-meta-container">
+      <div class="quarto-title-meta-column-start">
+        
+        <div class="quarto-title-meta">
+
+                <div>
+            <div class="quarto-title-meta-heading">Author</div>
+            <div class="quarto-title-meta-contents">
+                        <p>Emanuel Quintana Silva </p>
+                      </div>
+          </div>
+                
+                <div>
+            <div class="quarto-title-meta-heading">Published</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date">November 23, 2025</p>
+            </div>
+          </div>
+          
+                
+              </div>
+      </div>
+      <div class="quarto-title-meta-column-end quarto-other-formats-target">
+      </div>
+    </div>
+
+
+
+    <div class="quarto-other-links-text-target">
+    </div>  </div>
+</header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">Tabla de Contenidos</h2>
+   
+  <ul>
+  <li><a href="#modelos-económicos" id="toc-modelos-económicos" class="nav-link active" data-scroll-target="#modelos-económicos">02 Modelos Económicos</a>
+  <ul>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#el-modelo-económico" id="toc-el-modelo-económico" class="nav-link" data-scroll-target="#el-modelo-económico">El Modelo Económico</a></li>
+  <li><a href="#elementos-de-un-modelo-matemático" id="toc-elementos-de-un-modelo-matemático" class="nav-link" data-scroll-target="#elementos-de-un-modelo-matemático">2.1 Elementos de un Modelo Matemático</a>
+  <ul class="collapse">
+  <li><a href="#variables-constantes-y-parámetros" id="toc-variables-constantes-y-parámetros" class="nav-link" data-scroll-target="#variables-constantes-y-parámetros">Variables, Constantes y Parámetros</a>
+  <ul class="collapse">
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">Variables</a></li>
+  <li><a href="#constantes-o-parámetros" id="toc-constantes-o-parámetros" class="nav-link" data-scroll-target="#constantes-o-parámetros">Constantes (o Parámetros)</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#tipos-de-función" id="toc-tipos-de-función" class="nav-link" data-scroll-target="#tipos-de-función">Tipos de Función</a>
+  <ul class="collapse">
+  <li><a href="#funciones-constantes" id="toc-funciones-constantes" class="nav-link" data-scroll-target="#funciones-constantes">Funciones Constantes</a></li>
+  <li><a href="#funciones-polinomiales" id="toc-funciones-polinomiales" class="nav-link" data-scroll-target="#funciones-polinomiales">Funciones Polinomiales</a></li>
+  <li><a href="#funciones-racionales" id="toc-funciones-racionales" class="nav-link" data-scroll-target="#funciones-racionales">Funciones Racionales</a></li>
+  <li><a href="#funciones-algebraicas-vs.-no-algebraicas" id="toc-funciones-algebraicas-vs.-no-algebraicas" class="nav-link" data-scroll-target="#funciones-algebraicas-vs.-no-algebraicas">Funciones Algebraicas vs.&nbsp;No Algebraicas</a></li>
+  <li><a href="#funciones-de-más-de-una-variable" id="toc-funciones-de-más-de-una-variable" class="nav-link" data-scroll-target="#funciones-de-más-de-una-variable">Funciones de más de una variable</a></li>
+  <li><a href="#funciones-paramétricas-vs.-generales" id="toc-funciones-paramétricas-vs.-generales" class="nav-link" data-scroll-target="#funciones-paramétricas-vs.-generales">Funciones Paramétricas vs.&nbsp;Generales</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      
+
+       <section id="modelos-económicos" class="level1">
+<h1>02 Modelos Económicos</h1>
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
+<p>El <strong>Capítulo 2: Modelos Económicos</strong> se encuentra en la <strong>Parte Uno: Introducción</strong> del libro. Este capítulo establece el marco conceptual y matemático fundamental para el análisis económico que se desarrollará en el texto. Aquí se presentan los elementos esenciales para construir y comprender modelos económicos formales.</p>
+</section>
+<section id="el-modelo-económico" class="level2">
+<h2 class="anchored" data-anchor-id="el-modelo-económico">El Modelo Económico</h2>
+<p>Cualquier teoría económica es, por necesidad, una <strong>abstracción del mundo real</strong>. La inmensa complejidad de la economía real hace imposible comprender todas las interrelaciones a la vez.</p>
+<p>Un <strong>modelo económico</strong> es un marco analítico simplificado deliberadamente, que se elige para distinguir solo los <strong>factores y relaciones principales pertinentes</strong> al fenómeno económico bajo estudio. Por lo tanto, un modelo es solo una estructura o <strong>representación aproximada</strong> de la economía real.</p>
+<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="46154e90" class="cell" data-execution_count="2">
+<pre><code># Ejemplo: Representación de un modelo económico simple
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+# Modelo de oferta y demanda
+P = np.linspace(0, 20, 100)
+Q_d = 100 - 3 * P  # Función de demanda
+Q_s = 20 + 2 * P   # Función de oferta
+
+
+plt.figure(figsize=(10, 6))
+plt.plot(Q_d, P, 'r-', linewidth=2, label='Demanda: $Q_d = 100 - 3P$')
+plt.plot(Q_s, P, 'b-', linewidth=2, label='Oferta: $Q_s = 20 + 2P$')
+
+
+# Punto de equilibrio
+P_eq = 16
+Q_eq = 100 - 3 * P_eq
+plt.plot([Q_eq], [P_eq], 'go', markersize=8, label=f'Equilibrio (Q={Q_eq}, P={P_eq})')
+
+
+plt.xlabel('Cantidad (Q)')
+plt.ylabel('Precio (P)')
+plt.title('Modelo Básico de Oferta y Demanda')
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.show()</code></pre>
+<div class="cell-output cell-output-display">
+<div class="">
+<figure class="figure">
+<p class=""><a href="02-modelos-economicos_files/figure-html/cell-2-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="02-modelos-economicos_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div></div>
+</section>
+<div id="d4733071" class="cell markdown">
+<section id="elementos-de-un-modelo-matemático" class="level2">
+<h2 class="anchored" data-anchor-id="elementos-de-un-modelo-matemático">2.1 Elementos de un Modelo Matemático</h2>
+<p>Un modelo económico es, fundamentalmente, un marco teórico, y no hay una razón inherente para que deba ser matemático. Sin embargo, si es matemático, generalmente consistirá en un <strong>conjunto de ecuaciones</strong> diseñadas para describir su estructura. Al relacionar variables entre sí de ciertas maneras, estas ecuaciones dan <strong>forma matemática</strong> al conjunto de suposiciones analíticas adoptadas.</p>
+<section id="variables-constantes-y-parámetros" class="level3">
+<h3 class="anchored" data-anchor-id="variables-constantes-y-parámetros">Variables, Constantes y Parámetros</h3>
+<section id="variables" class="level4">
+<h4 class="anchored" data-anchor-id="variables">Variables</h4>
+<p>Es algo cuya magnitud puede cambiar, es decir, que puede tomar valores diferentes (ejemplos: precio (<span class="math inline">\(P\)</span>), ganancia (<span class="math inline">\(\pi\)</span>), ingreso nacional (<span class="math inline">\(Y\)</span>)). Se representan mediante un símbolo en lugar de un número específico.</p>
+<ul>
+<li><strong>Variables Endógenas:</strong> Aquellas cuyos <strong>valores solución se buscan desde dentro</strong> del modelo (ej: el nivel de precios de depuración del mercado o el nivel de producción de maximización de ganancias).</li>
+<li><strong>Variables Exógenas:</strong> Aquellas que <strong>se supone están determinadas por fuerzas externas</strong> al modelo y cuyas magnitudes se aceptan como datos o “presunciones”. Si <span class="math inline">\(P\)</span> simboliza el precio, <span class="math inline">\(P_a\)</span> puede indicar un precio determinado de forma exógena. Una variable puede ser endógena en un modelo y exógena en otro.</li>
+</ul>
+</section>
+<section id="constantes-o-parámetros" class="level4">
+<h4 class="anchored" data-anchor-id="constantes-o-parámetros">Constantes (o Parámetros)</h4>
+<p>Son magnitudes que no cambien en el contexto de un modelo dado. Las constantes paramétricas (como <span class="math inline">\(a, b, c\)</span> o <span class="math inline">\(\alpha, \beta, \gamma\)</span>) se consideran como un <strong>dato</strong> en el modelo. Los parámetros se asemejan a las variables exógenas y, a menudo, los escritores se refieren a ambos con la designación única de “parámetros”.</p>
+</section>
+</section>
+</section>
+</div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="634a1dde" class="cell" data-execution_count="3">
+<pre><code># Ejemplo: Variables endógenas vs. exógenas en un modelo
+import matplotlib.pyplot as plt
+
+
+# Configuración del gráfico explicativo
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+
+
+# Modelo con variable exógena
+P_exogeno = 10  # Precio determinado externamente
+Q_d = 100 - 3 * P_exogeno
+
+
+ax1.bar(['Precio (P)', 'Cantidad (Q)'], [P_exogeno, Q_d], color=['red', 'blue'], alpha=0.7)
+ax1.set_title('Variable Exógena\n(P determinada externamente)')
+ax1.set_ylabel('Valor')
+ax1.text(0, P_exogeno + 2, f'P = {P_exogeno}', ha='center', fontweight='bold')
+ax1.text(1, Q_d + 2, f'Q = {Q_d}', ha='center', fontweight='bold')
+
+
+# Modelo con equilibrio endógeno
+# Resolviendo Q_d = Q_s para encontrar equilibrio
+P_endo = 16  # Precio de equilibrio
+Q_endo = 100 - 3 * P_endo
+
+
+ax2.bar(['Precio (P)', 'Cantidad (Q)'], [P_endo, Q_endo], color=['green', 'purple'], alpha=0.7)
+ax2.set_title('Variables Endógenas\n(Determinadas dentro del modelo)')
+ax2.set_ylabel('Valor')
+ax2.text(0, P_endo + 2, f'P = {P_endo}', ha='center', fontweight='bold')
+ax2.text(1, Q_endo + 2, f'Q = {Q_endo}', ha='center', fontweight='bold')
+
+
+plt.tight_layout()
+plt.show()</code></pre>
+<div class="cell-output cell-output-display">
+<div class="">
+<figure class="figure">
+<p class=""><a href="02-modelos-economicos_files/figure-html/cell-3-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="02-modelos-economicos_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div></div>
+<div id="0b5da3f8" class="cell markdown">
+<section id="ecuaciones-e-identidades" class="level3">
+<h3 class="anchored" data-anchor-id="ecuaciones-e-identidades">Ecuaciones e Identidades</h3>
+<p>En las aplicaciones económicas, se distinguen tres tipos de ecuaciones:</p>
+<ol type="1">
+<li><p><strong>Ecuaciones Definicionales:</strong> Establecen una <strong>identidad</strong> entre dos expresiones alternas que tienen el mismo significado (ej: <span class="math inline">\(\pi \equiv R - C\)</span>, donde <span class="math inline">\(\pi\)</span> es la ganancia total, <span class="math inline">\(R\)</span> el ingreso total y <span class="math inline">\(C\)</span> el costo total). Se puede usar el signo de igualdad idéntica (<span class="math inline">\(\equiv\)</span>) o el signo igual (<span class="math inline">\(=\)</span>).</p></li>
+<li><p><strong>Ecuaciones de Comportamiento:</strong> Especifican la manera en que una variable se comporta en respuesta a cambios en otras variables. Pueden referirse al comportamiento humano (ej: patrón de consumo agregado) o no humano (ej: reacción del costo total al producto). Estas ecuaciones dan expresión matemática a las <strong>suposiciones adoptadas</strong> en el modelo.</p></li>
+<li><p><strong>Ecuaciones Condicionales:</strong> Expresan un <strong>requerimiento que debe satisfacerse</strong>.</p>
+<ul>
+<li><strong>Condiciones de equilibrio</strong> (ej: <span class="math inline">\(Q_d = Q_s\)</span> o <span class="math inline">\(S = I\)</span>).</li>
+<li><strong>Condiciones de optimización</strong> (ej: <span class="math inline">\(CM = IM\)</span>).</li>
+</ul></li>
+</ol>
+</section>
+<section id="sistema-de-números-reales" class="level2">
+<h2 class="anchored" data-anchor-id="sistema-de-números-reales">2.2 Sistema de Números Reales</h2>
+<p>El capítulo señala que, puesto que los valores que toma una variable económica son por lo común numéricos, es pertinente tratar con el <strong>sistema de los números reales</strong>.</p>
+</section>
+<section id="concepto-de-conjuntos" class="level2">
+<h2 class="anchored" data-anchor-id="concepto-de-conjuntos">2.3 Concepto de Conjuntos</h2>
+<p>Un <strong>conjunto</strong> es simplemente una colección de objetos <strong>distintos</strong> llamados elementos.</p>
+<p>El capítulo también introduce conceptos matemáticos relacionados que se usan a lo largo del libro:</p>
+<ul>
+<li><p><strong>Par Ordenado y Relación:</strong> Un <strong>par ordenado</strong> es un conjunto donde el orden importa. Una <strong>relación</strong> es un conjunto de pares ordenados. Si un valor <span class="math inline">\(x\)</span> en una relación puede determinar múltiples valores <span class="math inline">\(y\)</span>, gráficamente, dos o más puntos caerán en una sola recta vertical.</p></li>
+<li><p><strong>Función:</strong> Es una regla de mapeo que asocia a <strong>cada punto</strong> en el dominio (eje <span class="math inline">\(x\)</span>) hacia un <strong>punto único</strong> en la imagen (eje <span class="math inline">\(y\)</span>). En modelos económicos, el dominio y la imagen a menudo se restringen a <strong>números reales no negativos</strong>, por lo que se representan en el primer cuadrante.</p></li>
+</ul>
+</section>
+</div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="96b8f0de" class="cell" data-execution_count="4">
+<pre><code># Ejemplo: Relaciones vs. Funciones
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+
+
+# Relación (no función) - círculo
+theta = np.linspace(0, 2*np.pi, 100)
+x_rel = np.cos(theta)
+y_rel = np.sin(theta)
+ax1.plot(x_rel, y_rel, 'b-', linewidth=2)
+ax1.set_xlabel('x')
+ax1.set_ylabel('y')
+ax1.set_title('Relación (No Función)\n$x^2 + y^2 = 1$')
+ax1.grid(True, alpha=0.3)
+ax1.set_aspect('equal')
+
+
+# Función - parábola
+x_func = np.linspace(-2, 2, 100)
+y_func = x_func**2
+ax2.plot(x_func, y_func, 'r-', linewidth=2)
+ax2.set_xlabel('x')
+ax2.set_ylabel('y')
+ax2.set_title('Función\n$y = x^2$')
+ax2.grid(True, alpha=0.3)
+ax2.set_aspect('equal')
+
+
+plt.tight_layout()
+plt.show()</code></pre>
+<div class="cell-output cell-output-display">
+<div class="">
+<figure class="figure">
+<p class=""><a href="02-modelos-economicos_files/figure-html/cell-4-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="02-modelos-economicos_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div></div>
+<div id="2514c5ae" class="cell markdown">
+<section id="tipos-de-función" class="level2">
+<h2 class="anchored" data-anchor-id="tipos-de-función">Tipos de Función</h2>
+<p>Las ecuaciones de comportamiento normalmente adoptan la forma de funciones.</p>
+<section id="funciones-constantes" class="level3">
+<h3 class="anchored" data-anchor-id="funciones-constantes">Funciones Constantes</h3>
+<p>La imagen consiste en un solo elemento (ej: <span class="math inline">\(y = 7\)</span> o <span class="math inline">\(I = I_0\)</span>).</p>
+</section>
+<section id="funciones-polinomiales" class="level3">
+<h3 class="anchored" data-anchor-id="funciones-polinomiales">Funciones Polinomiales</h3>
+<p>Tienen la forma <span class="math inline">\(y = a_0 + a_1 x + \dots + a_n x^n\)</span>.</p>
+<ul>
+<li><strong>Función lineal</strong> (<span class="math inline">\(n=1\)</span>): Grado 1.</li>
+<li><strong>Función cuadrática</strong> (<span class="math inline">\(n=2\)</span>): Grado 2, traza una parábola con una sola protuberancia/serpenteante.</li>
+<li><strong>Función cúbica</strong> (<span class="math inline">\(n=3\)</span>): Grado 3, en general, muestra dos ondulaciones.</li>
+</ul>
+</section>
+<section id="funciones-racionales" class="level3">
+<h3 class="anchored" data-anchor-id="funciones-racionales">Funciones Racionales</h3>
+<p><span class="math inline">\(y\)</span> se expresa como una razón de dos polinomios. Un ejemplo especial es la <strong>hipérbola rectangular</strong> (<span class="math inline">\(y = a/x\)</span>), que describe una curva asintótica a los ejes, usada para curvas de demanda de elasticidad unitaria o el costo fijo promedio.</p>
+</section>
+<section id="funciones-algebraicas-vs.-no-algebraicas" class="level3">
+<h3 class="anchored" data-anchor-id="funciones-algebraicas-vs.-no-algebraicas">Funciones Algebraicas vs.&nbsp;No Algebraicas</h3>
+<p>Las funciones expresadas en términos de polinomios o raíces de polinomios son <strong>algebraicas</strong>. Las demás son <strong>no algebraicas</strong> o trascendentes.</p>
+</section>
+<section id="funciones-de-más-de-una-variable" class="level3">
+<h3 class="anchored" data-anchor-id="funciones-de-más-de-una-variable">Funciones de más de una variable</h3>
+<p>El uso de tres o más variables independientes (ej: <span class="math inline">\(U = h(u, v, w)\)</span>) requiere un diagrama de cuatro o más dimensiones, lo cual es una <strong>imposibilidad física de graficar</strong>. El lugar geométrico de estos puntos se llama <strong>hipersuperficie</strong>.</p>
+</section>
+<section id="funciones-paramétricas-vs.-generales" class="level3">
+<h3 class="anchored" data-anchor-id="funciones-paramétricas-vs.-generales">Funciones Paramétricas vs.&nbsp;Generales</h3>
+<p>Las funciones paramétricas (ej: <span class="math inline">\(y = a + bx + cx^2\)</span>) representan una <strong>familia completa de curvas</strong>. Las funciones generales (ej: <span class="math inline">\(z = g(x, y)\)</span>) tienen la <strong>aplicabilidad más general</strong>, pero a menudo requieren imponer <strong>restricciones cualitativas</strong> (ej: pendiente negativa de la función de demanda).</p>
+</section>
+</section>
+</div>
+<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="1b373cbf" class="cell" data-execution_count="5">
+<pre><code># Ejemplo: Diferentes tipos de funciones económicas
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(12, 10))
+
+
+x = np.linspace(0.1, 10, 100)
+
+
+# Función constante (oferta monetaria fija)
+ax1.axhline(y=100, color='red', linewidth=2)
+ax1.set_title('Función Constante\n$M_s = 100$')
+ax1.set_xlabel('Tiempo')
+ax1.set_ylabel('Oferta Monetaria')
+ax1.grid(True, alpha=0.3)
+
+
+# Función lineal (función consumo)
+C = 50 + 0.8 * x
+ax2.plot(x, C, 'blue', linewidth=2)
+ax2.set_title('Función Lineal\n$C = 50 + 0.8Y$')
+ax2.set_xlabel('Ingreso (Y)')
+ax2.set_ylabel('Consumo (C)')
+ax2.grid(True, alpha=0.3)
+
+
+# Función cuadrática (función costo)
+CT = 100 + 10*x + 0.5*x**2
+ax3.plot(x, CT, 'green', linewidth=2)
+ax3.set_title('Función Cuadrática\n$CT = 100 + 10Q + 0.5Q^2$')
+ax3.set_xlabel('Cantidad (Q)')
+ax3.set_ylabel('Costo Total')
+ax3.grid(True, alpha=0.3)
+
+
+# Función racional (costo fijo promedio)
+CFP = 100 / x
+ax4.plot(x, CFP, 'purple', linewidth=2)
+ax4.set_title('Función Racional\n$CFP = 100/Q$')
+ax4.set_xlabel('Cantidad (Q)')
+ax4.set_ylabel('Costo Fijo Promedio')
+ax4.grid(True, alpha=0.3)
+
+
+plt.tight_layout()
+plt.show()</code></pre>
+<div class="cell-output cell-output-display">
+<div class="">
+<figure class="figure">
+<p class=""><a href="02-modelos-economicos_files/figure-html/cell-5-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="02-modelos-economicos_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div></div>
+<div id="0df7b7f7" class="cell markdown">
+<hr>
+<p><strong>Emanuel Quintana Silva</strong><br>
+<em>UPTC - Universidad Pedagógica y Tecnológica de Colombia</em></p>
+</div>
+</section>
+     </main>
+<!-- /main column -->  <script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script> 
+  
+</body></html>

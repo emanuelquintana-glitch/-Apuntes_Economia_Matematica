@@ -1,0 +1,9 @@
+---
+title: "Contenido Teórico"
+author: "Emanuel Quintana Silva"
+date: today
+---
+
+# Contenido Te?rico
+
+Texto introductorio del ?rea te?rica.

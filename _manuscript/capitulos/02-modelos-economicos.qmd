@@ -1,0 +1,278 @@
+﻿---
+title: "02 Modelos Económicos"
+author: "Emanuel Quintana Silva"
+date: today
+---
+
+
+# 02 Modelos Económicos
+
+
+## Introducción
+
+
+El **Capítulo 2: Modelos Económicos** se encuentra en la **Parte Uno: Introducción** del libro. Este capítulo establece el marco conceptual y matemático fundamental para el análisis económico que se desarrollará en el texto. Aquí se presentan los elementos esenciales para construir y comprender modelos económicos formales.
+
+
+## El Modelo Económico
+
+
+Cualquier teoría económica es, por necesidad, una **abstracción del mundo real**. La inmensa complejidad de la economía real hace imposible comprender todas las interrelaciones a la vez.
+
+
+Un **modelo económico** es un marco analítico simplificado deliberadamente, que se elige para distinguir solo los **factores y relaciones principales pertinentes** al fenómeno económico bajo estudio. Por lo tanto, un modelo es solo una estructura o **representación aproximada** de la economía real.
+
+
+```{python}
+# Ejemplo: Representación de un modelo económico simple
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+# Modelo de oferta y demanda
+P = np.linspace(0, 20, 100)
+Q_d = 100 - 3 * P  # Función de demanda
+Q_s = 20 + 2 * P   # Función de oferta
+
+
+plt.figure(figsize=(10, 6))
+plt.plot(Q_d, P, 'r-', linewidth=2, label='Demanda: $Q_d = 100 - 3P$')
+plt.plot(Q_s, P, 'b-', linewidth=2, label='Oferta: $Q_s = 20 + 2P$')
+
+
+# Punto de equilibrio
+P_eq = 16
+Q_eq = 100 - 3 * P_eq
+plt.plot([Q_eq], [P_eq], 'go', markersize=8, label=f'Equilibrio (Q={Q_eq}, P={P_eq})')
+
+
+plt.xlabel('Cantidad (Q)')
+plt.ylabel('Precio (P)')
+plt.title('Modelo Básico de Oferta y Demanda')
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.show()
+```
+## 2.1 Elementos de un Modelo Matemático
+
+
+Un modelo económico es, fundamentalmente, un marco teórico, y no hay una razón inherente para que deba ser matemático. Sin embargo, si es matemático, generalmente consistirá en un **conjunto de ecuaciones** diseñadas para describir su estructura. Al relacionar variables entre sí de ciertas maneras, estas ecuaciones dan **forma matemática** al conjunto de suposiciones analíticas adoptadas.
+
+
+### Variables, Constantes y Parámetros
+
+
+#### Variables
+Es algo cuya magnitud puede cambiar, es decir, que puede tomar valores diferentes (ejemplos: precio ($P$), ganancia ($\pi$), ingreso nacional ($Y$)). Se representan mediante un símbolo en lugar de un número específico.
+
+
+*   **Variables Endógenas:** Aquellas cuyos **valores solución se buscan desde dentro** del modelo (ej: el nivel de precios de depuración del mercado o el nivel de producción de maximización de ganancias).
+*   **Variables Exógenas:** Aquellas que **se supone están determinadas por fuerzas externas** al modelo y cuyas magnitudes se aceptan como datos o "presunciones". Si $P$ simboliza el precio, $P_a$ puede indicar un precio determinado de forma exógena. Una variable puede ser endógena en un modelo y exógena en otro.
+
+
+#### Constantes (o Parámetros)
+Son magnitudes que no cambien en el contexto de un modelo dado. Las constantes paramétricas (como $a, b, c$ o $\alpha, \beta, \gamma$) se consideran como un **dato** en el modelo. Los parámetros se asemejan a las variables exógenas y, a menudo, los escritores se refieren a ambos con la designación única de "parámetros".
+
+
+```{python}
+# Ejemplo: Variables endógenas vs. exógenas en un modelo
+import matplotlib.pyplot as plt
+
+
+# Configuración del gráfico explicativo
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+
+
+# Modelo con variable exógena
+P_exogeno = 10  # Precio determinado externamente
+Q_d = 100 - 3 * P_exogeno
+
+
+ax1.bar(['Precio (P)', 'Cantidad (Q)'], [P_exogeno, Q_d], color=['red', 'blue'], alpha=0.7)
+ax1.set_title('Variable Exógena\n(P determinada externamente)')
+ax1.set_ylabel('Valor')
+ax1.text(0, P_exogeno + 2, f'P = {P_exogeno}', ha='center', fontweight='bold')
+ax1.text(1, Q_d + 2, f'Q = {Q_d}', ha='center', fontweight='bold')
+
+
+# Modelo con equilibrio endógeno
+# Resolviendo Q_d = Q_s para encontrar equilibrio
+P_endo = 16  # Precio de equilibrio
+Q_endo = 100 - 3 * P_endo
+
+
+ax2.bar(['Precio (P)', 'Cantidad (Q)'], [P_endo, Q_endo], color=['green', 'purple'], alpha=0.7)
+ax2.set_title('Variables Endógenas\n(Determinadas dentro del modelo)')
+ax2.set_ylabel('Valor')
+ax2.text(0, P_endo + 2, f'P = {P_endo}', ha='center', fontweight='bold')
+ax2.text(1, Q_endo + 2, f'Q = {Q_endo}', ha='center', fontweight='bold')
+
+
+plt.tight_layout()
+plt.show()
+```
+### Ecuaciones e Identidades
+
+
+En las aplicaciones económicas, se distinguen tres tipos de ecuaciones:
+
+
+1.  **Ecuaciones Definicionales:** Establecen una **identidad** entre dos expresiones alternas que tienen el mismo significado (ej: $\pi \equiv R - C$, donde $\pi$ es la ganancia total, $R$ el ingreso total y $C$ el costo total). Se puede usar el signo de igualdad idéntica ($\equiv$) o el signo igual ($=$).
+
+
+2.  **Ecuaciones de Comportamiento:** Especifican la manera en que una variable se comporta en respuesta a cambios en otras variables. Pueden referirse al comportamiento humano (ej: patrón de consumo agregado) o no humano (ej: reacción del costo total al producto). Estas ecuaciones dan expresión matemática a las **suposiciones adoptadas** en el modelo.
+
+
+3.  **Ecuaciones Condicionales:** Expresan un **requerimiento que debe satisfacerse**.
+    *   **Condiciones de equilibrio** (ej: $Q_d = Q_s$ o $S = I$).
+    *   **Condiciones de optimización** (ej: $CM = IM$).
+
+
+## 2.2 Sistema de Números Reales
+
+
+El capítulo señala que, puesto que los valores que toma una variable económica son por lo común numéricos, es pertinente tratar con el **sistema de los números reales**.
+
+
+## 2.3 Concepto de Conjuntos
+
+
+Un **conjunto** es simplemente una colección de objetos **distintos** llamados elementos.
+
+
+El capítulo también introduce conceptos matemáticos relacionados que se usan a lo largo del libro:
+
+
+*   **Par Ordenado y Relación:** Un **par ordenado** es un conjunto donde el orden importa. Una **relación** es un conjunto de pares ordenados. Si un valor $x$ en una relación puede determinar múltiples valores $y$, gráficamente, dos o más puntos caerán en una sola recta vertical.
+
+
+*   **Función:** Es una regla de mapeo que asocia a **cada punto** en el dominio (eje $x$) hacia un **punto único** en la imagen (eje $y$). En modelos económicos, el dominio y la imagen a menudo se restringen a **números reales no negativos**, por lo que se representan en el primer cuadrante.
+
+
+```{python}
+# Ejemplo: Relaciones vs. Funciones
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+
+
+# Relación (no función) - círculo
+theta = np.linspace(0, 2*np.pi, 100)
+x_rel = np.cos(theta)
+y_rel = np.sin(theta)
+ax1.plot(x_rel, y_rel, 'b-', linewidth=2)
+ax1.set_xlabel('x')
+ax1.set_ylabel('y')
+ax1.set_title('Relación (No Función)\n$x^2 + y^2 = 1$')
+ax1.grid(True, alpha=0.3)
+ax1.set_aspect('equal')
+
+
+# Función - parábola
+x_func = np.linspace(-2, 2, 100)
+y_func = x_func**2
+ax2.plot(x_func, y_func, 'r-', linewidth=2)
+ax2.set_xlabel('x')
+ax2.set_ylabel('y')
+ax2.set_title('Función\n$y = x^2$')
+ax2.grid(True, alpha=0.3)
+ax2.set_aspect('equal')
+
+
+plt.tight_layout()
+plt.show()
+```
+
+
+## Tipos de Función
+
+
+Las ecuaciones de comportamiento normalmente adoptan la forma de funciones.
+
+
+### Funciones Constantes
+La imagen consiste en un solo elemento (ej: $y = 7$ o $I = I_0$).
+
+
+### Funciones Polinomiales
+Tienen la forma $y = a_0 + a_1 x + \dots + a_n x^n$.
+
+
+*   **Función lineal** ($n=1$): Grado 1.
+*   **Función cuadrática** ($n=2$): Grado 2, traza una parábola con una sola protuberancia/serpenteante.
+*   **Función cúbica** ($n=3$): Grado 3, en general, muestra dos ondulaciones.
+
+
+### Funciones Racionales
+$y$ se expresa como una razón de dos polinomios. Un ejemplo especial es la **hipérbola rectangular** ($y = a/x$), que describe una curva asintótica a los ejes, usada para curvas de demanda de elasticidad unitaria o el costo fijo promedio.
+
+
+### Funciones Algebraicas vs. No Algebraicas
+Las funciones expresadas en términos de polinomios o raíces de polinomios son **algebraicas**. Las demás son **no algebraicas** o trascendentes.
+
+
+### Funciones de más de una variable
+El uso de tres o más variables independientes (ej: $U = h(u, v, w)$) requiere un diagrama de cuatro o más dimensiones, lo cual es una **imposibilidad física de graficar**. El lugar geométrico de estos puntos se llama **hipersuperficie**.
+
+
+### Funciones Paramétricas vs. Generales
+Las funciones paramétricas (ej: $y = a + bx + cx^2$) representan una **familia completa de curvas**. Las funciones generales (ej: $z = g(x, y)$) tienen la **aplicabilidad más general**, pero a menudo requieren imponer **restricciones cualitativas** (ej: pendiente negativa de la función de demanda).
+
+
+```{python}
+# Ejemplo: Diferentes tipos de funciones económicas
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(12, 10))
+
+
+x = np.linspace(0.1, 10, 100)
+
+
+# Función constante (oferta monetaria fija)
+ax1.axhline(y=100, color='red', linewidth=2)
+ax1.set_title('Función Constante\n$M_s = 100$')
+ax1.set_xlabel('Tiempo')
+ax1.set_ylabel('Oferta Monetaria')
+ax1.grid(True, alpha=0.3)
+
+
+# Función lineal (función consumo)
+C = 50 + 0.8 * x
+ax2.plot(x, C, 'blue', linewidth=2)
+ax2.set_title('Función Lineal\n$C = 50 + 0.8Y$')
+ax2.set_xlabel('Ingreso (Y)')
+ax2.set_ylabel('Consumo (C)')
+ax2.grid(True, alpha=0.3)
+
+
+# Función cuadrática (función costo)
+CT = 100 + 10*x + 0.5*x**2
+ax3.plot(x, CT, 'green', linewidth=2)
+ax3.set_title('Función Cuadrática\n$CT = 100 + 10Q + 0.5Q^2$')
+ax3.set_xlabel('Cantidad (Q)')
+ax3.set_ylabel('Costo Total')
+ax3.grid(True, alpha=0.3)
+
+
+# Función racional (costo fijo promedio)
+CFP = 100 / x
+ax4.plot(x, CFP, 'purple', linewidth=2)
+ax4.set_title('Función Racional\n$CFP = 100/Q$')
+ax4.set_xlabel('Cantidad (Q)')
+ax4.set_ylabel('Costo Fijo Promedio')
+ax4.grid(True, alpha=0.3)
+
+
+plt.tight_layout()
+plt.show()
+```
+---
+
+
+**Emanuel Quintana Silva**  
+*UPTC - Universidad Pedagógica y Tecnológica de Colombia*
