@@ -1,5 +1,4 @@
 ---
-<<<<<<< Updated upstream
 title: "Economía Matemática"
 author: "Emanuel Quintana Silva"
 format:
@@ -28,7 +27,7 @@ Este repositorio contiene apuntes completos de Economía Matemática basados en 
 **Emanuel Quintana Silva**  
 Economista en formación - UPTC  
 [emanuel.quintana@uptc.edu.co](mailto:emanuel.quintana@uptc.edu.co)
-=======
+
 title: "Economía Matemática: Teoría y Aplicaciones"
 author: "Emanuel Quintana Silva"
 institution: "UPTC - Universidad Pedagógica y Tecnológica de Colombia"
@@ -134,4 +133,3 @@ Este trabajo ha sido posible gracias al apoyo de la **Universidad Pedagógica y 
 **Emanuel Quintana Silva**  
 UPTC, Colombia  
 `r format(Sys.Date(), "%B %Y")`
->>>>>>> Stashed changes

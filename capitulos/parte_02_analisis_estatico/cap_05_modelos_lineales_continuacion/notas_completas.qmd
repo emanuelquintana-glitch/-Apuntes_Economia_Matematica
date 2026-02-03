@@ -1,0 +1,1481 @@
+---
+title: "Capítulo 5: Sistemas de Ecuaciones Lineales y Álgebra de Matrices"
+subtitle: "Fundamentos de Economía Matemática"
+author: 
+  - name: "Emanuel Quintana Silva"
+    affiliation: "Universidad Pedagógica y Tecnológica de Colombia (UPTC)"
+    email: "emanuel.quintana@uptc.edu.co"
+    orcid: "0009-0006-8419-2805"
+date: "Febrero 2026"
+date-format: "MMMM YYYY"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 4
+    toc-location: left
+    toc-title: "Contenido"
+    number-sections: true
+    number-depth: 4
+    code-fold: show
+    code-summary: "Mostrar código"
+    code-tools: true
+    code-copy: true
+    code-overflow: wrap
+    html-math-method: mathjax
+    css: styles.css
+    
+  pdf:
+    documentclass: book
+    papersize: letter
+    fontsize: 11pt
+    geometry:
+      - margin=1in
+    number-sections: true
+    toc: true
+    toc-depth: 3
+    colorlinks: true
+    
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: true
+  
+jupyter: python3
+lang: es
+---
+```{python}
+#| echo: false
+#| output: false
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import sympy as sp
+from sympy import Matrix, symbols, latex, simplify, solve, det, eye, inverse_ADJ
+from sympy import init_printing, Rational, nsimplify
+from IPython.display import display, Markdown, Latex, HTML
+import warnings
+warnings.filterwarnings('ignore')
+
+# Configuración de gráficos
+plt.rcParams['figure.figsize'] = (10, 6)
+plt.rcParams['font.size'] = 11
+plt.rcParams['axes.grid'] = True
+plt.rcParams['grid.alpha'] = 0.3
+plt.rcParams['figure.dpi'] = 100
+
+# Configuración de Sympy
+sp.init_printing(use_latex='mathjax')
+
+# Función auxiliar para mostrar matrices
+def display_matrix(M, name=""):
+    """Muestra una matriz con formato LaTeX"""
+    if name:
+        display(Markdown(f"**{name}:**"))
+    display(Latex(f"$${latex(M)}$$"))
+
+# Función auxiliar para mostrar ecuaciones
+def display_eq(eq, name=""):
+    """Muestra una ecuación con formato LaTeX"""
+    if name:
+        display(Markdown(f"**{name}:**"))
+    display(Latex(f"$${latex(eq)}$$"))
+```
+
+::: {.callout-note icon=false}
+## Información del Capítulo
+
+**Basado en:** Chiang, A. C. & Wainwright, K. (2005). *Fundamental Methods of Mathematical Economics*. McGraw-Hill, Capítulo 5.
+
+**Objetivo:** Desarrollar las herramientas del álgebra de matrices para resolver sistemas de ecuaciones lineales y aplicarlas a modelos económicos fundamentales incluyendo equilibrio de mercado, ingreso nacional y análisis insumo-producto.
+
+**Contenido:**
+- Condiciones de no singularidad
+- Determinantes y cofactores
+- Inversión de matrices
+- Regla de Cramer
+- Aplicaciones económicas
+:::
+
+# Introducción
+
+Este capítulo constituye una extensión del estudio de los sistemas de ecuaciones lineales, centrándose en las **pruebas de existencia de soluciones** y en los **métodos analíticos** para obtenerlas mediante el álgebra de matrices.
+
+El álgebra de matrices ofrece ventajas significativas sobre la eliminación de variables:
+
+1. **Notación compacta:** Expresa sistemas de $n$ ecuaciones como $Ax = d$
+2. **Criterio de existencia:** El determinante $|A|$ prueba si existe solución única
+3. **Soluciones analíticas:** Permite estática comparativa y análisis de sensibilidad
+
+# Condiciones de No Singularidad de una Matriz
+
+## Definición de Matriz No Singular
+
+Una matriz cuadrada $A$ de orden $n \times n$ se denomina **no singular** si y solo si existe otra matriz $B$ tal que:
+
+$$AB = BA = I_n$$
+
+donde $I_n$ es la matriz identidad de orden $n$.
+
+::: {.callout-important}
+## Implicación para Sistemas Lineales
+
+Si la matriz de coeficientes $A$ es no singular, el sistema $Ax = d$ tiene una **solución única**:
+
+$$x^* = A^{-1}d$$
+
+Si la matriz es **singular**, no existe solución única (puede haber infinitas soluciones o ninguna).
+:::
+```{python}
+# Ejemplo: Matriz singular vs no singular
+A_singular = Matrix([[1, 2], [2, 4]])
+A_no_singular = Matrix([[1, 2], [3, 4]])
+
+print("Ejemplo de Matriz Singular:")
+display_matrix(A_singular, "A_singular")
+print(f"Determinante: {det(A_singular)}")
+
+print("\nEjemplo de Matriz No Singular:")
+display_matrix(A_no_singular, "A_no_singular")
+print(f"Determinante: {det(A_no_singular)}")
+```
+
+## Condición Necesaria: La Cuadratura
+
+Para que una matriz pueda ser no singular, es un **requisito indispensable** que sea **cuadrada** (mismo número de renglones que de columnas).
+
+::: {.callout-warning}
+Ser cuadrada es **necesario** pero **no suficiente**. Una matriz puede ser cuadrada y aún así ser singular si sus renglones son linealmente dependientes.
+:::
+
+## Condición Suficiente: Independencia Lineal
+
+Una vez que la matriz es cuadrada, la **condición suficiente** para la no singularidad es que sus renglones (o columnas) sean **linealmente independientes**.
+
+**Independencia Lineal:** Un conjunto de vectores es linealmente independiente si ninguno puede expresarse como combinación lineal de los demás.
+```{python}
+# Ejemplo: Verificación de independencia lineal
+A1 = Matrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+A2 = Matrix([[1, 2, 3], [4, 5, 6], [2, 1, 0]])
+
+print("Matriz A1 (renglones dependientes):")
+display_matrix(A1)
+print(f"Rango: {A1.rank()}, Dimensión: 3x3")
+print(f"¿No singular?: {det(A1) != 0}")
+
+print("\nMatriz A2 (renglones independientes):")
+display_matrix(A2)
+print(f"Rango: {A2.rank()}, Dimensión: 3x3")
+print(f"¿No singular?: {det(A2) != 0}")
+```
+
+## El Rango de una Matriz
+
+El **rango** de una matriz $r(A)$ es el número máximo de renglones (o columnas) linealmente independientes.
+
+**Condición de Rango Completo:**
+
+Una matriz de $n \times n$ es **no singular** si y solo si $r(A) = n$.
+```{python}
+# Cálculo de rango mediante forma escalonada
+A = Matrix([[1, 2, 3], [2, 4, 6], [1, 1, 1]])
+
+print("Matriz Original:")
+display_matrix(A)
+
+print("\nForma Escalonada Reducida:")
+rref_A, pivot_cols = A.rref()
+display_matrix(rref_A)
+
+print(f"\nRango: {A.rank()}")
+print(f"Columnas pivote: {pivot_cols}")
+```
+
+## El Determinante como Criterio Definitivo
+
+El determinante ($|A|$) es un escalar que sirve como **prueba definitiva** de no singularidad:
+
+$$\text{Matriz no singular} \iff |A| \neq 0$$
+```{python}
+# Función para verificar no singularidad
+def verificar_no_singularidad(A, nombre="A"):
+    """Verifica si una matriz es no singular"""
+    d = det(A)
+    r = A.rank()
+    n = A.shape[0]
+    
+    print(f"Análisis de la matriz {nombre}:")
+    display_matrix(A, nombre)
+    print(f"Determinante: {d}")
+    print(f"Rango: {r}/{n}")
+    print(f"¿No singular?: {d != 0}")
+    
+    if d != 0:
+        print("✓ La matriz ES no singular (tiene inversa)")
+    else:
+        print("✗ La matriz ES singular (no tiene inversa)")
+    
+    return d != 0
+
+# Ejemplos
+A1 = Matrix([[2, 4], [8, 9]])
+A2 = Matrix([[2, 4], [1, 2]])
+
+verificar_no_singularidad(A1, "A1")
+print("\n" + "="*50 + "\n")
+verificar_no_singularidad(A2, "A2")
+```
+
+# El Determinante y su Evaluación
+
+## Propiedades Fundamentales de los Determinantes
+```{python}
+# Demostración de propiedades de determinantes
+A = Matrix([[2, 1, 7], [3, 3, 9], [1, 0, 3]])
+
+print("Matriz Original A:")
+display_matrix(A)
+det_A = det(A)
+print(f"|A| = {det_A}")
+
+# Propiedad I: Transpuesta
+At = A.T
+print("\nPropiedad I - Transpuesta:")
+print(f"|A'| = {det(At)} (debe ser igual a |A|)")
+
+# Propiedad II: Intercambio de renglones
+A2 = A.copy()
+A2.row_swap(0, 2)
+print("\nPropiedad II - Intercambio de renglones:")
+display_matrix(A2, "A con R1 ↔ R3")
+print(f"|A'| = {det(A2)} = -{det_A}")
+
+# Propiedad III: Multiplicación por escalar
+A3 = A.copy()
+A3[2, :] = 2 * A3[2, :]
+print("\nPropiedad III - Multiplicar renglón por 2:")
+display_matrix(A3, "A con R3 → 2R3")
+print(f"|A'| = {det(A3)} = 2 × {det_A}")
+```
+
+## Menores y Cofactores
+
+**Menor** $|M_{ij}|$: Determinante de la submatriz obtenida al eliminar el renglón $i$ y la columna $j$.
+
+**Cofactor** $|C_{ij}|$: Menor con signo apropiado:
+
+$$|C_{ij}| = (-1)^{i+j} |M_{ij}|$$
+```{python}
+# Cálculo de menores y cofactores
+def calcular_menor(A, i, j):
+    """Calcula el menor M_ij"""
+    M = A.copy()
+    M.row_del(i)
+    M.col_del(j)
+    return det(M)
+
+def calcular_cofactor(A, i, j):
+    """Calcula el cofactor C_ij"""
+    return (-1)**(i+j) * calcular_menor(A, i, j)
+
+# Ejemplo
+A = Matrix([[9, 11, 4], [7, 6, 1], [3, 1, 4]])
+
+print("Matriz A:")
+display_matrix(A)
+
+print("\nMenores y Cofactores del tercer renglón:")
+for j in range(3):
+    menor = calcular_menor(A, 2, j)
+    cofactor = calcular_cofactor(A, 2, j)
+    print(f"M_3{j+1} = {menor}, C_3{j+1} = {cofactor}")
+<!-- ``` -->
+
+## Expansión de Laplace
+
+El determinante puede calcularse expandiendo por cualquier renglón o columna:
+
+$$|A| = \sum_{j=1}^{n} a_{ij} |C_{ij}|$$ (expansión por renglón $i$)
+
+$$|A| = \sum_{i=1}^{n} a_{ij} |C_{ij}|$$ (expansión por columna $j$)
+```{python}
+# Expansión de Laplace por diferentes renglones/columnas
+def expansion_laplace(A, fila=None, columna=None):
+    """Calcula determinante mediante expansión de Laplace"""
+    n = A.shape[0]
+    
+    if fila is not None:
+        resultado = 0
+        for j in range(n):
+            resultado += A[fila, j] * calcular_cofactor(A, fila, j)
+        print(f"Expansión por renglón {fila + 1}:")
+        return resultado
+    elif columna is not None:
+        resultado = 0
+        for i in range(n):
+            resultado += A[i, columna] * calcular_cofactor(A, i, columna)
+        print(f"Expansión por columna {columna + 1}:")
+        return resultado
+
+A = Matrix([[1, 2, 0, 9], [2, 3, 4, 6], [1, 6, 0, -1], [0, -5, 0, 8]])
+
+print("Matriz A (4×4):")
+display_matrix(A)
+
+print("\nDeterminante calculado por diferentes métodos:")
+print(f"Sympy det(): {det(A)}")
+print(f"Expansión por fila 1: {expansion_laplace(A, fila=0)}")
+print(f"Expansión por columna 3: {expansion_laplace(A, columna=2)}")
+```
+
+# Inversión de Matrices
+
+## Método de la Adjunta
+
+La **matriz adjunta** $\text{adj }A$ es la transpuesta de la matriz de cofactores.
+
+**Fórmula de inversión:**
+
+$$A^{-1} = \frac{1}{|A|} \text{adj } A$$
+```{python}
+# Inversión de matriz mediante adjunta
+def matriz_cofactores(A):
+    """Calcula la matriz de cofactores"""
+    n = A.shape[0]
+    C = Matrix.zeros(n, n)
+    for i in range(n):
+        for j in range(n):
+            C[i, j] = calcular_cofactor(A, i, j)
+    return C
+
+def matriz_adjunta(A):
+    """Calcula la matriz adjunta"""
+    return matriz_cofactores(A).T
+
+def inversa_adjunta(A):
+    """Calcula la inversa mediante el método de la adjunta"""
+    det_A = det(A)
+    if det_A == 0:
+        raise ValueError("La matriz es singular")
+    
+    adj_A = matriz_adjunta(A)
+    return adj_A / det_A
+
+# Ejemplo
+A = Matrix([[7, 1], [3, 1]])
+
+print("Matriz A:")
+display_matrix(A)
+
+print(f"\nDeterminante: {det(A)}")
+
+print("\nMatriz de Cofactores:")
+display_matrix(matriz_cofactores(A))
+
+print("\nMatriz Adjunta:")
+display_matrix(matriz_adjunta(A))
+
+print("\nInversa (método adjunta):")
+A_inv_manual = inversa_adjunta(A)
+display_matrix(A_inv_manual)
+
+print("\nInversa (Sympy):")
+display_matrix(A.inv())
+
+print("\nVerificación: A × A⁻¹ = I")
+display_matrix(simplify(A * A_inv_manual))
+```
+
+## Regla de Dos Pasos para Matrices 2×2
+
+Para matrices de orden 2×2, existe un atajo:
+
+1. Intercambiar elementos de la diagonal principal
+2. Cambiar signos de los elementos fuera de la diagonal
+3. Dividir entre el determinante
+
+$$\begin{bmatrix} a & b \\ c & d \end{bmatrix}^{-1} = \frac{1}{ad-bc}\begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$$
+```{python}
+# Regla de dos pasos para 2×2
+def inversa_2x2(A):
+    """Calcula inversa de matriz 2×2 usando regla de dos pasos"""
+    if A.shape != (2, 2):
+        raise ValueError("Solo para matrices 2×2")
+    
+    a, b, c, d = A[0,0], A[0,1], A[1,0], A[1,1]
+    det_A = a*d - b*c
+    
+    if det_A == 0:
+        raise ValueError("Matriz singular")
+    
+    return Matrix([[d, -b], [-c, a]]) / det_A
+
+# Ejemplos del ejercicio 5.4
+matrices = {
+    "A": Matrix([[7, 3], [1, 1]]),
+    "B": Matrix([[5, 0], [-1, 3]]),
+    "C": Matrix([[9, 7], [3, 2]]),
+    "D": Matrix([[1, 7], [3, 1]])
+}
+
+for nombre, M in matrices.items():
+    print(f"\n{'='*50}")
+    print(f"Matriz {nombre}:")
+    display_matrix(M)
+    print(f"Determinante: {det(M)}")
+    print(f"Inversa:")
+    display_matrix(inversa_2x2(M))
+```
+
+## Propiedades de la Inversa
+```{python}
+# Demostración de propiedades de la inversa
+A = Matrix([[2, 1], [5, 3]])
+B = Matrix([[1, 2], [3, 4]])
+
+print("Matrices A y B:")
+display_matrix(A, "A")
+display_matrix(B, "B")
+
+# Propiedad 1: (AB)⁻¹ = B⁻¹A⁻¹
+AB = A * B
+inv_AB = AB.inv()
+inv_B_inv_A = B.inv() * A.inv()
+
+print("\nPropiedad 1: (AB)⁻¹ = B⁻¹A⁻¹")
+print("(AB)⁻¹:")
+display_matrix(simplify(inv_AB))
+print("B⁻¹A⁻¹:")
+display_matrix(simplify(inv_B_inv_A))
+print(f"¿Son iguales?: {simplify(inv_AB - inv_B_inv_A) == Matrix.zeros(2,2)}")
+
+# Propiedad 2: (A')⁻¹ = (A⁻¹)'
+inv_At = A.T.inv()
+inv_A_t = A.inv().T
+
+print("\nPropiedad 2: (A')⁻¹ = (A⁻¹)'")
+print("¿Son iguales?: {simplify(inv_At - inv_A_t) == Matrix.zeros(2,2)}")
+
+# Propiedad 3: |A⁻¹| = 1/|A|
+print("\nPropiedad 3: |A⁻¹| = 1/|A|")
+print(f"|A| = {det(A)}")
+print(f"|A⁻¹| = {det(A.inv())}")
+print(f"1/|A| = {Rational(1, det(A))}")
+```
+
+# La Regla de Cramer
+
+## Fundamento Teórico
+
+La Regla de Cramer permite resolver sistemas $Ax = d$ sin invertir la matriz completa:
+
+$$x_j = \frac{|A_j|}{|A|}$$
+
+donde $|A_j|$ es el determinante de la matriz $A$ con la columna $j$ reemplazada por $d$.
+```{python}
+# Implementación de la Regla de Cramer
+def regla_cramer(A, d):
+    """Resuelve Ax = d usando la Regla de Cramer"""
+    n = A.shape[0]
+    det_A = det(A)
+    
+    if det_A == 0:
+        raise ValueError("La matriz es singular")
+    
+    soluciones = []
+    for j in range(n):
+        # Reemplazar columna j con vector d
+        A_j = A.copy()
+        A_j[:, j] = d
+        
+        x_j = det(A_j) / det_A
+        soluciones.append(x_j)
+    
+    return Matrix(soluciones)
+
+# Ejemplos del Ejercicio 5.5
+print("Problema 1(a): 3x₁ - 2x₂ = 6, 2x₁ + x₂ = 11")
+A = Matrix([[3, -2], [2, 1]])
+d = Matrix([6, 11])
+
+display_matrix(A, "A")
+display_matrix(d, "d")
+
+print(f"\n|A| = {det(A)}")
+print(f"|A₁| = {det(Matrix([[6, -2], [11, 1]]))}")
+print(f"|A₂| = {det(Matrix([[3, 6], [2, 11]]))}")
+
+sol = regla_cramer(A, d)
+print("\nSolución:")
+display_matrix(sol)
+print(f"x₁ = {sol[0]}, x₂ = {sol[1]}")
+
+# Verificación
+print("\nVerificación: Ax = d")
+display_matrix(A * sol)
+```
+
+## Sistemas 3×3
+```{python}
+# Sistema 3×3 del Ejercicio 5.5-3(c)
+print("Problema: 4x + 3y - 2z = 1, x + 2y = 6, 3x + z = 4")
+
+A = Matrix([[4, 3, -2], [1, 2, 0], [3, 0, 1]])
+d = Matrix([1, 6, 4])
+
+print("\nMatriz de coeficientes A:")
+display_matrix(A)
+
+print("\nVector de constantes d:")
+display_matrix(d)
+
+print(f"\nDeterminante |A| = {det(A)}")
+
+# Aplicar Regla de Cramer
+sol = regla_cramer(A, d)
+
+print("\nSolución:")
+for i, var in enumerate(['x', 'y', 'z']):
+    print(f"{var} = {sol[i]}")
+
+# Verificación
+print("\nVerificación: Ax = d")
+resultado = A * sol
+display_matrix(resultado)
+print(f"¿Es correcto?: {simplify(resultado - d) == Matrix.zeros(3,1)}")
+```
+
+## Comparación: Inversión vs Cramer
+```{python}
+# Comparación de métodos
+import time
+
+A = Matrix([[5, 9], [7, -3]])
+d = Matrix([14, 4]])
+
+print("Sistema: 5x₁ + 9x₂ = 14, 7x₁ - 3x₂ = 4\n")
+
+# Método 1: Inversión de matriz
+start = time.time()
+sol_inv = A.inv() * d
+time_inv = time.time() - start
+
+print("Método 1 - Inversión de Matriz:")
+print(f"Solución: x₁ = {sol_inv[0]}, x₂ = {sol_inv[1]}")
+print(f"Tiempo: {time_inv:.6f} s")
+
+# Método 2: Regla de Cramer
+start = time.time()
+sol_cramer = regla_cramer(A, d)
+time_cramer = time.time() - start
+
+print("\nMétodo 2 - Regla de Cramer:")
+print(f"Solución: x₁ = {sol_cramer[0]}, x₂ = {sol_cramer[1]}")
+print(f"Tiempo: {time_cramer:.6f} s")
+
+print(f"\n¿Resultados idénticos?: {sol_inv == sol_cramer}")
+```
+
+# Aplicaciones Económicas
+
+## Modelo de Mercado (Equilibrio General)
+```{python}
+# Problema 1 del material: Modelo de mercado con dos bienes
+print("="*60)
+print("MODELO DE EQUILIBRIO GENERAL: DOS BIENES")
+print("="*60)
+
+print("\nDemanda:")
+print("  q_d1 = 53 - 2p₁ - 3p₂")
+print("  q_d2 = 64 - 3p₁ - 4p₂")
+print("\nOferta:")
+print("  q_s1 = -4 + 3p₁")
+print("  q_s2 = -8 + 2p₂")
+
+# En equilibrio: q_d1 = q_s1 y q_d2 = q_s2
+# 53 - 2p₁ - 3p₂ = -4 + 3p₁  →  5p₁ + 3p₂ = 57
+# 64 - 3p₁ - 4p₂ = -8 + 2p₂  →  3p₁ + 6p₂ = 72
+
+A = Matrix([[5, 3], [3, 6]])
+d = Matrix([57, 72])
+
+print("\nSistema de ecuaciones de equilibrio:")
+display_matrix(A, "A")
+display_matrix(d, "d")
+
+print(f"\nDeterminante: |A| = {det(A)}")
+
+# Resolver usando Cramer
+precios = regla_cramer(A, d)
+p1, p2 = precios[0], precios[1]
+
+print(f"\nPrecios de equilibrio:")
+print(f"  p₁* = {p1}")
+print(f"  p₂* = {p2}")
+
+# Calcular cantidades
+q1 = -4 + 3*p1
+q2 = -8 + 2*p2
+
+print(f"\nCantidades de equilibrio:")
+print(f"  q₁* = {q1}")
+print(f"  q₂* = {q2}")
+
+# Verificación
+q_d1 = 53 - 2*p1 - 3*p2
+q_d2 = 64 - 3*p1 - 4*p2
+
+print(f"\nVerificación:")
+print(f"  q_d1 = {q_d1} = q_s1")
+print(f"  q_d2 = {q_d2} = q_s2")
+
+# Análisis de la relación entre bienes
+print("\n" + "="*60)
+print("ANÁLISIS DE LA RELACIÓN ENTRE BIENES")
+print("="*60)
+print("\nDe la función de demanda del bien 1: q_d1 = 53 - 2p₁ - 3p₂")
+print("  Coeficiente de p₂: -3 (negativo)")
+print("  → Cuando p₂ ↑, q_d1 ↓")
+print("\nCONCLUSIÓN: Los bienes son COMPLEMENTOS")
+print("(se consumen juntos, como café y azúcar)")
+```
+
+## Modelo de Ingreso Nacional
+```{python}
+# Modelo Keynesiano simple
+print("="*60)
+print("MODELO DE INGRESO NACIONAL (KEYNESIANO SIMPLE)")
+print("="*60)
+
+print("\nEcuaciones:")
+print("  (1) Y = C + I₀ + G₀    [Identidad de equilibrio]")
+print("  (2) C = a + bY         [Función de consumo]")
+
+print("\nForma matricial:")
+print("  Y - C = I₀ + G₀")
+print("  -bY + C = a")
+
+# Solución simbólica
+Y, C, a, b, I0, G0 = symbols('Y C a b I_0 G_0', real=True, positive=True)
+
+A_symb = Matrix([[1, -1], [-b, 1]])
+d_symb = Matrix([I0 + G0, a])
+
+print("\nMatriz de coeficientes A:")
+display_matrix(A_symb)
+
+print("\nVector de constantes d:")
+display_matrix(d_symb)
+
+det_A = det(A_symb)
+print(f"\nDeterminante: |A| = {det_A}")
+
+print("\nComo 0 < b < 1, entonces 1 - b > 0")
+print("Por lo tanto, la matriz es NO SINGULAR")
+
+# Solución
+sol = A_symb.inv() * d_symb
+sol = simplify(sol)
+
+print("\nSolución del sistema:")
+print(f"\nY* = {sol[0]}")
+print(f"\nC* = {sol[1]}")
+
+# Ejemplo numérico
+print("\n" + "="*60)
+print("EJEMPLO NUMÉRICO")
+print("="*60)
+print("\nParámetros: a = 100, b = 0.8, I₀ = 50, G₀ = 80")
+
+a_val, b_val, I0_val, G0_val = 100, 0.8, 50, 80
+
+A_num = Matrix([[1, -1], [-b_val, 1]])
+d_num = Matrix([I0_val + G0_val, a_val])
+
+sol_num = A_num.inv() * d_num
+
+print(f"\nIngreso de equilibrio: Y* = {sol_num[0]}")
+print(f"Consumo de equilibrio: C* = {sol_num[1]}")
+
+# Multiplicador
+mult = 1 / (1 - b_val)
+print(f"\nMultiplicador: k = 1/(1-b) = {mult}")
+print(f"Si G₀ aumenta en 10, Y aumenta en: {10 * mult}")
+```
+
+## Modelo IS-LM
+```{python}
+# Modelo IS-LM del Ejercicio 5.6-3
+print("="*60)
+print("MODELO IS-LM")
+print("="*60)
+
+print("\nCurva IS: Y = A/(1-b) - g/(1-b)·i")
+print("Curva LM: i = (k/l)·Y - M₀/l")
+
+print("\nParámetros:")
+params = {
+    'b': 0.7,
+    'g': 100,
+    'A': 252,
+    'k': 0.25,
+    'l': 200,
+    'M0': 176
+}
+
+for k, v in params.items():
+    print(f"  {k} = {v}")
+
+# Forma matricial
+# (1-b)Y + gi = A
+# kY - li = M₀
+
+b_val = params['b']
+g_val = params['g']
+A_val = params['A']
+k_val = params['k']
+l_val = params['l']
+M0_val = params['M0']
+
+A = Matrix([[1-b_val, g_val], [k_val, -l_val]])
+d = Matrix([A_val, M0_val])
+
+print("\nSistema de ecuaciones:")
+print(f"  {1-b_val}Y + {g_val}i = {A_val}")
+print(f"  {k_val}Y - {l_val}i = {M0_val}")
+
+display_matrix(A, "A")
+display_matrix(d, "d")
+
+det_A = det(A)
+print(f"\nDeterminante: |A| = {det_A}")
+
+# Resolver
+sol = A.inv() * d
+
+Y_eq = float(sol[0])
+i_eq = float(sol[1])
+
+print(f"\nSOLUCIÓN DE EQUILIBRIO:")
+print(f"  Ingreso nacional: Y* = {Y_eq}")
+print(f"  Tasa de interés: i* = {i_eq} ({i_eq*100}%)")
+
+# Multiplicadores
+A_inv = A.inv()
+mult_G = float(A_inv[0, 0])
+mult_M = float(A_inv[0, 1])
+
+print(f"\nMULTIPLICADORES:")
+print(f"  ∂Y/∂A (gasto autónomo): {mult_G:.4f}")
+print(f"  ∂Y/∂M₀ (oferta de dinero): {mult_M:.4f}")
+```
+
+## Modelo de Leontief (Insumo-Producto)
+```{python}
+# Modelo de Leontief del Ejercicio 5.7-3
+print("="*60)
+print("MODELO DE INSUMO-PRODUCTO DE LEONTIEF")
+print("="*60)
+
+print("\nECONOMÍA DE DOS INDUSTRIAS")
+print("\nCoeficientes técnicos:")
+print("  Industria I: usa 0.10 de I y 0.60 de II por $1 de producto I")
+print("  Industria II: usa 0.50 de I y 0.00 de II por $1 de producto II")
+print("\nDemanda final:")
+print("  d₁ = $1,000 mil millones")
+print("  d₂ = $2,000 mil millones")
+
+# Matriz de coeficientes técnicos
+A = Matrix([[Rational(1,10), Rational(1,2)],
+            [Rational(3,5), 0]])
+
+print("\nMatriz de coeficientes de insumo A:")
+display_matrix(A)
+
+# Verificar viabilidad (suma de columnas < 1)
+print("\nVerificación de viabilidad:")
+for j in range(2):
+    suma = sum(A[:, j])
+    print(f"  Suma columna {j+1}: {float(suma):.2f} {'< 1 ✓' if suma < 1 else '>= 1 ✗'}")
+
+# Matriz de Leontief
+I = eye(2)
+L = I - A
+
+print("\nMatriz de Leontief (I - A):")
+display_matrix(L)
+
+# Verificar condición de Hawkins-Simon
+print("\nCondición de Hawkins-Simon:")
+det_L = det(L)
+menor1 = L[0,0]
+
+print(f"  |B₁| = {float(menor1):.2f} > 0 ✓")
+print(f"  |B₂| = {float(det_L):.2f} > 0 ✓")
+print("\n  La condición se SATISFACE")
+
+# Vector de demanda final
+d = Matrix([1000, 2000])
+
+print("\nVector de demanda final d:")
+display_matrix(d)
+
+# Solución: x = (I-A)⁻¹ d
+x = L.inv() * d
+
+print("\nNIVELES DE PRODUCCIÓN ÓPTIMOS:")
+print(f"  x₁* = ${float(x[0]):.2f} mil millones")
+print(f"  x₂* = ${float(x[1]):.2f} mil millones")
+
+# Matriz inversa de Leontief
+print("\nMatriz inversa de Leontief (I-A)⁻¹:")
+L_inv = L.inv()
+display_matrix(L_inv)
+
+# Interpretación
+print("\nINTERPRETACIÓN:")
+print("Elemento (i,j) indica cuánto debe producir la industria i")
+print("para entregar $1 de producto final de la industria j")
+```
+
+## Condición de Hawkins-Simon
+```{python}
+# Verificación detallada de la condición de Hawkins-Simon
+print("="*60)
+print("CONDICIÓN DE HAWKINS-SIMON: ANÁLISIS DETALLADO")
+print("="*60)
+
+def verificar_hawkins_simon(A):
+    """Verifica la condición de Hawkins-Simon para matriz de Leontief"""
+    n = A.shape[0]
+    I = eye(n)
+    B = I - A  # Matriz de Leontief
+    
+    print(f"\nMatriz de coeficientes técnicos A:")
+    display_matrix(A)
+    
+    print(f"\nMatriz de Leontief B = I - A:")
+    display_matrix(B)
+    
+    print("\nVerificación de menores principales directores:")
+    
+    cumple = True
+    for k in range(1, n+1):
+        # Submatriz principal de orden k
+        submatriz = B[:k, :k]
+        det_k = det(submatriz)
+        
+        print(f"\n  Orden {k}:")
+        if k <= 3:  # Mostrar matriz solo para órdenes pequeños
+            display_matrix(submatriz, f"B_{k}")
+        print(f"  |B_{k}| = {float(det_k):.6f}", end="")
+        
+        if det_k > 0:
+            print(" > 0 ✓")
+        else:
+            print(" ≤ 0 ✗")
+            cumple = False
+    
+    print("\n" + "="*60)
+    if cumple:
+        print("✓ La condición de Hawkins-Simon se CUMPLE")
+        print("✓ El sistema tendrá niveles de producción NO NEGATIVOS")
+    else:
+        print("✗ La condición de Hawkins-Simon NO se cumple")
+        print("✗ El sistema puede dar niveles de producción NEGATIVOS")
+    
+    return cumple
+
+# Ejemplo 1: Sistema que cumple la condición
+print("\nEJEMPLO 1: Sistema viable")
+A1 = Matrix([[Rational(1,10), Rational(1,2)],
+             [Rational(3,5), 0]])
+verificar_hawkins_simon(A1)
+
+# Ejemplo 2: Sistema de 3 industrias
+print("\n\n" + "="*60)
+print("EJEMPLO 2: Sistema de 3 industrias")
+A2 = Matrix([[Rational(5,100), Rational(1,4), Rational(34,100)],
+             [Rational(33,100), Rational(1,10), Rational(12,100)],
+             [Rational(19,100), Rational(38,100), 0]])
+verificar_hawkins_simon(A2)
+```
+
+# Ejercicios Resueltos
+
+## Ejercicio 5.1: Condiciones Necesarias y Suficientes
+```{python}
+print("="*60)
+print("EJERCICIO 5.1")
+print("="*60)
+
+# Problema 3: Independencia lineal de renglones
+matrices_ej = {
+    'a': Matrix([[2, 4], [8, 9]]),
+    'b': Matrix([[2, 0], [0, 2]]),
+    'c': Matrix([[0, 4], [3, 2]]),
+    'd': Matrix([[-1, 5], [2, -10]])
+}
+
+print("\nProblema 3: Independencia lineal de renglones\n")
+
+for nombre, M in matrices_ej.items():
+    print(f"Matriz ({nombre}):")
+    display_matrix(M)
+    
+    det_M = det(M)
+    indep = det_M != 0
+    
+    print(f"  Determinante: {det_M}")
+    print(f"  ¿Linealmente independientes?: {'Sí ✓' if indep else 'No ✗'}")
+    
+    if not indep:
+        # Mostrar relación de dependencia
+        r1 = M[0, :]
+        r2 = M[1, :]
+        if r1[0] != 0:
+            k = r2[0] / r1[0]
+            print(f"  Relación: R₂ = {float(k):.1f} × R₁")
+    print()
+```
+
+## Ejercicio 5.2: Evaluación de Determinantes
+```{python}
+print("="*60)
+print("EJERCICIO 5.2")
+print("="*60)
+
+# Problema 1: Evaluación de determinantes
+dets = {
+    'a': Matrix([[8, 1], [6, 0]]),
+    'b': Matrix([[1, 2, 3], [4, 7, 5], [3, 6, 9]]),
+    'd': Matrix([[1, 1, 4], [8, 11, -2], [0, 4, 7]])
+}
+
+print("\nProblema 1: Evaluación de determinantes\n")
+
+for nombre, M in dets.items():
+    print(f"({nombre})")
+    display_matrix(M)
+    print(f"|A| = {det(M)}\n")
+
+# Problema 4: Determinantes de orden 4
+print("\nProblema 4: Determinantes de cuarto orden\n")
+
+A4 = Matrix([[1, 2, 0, 9],
+             [2, 3, 4, 6],
+             [1, 6, 0, -1],
+             [0, -5, 0, 8]])
+
+print("(a)")
+display_matrix(A4)
+
+# Expandir por columna 3 (tiene más ceros)
+print("\nExpansión por columna 3:")
+det_A4 = det(A4)
+print(f"|A| = {det_A4}")
+
+# Calcular cofactor del elemento 9
+cofactor_9 = calcular_cofactor(A4, 0, 3)
+print(f"\nCofactor de 9 (C₁₄): {cofactor_9}")
+```
+
+## Ejercicio 5.4: Inversión de Matrices
+```{python}
+print("="*60)
+print("EJERCICIO 5.4")
+print("="*60)
+
+print("\nProblema 2: Inversas de matrices 2×2\n")
+
+matrices_2x2 = {
+    'A': Matrix([[7, 3], [1, 1]]),
+    'B': Matrix([[5, 0], [-1, 3]]),
+    'C': Matrix([[9, 7], [3, 2]]),
+    'D': Matrix([[1, 7], [3, 1]])
+}
+
+for nombre, M in matrices_2x2.items():
+    print(f"Matriz {nombre}:")
+    display_matrix(M)
+    print(f"Determinante: {det(M)}")
+    print(f"Inversa:")
+    display_matrix(M.inv())
+    print(f"Verificación: A·A⁻¹ = I")
+    display_matrix(simplify(M * M.inv()))
+    print("\n" + "-"*50 + "\n")
+
+# Problema 6: Resolver sistemas por inversión
+print("\nProblema 6: Resolver Ax = d por inversión\n")
+
+print("(a) 4x + 3y = 28, 2x + 5y = 42")
+A = Matrix([[4, 3], [2, 5]])
+d = Matrix([28, 42])
+
+print("\nMatriz A:")
+display_matrix(A)
+print("Vector d:")
+display_matrix(d)
+
+x = A.inv() * d
+print("\nSolución x = A⁻¹d:")
+display_matrix(x)
+print(f"\nx = {x[0]}, y = {x[1]}")
+```
+
+## Ejercicio 5.5: Regla de Cramer
+```{python}
+print("="*60)
+print("EJERCICIO 5.5")
+print("="*60)
+
+print("\nProblema 1: Sistemas 2×2 por Cramer\n")
+
+sistemas_2x2 = [
+    {
+        'nombre': '(a)',
+        'ecuaciones': '3x₁ - 2x₂ = 6, 2x₁ + x₂ = 11',
+        'A': Matrix([[3, -2], [2, 1]]),
+        'd': Matrix([6, 11])
+    },
+    {
+        'nombre': '(b)',
+        'ecuaciones': 'x₁ + 3x₂ = 3, 4x₁ - x₂ = 12',
+        'A': Matrix([[1, 3], [4, -1]]),
+        'd': Matrix([3, 12])
+    }
+]
+
+for sistema in sistemas_2x2:
+    print(f"{sistema['nombre']} {sistema['ecuaciones']}")
+    
+    A = sistema['A']
+    d = sistema['d']
+    
+    det_A = det(A)
+    print(f"\n|A| = {det_A}")
+    
+    # Aplicar Cramer
+    sol = regla_cramer(A, d)
+    
+    print(f"x₁ = {sol[0]}, x₂ = {sol[1]}")
+    
+    # Verificación
+    verif = A * sol
+    print(f"Verificación: Ax = {verif.T} = d ✓\n")
+```
+
+## Ejercicio 5.7: Modelo de Leontief
+```{python}
+print("="*60)
+print("EJERCICIO 5.7")
+print("="*60)
+
+print("\nProblema 3: Economía de dos industrias\n")
+
+A = Matrix([[Rational(1,10), Rational(1,2)],
+            [Rational(3,5), 0]])
+d = Matrix([1000, 2000])
+
+print("Datos del problema:")
+print("  Industria I: 0.10 de I + 0.60 de II → $1 de I")
+print("  Industria II: 0.50 de I + 0.00 de II → $1 de II")
+print("  Demanda final: d₁ = $1000B, d₂ = $2000B")
+
+print("\n(a) Matrices del sistema:\n")
+print("Matriz de insumos A:")
+display_matrix(A)
+
+I_mat = eye(2)
+L = I_mat - A
+print("\nMatriz de Leontief (I-A):")
+display_matrix(L)
+
+print("\nEcuación: (I-A)x = d")
+A_aug = L.row_join(d)
+display_matrix(A_aug, "[I-A | d]")
+
+print("\n(b) Verificación de Hawkins-Simon:\n")
+verificar_hawkins_simon(A)
+
+print("\n(c) Solución por Regla de Cramer:\n")
+x = regla_cramer(L, d)
+
+print(f"Niveles de producción:")
+print(f"  x₁* = ${float(x[0]):.2f} mil millones")
+print(f"  x₂* = ${float(x[1]):.2f} mil millones")
+
+# Interpretación económica
+print("\n" + "="*60)
+print("INTERPRETACIÓN ECONÓMICA")
+print("="*60)
+
+insumo_I_para_I = float(A[0,0] * x[0])
+insumo_II_para_I = float(A[1,0] * x[0])
+insumo_I_para_II = float(A[0,1] * x[1])
+
+print(f"\nPara producir ${float(x[0]):.2f}B del bien I:")
+print(f"  Se requieren ${insumo_I_para_I:.2f}B del bien I")
+print(f"  Se requieren ${insumo_II_para_I:.2f}B del bien II")
+print(f"  Disponible para demanda final: ${float(x[0]) - insumo_I_para_I:.2f}B")
+
+print(f"\nPara producir ${float(x[1]):.2f}B del bien II:")
+print(f"  Se requieren ${insumo_I_para_II:.2f}B del bien I")
+print(f"  Disponible para demanda final: ${float(x[1]):.2f}B")
+```
+
+# Comparación de Métodos
+```{python}
+print("="*60)
+print("COMPARACIÓN DE MÉTODOS DE RESOLUCIÓN")
+print("="*60)
+
+# Sistema de prueba
+A = Matrix([[2, 1, 3], [1, 4, 2], [3, 2, 1]])
+d = Matrix([14, 18, 12])
+
+print("\nSistema de prueba (3×3):")
+display_matrix(A, "A")
+display_matrix(d, "d")
+
+print("\n" + "="*60)
+print("MÉTODO 1: Inversión de Matriz")
+print("="*60)
+
+A_inv = A.inv()
+print("\nA⁻¹:")
+display_matrix(A_inv)
+
+sol1 = A_inv * d
+print("\nx = A⁻¹d:")
+display_matrix(sol1)
+
+print("\n" + "="*60)
+print("MÉTODO 2: Regla de Cramer")
+print("="*60)
+
+sol2 = regla_cramer(A, d)
+print("\nSolución:")
+display_matrix(sol2)
+
+print("\n" + "="*60)
+print("MÉTODO 3: Sympy solve()")
+print("="*60)
+
+x1, x2, x3 = symbols('x1 x2 x3')
+ecuaciones = [
+    2*x1 + x2 + 3*x3 - 14,
+    x1 + 4*x2 + 2*x3 - 18,
+    3*x1 + 2*x2 + x3 - 12
+]
+
+sol3_dict = solve(ecuaciones, [x1, x2, x3])
+sol3 = Matrix([sol3_dict[x1], sol3_dict[x2], sol3_dict[x3]])
+
+print("\nSolución:")
+display_matrix(sol3)
+
+print("\n" + "="*60)
+print("COMPARACIÓN DE RESULTADOS")
+print("="*60)
+
+print(f"\n¿Métodos 1 y 2 iguales?: {sol1 == sol2}")
+print(f"¿Métodos 2 y 3 iguales?: {sol2 == sol3}")
+print(f"\nTodos los métodos dan la misma solución ✓")
+```
+
+# Visualizaciones
+```{python}
+#| fig-cap: "Sistema de ecuaciones lineales 2×2 y su solución"
+#| label: fig-sistema-2x2
+
+# Visualización geométrica de sistema 2×2
+import matplotlib.pyplot as plt
+import numpy as np
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+
+# Sistema con solución única
+x = np.linspace(-2, 10, 100)
+y1 = (14 - 2*x) / 3  # 2x + 3y = 14
+y2 = (18 - x) / 4     # x + 4y = 18
+
+ax1.plot(x, y1, 'b-', label='2x + 3y = 14', linewidth=2)
+ax1.plot(x, y2, 'r-', label='x + 4y = 18', linewidth=2)
+ax1.plot(2, 4, 'go', markersize=12, label='Solución única (2, 4)')
+ax1.grid(True, alpha=0.3)
+ax1.legend(fontsize=10)
+ax1.set_xlabel('x', fontsize=12)
+ax1.set_ylabel('y', fontsize=12)
+ax1.set_title('Sistema con Solución Única\n(Matriz No Singular)', fontsize=12, fontweight='bold')
+ax1.axhline(y=0, color='k', linewidth=0.5)
+ax1.axvline(x=0, color='k', linewidth=0.5)
+ax1.set_xlim(-1, 9)
+ax1.set_ylim(-1, 8)
+
+# Sistema sin solución (líneas paralelas)
+y3 = (10 - 2*x) / 3   # 2x + 3y = 10
+y4 = (14 - 2*x) / 3   # 2x + 3y = 14
+
+ax2.plot(x, y3, 'b-', label='2x + 3y = 10', linewidth=2)
+ax2.plot(x, y4, 'r-', label='2x + 3y = 14', linewidth=2)
+ax2.grid(True, alpha=0.3)
+ax2.legend(fontsize=10)
+ax2.set_xlabel('x', fontsize=12)
+ax2.set_ylabel('y', fontsize=12)
+ax2.set_title('Sistema Sin Solución\n(Matriz Singular - Renglones Dependientes)', fontsize=12, fontweight='bold')
+ax2.axhline(y=0, color='k', linewidth=0.5)
+ax2.axvline(x=0, color='k', linewidth=0.5)
+ax2.set_xlim(-1, 9)
+ax2.set_ylim(-1, 8)
+
+plt.tight_layout()
+plt.show()
+```
+```{python}
+#| fig-cap: "Modelo de Leontief: Flujo de insumos entre industrias"
+#| label: fig-leontief
+
+# Diagrama de flujo del modelo de Leontief
+fig, ax = plt.subplots(figsize=(12, 8))
+ax.set_xlim(0, 10)
+ax.set_ylim(0, 10)
+ax.axis('off')
+
+# Posiciones de los nodos
+pos = {
+    'I1': (2, 7),
+    'I2': (8, 7),
+    'Final': (5, 2)
+}
+
+# Dibujar nodos (industrias)
+for nombre, (x, y) in pos.items():
+    if nombre.startswith('I'):
+        circle = plt.Circle((x, y), 0.8, color='lightblue', ec='black', linewidth=2)
+        ax.add_patch(circle)
+        ax.text(x, y, nombre, ha='center', va='center', fontsize=14, fontweight='bold')
+    else:
+        rect = plt.Rectangle((x-1, y-0.5), 2, 1, color='lightgreen', ec='black', linewidth=2)
+        ax.add_patch(rect)
+        ax.text(x, y, 'Demanda\nFinal', ha='center', va='center', fontsize=12, fontweight='bold')
+
+# Flechas de flujo (usando datos del ejercicio 5.7-3)
+# I1 usa 0.10 de I1
+ax.annotate('', xy=(2.6, 7.6), xytext=(1.4, 7.6),
+            arrowprops=dict(arrowstyle='->', lw=2, color='blue'))
+ax.text(2, 8.3, '0.10', fontsize=11, color='blue', fontweight='bold')
+
+# I1 usa 0.60 de I2
+ax.annotate('', xy=(2.8, 7.2), xytext=(7.2, 7.2),
+            arrowprops=dict(arrowstyle='->', lw=2, color='red'))
+ax.text(5, 7.7, '0.60', fontsize=11, color='red', fontweight='bold')
+
+# I2 usa 0.50 de I1
+ax.annotate('', xy=(7.2, 6.8), xytext=(2.8, 6.8),
+            arrowprops=dict(arrowstyle='->', lw=2, color='orange'))
+ax.text(5, 6.3, '0.50', fontsize=11, color='orange', fontweight='bold')
+
+# Hacia demanda final
+ax.annotate('', xy=(4, 3), xytext=(2.5, 6.3),
+            arrowprops=dict(arrowstyle='->', lw=2.5, color='green'))
+ax.text(2.5, 4.5, '$1000B', fontsize=11, color='green', fontweight='bold')
+
+ax.annotate('', xy=(6, 3), xytext=(7.5, 6.3),
+            arrowprops=dict(arrowstyle='->', lw=2.5, color='green'))
+ax.text(7.5, 4.5, '$2000B', fontsize=11, color='green', fontweight='bold')
+
+ax.set_title('Modelo de Insumo-Producto de Leontief\nFlujo Circular de la Economía',
+             fontsize=14, fontweight='bold', pad=20)
+
+# Leyenda
+legend_text = """
+Coeficientes técnicos (aᵢⱼ):
+- Azul: Insumo propio (a₁₁ = 0.10)
+- Rojo: I2 → I1 (a₂₁ = 0.60)
+- Naranja: I1 → I2 (a₁₂ = 0.50)
+
+Producción total requerida:
+x₁* = $3,333.33B
+x₂* = $4,000.00B
+"""
+ax.text(0.5, 4, legend_text, fontsize=10, 
+        bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
+
+plt.tight_layout()
+plt.show()
+```
+
+# Resumen y Conclusiones
+
+## Tabla Resumen: Condiciones de No Singularidad
+```{python}
+# Crear tabla resumen
+resumen_data = {
+    'Condición': [
+        'Cuadratura',
+        'Independencia lineal',
+        'Rango completo',
+        'Determinante no nulo',
+        'Eigenvalores no nulos'
+    ],
+    'Tipo': [
+        'Necesaria',
+        'Suficiente (dada cuadratura)',
+        'Necesaria y Suficiente',
+        'Necesaria y Suficiente',
+        'Necesaria y Suficiente'
+    ],
+    'Criterio': [
+        'm = n',
+        'Ningún renglón es combinación lineal de otros',
+        'r(A) = n',
+        '|A| ≠ 0',
+        'λᵢ ≠ 0 ∀i'
+    ],
+    'Verificación': [
+        'Contar filas y columnas',
+        'Forma escalonada',
+        'Forma escalonada',
+        'Expansión de Laplace',
+        'Ecuación característica'
+    ]
+}
+
+df_resumen = pd.DataFrame(resumen_data)
+
+display(HTML(df_resumen.to_html(index=False, escape=False)))
+```
+
+## Comparación de Métodos de Resolución
+```{python}
+# Tabla comparativa de métodos
+metodos_data = {
+    'Método': [
+        'Eliminación Gaussiana',
+        'Inversión de Matriz',
+        'Regla de Cramer',
+        'Descomposición LU'
+    ],
+    'Ventajas': [
+        '• Eficiente computacionalmente<br>• Estable numéricamente',
+        '• Solución analítica<br>• Útil para múltiples vectores d',
+        '• Solución individual de variables<br>• Forma cerrada',
+        '• Muy eficiente para sistemas grandes<br>• Factorización reutilizable'
+    ],
+    'Desventajas': [
+        '• No da fórmula general<br>• Repetir para cada sistema',
+        '• Costoso para matrices grandes<br>• Errores de redondeo',
+        '• Ineficiente para n grande<br>• n! operaciones',
+        '• Requiere implementación especial'
+    ],
+    'Mejor uso': [
+        'Cálculo numérico de sistemas únicos',
+        'Análisis teórico y estática comparativa',
+        'Análisis de sensibilidad variable por variable',
+        'Sistemas grandes con múltiples lados derechos'
+    ]
+}
+
+df_metodos = pd.DataFrame(metodos_data)
+
+display(HTML(df_metodos.to_html(index=False, escape=False)))
+```
+
+## Aplicaciones Económicas Principales
+
+::: {.callout-tip}
+## Aplicaciones Clave del Álgebra Matricial en Economía
+
+1. **Modelos de Equilibrio de Mercado**
+   - Determinación simultánea de precios de equilibrio
+   - Análisis de bienes complementos vs sustitutos
+   - Estática comparativa de shocks de demanda/oferta
+
+2. **Modelos Macroeconómicos**
+   - Modelo Keynesiano de ingreso nacional
+   - Modelo IS-LM (equilibrio real y monetario)
+   - Cálculo de multiplicadores fiscales y monetarios
+
+3. **Análisis Insumo-Producto (Leontief)**
+   - Planificación de producción consistente
+   - Evaluación de impactos intersectoriales
+   - Condición de Hawkins-Simon para viabilidad
+
+4. **Optimización**
+   - Programación lineal
+   - Condiciones de Kuhn-Tucker
+   - Análisis de portafolio
+:::
+
+## Conceptos Clave para Recordar
+```{python}
+conceptos = """
+### Conceptos Fundamentales
+
+**No Singularidad:**
+- Matriz cuadrada con determinante ≠ 0
+- Renglones linealmente independientes
+- Posee inversa única
+- Sistema Ax = d tiene solución única
+
+**Determinante:**
+- Escalar asociado a matriz cuadrada
+- Mide "volumen" del paralelepípedo formado por vectores columna
+- |A| = 0 ⟺ dependencia lineal
+- Se calcula por expansión de Laplace
+
+**Inversa:**
+- A⁻¹ satisface AA⁻¹ = A⁻¹A = I
+- Se calcula como A⁻¹ = (1/|A|) adj A
+- Solo existe si |A| ≠ 0
+
+**Regla de Cramer:**
+- xⱼ = |Aⱼ|/|A|
+- Aⱼ = A con columna j reemplazada por d
+- Útil para análisis de sensibilidad
+
+**Modelo de Leontief:**
+- x = (I - A)⁻¹d
+- A = matriz de coeficientes técnicos
+- d = vector de demanda final
+- Hawkins-Simon: todos los menores principales de (I-A) > 0
+"""
+
+display(Markdown(conceptos))
+```
+
+# Referencias y Lecturas Adicionales
+
+::: {.callout-note icon=false}
+## Bibliografía
+
+**Texto Principal:**
+- Chiang, A. C. & Wainwright, K. (2005). *Fundamental Methods of Mathematical Economics* (4th ed.). McGraw-Hill. Capítulo 5.
+
+**Referencias Complementarias:**
+- Sydsæter, K., Hammond, P., Seierstad, A., & Strøm, A. (2008). *Further Mathematics for Economic Analysis* (2nd ed.). Pearson.
+- Simon, C. P. & Blume, L. (1994). *Mathematics for Economists*. W.W. Norton.
+- Leontief, W. (1986). *Input-Output Economics* (2nd ed.). Oxford University Press.
+
+**Recursos en Línea:**
+- [Matrix Calculator](https://matrixcalc.org/) - Herramienta para cálculos matriciales
+- [WolframAlpha](https://www.wolframalpha.com/) - Motor de cómputo simbólico
+- [Khan Academy: Linear Algebra](https://www.khanacademy.org/math/linear-algebra)
+:::
+
+---
+
+::: {.callout-important}
+## Nota Final
+
+Este capítulo ha presentado las herramientas fundamentales del álgebra de matrices aplicadas al análisis económico. Los métodos desarrollados aquí son esenciales para:
+
+- Análisis de equilibrio general
+- Modelos macroeconómicos
+- Planificación económica (Leontief)
+- Optimización y programación matemática
+
+El dominio de estas técnicas es crucial para el estudio avanzado de economía matemática y econometría.
+:::

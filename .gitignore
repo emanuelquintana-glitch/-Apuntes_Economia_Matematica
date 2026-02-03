@@ -94,13 +94,12 @@ README_files/
 !*.yml
 !*.css
 
-<<<<<<< Updated upstream
 # ============================================
 # BASURA CONOCIDA / ARCHIVOS SUELTOS
 # ============================================
 sec_01_matrices/5
 setup_proyecto.bat
-=======
+
 # Abstra
 # Abstra is an AI-powered process automation framework.
 # Ignore directories containing user credentials, local state, and settings.
@@ -136,4 +135,3 @@ __marimo__/
 **/*.quarto_ipynb
 
 /.luarc.json
->>>>>>> Stashed changes
