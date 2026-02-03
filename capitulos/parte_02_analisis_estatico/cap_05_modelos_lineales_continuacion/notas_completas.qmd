@@ -52,7 +52,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import sympy as sp
-from sympy import Matrix, symbols, latex, simplify, solve, det, eye, inverse_ADJ
+from sympy import Matrix, symbols, latex, simplify, solve, det, eye
 from sympy import init_printing, Rational, nsimplify
 from IPython.display import display, Markdown, Latex, HTML
 import warnings
@@ -267,66 +267,55 @@ print(f"|A'| = {det(A3)} = 2 × {det_A}")
 
 $$|C_{ij}| = (-1)^{i+j} |M_{ij}|$$
 ```{python}
-# Cálculo de menores y cofactores
+from sympy import Matrix
+
 def calcular_menor(A, i, j):
-    """Calcula el menor M_ij"""
+    """Calcula el menor M_ij eliminando la fila i y columna j"""
     M = A.copy()
     M.row_del(i)
     M.col_del(j)
-    return det(M)
+    return M.det()
 
 def calcular_cofactor(A, i, j):
-    """Calcula el cofactor C_ij"""
+    """Calcula el cofactor C_ij utilizando la fórmula (-1)^(i+j) * M_ij"""
     return (-1)**(i+j) * calcular_menor(A, i, j)
 
-# Ejemplo
-A = Matrix([[9, 11, 4], [7, 6, 1], [3, 1, 4]])
-
-print("Matriz A:")
-display_matrix(A)
-
-print("\nMenores y Cofactores del tercer renglón:")
-for j in range(3):
-    menor = calcular_menor(A, 2, j)
-    cofactor = calcular_cofactor(A, 2, j)
-    print(f"M_3{j+1} = {menor}, C_3{j+1} = {cofactor}")
-<!-- ``` -->
-
-## Expansión de Laplace
-
-El determinante puede calcularse expandiendo por cualquier renglón o columna:
-
-$$|A| = \sum_{j=1}^{n} a_{ij} |C_{ij}|$$ (expansión por renglón $i$)
-
-$$|A| = \sum_{i=1}^{n} a_{ij} |C_{ij}|$$ (expansión por columna $j$)
-```{python}
-# Expansión de Laplace por diferentes renglones/columnas
 def expansion_laplace(A, fila=None, columna=None):
-    """Calcula determinante mediante expansión de Laplace"""
+    """Calcula el determinante mediante expansión de Laplace"""
     n = A.shape[0]
+    resultado = 0
     
     if fila is not None:
-        resultado = 0
         for j in range(n):
             resultado += A[fila, j] * calcular_cofactor(A, fila, j)
-        print(f"Expansión por renglón {fila + 1}:")
         return resultado
+    
     elif columna is not None:
-        resultado = 0
         for i in range(n):
             resultado += A[i, columna] * calcular_cofactor(A, i, columna)
-        print(f"Expansión por columna {columna + 1}:")
         return resultado
 
-A = Matrix([[1, 2, 0, 9], [2, 3, 4, 6], [1, 6, 0, -1], [0, -5, 0, 8]])
+# --- PRUEBA MATRIZ 3x3 ---
+A_3x3 = Matrix([[9, 11, 4], 
+                [7, 6, 1], 
+                [3, 1, 4]])
 
-print("Matriz A (4×4):")
-display_matrix(A)
+print("--- Matriz 3x3 ---")
+for j in range(3):
+    m = calcular_menor(A_3x3, 2, j)
+    c = calcular_cofactor(A_3x3, 2, j)
+    print(f"M_3{j+1} = {m}, C_3{j+1} = {c}")
 
-print("\nDeterminante calculado por diferentes métodos:")
-print(f"Sympy det(): {det(A)}")
-print(f"Expansión por fila 1: {expansion_laplace(A, fila=0)}")
-print(f"Expansión por columna 3: {expansion_laplace(A, columna=2)}")
+# --- PRUEBA MATRIZ 4x4 ---
+A_4x4 = Matrix([[1, 2, 0, 9], 
+                [2, 3, 4, 6], 
+                [1, 6, 0, -1], 
+                [0, -5, 0, 8]])
+
+print("\n--- Matriz 4x4 ---")
+print(f"Determinante (Sympy): {A_4x4.det()}")
+print(f"Determinante (Expansión Fila 1): {expansion_laplace(A_4x4, fila=0)}")
+print(f"Determinante (Expansión Columna 3): {expansion_laplace(A_4x4, columna=2)}")
 ```
 
 # Inversión de Matrices
@@ -548,33 +537,66 @@ print(f"¿Es correcto?: {simplify(resultado - d) == Matrix.zeros(3,1)}")
 
 ## Comparación: Inversión vs Cramer
 ```{python}
-# Comparación de métodos
 import time
+from sympy import Matrix
 
-A = Matrix([[5, 9], [7, -3]])
-d = Matrix([14, 4]])
+def regla_cramer(A, b):
+    """
+    Resuelve un sistema Ax = b usando la Regla de Cramer.
+    """
+    det_A = A.det()
+    if det_A == 0:
+        raise ValueError("El determinante es 0; el sistema no tiene solución única.")
+    
+    n = A.shape[1]
+    soluciones = []
+    
+    for i in range(n):
+        # Creamos una copia de A y reemplazamos la columna i por el vector b
+        A_temp = A.copy()
+        A_temp[:, i] = b
+        soluciones.append(A_temp.det() / det_A)
+    
+    return Matrix(soluciones)
+
+# 1. Definición del sistema
+# Matriz de coeficientes (2x2)
+A = Matrix([[5, 9], 
+            [7, -3]])
+
+# Vector de términos independientes (2x1)
+# Corregido: Asegúrate de que sea Matrix([14, 4]) para que sea columna
+d = Matrix([14, 4])
 
 print("Sistema: 5x₁ + 9x₂ = 14, 7x₁ - 3x₂ = 4\n")
 
-# Método 1: Inversión de matriz
-start = time.time()
-sol_inv = A.inv() * d
-time_inv = time.time() - start
+# --- Método 1: Inversión de matriz ---
+try:
+    start = time.time()
+    sol_inv = A.inv() * d
+    time_inv = time.time() - start
 
-print("Método 1 - Inversión de Matriz:")
-print(f"Solución: x₁ = {sol_inv[0]}, x₂ = {sol_inv[1]}")
-print(f"Tiempo: {time_inv:.6f} s")
+    print("Método 1 - Inversión de Matriz:")
+    print(f"Solución: x₁ = {sol_inv[0]}, x₂ = {sol_inv[1]}")
+    print(f"Tiempo: {time_inv:.6f} s")
+except Exception as e:
+    print(f"Error en Método 1: {e}")
 
-# Método 2: Regla de Cramer
-start = time.time()
-sol_cramer = regla_cramer(A, d)
-time_cramer = time.time() - start
+# --- Método 2: Regla de Cramer ---
+try:
+    start = time.time()
+    sol_cramer = regla_cramer(A, d)
+    time_cramer = time.time() - start
 
-print("\nMétodo 2 - Regla de Cramer:")
-print(f"Solución: x₁ = {sol_cramer[0]}, x₂ = {sol_cramer[1]}")
-print(f"Tiempo: {time_cramer:.6f} s")
+    print("\nMétodo 2 - Regla de Cramer:")
+    print(f"Solución: x₁ = {sol_cramer[0]}, x₂ = {sol_cramer[1]}")
+    print(f"Tiempo: {time_cramer:.6f} s")
+except Exception as e:
+    print(f"Error en Método 2: {e}")
 
-print(f"\n¿Resultados idénticos?: {sol_inv == sol_cramer}")
+# --- Comparación ---
+if 'sol_inv' in locals() and 'sol_cramer' in locals():
+    print(f"\n¿Resultados idénticos?: {sol_inv == sol_cramer}")
 ```
 
 # Aplicaciones Económicas

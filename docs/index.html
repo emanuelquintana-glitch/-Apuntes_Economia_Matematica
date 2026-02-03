@@ -108,8 +108,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="custom-math.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -202,7 +232,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Capítulo 4-1: Matrices</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -250,7 +280,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Capítulo 5: Sistemas de Ecuaciones Lineales y Álgebra de Matrices</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -927,6 +957,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#autor" id="toc-autor" class="nav-link" data-scroll-target="#autor"><span class="header-section-number">1.2</span> Autor</a></li>
   </ul></li>
+  <li><a href="#prefacio" id="toc-prefacio" class="nav-link" data-scroll-target="#prefacio"><span class="header-section-number">2</span> Prefacio</a>
+  <ul>
+  <li><a href="#objetivo-del-texto" id="toc-objetivo-del-texto" class="nav-link" data-scroll-target="#objetivo-del-texto"><span class="header-section-number">2.1</span> Objetivo del Texto</a></li>
+  <li><a href="#estructura-del-manuscrito" id="toc-estructura-del-manuscrito" class="nav-link" data-scroll-target="#estructura-del-manuscrito"><span class="header-section-number">2.2</span> Estructura del Manuscrito</a>
+  <ul class="collapse">
+  <li><a href="#parte-i-introducción" id="toc-parte-i-introducción" class="nav-link" data-scroll-target="#parte-i-introducción"><span class="header-section-number">2.2.1</span> Parte I: Introducción</a></li>
+  <li><a href="#parte-ii-análisis-estático" id="toc-parte-ii-análisis-estático" class="nav-link" data-scroll-target="#parte-ii-análisis-estático"><span class="header-section-number">2.2.2</span> Parte II: Análisis Estático</a></li>
+  <li><a href="#parte-iii-análisis-estático-comparativo" id="toc-parte-iii-análisis-estático-comparativo" class="nav-link" data-scroll-target="#parte-iii-análisis-estático-comparativo"><span class="header-section-number">2.2.3</span> Parte III: Análisis Estático Comparativo</a></li>
+  <li><a href="#parte-iv-problemas-de-optimización" id="toc-parte-iv-problemas-de-optimización" class="nav-link" data-scroll-target="#parte-iv-problemas-de-optimización"><span class="header-section-number">2.2.4</span> Parte IV: Problemas de Optimización</a></li>
+  <li><a href="#parte-v-análisis-dinámico" id="toc-parte-v-análisis-dinámico" class="nav-link" data-scroll-target="#parte-v-análisis-dinámico"><span class="header-section-number">2.2.5</span> Parte V: Análisis Dinámico</a></li>
+  </ul></li>
+  <li><a href="#características-pedagógicas" id="toc-características-pedagógicas" class="nav-link" data-scroll-target="#características-pedagógicas"><span class="header-section-number">2.3</span> Características Pedagógicas</a></li>
+  <li><a href="#prerrequisitos" id="toc-prerrequisitos" class="nav-link" data-scroll-target="#prerrequisitos"><span class="header-section-number">2.4</span> Prerrequisitos</a></li>
+  <li><a href="#convenciones-notacionales" id="toc-convenciones-notacionales" class="nav-link" data-scroll-target="#convenciones-notacionales"><span class="header-section-number">2.5</span> Convenciones Notacionales</a></li>
+  <li><a href="#agradecimientos" id="toc-agradecimientos" class="nav-link" data-scroll-target="#agradecimientos"><span class="header-section-number">2.6</span> Agradecimientos</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -939,7 +985,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Economía Matemática</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Economía Matemática</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Código</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Mostrar todo el código</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Ocultar todo el código</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">Ver el código fuente</a></li></ul></div></div>
 <p class="subtitle lead">Apuntes Completos</p>
 </div>
 
@@ -962,7 +1008,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">3 de enero de 2026</p>
+      <p class="date">3 de febrero de 2026</p>
     </div>
   </div>
   
@@ -1002,6 +1048,112 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Emanuel Quintana Silva</strong><br>
 Economista en formación - UPTC<br>
 <a href="mailto:emanuel.quintana@uptc.edu.co">emanuel.quintana@uptc.edu.co</a></p>
+<p>title: “Economía Matemática: Teoría y Aplicaciones” author: “Emanuel Quintana Silva” institution: “UPTC - Universidad Pedagógica y Tecnológica de Colombia” date: today abstract: | Este manuscrito presenta un tratamiento comprehensivo de la economía matemática, integrando herramientas matemáticas avanzadas con teoría económica moderna. Diseñado para estudiantes e investigadores, cubre desde los fundamentos del análisis estático hasta técnicas sofisticadas de optimización y análisis dinámico. keywords: - economía matemática - análisis estático - optimización económica - ecuaciones diferenciales - microeconomía avanzada - UPTC —</p>
+</section>
+</section>
+<section id="prefacio" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Prefacio</h1>
+<p>Bienvenido a este manuscrito sobre <strong>Economía Matemática</strong>. Este trabajo surge de la necesidad de integrar rigurosamente las herramientas matemáticas con la teoría económica, proporcionando un puente entre el análisis formal y las aplicaciones prácticas en economía.</p>
+<section id="objetivo-del-texto" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="objetivo-del-texto"><span class="header-section-number">2.1</span> Objetivo del Texto</h2>
+<p>Este texto está diseñado para:</p>
+<ul>
+<li>Proporcionar fundamentos sólidos en métodos matemáticos aplicados a economía</li>
+<li>Desarrollar habilidades para modelar problemas económicos formalmente</li>
+<li>Presentar técnicas de análisis estático y dinámico</li>
+<li>Ofrecer aplicaciones prácticas en microeconomía y macroeconomía</li>
+</ul>
+</section>
+<section id="estructura-del-manuscrito" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="estructura-del-manuscrito"><span class="header-section-number">2.2</span> Estructura del Manuscrito</h2>
+<p>El contenido está organizado en <strong>cinco partes</strong> principales:</p>
+<section id="parte-i-introducción" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="parte-i-introducción"><span class="header-section-number">2.2.1</span> Parte I: Introducción</h3>
+<p>Fundamentos conceptuales y metodológicos de la economía matemática.</p>
+</section>
+<section id="parte-ii-análisis-estático" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="parte-ii-análisis-estático"><span class="header-section-number">2.2.2</span> Parte II: Análisis Estático</h3>
+<p>Modelos de equilibrio y álgebra de matrices aplicada a economía.</p>
+</section>
+<section id="parte-iii-análisis-estático-comparativo" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="parte-iii-análisis-estático-comparativo"><span class="header-section-number">2.2.3</span> Parte III: Análisis Estático Comparativo</h3>
+<p>Técnicas de diferenciación y análisis de sensibilidad en modelos económicos.</p>
+</section>
+<section id="parte-iv-problemas-de-optimización" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="parte-iv-problemas-de-optimización"><span class="header-section-number">2.2.4</span> Parte IV: Problemas de Optimización</h3>
+<p>Métodos de optimización con y sin restricciones aplicados a teoría económica.</p>
+</section>
+<section id="parte-v-análisis-dinámico" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="parte-v-análisis-dinámico"><span class="header-section-number">2.2.5</span> Parte V: Análisis Dinámico</h3>
+<p>Sistemas dinámicos, ecuaciones diferenciales y teoría de control óptimo.</p>
+</section>
+</section>
+<section id="características-pedagógicas" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="características-pedagógicas"><span class="header-section-number">2.3</span> Características Pedagógicas</h2>
+<ul>
+<li><strong>Ejemplos económicos</strong> en cada concepto matemático</li>
+<li><strong>Aplicaciones prácticas</strong> con Python/R</li>
+<li><strong>Ejercicios resueltos</strong> paso a paso</li>
+<li><strong>Conexiones con teoría económica</strong> moderna</li>
+</ul>
+</section>
+<section id="prerrequisitos" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="prerrequisitos"><span class="header-section-number">2.4</span> Prerrequisitos</h2>
+<p>El texto asume familiaridad con: - Cálculo diferencial e integral - Álgebra lineal básica - Conceptos fundamentales de microeconomía</p>
+</section>
+<section id="convenciones-notacionales" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="convenciones-notacionales"><span class="header-section-number">2.5</span> Convenciones Notacionales</h2>
+<ul>
+<li>Variables económicas en <em>cursiva</em>: <span class="math inline">\(Q_d\)</span>, <span class="math inline">\(P\)</span>, <span class="math inline">\(C\)</span></li>
+<li>Vectores en negrita: <span class="math inline">\(\mathbf{x}\)</span>, <span class="math inline">\(\mathbf{p}\)</span></li>
+<li>Derivadas parciales: <span class="math inline">\(\frac{\partial f}{\partial x}\)</span></li>
+</ul>
+<div id="8c3306d6" class="cell" data-execution_count="1">
+<details open="" class="code-fold">
+<summary>Mostrar código</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo introductorio: Función de utilidad Cobb-Douglas</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Parámetros</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>alpha, beta <span class="op">=</span> <span class="fl">0.6</span>, <span class="fl">0.4</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="dv">10</span>, <span class="dv">50</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="dv">10</span>, <span class="dv">50</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Función de utilidad Cobb-Douglas</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>U <span class="op">=</span> (X<span class="op">**</span>alpha) <span class="op">*</span> (Y<span class="op">**</span>beta)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico 3D</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">'3d'</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax.plot_surface(X, Y, U, cmap<span class="op">=</span><span class="st">'viridis'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Bien X'</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Bien Y'</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="st">'Utilidad U(x,y)'</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Función de Utilidad Cobb-Douglas</span><span class="ch">\n</span><span class="st">$U(x,y) = x^</span><span class="sc">{0.6}</span><span class="st"> y^</span><span class="sc">{0.4}</span><span class="st">$'</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="agradecimientos" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="agradecimientos"><span class="header-section-number">2.6</span> Agradecimientos</h2>
+<p>Este trabajo ha sido posible gracias al apoyo de la <strong>Universidad Pedagógica y Tecnológica de Colombia (UPTC)</strong> y a todos los estudiantes cuyas preguntas y discusiones han enriquecido este material.</p>
+<blockquote class="blockquote">
+<p><em>“Las matemáticas no son solo números y ecuaciones; son el lenguaje con el cual comprendemos la estructura de la realidad económica.”</em></p>
+</blockquote>
+<p><strong>Emanuel Quintana Silva</strong><br>
+UPTC, Colombia<br>
+<code>r format(Sys.Date(), "%B %Y")</code></p>
 
 
 <!-- -->
@@ -1148,6 +1300,13 @@ Economista en formación - UPTC<br>
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -1470,35 +1629,142 @@ Economista en formación - UPTC<br>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Ejecutar el código</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Economía Matemática"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Emanuel Quintana Silva"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu"># Bienvenido</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Bienvenido al repositorio de **Economía Matemática**.</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contenido</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Este repositorio contiene apuntes completos de Economía Matemática basados en *Métodos Fundamentales de Economía Matemática*.</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### Estructura</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Parte I**: Fundamentos Matemáticos</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Parte II**: Álgebra de Matrices</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Parte III**: Estática Comparativa</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Parte IV**: Optimización</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Parte V**: Análisis Dinámico</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Autor</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>**Emanuel Quintana Silva**  </span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Economista en formación - UPTC  </span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">emanuel.quintana@uptc.edu.co</span><span class="co">](mailto:emanuel.quintana@uptc.edu.co)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Economía Matemática"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Emanuel Quintana Silva"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu"># Bienvenido</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>Bienvenido al repositorio de **Economía Matemática**.</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contenido</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>Este repositorio contiene apuntes completos de Economía Matemática basados en *Métodos Fundamentales de Economía Matemática*.</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### Estructura</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Parte I**: Fundamentos Matemáticos</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Parte II**: Álgebra de Matrices</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Parte III**: Estática Comparativa</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Parte IV**: Optimización</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Parte V**: Análisis Dinámico</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Autor</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>**Emanuel Quintana Silva**  </span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>Economista en formación - UPTC  </span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">emanuel.quintana@uptc.edu.co</span><span class="co">](mailto:emanuel.quintana@uptc.edu.co)</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>title: "Economía Matemática: Teoría y Aplicaciones"</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>author: "Emanuel Quintana Silva"</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>institution: "UPTC - Universidad Pedagógica y Tecnológica de Colombia"</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>date: today</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>abstract: |</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  Este manuscrito presenta un tratamiento comprehensivo de la economía matemática,</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  integrando herramientas matemáticas avanzadas con teoría económica moderna.</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  Diseñado para estudiantes e investigadores, cubre desde los fundamentos del</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>  análisis estático hasta técnicas sofisticadas de optimización y análisis dinámico.</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>keywords:</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>economía matemática</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>análisis estático</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>optimización económica</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>ecuaciones diferenciales</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>microeconomía avanzada</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>UPTC</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="fu"># Prefacio</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>Bienvenido a este manuscrito sobre **Economía Matemática**. Este trabajo surge de la necesidad de integrar rigurosamente las herramientas matemáticas con la teoría económica, proporcionando un puente entre el análisis formal y las aplicaciones prácticas en economía.</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objetivo del Texto</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>Este texto está diseñado para:</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Proporcionar fundamentos sólidos en métodos matemáticos aplicados a economía</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Desarrollar habilidades para modelar problemas económicos formalmente</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Presentar técnicas de análisis estático y dinámico</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ofrecer aplicaciones prácticas en microeconomía y macroeconomía</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="fu">## Estructura del Manuscrito</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>El contenido está organizado en **cinco partes** principales:</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="fu">### Parte I: Introducción</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>Fundamentos conceptuales y metodológicos de la economía matemática.</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="fu">### Parte II: Análisis Estático  </span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>Modelos de equilibrio y álgebra de matrices aplicada a economía.</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="fu">### Parte III: Análisis Estático Comparativo</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>Técnicas de diferenciación y análisis de sensibilidad en modelos económicos.</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="fu">### Parte IV: Problemas de Optimización</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>Métodos de optimización con y sin restricciones aplicados a teoría económica.</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="fu">### Parte V: Análisis Dinámico</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>Sistemas dinámicos, ecuaciones diferenciales y teoría de control óptimo.</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="fu">## Características Pedagógicas</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ejemplos económicos** en cada concepto matemático</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Aplicaciones prácticas** con Python/R</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ejercicios resueltos** paso a paso</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Conexiones con teoría económica** moderna</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prerrequisitos</span></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>El texto asume familiaridad con:</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cálculo diferencial e integral</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Álgebra lineal básica</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Conceptos fundamentales de microeconomía</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="fu">## Convenciones Notacionales</span></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Variables económicas en *cursiva*: $Q_d$, $P$, $C$</span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Vectores en negrita: $\mathbf{x}$, $\mathbf{p}$</span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Derivadas parciales: $\frac{\partial f}{\partial x}$</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo introductorio: Función de utilidad Cobb-Douglas</span></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="co"># Parámetros</span></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>alpha, beta <span class="op">=</span> <span class="fl">0.6</span>, <span class="fl">0.4</span></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="dv">10</span>, <span class="dv">50</span>)</span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="dv">10</span>, <span class="dv">50</span>)</span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a><span class="co"># Función de utilidad Cobb-Douglas</span></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>U <span class="op">=</span> (X<span class="op">**</span>alpha) <span class="op">*</span> (Y<span class="op">**</span>beta)</span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico 3D</span></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">'3d'</span>)</span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>ax.plot_surface(X, Y, U, cmap<span class="op">=</span><span class="st">'viridis'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Bien X'</span>)</span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Bien Y'</span>)</span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="st">'Utilidad U(x,y)'</span>)</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Función de Utilidad Cobb-Douglas</span><span class="ch">\n</span><span class="st">$U(x,y) = x^</span><span class="sc">{0.6}</span><span class="st"> y^</span><span class="sc">{0.4}</span><span class="st">$'</span>)</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a><span class="fu">## Agradecimientos</span></span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>Este trabajo ha sido posible gracias al apoyo de la **Universidad Pedagógica y Tecnológica de Colombia (UPTC)** y a todos los estudiantes cuyas preguntas y discusiones han enriquecido este material.</span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *"Las matemáticas no son solo números y ecuaciones; son el lenguaje con el cual comprendemos la estructura de la realidad económica."*</span></span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>**Emanuel Quintana Silva**  </span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>UPTC, Colombia  </span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="in">`r format(Sys.Date(), "%B %Y")`</span></span>
+</code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
