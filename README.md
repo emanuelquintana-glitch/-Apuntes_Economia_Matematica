@@ -1,11 +1,11 @@
-# Apuntes de Economía Matemática
+# **Apuntes de Economía Matemática**
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Quarto](https://img.shields.io/badge/Made%20with-Quarto-blue.svg)](https://quarto.org)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org)
 [![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org)
 
-##  Descripción
+## *Descripción*
 
 Repositorio académico de apuntes, ejercicios y aplicaciones computacionales de **Economía Matemática**. Desarrollado por **Emanuel Quintana Silva**, economista en formación de la Universidad Pedagógica y Tecnológica de Colombia (UPTC).
 
