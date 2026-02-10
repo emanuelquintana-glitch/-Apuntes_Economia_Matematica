@@ -44,8 +44,6 @@ Al revisar estos apartados, te invito a interactuar con los archivos **PDF**, ya
 
 Para una experiencia completa, por favor **descarga los archivos** (tanto el PDF como el código LaTeX) y ábrelos con **Adobe Acrobat** (recomendado) o **Firefox** si utilizas Linux.
 
-*¡Siempre en el cora!* ❤️
-
 
 
 
