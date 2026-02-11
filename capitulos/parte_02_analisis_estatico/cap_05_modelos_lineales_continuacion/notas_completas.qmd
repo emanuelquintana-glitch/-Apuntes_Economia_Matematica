@@ -1488,15 +1488,6 @@ display(Markdown(conceptos))
 :::
 
 ---
-##  Autor
-
-**Emanuel Quintana Silva**
-
-[![LinkedIn](https://img.shields.io)](https://www.linkedin.com)
-[![GitHub](https://img.shields.io)](https://github.com)
-
-> "La economía es el estudio de la humanidad en los asuntos ordinarios de la vida."
-
 
 ::: {.callout-important}
 ## Nota Final
