@@ -1488,6 +1488,9 @@ display(Markdown(conceptos))
 :::
 
 ---
+# Autor
+
+***Emanuel Quintana Silva***
 
 ::: {.callout-important}
 ## Nota Final
