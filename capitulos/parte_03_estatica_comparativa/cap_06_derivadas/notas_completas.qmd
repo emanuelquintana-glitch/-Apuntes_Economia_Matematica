@@ -1859,5 +1859,350 @@ Todos estos son casos especiales del hecho fundamental de que las funciones poli
 """))
 ```
 
-# Continuidad y Diferenciabilidad
+
+## Definición de Diferenciabilidad
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+from IPython.display import display, Markdown
+
+# Usamos r""" para evitar conflictos con backslashes de LaTeX
+texto_intro = r"""
+::: {.callout-important}
+## Definición: Función Diferenciable
+Una función $f(x)$ es **diferenciable** en $x_0$ si existe el límite:
+$$f'(x_0) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$$
+Geométricamente, implica una **tangente única** (sin picos).
+:::
+"""
+display(Markdown(texto_intro))
+
+# Gráficas
+fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+
+x_vals = np.linspace(-3, 5, 1000)
+f_abs = lambda x: np.abs(x - 1) + 1
+axes[0].plot(x_vals, f_abs(x_vals), 'b-', label='|x-1|+1')
+axes[0].plot(1, 1, 'ro')
+axes[0].set_title('Continua pero NO Diferenciable')
+axes[0].legend()
+
+x_vals2 = np.linspace(-1, 4, 1000)
+f_smooth = lambda x: (x - 1)**2 + 1
+axes[1].plot(x_vals2, f_smooth(x_vals2), 'b-', label='(x-1)^2+1')
+axes[1].plot(1, 1, 'ro')
+# Tangente como array para evitar el ValueError
+x_t = np.linspace(-0.5, 2.5, 50)
+y_t = np.full_like(x_t, 1.0)
+axes[1].plot(x_t, y_t, 'r--', label='m=0')
+axes[1].set_title('Continua Y Diferenciable')
+axes[1].legend()
+
+plt.tight_layout()
+plt.show()
+
+texto_final = r"""
+::: {.callout-warning}
+## Diferencia Clave
+El "pico" en $x=1$ de la izquierda impide una tangente única, mientras que la curva suave de la derecha sí la permite.
+:::
+"""
+display(Markdown(texto_final))
+```
+
+## Relación entre Continuidad y Diferenciabilidad
+
+```{python}
+import matplotlib.pyplot as plt
+from IPython.display import display, Markdown
+
+# 1. Bloque de Teorema (Asegurando el cierre de comillas y paréntesis)
+display(Markdown("""
+::: {.callout-important}
+## Teorema Fundamental
+
+**Relación entre Continuidad y Diferenciabilidad:**
+
+$$\\text{Diferenciable en } x_0 \\quad \\Rightarrow \\quad \\text{Continua en } x_0$$
+
+**Pero NO al revés:**
+
+$$\\text{Continua en } x_0 \\quad \\not\\Rightarrow \\quad \\text{Diferenciable en } x_0$$
+
+### Jerarquía de Propiedades
+Diferenciable $\\subset$ Continua $\\subset$ Definida
+:::
+"""))
+
+# 2. Gráfica de la Jerarquía
+fig, ax = plt.subplots(figsize=(7, 5))
+circle1 = plt.Circle((0.5, 0.5), 0.4, color='skyblue', alpha=0.3)
+circle2 = plt.Circle((0.5, 0.5), 0.25, color='lightgreen', alpha=0.4)
+circle3 = plt.Circle((0.5, 0.5), 0.12, color='gold', alpha=0.5)
+
+ax.add_patch(circle1)
+ax.add_patch(circle2)
+ax.add_patch(circle3)
+
+ax.text(0.5, 0.5, 'Diferenciables', ha='center', weight='bold')
+ax.text(0.5, 0.28, 'Continuas', ha='center')
+ax.text(0.5, 0.15, 'Definidas', ha='center')
+
+ax.set_xlim(0, 1)
+ax.set_ylim(0, 1)
+ax.axis('off')
+plt.show()
+```
+
+## Prueba Visual de Continuidad y Diferenciabilidad
+
+```{python}
+# Crear prueba interactiva visual
+display(Markdown("""
+### Prueba Visual: Clasificación de Funciones
+
+A continuación se muestran varios tipos de funciones en puntos críticos:
+"""))
+
+fig, axes = plt.subplots(2, 3, figsize=(15, 10))
+
+# 1. Polinomio (diferenciable)
+ax = axes[0, 0]
+x_vals = np.linspace(-2, 2, 1000)
+y_vals = x_vals**3 - x_vals
+ax.plot(x_vals, y_vals, 'b-', linewidth=2)
+ax.plot(0, 0, 'ro', markersize=10)
+ax.set_title('1. $f(x) = x^3 - x$ en $x=0$\n✅ Diferenciable')
+ax.grid(True, alpha=0.3)
+
+# 2. Valor absoluto (continua, no diferenciable)
+ax = axes[0, 1]
+x_vals = np.linspace(-2, 2, 1000)
+y_vals = np.abs(x_vals)
+ax.plot(x_vals, y_vals, 'b-', linewidth=2)
+ax.plot(0, 0, 'ro', markersize=10)
+ax.set_title('2. $f(x) = |x|$ en $x=0$\n✅ Continua, ❌ NO diferenciable')
+ax.grid(True, alpha=0.3)
+
+# 3. Racional con hueco (ni continua)
+ax = axes[0, 2]
+x_vals = np.linspace(-2, 2, 1000)
+x_vals = x_vals[np.abs(x_vals) > 0.05]
+y_vals = (x_vals**2 - 1) / x_vals
+ax.plot(x_vals, y_vals, 'b-', linewidth=2)
+ax.plot(0, 0, 'wo', markersize=10, markeredgecolor='red', markeredgewidth=2)
+ax.set_title('3. $f(x) = \\frac{x^2-1}{x}$ en $x=0$\n❌ NO continua, ❌ NO diferenciable')
+ax.set_ylim(-3, 3)
+ax.grid(True, alpha=0.3)
+
+# 4. Escalón (discontinua)
+ax = axes[1, 0]
+x_left = np.linspace(-2, 0, 100)
+x_right = np.linspace(0, 2, 100)
+ax.plot(x_left, np.zeros_like(x_left), 'b-', linewidth=2)
+ax.plot(x_right, np.ones_like(x_right), 'b-', linewidth=2)
+ax.plot(0, 0, 'go', markersize=8)
+ax.plot(0, 1, 'bs', markersize=8)
+ax.set_title('4. Función escalón en $x=0$\n❌ NO continua (salto)')
+ax.set_ylim(-0.5, 1.5)
+ax.grid(True, alpha=0.3)
+
+# 5. Raíz cúbica (continua, tangente vertical)
+ax = axes[1, 1]
+x_vals = np.linspace(-2, 2, 1000)
+y_vals = np.sign(x_vals) * np.abs(x_vals)**(1/3)
+ax.plot(x_vals, y_vals, 'b-', linewidth=2)
+ax.plot(0, 0, 'ro', markersize=10)
+ax.set_title('5. $f(x) = \\sqrt[3]{x}$ en $x=0$\n✅ Continua, ❌ NO diferenciable\n(tangente vertical)')
+ax.grid(True, alpha=0.3)
+
+# 6. Función suave (diferenciable)
+ax = axes[1, 2]
+x_vals = np.linspace(-2, 2, 1000)
+y_vals = np.exp(-x_vals**2)
+ax.plot(x_vals, y_vals, 'b-', linewidth=2)
+ax.plot(0, 1, 'ro', markersize=10)
+# Tangente
+x_tang = np.linspace(-1, 1, 50)
+y_tang = np.ones_like(x_tang)  # pendiente = 0 en x=0
+ax.plot(x_tang, y_tang, 'r--', linewidth=1.5, alpha=0.7)
+ax.set_title('6. $f(x) = e^{-x^2}$ en $x=0$\n✅ Diferenciable (tangente única)')
+ax.grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+
+# Tabla resumen
+classification_df = pd.DataFrame({
+    'Función': [
+        '$f(x) = x^3 - x$',
+        '$f(x) = |x|$',
+        '$f(x) = \\frac{x^2-1}{x}$',
+        'Función escalón',
+        '$f(x) = \\sqrt[3]{x}$',
+        '$f(x) = e^{-x^2}$'
+    ],
+    'Punto': ['$x=0$'] * 6,
+    'Definida': ['✅', '✅', '❌', '✅', '✅', '✅'],
+    'Continua': ['✅', '✅', '❌', '❌', '✅', '✅'],
+    'Diferenciable': ['✅', '❌', '❌', '❌', '❌', '✅'],
+    'Razón': [
+        'Suave',
+        'Pico agudo',
+        'No definida',
+        'Salto',
+        'Tangente vertical',
+        'Suave'
+    ]
+})
+
+display(HTML(classification_df.to_html(index=False, escape=False)))
+```
+
+# Resumen del Capítulo
+
+```{python}
+display(Markdown("""
+## Conceptos Clave
+
+::: {.callout-note}
+### 1. Estática Comparativa
+- **Objetivo:** Comparar estados de equilibrio "antes" y "después" de un cambio
+- **No considera:** El proceso de ajuste ni el tiempo
+- **Herramienta:** La derivada (tasa de cambio instantánea)
+- **Tipos:** Cualitativo (dirección) y Cuantitativo (magnitud)
+:::
+
+::: {.callout-note}
+### 2. Cociente de Diferencias y Derivada
+
+**Cociente de diferencias** (tasa promedio):
+$$\\frac{\\Delta y}{\\Delta x} = \\frac{f(x_0 + \\Delta x) - f(x_0)}{\\Delta x}$$
+
+**Derivada** (tasa instantánea):
+$$\\frac{dy}{dx} = f'(x) = \\lim_{\\Delta x \\to 0} \\frac{\\Delta y}{\\Delta x}$$
+
+**Relación:** Derivada = límite del cociente de diferencias
+:::
+
+::: {.callout-note}
+### 3. Interpretación Geométrica
+
+- **Cociente de diferencias:** Pendiente de la **secante** (línea entre dos puntos)
+- **Derivada:** Pendiente de la **tangente** (línea en un solo punto)
+- **Análisis marginal:** En economía, la derivada representa el concepto "marginal"
+:::
+
+::: {.callout-note}
+### 4. Concepto de Límite
+
+**Definición:** $\\lim_{v \\to N} g(v) = L$ significa que $g(v)$ se aproxima a $L$ cuando $v$ se acerca a $N$
+
+**Límites laterales:**
+- Izquierdo: $v \\to N^-$
+- Derecho: $v \\to N^+$
+- El límite existe si ambos son iguales
+
+**Evaluación:**
+- Sustitución directa (si es continua)
+- Transformación algebraica (si hay indeterminación)
+- Teoremas de límites
+:::
+
+::: {.callout-note}
+### 5. Continuidad y Diferenciabilidad
+
+**Continuidad en $x_0$:**
+1. $f(x_0)$ definida
+2. $\\lim_{x \\to x_0} f(x)$ existe
+3. $\\lim_{x \\to x_0} f(x) = f(x_0)$
+
+**Diferenciabilidad en $x_0$:**
+- Existe $f'(x_0) = \\lim_{\\Delta x \\to 0} \\frac{\\Delta y}{\\Delta x}$
+
+**Relación:**
+$$\\boxed{\\text{Diferenciable} \\Rightarrow \\text{Continua}}$$
+$$\\boxed{\\text{Continua} \\not\\Rightarrow \\text{Diferenciable}}$$
+:::
+
+## Fórmulas Importantes
+
+| Concepto | Fórmula | Significado |
+|----------|---------|-------------|
+| Cociente de diferencias | $\\frac{\\Delta y}{\\Delta x} = \\frac{f(x+\\Delta x) - f(x)}{\\Delta x}$ | Tasa de cambio promedio |
+| Derivada | $f'(x) = \\lim_{\\Delta x \\to 0} \\frac{\\Delta y}{\\Delta x}$ | Tasa de cambio instantánea |
+| Aproximación lineal | $f(x) \\approx f(x_0) + f'(x_0)(x - x_0)$ | Estimación usando tangente |
+| Límite | $\\lim_{v \\to N} g(v) = L$ | Valor al que tiende la función |
+| Continuidad | $\\lim_{x \\to x_0} f(x) = f(x_0)$ | Límite = Valor |
+
+## Aplicaciones Económicas
+
+1. **Análisis Marginal:**
+   - Costo Marginal = $C'(Q)$
+   - Ingreso Marginal = $I'(Q)$
+   - Utilidad Marginal = $U'(Q)$
+
+2. **Multiplicadores:**
+   - Multiplicador de la inversión: $\\frac{dY}{dI}$
+   - Elasticidad: $\\varepsilon = \\frac{dQ}{dP} \\cdot \\frac{P}{Q}$
+
+3. **Optimización:**
+   - Condición de primer orden: $f'(x) = 0$
+   - Máximo/mínimo según signo de $f''(x)$
+"""))
+```
+
+# Referencias y Bibliografía
+
+```{python}
+display(Markdown("""
+## Referencias Principales
+
+::: {.callout-tip icon=false}
+## Bibliografía
+
+**Texto Base:**
+- Chiang, A. C. & Wainwright, K. (2005). *Fundamental Methods of Mathematical Economics* (4th ed.). McGraw-Hill, Capítulo 6.
+
+**Lecturas Complementarias:**
+- Simon, C. P. & Blume, L. (1994). *Mathematics for Economists*. W. W. Norton & Company.
+- Sydsæter, K., Hammond, P., Seierstad, A., & Strøm, A. (2008). *Further Mathematics for Economic Analysis* (2nd ed.). Pearson Education.
+- Hoy, M., Livernois, J., McKenna, C., Rees, R., & Stengos, T. (2011). *Mathematics for Economics* (3rd ed.). MIT Press.
+
+**Recursos en Línea:**
+- Khan Academy: Cálculo Diferencial
+- MIT OpenCourseWare: Single Variable Calculus
+- Wolfram MathWorld: Calculus and Analysis
+:::
+
+## Próximo Capítulo
+
+En el **Capítulo 7** estudiaremos:
+- Reglas de derivación
+- Derivadas de funciones compuestas (regla de la cadena)
+- Derivadas de funciones implícitas
+- Derivadas de orden superior
+- Aplicaciones a la optimización económica
+
+---
+
+**Documento preparado con:**
+- Python 3.x
+- SymPy para cálculo simbólico
+- Matplotlib para visualizaciones
+- Quarto para generación de documentos
+"""))
+```
+
+```{python}
+#| echo: false
+# Información final
+import sys
+from datetime import datetime
+
+print(f"Documento generado: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+print(f"Versión de Python: {sys.version.split()[0]}")
+```
+
 

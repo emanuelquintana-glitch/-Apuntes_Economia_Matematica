@@ -24,6 +24,7 @@ Este material cubre desde fundamentos de álgebra lineal hasta teoría de contro
 
 ![Cheat Interactivo](Cheat_Interactivo.gif)
 
+![Resultados del Análisis](captura_apuntes.png)
 
 ##  Estructura del Repositorio
 

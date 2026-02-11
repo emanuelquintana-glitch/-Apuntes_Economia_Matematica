@@ -1848,5 +1848,85 @@
     "crumbs": [
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>Capítulo 6: Estática Comparativa y el Concepto de Derivada</span>"
     ]
+  },
+  {
+    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#definición-de-diferenciabilidad",
+    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#definición-de-diferenciabilidad",
+    "title": "27  Capítulo 6: Estática Comparativa y el Concepto de Derivada",
+    "section": "32.5 Definición de Diferenciabilidad",
+    "text": "32.5 Definición de Diferenciabilidad\n\n\nMostrar código\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom IPython.display import display, Markdown\n\n# Usamos r\"\"\" para evitar conflictos con backslashes de LaTeX\ntexto_intro = r\"\"\"\n::: {.callout-important}\n## Definición: Función Diferenciable\nUna función $f(x)$ es **diferenciable** en $x_0$ si existe el límite:\n$$f'(x_0) = \\lim_{\\Delta x \\to 0} \\frac{f(x_0 + \\Delta x) - f(x_0)}{\\Delta x}$$\nGeométricamente, implica una **tangente única** (sin picos).\n:::\n\"\"\"\ndisplay(Markdown(texto_intro))\n\n# Gráficas\nfig, axes = plt.subplots(1, 2, figsize=(14, 6))\n\nx_vals = np.linspace(-3, 5, 1000)\nf_abs = lambda x: np.abs(x - 1) + 1\naxes[0].plot(x_vals, f_abs(x_vals), 'b-', label='|x-1|+1')\naxes[0].plot(1, 1, 'ro')\naxes[0].set_title('Continua pero NO Diferenciable')\naxes[0].legend()\n\nx_vals2 = np.linspace(-1, 4, 1000)\nf_smooth = lambda x: (x - 1)**2 + 1\naxes[1].plot(x_vals2, f_smooth(x_vals2), 'b-', label='(x-1)^2+1')\naxes[1].plot(1, 1, 'ro')\n# Tangente como array para evitar el ValueError\nx_t = np.linspace(-0.5, 2.5, 50)\ny_t = np.full_like(x_t, 1.0)\naxes[1].plot(x_t, y_t, 'r--', label='m=0')\naxes[1].set_title('Continua Y Diferenciable')\naxes[1].legend()\n\nplt.tight_layout()\nplt.show()\n\ntexto_final = r\"\"\"\n::: {.callout-warning}\n## Diferencia Clave\nEl \"pico\" en $x=1$ de la izquierda impide una tangente única, mientras que la curva suave de la derecha sí la permite.\n:::\n\"\"\"\ndisplay(Markdown(texto_final))\n\n\n\n\n\n\n\n\nImportanteDefinición: Función Diferenciable\n\n\n\nUna función \\(f(x)\\) es diferenciable en \\(x_0\\) si existe el límite: \\[f'(x_0) = \\lim_{\\Delta x \\to 0} \\frac{f(x_0 + \\Delta x) - f(x_0)}{\\Delta x}\\] Geométricamente, implica una tangente única (sin picos).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAdvertenciaDiferencia Clave\n\n\n\nEl “pico” en \\(x=1\\) de la izquierda impide una tangente única, mientras que la curva suave de la derecha sí la permite.",
+    "crumbs": [
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Capítulo 6: Estática Comparativa y el Concepto de Derivada</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#relación-entre-continuidad-y-diferenciabilidad",
+    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#relación-entre-continuidad-y-diferenciabilidad",
+    "title": "27  Capítulo 6: Estática Comparativa y el Concepto de Derivada",
+    "section": "32.6 Relación entre Continuidad y Diferenciabilidad",
+    "text": "32.6 Relación entre Continuidad y Diferenciabilidad\n\n\nMostrar código\nimport matplotlib.pyplot as plt\nfrom IPython.display import display, Markdown\n\n# 1. Bloque de Teorema (Asegurando el cierre de comillas y paréntesis)\ndisplay(Markdown(\"\"\"\n::: {.callout-important}\n## Teorema Fundamental\n\n**Relación entre Continuidad y Diferenciabilidad:**\n\n$$\\\\text{Diferenciable en } x_0 \\\\quad \\\\Rightarrow \\\\quad \\\\text{Continua en } x_0$$\n\n**Pero NO al revés:**\n\n$$\\\\text{Continua en } x_0 \\\\quad \\\\not\\\\Rightarrow \\\\quad \\\\text{Diferenciable en } x_0$$\n\n### Jerarquía de Propiedades\nDiferenciable $\\\\subset$ Continua $\\\\subset$ Definida\n:::\n\"\"\"))\n\n# 2. Gráfica de la Jerarquía\nfig, ax = plt.subplots(figsize=(7, 5))\ncircle1 = plt.Circle((0.5, 0.5), 0.4, color='skyblue', alpha=0.3)\ncircle2 = plt.Circle((0.5, 0.5), 0.25, color='lightgreen', alpha=0.4)\ncircle3 = plt.Circle((0.5, 0.5), 0.12, color='gold', alpha=0.5)\n\nax.add_patch(circle1)\nax.add_patch(circle2)\nax.add_patch(circle3)\n\nax.text(0.5, 0.5, 'Diferenciables', ha='center', weight='bold')\nax.text(0.5, 0.28, 'Continuas', ha='center')\nax.text(0.5, 0.15, 'Definidas', ha='center')\n\nax.set_xlim(0, 1)\nax.set_ylim(0, 1)\nax.axis('off')\nplt.show()\n\n\n\n\n\n\n\n\nImportanteTeorema Fundamental\n\n\n\nRelación entre Continuidad y Diferenciabilidad:\n\\[\\text{Diferenciable en } x_0 \\quad \\Rightarrow \\quad \\text{Continua en } x_0\\]\nPero NO al revés:\n\\[\\text{Continua en } x_0 \\quad \\not\\Rightarrow \\quad \\text{Diferenciable en } x_0\\]\n\n32.6.1 Jerarquía de Propiedades\nDiferenciable \\(\\subset\\) Continua \\(\\subset\\) Definida",
+    "crumbs": [
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Capítulo 6: Estática Comparativa y el Concepto de Derivada</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#prueba-visual-de-continuidad-y-diferenciabilidad",
+    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#prueba-visual-de-continuidad-y-diferenciabilidad",
+    "title": "27  Capítulo 6: Estática Comparativa y el Concepto de Derivada",
+    "section": "32.7 Prueba Visual de Continuidad y Diferenciabilidad",
+    "text": "32.7 Prueba Visual de Continuidad y Diferenciabilidad\n\n\nMostrar código\n# Crear prueba interactiva visual\ndisplay(Markdown(\"\"\"\n### Prueba Visual: Clasificación de Funciones\n\nA continuación se muestran varios tipos de funciones en puntos críticos:\n\"\"\"))\n\nfig, axes = plt.subplots(2, 3, figsize=(15, 10))\n\n# 1. Polinomio (diferenciable)\nax = axes[0, 0]\nx_vals = np.linspace(-2, 2, 1000)\ny_vals = x_vals**3 - x_vals\nax.plot(x_vals, y_vals, 'b-', linewidth=2)\nax.plot(0, 0, 'ro', markersize=10)\nax.set_title('1. $f(x) = x^3 - x$ en $x=0$\\n✅ Diferenciable')\nax.grid(True, alpha=0.3)\n\n# 2. Valor absoluto (continua, no diferenciable)\nax = axes[0, 1]\nx_vals = np.linspace(-2, 2, 1000)\ny_vals = np.abs(x_vals)\nax.plot(x_vals, y_vals, 'b-', linewidth=2)\nax.plot(0, 0, 'ro', markersize=10)\nax.set_title('2. $f(x) = |x|$ en $x=0$\\n✅ Continua, ❌ NO diferenciable')\nax.grid(True, alpha=0.3)\n\n# 3. Racional con hueco (ni continua)\nax = axes[0, 2]\nx_vals = np.linspace(-2, 2, 1000)\nx_vals = x_vals[np.abs(x_vals) &gt; 0.05]\ny_vals = (x_vals**2 - 1) / x_vals\nax.plot(x_vals, y_vals, 'b-', linewidth=2)\nax.plot(0, 0, 'wo', markersize=10, markeredgecolor='red', markeredgewidth=2)\nax.set_title('3. $f(x) = \\\\frac{x^2-1}{x}$ en $x=0$\\n❌ NO continua, ❌ NO diferenciable')\nax.set_ylim(-3, 3)\nax.grid(True, alpha=0.3)\n\n# 4. Escalón (discontinua)\nax = axes[1, 0]\nx_left = np.linspace(-2, 0, 100)\nx_right = np.linspace(0, 2, 100)\nax.plot(x_left, np.zeros_like(x_left), 'b-', linewidth=2)\nax.plot(x_right, np.ones_like(x_right), 'b-', linewidth=2)\nax.plot(0, 0, 'go', markersize=8)\nax.plot(0, 1, 'bs', markersize=8)\nax.set_title('4. Función escalón en $x=0$\\n❌ NO continua (salto)')\nax.set_ylim(-0.5, 1.5)\nax.grid(True, alpha=0.3)\n\n# 5. Raíz cúbica (continua, tangente vertical)\nax = axes[1, 1]\nx_vals = np.linspace(-2, 2, 1000)\ny_vals = np.sign(x_vals) * np.abs(x_vals)**(1/3)\nax.plot(x_vals, y_vals, 'b-', linewidth=2)\nax.plot(0, 0, 'ro', markersize=10)\nax.set_title('5. $f(x) = \\\\sqrt[3]{x}$ en $x=0$\\n✅ Continua, ❌ NO diferenciable\\n(tangente vertical)')\nax.grid(True, alpha=0.3)\n\n# 6. Función suave (diferenciable)\nax = axes[1, 2]\nx_vals = np.linspace(-2, 2, 1000)\ny_vals = np.exp(-x_vals**2)\nax.plot(x_vals, y_vals, 'b-', linewidth=2)\nax.plot(0, 1, 'ro', markersize=10)\n# Tangente\nx_tang = np.linspace(-1, 1, 50)\ny_tang = np.ones_like(x_tang)  # pendiente = 0 en x=0\nax.plot(x_tang, y_tang, 'r--', linewidth=1.5, alpha=0.7)\nax.set_title('6. $f(x) = e^{-x^2}$ en $x=0$\\n✅ Diferenciable (tangente única)')\nax.grid(True, alpha=0.3)\n\nplt.tight_layout()\nplt.show()\n\n# Tabla resumen\nclassification_df = pd.DataFrame({\n    'Función': [\n        '$f(x) = x^3 - x$',\n        '$f(x) = |x|$',\n        '$f(x) = \\\\frac{x^2-1}{x}$',\n        'Función escalón',\n        '$f(x) = \\\\sqrt[3]{x}$',\n        '$f(x) = e^{-x^2}$'\n    ],\n    'Punto': ['$x=0$'] * 6,\n    'Definida': ['✅', '✅', '❌', '✅', '✅', '✅'],\n    'Continua': ['✅', '✅', '❌', '❌', '✅', '✅'],\n    'Diferenciable': ['✅', '❌', '❌', '❌', '❌', '✅'],\n    'Razón': [\n        'Suave',\n        'Pico agudo',\n        'No definida',\n        'Salto',\n        'Tangente vertical',\n        'Suave'\n    ]\n})\n\ndisplay(HTML(classification_df.to_html(index=False, escape=False)))\n\n\n32.7.1 Prueba Visual: Clasificación de Funciones\nA continuación se muestran varios tipos de funciones en puntos críticos:\n\n\n\n\n\n\n\n\n\n\n\n\nFunción\nPunto\nDefinida\nContinua\nDiferenciable\nRazón\n\n\n\n\n$f(x) = x^3 - x$\n$x=0$\n✅\n✅\n✅\nSuave\n\n\n$f(x) = |x|$\n$x=0$\n✅\n✅\n❌\nPico agudo\n\n\n$f(x) = \\frac{x^2-1}{x}$\n$x=0$\n❌\n❌\n❌\nNo definida\n\n\nFunción escalón\n$x=0$\n✅\n❌\n❌\nSalto\n\n\n$f(x) = \\sqrt[3]{x}$\n$x=0$\n✅\n✅\n❌\nTangente vertical\n\n\n$f(x) = e^{-x^2}$\n$x=0$\n✅\n✅\n✅\nSuave",
+    "crumbs": [
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Capítulo 6: Estática Comparativa y el Concepto de Derivada</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#conceptos-clave",
+    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#conceptos-clave",
+    "title": "27  Capítulo 6: Estática Comparativa y el Concepto de Derivada",
+    "section": "33.1 Conceptos Clave",
+    "text": "33.1 Conceptos Clave\n\n\n\n\n\n\nNota1. Estática Comparativa\n\n\n\n\nObjetivo: Comparar estados de equilibrio “antes” y “después” de un cambio\nNo considera: El proceso de ajuste ni el tiempo\nHerramienta: La derivada (tasa de cambio instantánea)\nTipos: Cualitativo (dirección) y Cuantitativo (magnitud)\n\n\n\n\n\n\n\n\n\nNota2. Cociente de Diferencias y Derivada\n\n\n\nCociente de diferencias (tasa promedio): \\[\\frac{\\Delta y}{\\Delta x} = \\frac{f(x_0 + \\Delta x) - f(x_0)}{\\Delta x}\\]\nDerivada (tasa instantánea): \\[\\frac{dy}{dx} = f'(x) = \\lim_{\\Delta x \\to 0} \\frac{\\Delta y}{\\Delta x}\\]\nRelación: Derivada = límite del cociente de diferencias\n\n\n\n\n\n\n\n\nNota3. Interpretación Geométrica\n\n\n\n\nCociente de diferencias: Pendiente de la secante (línea entre dos puntos)\nDerivada: Pendiente de la tangente (línea en un solo punto)\nAnálisis marginal: En economía, la derivada representa el concepto “marginal”\n\n\n\n\n\n\n\n\n\nNota4. Concepto de Límite\n\n\n\nDefinición: \\(\\lim_{v \\to N} g(v) = L\\) significa que \\(g(v)\\) se aproxima a \\(L\\) cuando \\(v\\) se acerca a \\(N\\)\nLímites laterales: - Izquierdo: \\(v \\to N^-\\) - Derecho: \\(v \\to N^+\\) - El límite existe si ambos son iguales\nEvaluación: - Sustitución directa (si es continua) - Transformación algebraica (si hay indeterminación) - Teoremas de límites\n\n\n\n\n\n\n\n\nNota5. Continuidad y Diferenciabilidad\n\n\n\nContinuidad en \\(x_0\\): 1. \\(f(x_0)\\) definida 2. \\(\\lim_{x \\to x_0} f(x)\\) existe 3. \\(\\lim_{x \\to x_0} f(x) = f(x_0)\\)\nDiferenciabilidad en \\(x_0\\): - Existe \\(f'(x_0) = \\lim_{\\Delta x \\to 0} \\frac{\\Delta y}{\\Delta x}\\)\nRelación: \\[\\boxed{\\text{Diferenciable} \\Rightarrow \\text{Continua}}\\] \\[\\boxed{\\text{Continua} \\not\\Rightarrow \\text{Diferenciable}}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Capítulo 6: Estática Comparativa y el Concepto de Derivada</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#fórmulas-importantes",
+    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#fórmulas-importantes",
+    "title": "27  Capítulo 6: Estática Comparativa y el Concepto de Derivada",
+    "section": "33.2 Fórmulas Importantes",
+    "text": "33.2 Fórmulas Importantes\n\n\n\n\n\n\n\n\nConcepto\nFórmula\nSignificado\n\n\n\n\nCociente de diferencias\n\\(\\frac{\\Delta y}{\\Delta x} = \\frac{f(x+\\Delta x) - f(x)}{\\Delta x}\\)\nTasa de cambio promedio\n\n\nDerivada\n\\(f'(x) = \\lim_{\\Delta x \\to 0} \\frac{\\Delta y}{\\Delta x}\\)\nTasa de cambio instantánea\n\n\nAproximación lineal\n\\(f(x) \\approx f(x_0) + f'(x_0)(x - x_0)\\)\nEstimación usando tangente\n\n\nLímite\n\\(\\lim_{v \\to N} g(v) = L\\)\nValor al que tiende la función\n\n\nContinuidad\n\\(\\lim_{x \\to x_0} f(x) = f(x_0)\\)\nLímite = Valor",
+    "crumbs": [
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Capítulo 6: Estática Comparativa y el Concepto de Derivada</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#aplicaciones-económicas",
+    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#aplicaciones-económicas",
+    "title": "27  Capítulo 6: Estática Comparativa y el Concepto de Derivada",
+    "section": "33.3 Aplicaciones Económicas",
+    "text": "33.3 Aplicaciones Económicas\n\nAnálisis Marginal:\n\nCosto Marginal = \\(C'(Q)\\)\nIngreso Marginal = \\(I'(Q)\\)\nUtilidad Marginal = \\(U'(Q)\\)\n\nMultiplicadores:\n\nMultiplicador de la inversión: \\(\\frac{dY}{dI}\\)\nElasticidad: \\(\\varepsilon = \\frac{dQ}{dP} \\cdot \\frac{P}{Q}\\)\n\nOptimización:\n\nCondición de primer orden: \\(f'(x) = 0\\)\nMáximo/mínimo según signo de \\(f''(x)\\)",
+    "crumbs": [
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Capítulo 6: Estática Comparativa y el Concepto de Derivada</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#referencias-principales",
+    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#referencias-principales",
+    "title": "27  Capítulo 6: Estática Comparativa y el Concepto de Derivada",
+    "section": "34.1 Referencias Principales",
+    "text": "34.1 Referencias Principales\n\n\n\n\n\n\nTipBibliografía\n\n\n\nTexto Base: - Chiang, A. C. & Wainwright, K. (2005). Fundamental Methods of Mathematical Economics (4th ed.). McGraw-Hill, Capítulo 6.\nLecturas Complementarias: - Simon, C. P. & Blume, L. (1994). Mathematics for Economists. W. W. Norton & Company. - Sydsæter, K., Hammond, P., Seierstad, A., & Strøm, A. (2008). Further Mathematics for Economic Analysis (2nd ed.). Pearson Education. - Hoy, M., Livernois, J., McKenna, C., Rees, R., & Stengos, T. (2011). Mathematics for Economics (3rd ed.). MIT Press.\nRecursos en Línea: - Khan Academy: Cálculo Diferencial - MIT OpenCourseWare: Single Variable Calculus - Wolfram MathWorld: Calculus and Analysis",
+    "crumbs": [
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Capítulo 6: Estática Comparativa y el Concepto de Derivada</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#próximo-capítulo",
+    "href": "capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html#próximo-capítulo",
+    "title": "27  Capítulo 6: Estática Comparativa y el Concepto de Derivada",
+    "section": "34.2 Próximo Capítulo",
+    "text": "34.2 Próximo Capítulo\nEn el Capítulo 7 estudiaremos: - Reglas de derivación - Derivadas de funciones compuestas (regla de la cadena) - Derivadas de funciones implícitas - Derivadas de orden superior - Aplicaciones a la optimización económica\n\nDocumento preparado con: - Python 3.x - SymPy para cálculo simbólico - Matplotlib para visualizaciones - Quarto para generación de documentos",
+    "crumbs": [
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Capítulo 6: Estática Comparativa y el Concepto de Derivada</span>"
+    ]
   }
 ]
