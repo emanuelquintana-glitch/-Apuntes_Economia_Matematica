@@ -1928,5 +1928,115 @@
     "crumbs": [
       "<span class='chapter-number'>27</span>  <span class='chapter-title'>Capítulo 6: Estática Comparativa y el Concepto de Derivada</span>"
     ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html",
+    "title": "10  Capítulo 4: Álgebra de Matrices (Continuación)",
+    "section": "",
+    "text": "11 1. El Formato Matricial de los Modelos Económicos\nComo se mencionó anteriormente, un sistema de \\(n\\) ecuaciones lineales con \\(n\\) variables puede compactarse en la ecuación matricial:\n\\[\\mathbf{A}\\mathbf{x} = \\mathbf{d}\\]\nDonde las dimensiones son \\((\\text{n} \\times \\text{n}) (\\text{n} \\times 1) = (\\text{n} \\times 1)\\). Esta notación no es solo estética; permite utilizar las propiedades del álgebra lineal para hallar soluciones únicas de manera eficiente.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Capítulo 4: Álgebra de Matrices (Continuación)</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#suma-y-resta-de-matrices",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#suma-y-resta-de-matrices",
+    "title": "10  Sección 02: Operaciones con Matrices",
+    "section": "11.1 Suma y Resta de Matrices",
+    "text": "11.1 Suma y Resta de Matrices\nPara que dos matrices puedan sumarse o restarse, deben ser conformables, es decir, tener la misma dimensión ().\n\n\n\n\n\n\nNotaDefinición\n\n\n\nSi y , entonces .\n\n\n\n\nMostrar código\n# Operación con Numpy\nA = np.array([[4, 9], [2, 1]])\nB = np.array([[2, 0], [0, 7]])\n\nprint(\"Matriz A + B:\")\nprint(A + B)\n\n\nMatriz A + B:\n[[6 9]\n [2 8]]",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sección 02: Operaciones con Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#multiplicación-de-matrices",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#multiplicación-de-matrices",
+    "title": "10  Sección 02: Operaciones con Matrices",
+    "section": "11.2 Multiplicación de Matrices",
+    "text": "11.2 Multiplicación de Matrices\nPara que el producto exista, el número de columnas de A debe ser igual al número de filas de B. Si es y es , la matriz resultante será de dimensión .\n\n11.2.1 El Producto Punto (Dot Product)\nEl elemento de la matriz resultante se obtiene multiplicando la fila de la primera matriz por la columna de la segunda:\n\n\nEjemplo con SymPy para visualización matemática\nA_sp = Matrix([[1, 2, 3], [4, 5, 6]]) \nB_sp = Matrix([[7, 8], [9, 10], [11, 12]]) \n\nprint(\"Producto matricial A (2x3) * B (3x2):\")\ndisplay(A_sp * B_sp)\n\n\nProducto matricial A (2x3) * B (3x2):\n\n\n\\(\\displaystyle \\left[\\begin{matrix}58 & 64\\\\139 & 154\\end{matrix}\\right]\\)",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sección 02: Operaciones con Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#suma-y-resta-de-matrices-1",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#suma-y-resta-de-matrices-1",
+    "title": "10  Sección 02: Operaciones con Matrices",
+    "section": "13.1 Suma y Resta de Matrices",
+    "text": "13.1 Suma y Resta de Matrices\nPara que dos matrices puedan sumarse o restarse, deben ser conformables, es decir, tener la misma dimensión ().\n\n\n\n\n\n\nNotaDefinición\n\n\n\nSi y , entonces .\n\n\nquarto-executable-code-5450563D\n#| label: suma-matrices\n# Operación con Numpy\nA = np.array([[4, 9], [2, 1]])\nB = np.array([[2, 0], [0, 7]])\n\nprint(\"Matriz A + B:\")\nprint(A + B)",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sección 02: Operaciones con Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#multiplicación-de-matrices-1",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#multiplicación-de-matrices-1",
+    "title": "10  Sección 02: Operaciones con Matrices",
+    "section": "13.2 Multiplicación de Matrices",
+    "text": "13.2 Multiplicación de Matrices\nPara que el producto exista, el número de columnas de A debe ser igual al número de filas de B. Si es y es , la matriz resultante será de dimensión .\n\n13.2.1 El Producto Punto (Dot Product)\nEl elemento de la matriz resultante se obtiene multiplicando la fila de la primera matriz por la columna de la segunda:\nquarto-executable-code-5450563D\n#| label: multiplicacion-sympy\n#| code-summary: \"Ejemplo con SymPy para visualización matemática\"\n\nA_sp = Matrix([[1, 2, 3], [4, 5, 6]]) \nB_sp = Matrix([[7, 8], [9, 10], [11, 12]]) \n\nprint(\"Producto matricial A (2x3) * B (3x2):\")\ndisplay(A_sp * B_sp)",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Sección 02: Operaciones con Matrices</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#el-concepto-de-matriz-identidad-mathbfi",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#el-concepto-de-matriz-identidad-mathbfi",
+    "title": "10  Capítulo 4: Álgebra de Matrices (Continuación)",
+    "section": "11.1 1.1 El Concepto de Matriz Identidad (\\(\\mathbf{I}\\))",
+    "text": "11.1 1.1 El Concepto de Matriz Identidad (\\(\\mathbf{I}\\))\nLa matriz identidad \\(\\mathbf{I}\\) actúa como el número \\(1\\) en el álgebra escalar. Es una matriz cuadrada donde: - Los elementos de la diagonal principal son \\(1\\) (\\(a_{ii} = 1\\)). - Todos los demás elementos son \\(0\\) (\\(a_{ij} = 0\\) para \\(i \\neq j\\)).\n\nimport numpy as np\nimport sympy as sp\nfrom IPython.display import display, Math\n\n# Generación de una matriz identidad 3x3\nI = np.eye(3)\nprint(\"Matriz Identidad (I) 3x3:\")\nprint(I)\n\nMatriz Identidad (I) 3x3:\n[[1. 0. 0.]\n [0. 1. 0.]\n [0. 0. 1.]]",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Capítulo 4: Álgebra de Matrices (Continuación)</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#condición-necesaria-ser-cuadrada",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#condición-necesaria-ser-cuadrada",
+    "title": "10  Capítulo 4: Álgebra de Matrices (Continuación)",
+    "section": "13.1 3.1 Condición Necesaria: Ser Cuadrada",
+    "text": "13.1 3.1 Condición Necesaria: Ser Cuadrada\nEl número de ecuaciones debe ser igual al número de incógnitas ().\n\nSi hay menos ecuaciones que variables, el sistema está subdeterminado (infinitas soluciones).\nSi hay más, está sobredeterminado.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Capítulo 4: Álgebra de Matrices (Continuación)</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#condición-suficiente-independencia-lineal",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#condición-suficiente-independencia-lineal",
+    "title": "10  Capítulo 4: Álgebra de Matrices (Continuación)",
+    "section": "13.2 3.2 Condición Suficiente: Independencia Lineal",
+    "text": "13.2 3.2 Condición Suficiente: Independencia Lineal\nLas filas (o columnas) de la matriz de coeficientes deben ser linealmente independientes.\n\nDefinición de Independencia Lineal: Un conjunto de vectores fila es linealmente independiente si la única combinación lineal que resulta en el vector cero es aquella donde todos los escalares son cero:\n\n\n13.2.1 Ejemplo Práctico: Detectando Redundancia\nSi una ecuación es simplemente el doble de otra (ej. y ), la matriz es singular porque las filas son dependientes. Económicamente, esto significa que una de las ecuaciones es redundante y no aporta información nueva para resolver el sistema.\n\n# Ejemplo de matriz singular (filas dependientes)\nA_singular = np.array([[1, 2], \n                       [2, 4]]) # La fila 2 es el doble de la fila 1\n\ntry:\n    inv = np.linalg.inv(A_singular)\nexcept np.linalg.LinAlgError:\n    print(\"Error: La matriz es singular y no se puede invertir.\")\n\nError: La matriz es singular y no se puede invertir.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Capítulo 4: Álgebra de Matrices (Continuación)</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#determinantes-de-segundo-orden",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#determinantes-de-segundo-orden",
+    "title": "10  Capítulo 4: Álgebra de Matrices (Continuación)",
+    "section": "15.1 4.1 Determinantes de Segundo Orden",
+    "text": "15.1 4.1 Determinantes de Segundo Orden\nPara una matriz de \\(2 \\times 2\\), el determinante se define como la diferencia del producto de las diagonales:\n\\[|\\mathbf{A}| = \\begin{vmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{vmatrix} = a_{11}a_{22} - a_{12}a_{21}\\]",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Capítulo 4: Álgebra de Matrices (Continuación)</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#la-prueba-de-dependencia-lineal",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#la-prueba-de-dependencia-lineal",
+    "title": "10  Capítulo 4: Álgebra de Matrices (Continuación)",
+    "section": "15.2 4.2 La Prueba de Dependencia Lineal",
+    "text": "15.2 4.2 La Prueba de Dependencia Lineal\nPodemos ilustrar fácilmente la condición de no singularidad mediante el determinante. Consideremos el caso donde los elementos de la segunda fila son un múltiplo \\(k\\) de la primera fila (dependencia lineal):\n\\[|\\mathbf{A}| = \\begin{vmatrix} a & b \\\\ ka & kb \\end{vmatrix} = (a)(kb) - (b)(ka) = akb - bka = 0\\]\n\n\n\n\n\n\nImportanteConclusión Clave\n\n\n\nSi \\(|\\mathbf{A}| = 0\\), la matriz tiene dependencia lineal, es singular y por lo tanto no tiene inversa. En términos económicos, esto significa que el sistema no tiene una solución única determinada.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Capítulo 4: Álgebra de Matrices (Continuación)</span>"
+    ]
+  },
+  {
+    "objectID": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#demostración-computacional",
+    "href": "capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html#demostración-computacional",
+    "title": "10  Capítulo 4: Álgebra de Matrices (Continuación)",
+    "section": "15.3 4.3 Demostración Computacional",
+    "text": "15.3 4.3 Demostración Computacional\nUtilicemos Python para comparar una matriz con solución única frente a una matriz dependiente (redundante).\n\nimport numpy as np\n\n# Caso 1: Filas independientes (Determinante != 0)\nA_indep = np.array([[3, 1], \n                    [1, 2]])\ndet_indep = np.linalg.det(A_indep)\n\n# Caso 2: Filas dependientes (Fila 2 es 2x Fila 1)\nA_dep = np.array([[3, 1], \n                  [6, 2]])\ndet_dep = np.linalg.det(A_dep)\n\nprint(f\"Matriz Independiente:\\n{A_indep}\\nDeterminante: {det_indep:.2f}\")\nprint(f\"\\nMatriz Dependiente (Redundante):\\n{A_dep}\\nDeterminante: {det_dep:.2f}\")\n\nMatriz Independiente:\n[[3 1]\n [1 2]]\nDeterminante: 5.00\n\nMatriz Dependiente (Redundante):\n[[3 1]\n [6 2]]\nDeterminante: 0.00\n\n\n\n15.3.1 Interpretación Económica\nSi estuviéramos modelando un equilibrio de mercado y nuestro determinante fuera , significaría que las ecuaciones de oferta y demanda que planteamos son en realidad la misma ecuación expresada de forma diferente, lo que nos impide hallar el precio () y la cantidad () de equilibrio.",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Capítulo 4: Álgebra de Matrices (Continuación)</span>"
+    ]
   }
 ]

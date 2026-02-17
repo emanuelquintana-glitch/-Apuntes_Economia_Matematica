@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Emanuel Quintana">
-<meta name="keywords" content="economía matemática, matemáticas, economía, optimización, cálculo">
-<meta name="description" content="Apuntes de Economía Matemática">
+<meta name="author" content="Emanuel Quintana Silva">
+<meta name="keywords" content="economía matemática, matemáticas, economía, optimización, cálculo, álgebra lineal">
+<meta name="description" content="Apuntes completos de Economía Matemática basados en Chiang &amp; Wainwright">
 
-<title>Economía Matemática</title>
+<title>10&nbsp; Capítulo 4: Álgebra de Matrices (Continuación) – Economía Matemática</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,8 +24,9 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -69,15 +70,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../../../">
 <link href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_03_vectores/notas.html" rel="next">
 <link href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html" rel="prev">
-<script src="../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-ef4d8e9faa04af36b84e1866e7343808.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -92,37 +95,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../../styles.css">
+<link rel="stylesheet" href="../../../../custom-math.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">notas.html</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Capítulo 4: Álgebra de Matrices (Continuación)</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -132,796 +165,832 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../../../../index.html" class="sidebar-logo-link">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../../../../">Economía Matemática</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/emanuelquintana-glitch/-Apuntes_Economia_Matematica" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/emanuelquintana-glitch/-Apuntes_Economia_Matematica" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Buscar"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_03_vectores/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_04_leyes_algebraicas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_05_identidad_nulas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_06_transpuestas_inversas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/aplicaciones.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">aplicaciones.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_01_no_singularidad/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_02_determinantes/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_03_propiedades_determinantes/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/algoritmos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">algoritmos.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_05_regla_cramer/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_06_aplicaciones_modelos/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_07_leontief_insumo_producto/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/README.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Parte III: Estática Comparativa</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_02_tasa_cambio/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_03_pendiente_curva/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_04_limites/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_05_desigualdades/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_06_teoremas_limites/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_07_continuidad_diferenciabilidad/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_01_una_variable/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_02_dos_o_mas_funciones/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_03_variables_diferentes/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_04_diferenciacion_parcial/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_05_aplicaciones_estatica_comparativa/modelos_economia.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">modelos_economia.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_06_jacobianos/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_01_diferenciales/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_02_diferenciales_totales/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_03_reglas_diferenciales/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_04_derivadas_totales/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_05_funciones_implicitas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_06_estatica_comparativa/modelos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">modelos.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/README.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Parte IV: Optimización</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_01_valores_optimos/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_02_primera_derivada/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_03_derivadas_superiores/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_04_segunda_derivada/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_05_series_taylor_maclaurin/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_06_n_esima_derivada/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_01_naturaleza_exponenciales/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_02_funcion_natural_crecimiento/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_03_logaritmos/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_04_funciones_logaritmicas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_05_derivadas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_06_fecha_optima/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_07_mas_aplicaciones/aplicaciones.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">aplicaciones.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_01_version_diferencial/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_02_dos_variables/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_03_formas_cuadraticas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_04_mas_de_dos_variables/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_05_concavidad_convexidad/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_07_estatica_comparativa/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_02_valores_estacionarios/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_03_segunda_orden/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_04_cuasiconcavidad/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_05_maximizacion_utilidad/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_06_funciones_homogeneas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_07_combinacion_insumos/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_01_kuhn_tucker/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_02_calificacion_restriccion/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_04_teoremas_suficiencia/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_05_funciones_valor_maximo/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_06_dualidad/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/README.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">75</span>&nbsp; <span class="chapter-title">Parte V: Análisis Dinámico</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">76</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_02_integrales_indefinidas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">77</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_03_integrales_definidas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_04_integrales_impropias/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">79</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_05_aplicaciones_economia/aplicaciones.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">aplicaciones.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_06_modelo_domar/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">81</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">82</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_01_lineales_coeficientes_constantes/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">83</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_02_dinamica_precio_mercado/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">84</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_03_coeficiente_variable/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">85</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_04_ecuaciones_exactas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">86</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_05_no_lineales/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">87</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_06_enfoque_cualitativo/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">88</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_07_modelo_solow/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">89</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">90</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_01_segundo_orden/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">91</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_02_numeros_complejos/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">92</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_03_raices_complejas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">93</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_04_modelo_expectativas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_05_inflacion_desempleo/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">95</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_06_termino_variable/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">96</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_07_orden_superior/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">97</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">98</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_02_solucion/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">99</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_03_estabilidad/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">100</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_04_modelo_telarana/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">101</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_05_modelo_inventario/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">102</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_06_no_lineales_metodo_grafico/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">103</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">104</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_01_segundo_orden/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">105</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_02_modelo_samuelson/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">106</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_03_inflacion_desempleo_discreto/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">107</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_04_generalizaciones/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">108</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">109</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_02_solucion/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">110</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_03_modelos_insumo_producto/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">111</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_04_inflacion_desempleo/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">112</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_05_diagramas_fase/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">113</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_06_linealizacion/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">114</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">115</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_01_naturaleza/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">116</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_02_condiciones_terminales/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">117</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_05_horizonte_infinito/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">118</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">119</span>&nbsp; <span class="chapter-title">Economía Matemática</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Economía Matemática</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../prefacio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">120</span>&nbsp; <span class="chapter-title">Prefacio</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Prefacio</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../capitulos/parte_01_introduccion/README.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">121</span>&nbsp; <span class="chapter-title">Parte I: Introducción</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Parte I: Introducción</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../capitulos/parte_01_introduccion/cap_01_naturaleza_economia_matematica/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">122</span>&nbsp; <span class="chapter-title">Capítulo 1: Naturaleza de la Economía Matemática</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Capítulo 1: Naturaleza de la Economía Matemática</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../capitulos/parte_01_introduccion/cap_02_revision_aritmetica_algebra/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">123</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Capítulo 2: Revisión de Aritmética y Álgebra</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../capitulos/parte_01_introduccion/cap_03_ecuaciones_graficas/notas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">124</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Prueba Simple de Shiny + Quarto</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../capitulos/parte_02_analisis_estatico/README.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">125</span>&nbsp; <span class="chapter-title">Parte II: Análisis Estático</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Parte II: Análisis Estático</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">126</span>&nbsp; <span class="chapter-title">Capítulo 4: Modelos Lineales y Álgebra de Matrices</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Capítulo 4: Modelos Lineales y Álgebra de Matrices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_02_operaciones_matrices/notas.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Capítulo 4: Álgebra de Matrices (Continuación)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_03_vectores/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_04_leyes_algebraicas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_05_identidad_nulas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_06_transpuestas_inversas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_07_cadenas_markov/aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">aplicaciones.html</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/notas_completas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">127</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Capítulo 5: Sistemas de Ecuaciones Lineales y Álgebra de Matrices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_01_no_singularidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_02_determinantes/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_03_propiedades_determinantes/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_04_matriz_inversa/algoritmos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">algoritmos.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_05_regla_cramer/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_06_aplicaciones_modelos/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_02_analisis_estatico/cap_05_modelos_lineales_continuacion/sec_07_leontief_insumo_producto/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Parte III: Estática Comparativa</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Capítulo 6: Estática Comparativa y el Concepto de Derivada</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_02_tasa_cambio/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_03_pendiente_curva/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_04_limites/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_05_desigualdades/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_06_teoremas_limites/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_06_derivadas/sec_07_continuidad_diferenciabilidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_01_una_variable/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_02_dos_o_mas_funciones/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_03_variables_diferentes/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_04_diferenciacion_parcial/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_05_aplicaciones_estatica_comparativa/modelos_economia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">modelos_economia.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_07_reglas_diferenciacion/sec_06_jacobianos/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_01_diferenciales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_02_diferenciales_totales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_03_reglas_diferenciales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_04_derivadas_totales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_05_funciones_implicitas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_03_estatica_comparativa/cap_08_funciones_generales/sec_06_estatica_comparativa/modelos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">47</span>&nbsp; <span class="chapter-title">modelos.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Parte IV: Optimización</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_01_valores_optimos/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_02_primera_derivada/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_03_derivadas_superiores/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_04_segunda_derivada/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_05_series_taylor_maclaurin/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_09_optimizacion_una_variable/sec_06_n_esima_derivada/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">55</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">56</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_01_naturaleza_exponenciales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_02_funcion_natural_crecimiento/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_03_logaritmos/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">59</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_04_funciones_logaritmicas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">60</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_05_derivadas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_06_fecha_optima/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_10_funciones_exponenciales_logaritmicas/sec_07_mas_aplicaciones/aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">aplicaciones.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">64</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_01_version_diferencial/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_02_dos_variables/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">66</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_03_formas_cuadraticas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">67</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_04_mas_de_dos_variables/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">68</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_05_concavidad_convexidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">69</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_11_mas_de_una_variable/sec_07_estatica_comparativa/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">70</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">71</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_02_valores_estacionarios/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">72</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_03_segunda_orden/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">73</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_04_cuasiconcavidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">74</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_05_maximizacion_utilidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">75</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_06_funciones_homogeneas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">76</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_12_restricciones_igualdad/sec_07_combinacion_insumos/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">77</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">78</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_01_kuhn_tucker/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">79</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_02_calificacion_restriccion/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">80</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_04_teoremas_suficiencia/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">81</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_05_funciones_valor_maximo/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">82</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_04_optimizacion/cap_13_temas_adicionales/sec_06_dualidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">83</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/README.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">84</span>&nbsp; <span class="chapter-title">Parte V: Análisis Dinámico</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">85</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_02_integrales_indefinidas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">86</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_03_integrales_definidas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">87</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_04_integrales_impropias/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">88</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_05_aplicaciones_economia/aplicaciones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">89</span>&nbsp; <span class="chapter-title">aplicaciones.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_14_calculo_integral/sec_06_modelo_domar/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">90</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">91</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_01_lineales_coeficientes_constantes/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">92</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_02_dinamica_precio_mercado/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">93</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_03_coeficiente_variable/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">94</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_04_ecuaciones_exactas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">95</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_05_no_lineales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">96</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_06_enfoque_cualitativo/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">97</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_15_ecuaciones_diferenciales_primer_orden/sec_07_modelo_solow/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">98</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">99</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_01_segundo_orden/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">100</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_02_numeros_complejos/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">101</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_03_raices_complejas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">102</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_04_modelo_expectativas/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">103</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_05_inflacion_desempleo/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">104</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_06_termino_variable/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">105</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_16_ecuaciones_diferenciales_orden_superior/sec_07_orden_superior/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">106</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">107</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_02_solucion/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">108</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_03_estabilidad/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">109</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_04_modelo_telarana/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">110</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_05_modelo_inventario/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">111</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_17_ecuaciones_diferencias_primer_orden/sec_06_no_lineales_metodo_grafico/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">112</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">113</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_01_segundo_orden/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">114</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_02_modelo_samuelson/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">115</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_03_inflacion_desempleo_discreto/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">116</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_18_ecuaciones_diferencias_orden_superior/sec_04_generalizaciones/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">117</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">118</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_02_solucion/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">119</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_03_modelos_insumo_producto/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">120</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_04_inflacion_desempleo/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">121</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_05_diagramas_fase/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">122</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_19_ecuaciones_simultaneas/sec_06_linealizacion/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">123</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/notas_completas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">124</span>&nbsp; <span class="chapter-title">notas_completas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_01_naturaleza/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">125</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_02_condiciones_terminales/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">126</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../../capitulos/parte_05_analisis_dinamico/cap_20_teoria_control_optimo/sec_05_horizonte_infinito/notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">127</span>&nbsp; <span class="chapter-title">notas.html</span></span></a>
   </div>
 </li>
     </ul>
     </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contenido</h2>
+   
+  <ul>
+  <li><a href="#el-formato-matricial-de-los-modelos-económicos" id="toc-el-formato-matricial-de-los-modelos-económicos" class="nav-link active" data-scroll-target="#el-formato-matricial-de-los-modelos-económicos"><span class="header-section-number">11</span> 1. El Formato Matricial de los Modelos Económicos</a>
+  <ul>
+  <li><a href="#el-concepto-de-matriz-identidad-mathbfi" id="toc-el-concepto-de-matriz-identidad-mathbfi" class="nav-link" data-scroll-target="#el-concepto-de-matriz-identidad-mathbfi"><span class="header-section-number">11.1</span> 1.1 El Concepto de Matriz Identidad (<span class="math inline">\(\mathbf{I}\)</span>)</a></li>
+  </ul></li>
+  <li><a href="#la-matriz-inversa" id="toc-la-matriz-inversa" class="nav-link" data-scroll-target="#la-matriz-inversa"><span class="header-section-number">12</span> 2. La Matriz Inversa ()</a>
+  <ul>
+  <li><a href="#definición" id="toc-definición" class="nav-link" data-scroll-target="#definición"><span class="header-section-number">12.0.1</span> Definición</a></li>
+  <li><a href="#solución-del-sistema" id="toc-solución-del-sistema" class="nav-link" data-scroll-target="#solución-del-sistema"><span class="header-section-number">12.0.2</span> Solución del Sistema</a></li>
+  </ul></li>
+  <li><a href="#condiciones-para-la-no-singularidad" id="toc-condiciones-para-la-no-singularidad" class="nav-link" data-scroll-target="#condiciones-para-la-no-singularidad"><span class="header-section-number">13</span> 3. Condiciones para la No Singularidad</a>
+  <ul>
+  <li><a href="#condición-necesaria-ser-cuadrada" id="toc-condición-necesaria-ser-cuadrada" class="nav-link" data-scroll-target="#condición-necesaria-ser-cuadrada"><span class="header-section-number">13.1</span> 3.1 Condición Necesaria: Ser Cuadrada</a></li>
+  <li><a href="#condición-suficiente-independencia-lineal" id="toc-condición-suficiente-independencia-lineal" class="nav-link" data-scroll-target="#condición-suficiente-independencia-lineal"><span class="header-section-number">13.2</span> 3.2 Condición Suficiente: Independencia Lineal</a>
+  <ul class="collapse">
+  <li><a href="#ejemplo-práctico-detectando-redundancia" id="toc-ejemplo-práctico-detectando-redundancia" class="nav-link" data-scroll-target="#ejemplo-práctico-detectando-redundancia"><span class="header-section-number">13.2.1</span> Ejemplo Práctico: Detectando Redundancia</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#resumen-de-requisitos-para-una-solución-determinada" id="toc-resumen-de-requisitos-para-una-solución-determinada" class="nav-link" data-scroll-target="#resumen-de-requisitos-para-una-solución-determinada"><span class="header-section-number">14</span> 4. Resumen de Requisitos para una Solución Determinada</a></li>
+  <li><a href="#determinantes-y-no-singularidad" id="toc-determinantes-y-no-singularidad" class="nav-link" data-scroll-target="#determinantes-y-no-singularidad"><span class="header-section-number">15</span> 4. Determinantes y No Singularidad</a>
+  <ul>
+  <li><a href="#determinantes-de-segundo-orden" id="toc-determinantes-de-segundo-orden" class="nav-link" data-scroll-target="#determinantes-de-segundo-orden"><span class="header-section-number">15.1</span> 4.1 Determinantes de Segundo Orden</a></li>
+  <li><a href="#la-prueba-de-dependencia-lineal" id="toc-la-prueba-de-dependencia-lineal" class="nav-link" data-scroll-target="#la-prueba-de-dependencia-lineal"><span class="header-section-number">15.2</span> 4.2 La Prueba de Dependencia Lineal</a></li>
+  <li><a href="#demostración-computacional" id="toc-demostración-computacional" class="nav-link" data-scroll-target="#demostración-computacional"><span class="header-section-number">15.3</span> 4.3 Demostración Computacional</a>
+  <ul class="collapse">
+  <li><a href="#interpretación-económica" id="toc-interpretación-económica" class="nav-link" data-scroll-target="#interpretación-económica"><span class="header-section-number">15.3.1</span> Interpretación Económica</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><div class="quarto-title-block"><div class="quarto-title-tools-only"><h1></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Capítulo 4: Álgebra de Matrices (Continuación)</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
+<p class="subtitle lead">Sistemas de Ecuaciones, Inversión y Condición de No Singularidad</p>
 </div>
 
 
@@ -929,9 +998,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
     <div class="quarto-title-meta-contents">
-             <p>Emanuel Quintana </p>
+             <p>Emanuel Quintana Silva </p>
           </div>
   </div>
     
@@ -942,58 +1011,224 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="keywords">
-    <div class="block-title">Keywords</div>
-    <p>economía matemática, matemáticas, economía, optimización, cálculo</p>
+    <div class="block-title">Palabras clave</div>
+    <p>economía matemática, matemáticas, economía, optimización, cálculo, álgebra lineal</p>
   </div>
 </div>
 
 </header>
 
 
+<section id="el-formato-matricial-de-los-modelos-económicos" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> 1. El Formato Matricial de los Modelos Económicos</h1>
+<p>Como se mencionó anteriormente, un sistema de <span class="math inline">\(n\)</span> ecuaciones lineales con <span class="math inline">\(n\)</span> variables puede compactarse en la ecuación matricial:</p>
+<p><span class="math display">\[\mathbf{A}\mathbf{x} = \mathbf{d}\]</span></p>
+<p>Donde las dimensiones son <span class="math inline">\((\text{n} \times \text{n}) (\text{n} \times 1) = (\text{n} \times 1)\)</span>. Esta notación no es solo estética; permite utilizar las propiedades del álgebra lineal para hallar soluciones únicas de manera eficiente.</p>
+<section id="el-concepto-de-matriz-identidad-mathbfi" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="el-concepto-de-matriz-identidad-mathbfi"><span class="header-section-number">11.1</span> 1.1 El Concepto de Matriz Identidad (<span class="math inline">\(\mathbf{I}\)</span>)</h2>
+<p>La matriz identidad <span class="math inline">\(\mathbf{I}\)</span> actúa como el número <span class="math inline">\(1\)</span> en el álgebra escalar. Es una matriz cuadrada donde: - Los elementos de la diagonal principal son <span class="math inline">\(1\)</span> (<span class="math inline">\(a_{ii} = 1\)</span>). - Todos los demás elementos son <span class="math inline">\(0\)</span> (<span class="math inline">\(a_{ij} = 0\)</span> para <span class="math inline">\(i \neq j\)</span>).</p>
+<div id="7c91f180" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, Math</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Generación de una matriz identidad 3x3</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>I <span class="op">=</span> np.eye(<span class="dv">3</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Matriz Identidad (I) 3x3:"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(I)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Matriz Identidad (I) 3x3:
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="la-matriz-inversa" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> 2. La Matriz Inversa ()</h1>
+<p>En álgebra escalar, si tenemos , resolvemos como (o ). En matrices, la división no existe, por lo que utilizamos la <strong>Matriz Inversa</strong>.</p>
+<section id="definición" class="level3" data-number="12.0.1">
+<h3 data-number="12.0.1" class="anchored" data-anchor-id="definición"><span class="header-section-number">12.0.1</span> Definición</h3>
+<p>Una matriz tiene una inversa si y solo si es una matriz cuadrada y cumple:</p>
+</section>
+<section id="solución-del-sistema" class="level3" data-number="12.0.2">
+<h3 data-number="12.0.2" class="anchored" data-anchor-id="solución-del-sistema"><span class="header-section-number">12.0.2</span> Solución del Sistema</h3>
+<p>Si la inversa existe, podemos premultiplicar ambos lados de la ecuación original:</p>
+<ol type="1">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</section>
+</section>
+<section id="condiciones-para-la-no-singularidad" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> 3. Condiciones para la No Singularidad</h1>
+<p>No todas las matrices cuadradas tienen inversa. Una matriz que <strong>no</strong> tiene inversa se llama <strong>singular</strong>. Para que una matriz sea <strong>no singular</strong> (tenga inversa), se deben cumplir dos condiciones:</p>
+<section id="condición-necesaria-ser-cuadrada" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="condición-necesaria-ser-cuadrada"><span class="header-section-number">13.1</span> 3.1 Condición Necesaria: Ser Cuadrada</h2>
+<p>El número de ecuaciones debe ser igual al número de incógnitas ().</p>
+<ul>
+<li>Si hay menos ecuaciones que variables, el sistema está <strong>subdeterminado</strong> (infinitas soluciones).</li>
+<li>Si hay más, está <strong>sobredeterminado</strong>.</li>
+</ul>
+</section>
+<section id="condición-suficiente-independencia-lineal" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="condición-suficiente-independencia-lineal"><span class="header-section-number">13.2</span> 3.2 Condición Suficiente: Independencia Lineal</h2>
+<p>Las filas (o columnas) de la matriz de coeficientes deben ser <strong>linealmente independientes</strong>.</p>
+<blockquote class="blockquote">
+<p><strong>Definición de Independencia Lineal:</strong> Un conjunto de vectores fila es linealmente independiente si la única combinación lineal que resulta en el vector cero es aquella donde todos los escalares son cero:</p>
+</blockquote>
+<section id="ejemplo-práctico-detectando-redundancia" class="level3" data-number="13.2.1">
+<h3 data-number="13.2.1" class="anchored" data-anchor-id="ejemplo-práctico-detectando-redundancia"><span class="header-section-number">13.2.1</span> Ejemplo Práctico: Detectando Redundancia</h3>
+<p>Si una ecuación es simplemente el doble de otra (ej. y ), la matriz es singular porque las filas son dependientes. Económicamente, esto significa que una de las ecuaciones es redundante y no aporta información nueva para resolver el sistema.</p>
+<div id="0ff5863c" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo de matriz singular (filas dependientes)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>A_singular <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                       [<span class="dv">2</span>, <span class="dv">4</span>]]) <span class="co"># La fila 2 es el doble de la fila 1</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    inv <span class="op">=</span> np.linalg.inv(A_singular)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> np.linalg.LinAlgError:</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Error: La matriz es singular y no se puede invertir."</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Error: La matriz es singular y no se puede invertir.</code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="resumen-de-requisitos-para-una-solución-determinada" class="level1" data-number="14">
+<h1 data-number="14"><span class="header-section-number">14</span> 4. Resumen de Requisitos para una Solución Determinada</h1>
+<p>Para que un modelo económico lineal tenga una solución única, necesitamos:</p>
+<ol type="1">
+<li><strong>Consistencia:</strong> Las ecuaciones no deben ser contradictorias.</li>
+<li><strong>No Redundancia:</strong> Las ecuaciones deben ser funcionalmente (linealmente) independientes.</li>
+<li><strong>Determinación:</strong> Tener exactamente el mismo número de ecuaciones independientes que de variables incógnitas.</li>
+</ol>
+</section>
+<section id="determinantes-y-no-singularidad" class="level1" data-number="15">
+<h1 data-number="15"><span class="header-section-number">15</span> 4. Determinantes y No Singularidad</h1>
+<p>El determinante de una matriz cuadrada <span class="math inline">\(\mathbf{A}\)</span> es un número único (escalar) asociado a dicha matriz. Este valor es la prueba de fuego para la independencia lineal: si el determinante es cero, la matriz es singular (sus filas son dependientes).</p>
+<section id="determinantes-de-segundo-orden" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="determinantes-de-segundo-orden"><span class="header-section-number">15.1</span> 4.1 Determinantes de Segundo Orden</h2>
+<p>Para una matriz de <span class="math inline">\(2 \times 2\)</span>, el determinante se define como la diferencia del producto de las diagonales:</p>
+<p><span class="math display">\[|\mathbf{A}| = \begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{vmatrix} = a_{11}a_{22} - a_{12}a_{21}\]</span></p>
+</section>
+<section id="la-prueba-de-dependencia-lineal" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="la-prueba-de-dependencia-lineal"><span class="header-section-number">15.2</span> 4.2 La Prueba de Dependencia Lineal</h2>
+<p>Podemos ilustrar fácilmente la condición de no singularidad mediante el determinante. Consideremos el caso donde los elementos de la segunda fila son un múltiplo <span class="math inline">\(k\)</span> de la primera fila (dependencia lineal):</p>
+<p><span class="math display">\[|\mathbf{A}| = \begin{vmatrix} a &amp; b \\ ka &amp; kb \end{vmatrix} = (a)(kb) - (b)(ka) = akb - bka = 0\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Conclusión Clave
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si <span class="math inline">\(|\mathbf{A}| = 0\)</span>, la matriz tiene <strong>dependencia lineal</strong>, es <strong>singular</strong> y por lo tanto <strong>no tiene inversa</strong>. En términos económicos, esto significa que el sistema no tiene una solución única determinada.</p>
+</div>
+</div>
+</section>
+<section id="demostración-computacional" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="demostración-computacional"><span class="header-section-number">15.3</span> 4.3 Demostración Computacional</h2>
+<p>Utilicemos Python para comparar una matriz con solución única frente a una matriz dependiente (redundante).</p>
+<div id="determinantes-ejemplo" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Caso 1: Filas independientes (Determinante != 0)</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>A_indep <span class="op">=</span> np.array([[<span class="dv">3</span>, <span class="dv">1</span>], </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                    [<span class="dv">1</span>, <span class="dv">2</span>]])</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>det_indep <span class="op">=</span> np.linalg.det(A_indep)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Caso 2: Filas dependientes (Fila 2 es 2x Fila 1)</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>A_dep <span class="op">=</span> np.array([[<span class="dv">3</span>, <span class="dv">1</span>], </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>                  [<span class="dv">6</span>, <span class="dv">2</span>]])</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>det_dep <span class="op">=</span> np.linalg.det(A_dep)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Matriz Independiente:</span><span class="ch">\n</span><span class="sc">{</span>A_indep<span class="sc">}</span><span class="ch">\n</span><span class="ss">Determinante: </span><span class="sc">{</span>det_indep<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Matriz Dependiente (Redundante):</span><span class="ch">\n</span><span class="sc">{</span>A_dep<span class="sc">}</span><span class="ch">\n</span><span class="ss">Determinante: </span><span class="sc">{</span>det_dep<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Matriz Independiente:
+[[3 1]
+ [1 2]]
+Determinante: 5.00
+
+Matriz Dependiente (Redundante):
+[[3 1]
+ [6 2]]
+Determinante: 0.00</code></pre>
+</div>
+</div>
+<section id="interpretación-económica" class="level3" data-number="15.3.1">
+<h3 data-number="15.3.1" class="anchored" data-anchor-id="interpretación-económica"><span class="header-section-number">15.3.1</span> Interpretación Económica</h3>
+<p>Si estuviéramos modelando un equilibrio de mercado y nuestro determinante fuera , significaría que las ecuaciones de oferta y demanda que planteamos son en realidad la misma ecuación expresada de forma diferente, lo que nos impide hallar el precio () y la cantidad () de equilibrio.</p>
 
 
 <!-- -->
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
@@ -1001,235 +1236,242 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
       return codeEl.innerText;
     }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-  const viewSource = window.document.getElementById('quarto-view-source') ||
-                     window.document.getElementById('quarto-code-tools-source');
-  if (viewSource) {
-    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-    viewSource.addEventListener("click", function(e) {
-      if (sourceUrl) {
-        // rstudio viewer pane
-        if (/\bcapabilities=\b/.test(window.location)) {
-          window.open(sourceUrl);
-        } else {
-          window.location.href = sourceUrl;
-        }
-      } else {
-        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-        modal.show();
-      }
-      return false;
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-  }
-  function toggleCodeHandler(show) {
-    return function(e) {
-      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-      for (let i=0; i<detailsSrc.length; i++) {
-        const details = detailsSrc[i].parentElement;
-        if (show) {
-          details.open = true;
-        } else {
-          details.removeAttribute("open");
-        }
-      }
-      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-      const fromCls = show ? "hidden" : "unhidden";
-      const toCls = show ? "unhidden" : "hidden";
-      for (let i=0; i<cellCodeDivs.length; i++) {
-        const codeDiv = cellCodeDivs[i];
-        if (codeDiv.classList.contains(fromCls)) {
-          codeDiv.classList.remove(fromCls);
-          codeDiv.classList.add(toCls);
-        } 
-      }
-      return false;
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-  }
-  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-  if (hideAllCode) {
-    hideAllCode.addEventListener("click", toggleCodeHandler(false));
-  }
-  const showAllCode = window.document.getElementById("quarto-show-all-code");
-  if (showAllCode) {
-    showAllCode.addEventListener("click", toggleCodeHandler(true));
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
           } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
         }
-        return container.innerHTML
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1237,198 +1479,325 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html" class="pagination-link" aria-label="notas.html">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">notas.html</span></span>
+      <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_01_matrices/notas.html" class="pagination-link" aria-label="Capítulo 4-1: Modelos Lineales y Álgebra de Matrices">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Capítulo 4-1: Modelos Lineales y Álgebra de Matrices</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../../../capitulos/parte_02_analisis_estatico/cap_04_modelos_lineales_algebra_matrices/sec_03_vectores/notas.html" class="pagination-link" aria-label="notas.html">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">notas.html</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">notas.html</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Ejecutar el código</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Capítulo 4: Álgebra de Matrices (Continuación)"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Sistemas de Ecuaciones, Inversión y Condición de No Singularidad"</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Emanuel Quintana Silva"</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: false</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">    html-math-method: mathjax</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="an">jupyter:</span><span class="co"> python3</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu"># 1. El Formato Matricial de los Modelos Económicos</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>Como se mencionó anteriormente, un sistema de $n$ ecuaciones lineales con $n$ variables puede compactarse en la ecuación matricial:</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>$$\mathbf{A}\mathbf{x} = \mathbf{d}$$</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>Donde las dimensiones son $(\text{n} \times \text{n}) (\text{n} \times 1) = (\text{n} \times 1)$. Esta notación no es solo estética; permite utilizar las propiedades del álgebra lineal para hallar soluciones únicas de manera eficiente.</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1.1 El Concepto de Matriz Identidad ($\mathbf{I}$)</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>La matriz identidad $\mathbf{I}$ actúa como el número $1$ en el álgebra escalar. Es una matriz cuadrada donde:</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Los elementos de la diagonal principal son $1$ ($a_{ii} = 1$).</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Todos los demás elementos son $0$ ($a_{ij} = 0$ para $i \neq j$).</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sympy <span class="im">as</span> sp</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, Math</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Generación de una matriz identidad 3x3</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>I <span class="op">=</span> np.eye(<span class="dv">3</span>)</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Matriz Identidad (I) 3x3:"</span>)</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(I)</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a><span class="fu"># 2. La Matriz Inversa ()</span></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>En álgebra escalar, si tenemos , resolvemos como  (o ). En matrices, la división no existe, por lo que utilizamos la **Matriz Inversa**.</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### Definición</span></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>Una matriz  tiene una inversa  si y solo si es una matriz cuadrada y cumple:</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a><span class="fu">### Solución del Sistema</span></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>Si la inversa existe, podemos premultiplicar ambos lados de la ecuación original:</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span></span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span></span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span></span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a><span class="fu"># 3. Condiciones para la No Singularidad</span></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>No todas las matrices cuadradas tienen inversa. Una matriz que **no** tiene inversa se llama **singular**. Para que una matriz sea **no singular** (tenga inversa), se deben cumplir dos condiciones:</span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.1 Condición Necesaria: Ser Cuadrada</span></span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>El número de ecuaciones debe ser igual al número de incógnitas ().</span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Si hay menos ecuaciones que variables, el sistema está **subdeterminado** (infinitas soluciones).</span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Si hay más, está **sobredeterminado**.</span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3.2 Condición Suficiente: Independencia Lineal</span></span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>Las filas (o columnas) de la matriz de coeficientes deben ser **linealmente independientes**.</span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Definición de Independencia Lineal:**</span></span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Un conjunto de vectores fila  es linealmente independiente si la única combinación lineal que resulta en el vector cero es aquella donde todos los escalares son cero:</span></span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; </span></span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ejemplo Práctico: Detectando Redundancia</span></span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>Si una ecuación es simplemente el doble de otra (ej.  y ), la matriz es singular porque las filas son dependientes. Económicamente, esto significa que una de las ecuaciones es redundante y no aporta información nueva para resolver el sistema.</span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo de matriz singular (filas dependientes)</span></span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a>A_singular <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], </span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a>                       [<span class="dv">2</span>, <span class="dv">4</span>]]) <span class="co"># La fila 2 es el doble de la fila 1</span></span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a>    inv <span class="op">=</span> np.linalg.inv(A_singular)</span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> np.linalg.LinAlgError:</span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Error: La matriz es singular y no se puede invertir."</span>)</span>
+<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a><span class="fu"># 4. Resumen de Requisitos para una Solución Determinada</span></span>
+<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>Para que un modelo económico lineal tenga una solución única, necesitamos:</span>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Consistencia:** Las ecuaciones no deben ser contradictorias.</span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**No Redundancia:** Las ecuaciones deben ser funcionalmente (linealmente) independientes.</span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Determinación:** Tener exactamente el mismo número de ecuaciones independientes que de variables incógnitas.</span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a><span class="fu"># 4. Determinantes y No Singularidad</span></span>
+<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a>El determinante de una matriz cuadrada $\mathbf{A}$ es un número único (escalar) asociado a dicha matriz. Este valor es la prueba de fuego para la independencia lineal: si el determinante es cero, la matriz es singular (sus filas son dependientes).</span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.1 Determinantes de Segundo Orden</span></span>
+<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a>Para una matriz de $2 \times 2$, el determinante se define como la diferencia del producto de las diagonales:</span>
+<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a>$$|\mathbf{A}| = \begin{vmatrix} a_{11} &amp; a_{12} <span class="sc">\\</span> a_{21} &amp; a_{22} \end{vmatrix} = a_{11}a_{22} - a_{12}a_{21}$$</span>
+<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.2 La Prueba de Dependencia Lineal</span></span>
+<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a>Podemos ilustrar fácilmente la condición de no singularidad mediante el determinante. Consideremos el caso donde los elementos de la segunda fila son un múltiplo $k$ de la primera fila (dependencia lineal):</span>
+<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a>$$|\mathbf{A}| = \begin{vmatrix} a &amp; b <span class="sc">\\</span> ka &amp; kb \end{vmatrix} = (a)(kb) - (b)(ka) = akb - bka = 0$$</span>
+<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusión Clave</span></span>
+<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a>Si $|\mathbf{A}| = 0$, la matriz tiene **dependencia lineal**, es **singular** y por lo tanto **no tiene inversa**. En términos económicos, esto significa que el sistema no tiene una solución única determinada.</span>
+<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4.3 Demostración Computacional</span></span>
+<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a>Utilicemos Python para comparar una matriz con solución única frente a una matriz dependiente (redundante).</span>
+<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-136"><a href="#cb7-136" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb7-137"><a href="#cb7-137" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: determinantes-ejemplo</span></span>
+<span id="cb7-138"><a href="#cb7-138" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-139"><a href="#cb7-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-140"><a href="#cb7-140" aria-hidden="true" tabindex="-1"></a><span class="co"># Caso 1: Filas independientes (Determinante != 0)</span></span>
+<span id="cb7-141"><a href="#cb7-141" aria-hidden="true" tabindex="-1"></a>A_indep <span class="op">=</span> np.array([[<span class="dv">3</span>, <span class="dv">1</span>], </span>
+<span id="cb7-142"><a href="#cb7-142" aria-hidden="true" tabindex="-1"></a>                    [<span class="dv">1</span>, <span class="dv">2</span>]])</span>
+<span id="cb7-143"><a href="#cb7-143" aria-hidden="true" tabindex="-1"></a>det_indep <span class="op">=</span> np.linalg.det(A_indep)</span>
+<span id="cb7-144"><a href="#cb7-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-145"><a href="#cb7-145" aria-hidden="true" tabindex="-1"></a><span class="co"># Caso 2: Filas dependientes (Fila 2 es 2x Fila 1)</span></span>
+<span id="cb7-146"><a href="#cb7-146" aria-hidden="true" tabindex="-1"></a>A_dep <span class="op">=</span> np.array([[<span class="dv">3</span>, <span class="dv">1</span>], </span>
+<span id="cb7-147"><a href="#cb7-147" aria-hidden="true" tabindex="-1"></a>                  [<span class="dv">6</span>, <span class="dv">2</span>]])</span>
+<span id="cb7-148"><a href="#cb7-148" aria-hidden="true" tabindex="-1"></a>det_dep <span class="op">=</span> np.linalg.det(A_dep)</span>
+<span id="cb7-149"><a href="#cb7-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-150"><a href="#cb7-150" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Matriz Independiente:</span><span class="ch">\n</span><span class="sc">{</span>A_indep<span class="sc">}</span><span class="ch">\n</span><span class="ss">Determinante: </span><span class="sc">{</span>det_indep<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb7-151"><a href="#cb7-151" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Matriz Dependiente (Redundante):</span><span class="ch">\n</span><span class="sc">{</span>A_dep<span class="sc">}</span><span class="ch">\n</span><span class="ss">Determinante: </span><span class="sc">{</span>det_dep<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb7-152"><a href="#cb7-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-153"><a href="#cb7-153" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-154"><a href="#cb7-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-155"><a href="#cb7-155" aria-hidden="true" tabindex="-1"></a><span class="fu">### Interpretación Económica</span></span>
+<span id="cb7-156"><a href="#cb7-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-157"><a href="#cb7-157" aria-hidden="true" tabindex="-1"></a>Si estuviéramos modelando un equilibrio de mercado y nuestro determinante fuera , significaría que las ecuaciones de oferta y demanda que planteamos son en realidad la misma ecuación expresada de forma diferente, lo que nos impide hallar el precio () y la cantidad () de equilibrio.</span>
+</code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
