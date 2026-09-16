@@ -1,6 +1,6 @@
 ---
 title: "Parte I: Introducción"
--
+--
 
 # Introducción a la Economía Matemática
 Esta parte cubre los fundamentos básicos necesarios para el estudio de la economía matemática.
