@@ -13,4 +13,4 @@ Esta parte cubre los fundamentos básicos necesarios para el estudio de la econo
 2. [Revisión de Aritmética y Álgebra](cap_02_revision_aritmetica_algebra/notas.qmd)
 3. [Ecuaciones y Gráficas](cap_03_ecuaciones_graficas/notas.qmd)
 
-## Secciones y Clasificación por
+## Secciones y Clasificación po
