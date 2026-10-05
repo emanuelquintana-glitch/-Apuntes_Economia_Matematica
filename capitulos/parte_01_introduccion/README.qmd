@@ -6,7 +6,7 @@ title: "Parte I: Introducción"
 
 Esta parte cubre los fundamentos básicos necesarios paa el estudio de la economía matemática
 
-## Capítulos y revisio
+## Capítulos y revisi
 
 1. [Naturaleza de la Economía Matemática](cap_01_naturaleza_economia_matematica/notas.qmd)
 2. [Revisión de Aritmética y Álgebra](cap_02_revision_aritmetica_algebra/notas.qmd)
